@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float hp;
+
     [SerializeField]
     private Joy_Stick joy_Stick;
 
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         animator_walk = GetComponent<Animator>();
+        hp = 10f;
     }
 
     private void Update()

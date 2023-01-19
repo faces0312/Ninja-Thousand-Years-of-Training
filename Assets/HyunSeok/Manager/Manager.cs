@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour
 {
     public static Manager manager;
     public ObjectManager objectManager;
+    public Player player;
 
     public int lv;
     public float exp_Tmp;
