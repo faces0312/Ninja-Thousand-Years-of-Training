@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float hp_max;
     public float hp;
 
     [SerializeField]
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         animator_walk = GetComponent<Animator>();
+        hp_max = 100000f;
         hp = 10f;
     }
 

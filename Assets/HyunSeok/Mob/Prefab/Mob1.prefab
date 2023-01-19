@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 5289893217853964095}
+  lighting_hit_CT: 0
+  is_lighting_hit: 0
 --- !u!1 &2326340946556538745
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +190,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: -8499243052114706715, guid: d5249285189b2cf43a9c371acbad5b3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

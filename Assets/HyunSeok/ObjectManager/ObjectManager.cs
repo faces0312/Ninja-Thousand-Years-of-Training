@@ -20,6 +20,7 @@ public class ObjectManager : MonoBehaviour
     Mob closetEnemy;
     GameObject atk_normal;
     GameObject atk_shadow;
+    GameObject frieColumn;
 
     public bool is_atk;//(맵안에 몹이 있는 상태인지)
 
@@ -29,16 +30,18 @@ public class ObjectManager : MonoBehaviour
     public float fire_CT;
     public float lighting_CT;
     public float talisman_CT;
+    public float firecolumn_CT;
 
     private float atk_normal_Tmp_CT;
     private float shadow_partner_Tmp_CT;
     private float fire_Tmp_CT;
     private float lighting_Tmp_CT;
     private float talisman_Tmp_CT;
+    private float firecolumn_Tmp_CT;
 
     void Awake()
     {
-        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman"};
+        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn"};
         mob_str = new string[] { "Mob1" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
@@ -62,6 +65,9 @@ public class ObjectManager : MonoBehaviour
 
         talisman_CT = 3.7f;
         talisman_Tmp_CT = talisman_CT;
+
+        firecolumn_CT = 7f;
+        firecolumn_Tmp_CT = firecolumn_CT;
     }
 
     private void Update()
@@ -75,7 +81,7 @@ public class ObjectManager : MonoBehaviour
             mob_Tmp_CT = mob_CT;
         }
 
-        if(is_atk == true)
+        if (is_atk == true)
         {
             if (atk_normal_Tmp_CT > 0)
                 atk_normal_Tmp_CT -= Time.deltaTime;
@@ -85,7 +91,7 @@ public class ObjectManager : MonoBehaviour
                 atk_normal_Tmp_CT = atk_normal_CT;
             }
 
-            if(Data.Instance.gameData.shadow_partner_lv>0)
+            if (Data.Instance.gameData.shadow_partner_lv > 0)
             {
                 if (shadow_partner_Tmp_CT > 0)
                     shadow_partner_Tmp_CT -= Time.deltaTime;
@@ -103,7 +109,7 @@ public class ObjectManager : MonoBehaviour
             }
         }
 
-        if(Data.Instance.gameData.fire_lv > 0)
+        if (Data.Instance.gameData.fire_lv > 0)
         {
             if (fire_Tmp_CT > 0)
                 fire_Tmp_CT -= Time.deltaTime;
@@ -158,6 +164,17 @@ public class ObjectManager : MonoBehaviour
             {
                 StartCoroutine("Talisman_General");
                 talisman_Tmp_CT = talisman_CT;
+            }
+        }
+
+        if(Data.Instance.gameData.fire_column_lv > 0)
+        {
+            if (firecolumn_Tmp_CT > 0)
+                firecolumn_Tmp_CT -= Time.deltaTime;
+            else
+            {
+                FireColumn_General();
+                firecolumn_Tmp_CT = firecolumn_CT;
             }
         }
     }
@@ -620,5 +637,34 @@ public class ObjectManager : MonoBehaviour
         talisman36.transform.localEulerAngles = new Vector3(0, 0, 260);
         yield return new WaitForSeconds(0.1f);
 
+    }
+
+    public void FireColumn_General()
+    {
+        
+        float distanceClosetEnemy = 13f;
+        closetEnemy = null;
+        Mob[] allenemys = GameObject.FindObjectsOfType<Mob>();
+
+        if (allenemys.Length == 0)
+            return;
+
+        foreach (Mob currentEnemy in allenemys)
+        {
+            float distanceToEnemy = (currentEnemy.transform.position - player.transform.position).sqrMagnitude;
+            if (distanceToEnemy < distanceClosetEnemy)
+            {
+                distanceClosetEnemy = distanceToEnemy;
+                closetEnemy = currentEnemy;
+                frieColumn = objectPool.MakeObj(atk_str[5]);
+                frieColumn.transform.position = closetEnemy.transform.position;
+                break;
+            }
+        }
+
+        /*Vector3 start = atk_normal.transform.position;
+        Vector3 end = closetEnemy.transform.position;
+        Vector3 fin = end - start;
+        atk_normal.transform.rotation = Quaternion.Euler(atk_normal.transform.rotation.x, atk_normal.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);*/
     }
 }

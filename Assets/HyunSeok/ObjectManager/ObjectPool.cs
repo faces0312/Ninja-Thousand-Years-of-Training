@@ -17,6 +17,8 @@ public class ObjectPool : MonoBehaviour
     GameObject[] player_Lighting;
     public GameObject player_Talisman_Prefab;
     GameObject[] player_Talisman;
+    public GameObject player_FireColumn_Prefab;
+    GameObject[] player_FireColumn;
 
 
     //¸÷ Å¸°Ù
@@ -36,6 +38,7 @@ public class ObjectPool : MonoBehaviour
         player_Fire = new GameObject[24];
         player_Lighting = new GameObject[12];
         player_Talisman = new GameObject[36];
+        player_FireColumn = new GameObject[5];
 
         normalAkt_letter = new GameObject[10];
 
@@ -74,6 +77,11 @@ public class ObjectPool : MonoBehaviour
             player_Talisman[index] = Instantiate(player_Talisman_Prefab);
             player_Talisman[index].SetActive(false);
         }
+        for (int index = 0; index < player_FireColumn.Length; index++)
+        {
+            player_FireColumn[index] = Instantiate(player_FireColumn_Prefab);
+            player_FireColumn[index].SetActive(false);
+        }
         for (int index = 0; index < normalAkt_letter.Length; index++)
         {
             normalAkt_letter[index] = Instantiate(normalAkt_letter_Prefab);
@@ -99,6 +107,9 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "Talisman":
                 targetPool = player_Talisman;
+                break;
+            case "FireColumn":
+                targetPool = player_FireColumn;
                 break;
             case "Mob1":
                 targetPool = mob1;
