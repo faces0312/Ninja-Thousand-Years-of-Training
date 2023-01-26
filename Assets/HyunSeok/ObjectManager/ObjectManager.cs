@@ -237,13 +237,13 @@ public class ObjectManager : MonoBehaviour
         }
 
         if (Data.Instance.gameData.windwall_lv > 0)
-        { //생성쿨타임
+        { //생성쿨타임히히
             if (windwall_Tmp_CT > 0) //생성 쿨타임 1초줄어들어요
                 windwall_Tmp_CT -= Time.deltaTime;
             else
             {
-                Electric_General(); //생성 
-                electricity_Tmp_CT = electricity_CT; //
+                WindWall_General(); //생성 
+                windwall_Tmp_CT = windwall_CT; //
             }
         }
     }
