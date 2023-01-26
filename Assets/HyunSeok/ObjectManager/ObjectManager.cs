@@ -35,6 +35,7 @@ public class ObjectManager : MonoBehaviour
     public float boomerang_CT;
     public float electricity_CT;
     public float windwall_CT;
+    public float wind_CT;
 
 
     //-------------현재 시간 쿨타임
@@ -48,6 +49,7 @@ public class ObjectManager : MonoBehaviour
     private float boomerang_Tmp_CT;
     private float electricity_Tmp_CT;
     private float windwall_Tmp_CT;
+    private float wind_Tmp_CT;
 
 
 
@@ -55,7 +57,7 @@ public class ObjectManager : MonoBehaviour
 
     void Awake()
     {
-        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall"};
+        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall", "Wind"};
         mob_str = new string[] { "Mob1" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
@@ -94,6 +96,9 @@ public class ObjectManager : MonoBehaviour
 
         windwall_CT = 3f;
         windwall_Tmp_CT = windwall_CT;
+
+        wind_CT = 3f;
+        wind_Tmp_CT = wind_CT;
     }
 
     private void Update()
@@ -244,6 +249,17 @@ public class ObjectManager : MonoBehaviour
             {
                 WindWall_General(); //생성 
                 windwall_Tmp_CT = windwall_CT; //
+            }
+        }
+
+        if (Data.Instance.gameData.wind_lv > 0)
+        { //생성쿨타임히히
+            if (wind_Tmp_CT > 0) //생성 쿨타임 1초줄어들어요
+                wind_Tmp_CT -= Time.deltaTime;
+            else
+            {
+                Wind_General(); //생성 
+                wind_Tmp_CT = wind_CT; //
             }
         }
     }
@@ -732,5 +748,13 @@ public class ObjectManager : MonoBehaviour
 
         windwall = objectPool.MakeObj(atk_str[9]);
         windwall.gameObject.transform.position = player.transform.position;
+    }
+
+    public void Wind_General()
+    {
+        GameObject wind;
+
+        wind = objectPool.MakeObj(atk_str[10]);
+        wind.gameObject.transform.position = player.transform.position;
     }
 }

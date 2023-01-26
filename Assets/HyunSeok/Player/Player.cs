@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     public GameObject shadowPartner1_Loca;
     public GameObject shadowPartner2_Loca;
     private float shadowPartner_speed = 2.8f;
-    public GameObject wind_Location;
 
     //볼트 태클
     //public Animator animator_voltTackle; // 걷기
@@ -57,7 +56,6 @@ public class Player : MonoBehaviour
         shadowPartner2.transform.position = Vector3.MoveTowards(shadowPartner2.transform.position,
             shadowPartner2_Loca.transform.position, Time.deltaTime * shadowPartner_speed);
 
-        wind_Location.transform.position = transform.position;
 
         if(Data.Instance.gameData.voltTackle_lv>0)
         {

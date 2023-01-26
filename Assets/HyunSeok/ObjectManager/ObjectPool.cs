@@ -27,6 +27,8 @@ public class ObjectPool : MonoBehaviour
     GameObject[] player_Electricity;
     public GameObject player_WindWall_Prefab;
     GameObject[] player_WindWall;
+    public GameObject player_Wind_Prefab;
+    GameObject[] player_Wind;
 
 
     //各 鸥百
@@ -51,6 +53,7 @@ public class ObjectPool : MonoBehaviour
         player_Boomerang = new GameObject[10];
         player_Electricity = new GameObject[10];
         player_WindWall = new GameObject[5];
+        player_Wind = new GameObject[5];
 
         normalAkt_letter = new GameObject[10];
 
@@ -114,6 +117,16 @@ public class ObjectPool : MonoBehaviour
             player_Electricity[index] = Instantiate(player_Electricity_Prefab); //积己
             player_Electricity[index].SetActive(false); //老窜 波初扁
         }
+        for (int index = 0; index < player_WindWall.Length; index++)
+        {
+            player_WindWall[index] = Instantiate(player_WindWall_Prefab); //积己
+            player_WindWall[index].SetActive(false); //老窜 波初扁
+        }
+        for (int index = 0; index < player_Wind.Length; index++)
+        {
+            player_Wind[index] = Instantiate(player_Wind_Prefab); //积己
+            player_Wind[index].SetActive(false); //老窜 波初扁
+        }
     }
 
     public GameObject MakeObj(string type)
@@ -155,6 +168,9 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "WindWall":
                 targetPool = player_WindWall;
+                break;
+            case "Wind":
+                targetPool = player_Wind;
                 break;
 
         }
