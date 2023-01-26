@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class Wind : MonoBehaviour
 {
-    public Player player;
-    public GameObject wind_Location;
-    public float speed;
-
-    private void Update()
+    private void OnEnable()
     {
-        /*if (player.transform.localScale.x < 0)
-        {
-            Vector3 scale = new Vector3(-0.7f,0.7f,1);
-            transform.localScale = scale;
-        }
-        else if (player.transform.localScale.x > 0)
-        {
-            Vector3 scale = new Vector3(0.7f, 0.7f, 1);
-            transform.localScale = scale;
-        }*/
-
-
-        transform.RotateAround(wind_Location.transform.position, Vector3.forward, Time.deltaTime * speed);
+        StartCoroutine(Wind_Go());
     }
+    //dsafsadlkfjaslkfjasdflkj
 
-
+    IEnumerator Wind_Go()
+    {
+        for(int i=0; i<100; i++)
+        {
+            //transform.position = Vector3.Slerp(gameObject.transform.position, Vector3.right * Time.deltaTime, 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
+        gameObject.SetActive(false);
+    }
 }

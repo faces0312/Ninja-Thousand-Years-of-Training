@@ -21,6 +21,7 @@ public class ObjectManager : MonoBehaviour
     GameObject atk_normal;
     GameObject atk_shadow;
     GameObject frieColumn;
+    GameObject wind;
 
     public bool is_atk;//(맵안에 몹이 있는 상태인지)
 
@@ -50,10 +51,6 @@ public class ObjectManager : MonoBehaviour
     private float electricity_Tmp_CT;
     private float windwall_Tmp_CT;
     private float wind_Tmp_CT;
-
-
-
-
 
     void Awake()
     {
@@ -711,7 +708,6 @@ public class ObjectManager : MonoBehaviour
         atk_normal.transform.rotation = Quaternion.Euler(atk_normal.transform.rotation.x, atk_normal.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);*/
     }
 
-
     public void Tornado_General()
     {
         GameObject tornado;
@@ -719,6 +715,7 @@ public class ObjectManager : MonoBehaviour
         tornado = objectPool.MakeObj(atk_str[5]);
         tornado.gameObject.transform.position = player.transform.position;
     }
+
     public void Tree_General()
     {
         GameObject tree;
@@ -752,9 +749,29 @@ public class ObjectManager : MonoBehaviour
 
     public void Wind_General()
     {
-        GameObject wind;
+        float distanceClosetEnemy = 13f;
+        closetEnemy = null;
+        Mob[] allenemys = GameObject.FindObjectsOfType<Mob>();
 
-        wind = objectPool.MakeObj(atk_str[10]);
-        wind.gameObject.transform.position = player.transform.position;
+        if (allenemys.Length == 0)
+            return;
+
+        foreach (Mob currentEnemy in allenemys)
+        {
+            float distanceToEnemy = (currentEnemy.transform.position - player.transform.position).sqrMagnitude;
+            if (distanceToEnemy < distanceClosetEnemy)
+            {
+                distanceClosetEnemy = distanceToEnemy;
+                closetEnemy = currentEnemy;
+                wind = objectPool.MakeObj(atk_str[10]);
+                wind.transform.position = player.transform.position;
+                Vector3 start = wind.transform.position;
+                Vector3 end = closetEnemy.transform.position;
+                Vector3 fin = end - start;
+                wind.transform.rotation = Quaternion.Euler(wind.transform.rotation.x, wind.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);
+                break;
+            }
+        }
+        
     }
 }
