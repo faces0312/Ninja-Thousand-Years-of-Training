@@ -20,13 +20,17 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Data.Instance.gameData.normal_atk_lv = 0;
+        Data.Instance.gameData.normal_atk_lv = 1;
         Data.Instance.gameData.shadow_partner_lv = 0;
         Data.Instance.gameData.fire_lv = 0;
         Data.Instance.gameData.lightning_lv = 0;
         Data.Instance.gameData.wind_lv = 0;
         Data.Instance.gameData.talisman_lv = 0;
-        Data.Instance.gameData.fire_column_lv = 1;
+        Data.Instance.gameData.fire_column_lv = 0;
+        Data.Instance.gameData.woodTrap_lv = 0;
+        Data.Instance.gameData.voltTackle_lv = 0;
+        Data.Instance.gameData.tornado_lv = 1;
+
 
         lv = 1;
         Data.Instance.gameData.exp = 0;

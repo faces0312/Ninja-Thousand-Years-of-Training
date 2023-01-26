@@ -9,11 +9,18 @@ public class Mob1_Body : MonoBehaviour
     public float lighting_hit_CT;
     public bool is_lighting_hit;
 
+    public float woodTrap_Hit_CT;
+    private float woodTrap_Hit_Tmp_CT;
+
+
     private void OnEnable()
     {
         mob.rend.material.color = Color.white;
         is_lighting_hit = true;
         lighting_hit_CT = 0;
+        
+        woodTrap_Hit_CT = 1.5f;
+        woodTrap_Hit_Tmp_CT = 0f;
     }
     private void Update()
     {
@@ -22,6 +29,16 @@ public class Mob1_Body : MonoBehaviour
         else
         {
             is_lighting_hit = true;
+        }
+
+        if (woodTrap_Hit_Tmp_CT > 0)
+        {
+            woodTrap_Hit_Tmp_CT -= Time.deltaTime;
+            mob.speed = 0;
+        }
+        else
+        {
+            mob.speed = 1;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -201,6 +218,76 @@ public class Mob1_Body : MonoBehaviour
             else if (Data.Instance.gameData.fire_column_lv == 5)
                 mob.hp -= 20;
             else if (Data.Instance.gameData.fire_column_lv == 6)
+                mob.hp -= 20;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
+
+        if (collision.tag == "WoodTrap")
+        {
+            woodTrap_Hit_Tmp_CT = 1.5f;
+            if (Data.Instance.gameData.woodTrap_lv == 1)
+                mob.hp -= 1;
+            else if (Data.Instance.gameData.woodTrap_lv == 2)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.woodTrap_lv == 3)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.woodTrap_lv == 4)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.woodTrap_lv == 5)
+                mob.hp -= 20;
+            else if (Data.Instance.gameData.woodTrap_lv == 6)
+                mob.hp -= 20;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
+
+        if (collision.tag == "VoltTackle")
+        {
+            if (Data.Instance.gameData.voltTackle_lv == 1)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.voltTackle_lv == 2)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.voltTackle_lv == 3)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.voltTackle_lv == 4)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.voltTackle_lv == 5)
+                mob.hp -= 20;
+            else if (Data.Instance.gameData.voltTackle_lv == 6)
+                mob.hp -= 20;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
+
+        if (collision.tag == "Tornado")
+        {
+            if (Data.Instance.gameData.tornado_lv == 1)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.tornado_lv == 2)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.tornado_lv == 3)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.tornado_lv == 4)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.tornado_lv == 5)
+                mob.hp -= 20;
+            else if (Data.Instance.gameData.tornado_lv == 6)
                 mob.hp -= 20;
             if (mob.hp <= 0)
             {

@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public ObjectManager objectManager;
     public Animator animator_walk; // 걷기
 
-    public float speed = 3;
+    public float speed;
 
     public ShadowPartner shadowPartner1;
     public ShadowPartner shadowPartner2;
@@ -22,13 +22,24 @@ public class Player : MonoBehaviour
     private float shadowPartner_speed = 2.8f;
     public GameObject wind_Location;
 
+    //볼트 태클
+    //public Animator animator_voltTackle; // 걷기
+    public GameObject volttackle;
+    private float volttackle_CT;
+    private float volttackle_Tmp_CT;
 
     // Start is called before the first frame update
     void Start()
     {
         animator_walk = GetComponent<Animator>();
-        hp_max = 100000f;
-        hp = 10f;
+        //animator_voltTackle = GetComponent<Animator>();
+
+        hp_max = 100;
+        hp = hp_max;
+        speed = 3;
+
+        volttackle_CT = 5f;
+        volttackle_Tmp_CT = volttackle_CT;
     }
 
     private void Update()
@@ -47,6 +58,18 @@ public class Player : MonoBehaviour
             shadowPartner2_Loca.transform.position, Time.deltaTime * shadowPartner_speed);
 
         wind_Location.transform.position = transform.position;
+
+        if(Data.Instance.gameData.voltTackle_lv>0)
+        {
+            //볼트태클
+            if (volttackle_Tmp_CT > 0)
+                volttackle_Tmp_CT -= Time.deltaTime;
+            else
+            {
+                volttackle.gameObject.SetActive(true);
+                volttackle_Tmp_CT = volttackle_CT;
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -31,6 +31,8 @@ public class ObjectManager : MonoBehaviour
     public float lighting_CT;
     public float talisman_CT;
     public float firecolumn_CT;
+    public float woodTrap_CT;
+    public float tornado_CT;
 
     private float atk_normal_Tmp_CT;
     private float shadow_partner_Tmp_CT;
@@ -38,10 +40,13 @@ public class ObjectManager : MonoBehaviour
     private float lighting_Tmp_CT;
     private float talisman_Tmp_CT;
     private float firecolumn_Tmp_CT;
+    public float woodTrap_Tmp_CT;
+    public float tornado_Tmp_CT;
+
 
     void Awake()
     {
-        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn"};
+        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado"};
         mob_str = new string[] { "Mob1" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
@@ -66,8 +71,14 @@ public class ObjectManager : MonoBehaviour
         talisman_CT = 3.7f;
         talisman_Tmp_CT = talisman_CT;
 
-        firecolumn_CT = 7f;
+        firecolumn_CT = 3f;
         firecolumn_Tmp_CT = firecolumn_CT;
+
+        woodTrap_CT = 5f;
+        woodTrap_Tmp_CT = woodTrap_CT;
+
+        tornado_CT = 5f;
+        tornado_Tmp_CT = tornado_CT;
     }
 
     private void Update()
@@ -81,7 +92,8 @@ public class ObjectManager : MonoBehaviour
             mob_Tmp_CT = mob_CT;
         }
 
-        if (is_atk == true)
+        
+        /*if (is_atk == true)
         {
             if (atk_normal_Tmp_CT > 0)
                 atk_normal_Tmp_CT -= Time.deltaTime;
@@ -107,7 +119,8 @@ public class ObjectManager : MonoBehaviour
                     shadow_partner_Tmp_CT = shadow_partner_CT;
                 }
             }
-        }
+        }*/
+        
 
         if (Data.Instance.gameData.fire_lv > 0)
         {
@@ -175,6 +188,28 @@ public class ObjectManager : MonoBehaviour
             {
                 FireColumn_General();
                 firecolumn_Tmp_CT = firecolumn_CT;
+            }
+        }
+
+        if (Data.Instance.gameData.woodTrap_lv > 0)
+        {
+            if (woodTrap_Tmp_CT > 0)
+                woodTrap_Tmp_CT -= Time.deltaTime;
+            else
+            {
+                WoodTrap_General();
+                woodTrap_Tmp_CT = woodTrap_CT;
+            }
+        }
+
+        if (Data.Instance.gameData.tornado_lv > 0)
+        {
+            if (tornado_Tmp_CT > 0)
+                tornado_Tmp_CT -= Time.deltaTime;
+            else
+            {
+                Tornado_General();
+                tornado_Tmp_CT = woodTrap_CT;
             }
         }
     }
@@ -666,5 +701,21 @@ public class ObjectManager : MonoBehaviour
         Vector3 end = closetEnemy.transform.position;
         Vector3 fin = end - start;
         atk_normal.transform.rotation = Quaternion.Euler(atk_normal.transform.rotation.x, atk_normal.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);*/
+    }
+
+    public void WoodTrap_General()
+    {
+        GameObject woodTrap;
+
+        woodTrap = objectPool.MakeObj(atk_str[6]);
+        woodTrap.gameObject.transform.position = player.transform.position;
+    }
+
+    public void Tornado_General()
+    {
+        GameObject tornado;
+
+        tornado = objectPool.MakeObj(atk_str[7]);
+        tornado.gameObject.transform.position = player.transform.position;
     }
 }
