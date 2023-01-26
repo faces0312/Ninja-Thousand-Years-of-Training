@@ -23,6 +23,8 @@ public class ObjectPool : MonoBehaviour
     GameObject[] player_WoodTrap;
     public GameObject player_Tornado_Prefab;
     GameObject[] player_Tornado;
+    public GameObject player_Tree_Prefab;
+    GameObject[] player_Tree;
 
 
     //各 鸥百
@@ -45,7 +47,7 @@ public class ObjectPool : MonoBehaviour
         player_FireColumn = new GameObject[5];
         player_WoodTrap = new GameObject[5];
         player_Tornado = new GameObject[5];
-
+        player_Tree = new GameObject[3];
 
         normalAkt_letter = new GameObject[10];
 
@@ -104,6 +106,11 @@ public class ObjectPool : MonoBehaviour
             normalAkt_letter[index] = Instantiate(normalAkt_letter_Prefab);
             normalAkt_letter[index].SetActive(false);
         }
+        for (int index = 0; index < player_Tree.Length; index++)
+        {
+            player_Tree[index] = Instantiate(player_Tree_Prefab); //积己
+            player_Tree[index].SetActive(false); //老窜 波初扁
+        }
     }
 
     public GameObject MakeObj(string type)
@@ -111,7 +118,7 @@ public class ObjectPool : MonoBehaviour
         switch (type)
         {
             case "Normal_Atk":
-                targetPool = player_nomralAtk;
+                targetPool = player_nomralAtk;  //积己秦扼
                 break;
             case "Shadow_Atk":
                 targetPool = player_shadowAtk;
@@ -135,10 +142,13 @@ public class ObjectPool : MonoBehaviour
                 targetPool = player_Tornado;
                 break;
             case "Mob1":
-                targetPool = mob1;
+                targetPool = mob1; 
                 break;
             case "Normal_Atk_Letter":
                 targetPool = normalAkt_letter;
+                break;
+            case "Tree":
+                targetPool = player_Tree;
                 break;
         }
         for (int index = 0; index < targetPool.Length; index++)

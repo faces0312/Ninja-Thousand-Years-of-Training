@@ -29,7 +29,8 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.fire_column_lv = 0;
         Data.Instance.gameData.woodTrap_lv = 0;
         Data.Instance.gameData.voltTackle_lv = 0;
-        Data.Instance.gameData.tornado_lv = 1;
+        Data.Instance.gameData.tornado_lv = 0;
+        Data.Instance.gameData.tree_lv = 1;
 
 
         lv = 1;

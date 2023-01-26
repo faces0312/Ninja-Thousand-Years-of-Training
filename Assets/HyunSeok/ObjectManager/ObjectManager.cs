@@ -24,7 +24,7 @@ public class ObjectManager : MonoBehaviour
 
     public bool is_atk;//(¸Ê¾È¿¡ ¸÷ÀÌ ÀÖ´Â »óÅÂÀÎÁö)
 
-
+    //----------------ÀüÃ¼ ÄðÅ¸ÀÓ
     public float atk_normal_CT;//Ç¥Ã¢ ÄðÅ¸ÀÓ
     public float shadow_partner_CT;//½¦µµ¿ì ÆÄÆ®³Ê ÄðÅ¸ÀÓ
     public float fire_CT;
@@ -33,7 +33,10 @@ public class ObjectManager : MonoBehaviour
     public float firecolumn_CT;
     public float woodTrap_CT;
     public float tornado_CT;
+    public float tree_CT;
+    
 
+    //-------------ÇöÀç ½Ã°£ ÄðÅ¸ÀÓ
     private float atk_normal_Tmp_CT;
     private float shadow_partner_Tmp_CT;
     private float fire_Tmp_CT;
@@ -42,11 +45,13 @@ public class ObjectManager : MonoBehaviour
     private float firecolumn_Tmp_CT;
     public float woodTrap_Tmp_CT;
     public float tornado_Tmp_CT;
+    private float tree_Tmp_CT;
+
 
 
     void Awake()
     {
-        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado"};
+        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado", "Tree"};
         mob_str = new string[] { "Mob1" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
@@ -79,6 +84,9 @@ public class ObjectManager : MonoBehaviour
 
         tornado_CT = 5f;
         tornado_Tmp_CT = tornado_CT;
+
+        tree_CT = 3f;
+        tree_Tmp_CT = tree_CT;
     }
 
     private void Update()
@@ -209,7 +217,17 @@ public class ObjectManager : MonoBehaviour
             else
             {
                 Tornado_General();
-                tornado_Tmp_CT = woodTrap_CT;
+                tornado_Tmp_CT = tornado_CT;
+            }
+        }
+        if (Data.Instance.gameData.tree_lv > 0)
+        {
+            if (tree_Tmp_CT > 0)
+                tree_Tmp_CT -= Time.deltaTime;
+            else
+            { //
+                Tree_General(); 
+                tree_Tmp_CT = tree_CT;
             }
         }
     }
@@ -717,5 +735,12 @@ public class ObjectManager : MonoBehaviour
 
         tornado = objectPool.MakeObj(atk_str[7]);
         tornado.gameObject.transform.position = player.transform.position;
+    }
+    public void Tree_General()
+    {
+        GameObject tree;
+
+        tree = objectPool.MakeObj(atk_str[8]);
+        tree.gameObject.transform.position = player.transform.position;
     }
 }

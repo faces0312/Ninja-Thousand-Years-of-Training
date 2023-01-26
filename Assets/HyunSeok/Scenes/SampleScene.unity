@@ -488,6 +488,7 @@ MonoBehaviour:
   player_FireColumn_Prefab: {fileID: 1168292638173574185, guid: 9f749b13b72c16e4db3130af8dd1f133, type: 3}
   player_WoodTrap_Prefab: {fileID: 5903579145486290530, guid: ab728ea18bc470147ac32c1a793b7866, type: 3}
   player_Tornado_Prefab: {fileID: 8358387555212799346, guid: 756156308a2049649a59c1286e20ae59, type: 3}
+  player_Tree_Prefab: {fileID: 176804983354131202, guid: 977905d457ab5d5429a336c840ec7ec3, type: 3}
   mob1_Prefab: {fileID: 2326340946556538745, guid: 6fe4a7272cdd8e94aa02d52a870b707e, type: 3}
   normalAkt_letter_Prefab: {fileID: 7044367920852072733, guid: fec1dc7634630834ca4fe7a91ed1a244, type: 3}
 --- !u!4 &204111285
@@ -6282,6 +6283,7 @@ MonoBehaviour:
   firecolumn_CT: 0
   woodTrap_CT: 0
   tornado_CT: 0
+  tree_CT: 0
   woodTrap_Tmp_CT: 0
   tornado_Tmp_CT: 0
 --- !u!4 &2067862463
