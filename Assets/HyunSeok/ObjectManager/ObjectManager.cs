@@ -34,7 +34,7 @@ public class ObjectManager : MonoBehaviour
     public float tree_CT;
     public float boomerang_CT;
     public float electricity_CT;
-    public float WindWall_CT;
+    public float windwall_CT;
 
 
     //-------------현재 시간 쿨타임
@@ -47,7 +47,7 @@ public class ObjectManager : MonoBehaviour
     private float tree_Tmp_CT;
     private float boomerang_Tmp_CT;
     private float electricity_Tmp_CT;
-    private float WindWall_Tmp_CT;
+    private float windwall_Tmp_CT;
 
 
 
@@ -91,9 +91,9 @@ public class ObjectManager : MonoBehaviour
 
         electricity_CT = 3f;
         electricity_Tmp_CT = electricity_CT;
-        
-        WindWall_CT = 3f;
-        WindWall_Tmp_CT = WindWall_CT;
+
+        windwall_CT = 3f;
+        windwall_Tmp_CT = windwall_CT;
     }
 
     private void Update()
@@ -226,13 +226,24 @@ public class ObjectManager : MonoBehaviour
         }
 
         if (Data.Instance.gameData.electricity_lv > 0)
-        {
-            if (electricity_Tmp_CT > 0)
+        { //생성쿨타임
+            if (electricity_Tmp_CT > 0) //생성 쿨타임 1초줄어들어요
                 electricity_Tmp_CT -= Time.deltaTime;
             else
-            { //
-                Electric_General();
-                electricity_Tmp_CT = electricity_CT;
+            { 
+                Electric_General(); //생성 
+                electricity_Tmp_CT = electricity_CT; //
+            }
+        }
+
+        if (Data.Instance.gameData.windwall_lv > 0)
+        { //생성쿨타임
+            if (windwall_Tmp_CT > 0) //생성 쿨타임 1초줄어들어요
+                windwall_Tmp_CT -= Time.deltaTime;
+            else
+            {
+                Electric_General(); //생성 
+                electricity_Tmp_CT = electricity_CT; //
             }
         }
     }
@@ -714,5 +725,12 @@ public class ObjectManager : MonoBehaviour
 
         electricity = objectPool.MakeObj(atk_str[8]);
         electricity.gameObject.transform.position = player.transform.position;
+    }
+    public void WindWall_General()
+    {
+        GameObject windwall;
+
+        windwall = objectPool.MakeObj(atk_str[9]);
+        windwall.gameObject.transform.position = player.transform.position;
     }
 }

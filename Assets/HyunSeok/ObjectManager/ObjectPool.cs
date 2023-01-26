@@ -153,6 +153,10 @@ public class ObjectPool : MonoBehaviour
             case "Electricity":
                 targetPool = player_Electricity;
                 break;
+            case "WindWall":
+                targetPool = player_WindWall;
+                break;
+
         }
         for (int index = 0; index < targetPool.Length; index++)
         {
