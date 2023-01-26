@@ -35,6 +35,7 @@ public class ObjectManager : MonoBehaviour
     public float tornado_CT;
     public float tree_CT;
     public float boomerang_CT;
+    public float electricity_CT;
 
 
     //-------------현재 시간 쿨타임
@@ -48,12 +49,13 @@ public class ObjectManager : MonoBehaviour
     public float tornado_Tmp_CT;
     private float tree_Tmp_CT;
     private float boomerang_Tmp_CT;
+    private float electricity_Tmp_CT;
 
 
 
     void Awake()
     {
-        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado", "Tree", "Boomerang"};
+        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado", "Tree", "Boomerang", "Electricity"};
         mob_str = new string[] { "Mob1" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
@@ -92,6 +94,9 @@ public class ObjectManager : MonoBehaviour
 
         boomerang_CT = 3f;
         boomerang_Tmp_CT = boomerang_CT;
+
+        electricity_CT = 3f;
+        electricity_Tmp_CT = electricity_CT;
     }
 
     private void Update()
@@ -235,6 +240,7 @@ public class ObjectManager : MonoBehaviour
                 tree_Tmp_CT = tree_CT;
             }
         }
+
         if (Data.Instance.gameData.boomerang_lv > 0)
         {
             if (boomerang_Tmp_CT > 0)
@@ -243,6 +249,17 @@ public class ObjectManager : MonoBehaviour
             { //
                 Boomerang_General();
                 boomerang_Tmp_CT = boomerang_CT;
+            }
+        }
+
+        if (Data.Instance.gameData.electricity_lv > 0)
+        {
+            if (electricity_Tmp_CT > 0)
+                electricity_Tmp_CT -= Time.deltaTime;
+            else
+            { //
+                Electric_General();
+                electricity_Tmp_CT = electricity_CT;
             }
         }
     }
@@ -765,5 +782,13 @@ public class ObjectManager : MonoBehaviour
 
         boomerang = objectPool.MakeObj(atk_str[9]);
         boomerang.gameObject.transform.position = player.transform.position;
+    }
+
+    public void Electric_General()
+    {
+        GameObject electricity;
+
+        electricity = objectPool.MakeObj(atk_str[10]);
+        electricity.gameObject.transform.position = player.transform.position;
     }
 }

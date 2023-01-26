@@ -27,6 +27,8 @@ public class ObjectPool : MonoBehaviour
     GameObject[] player_Tree;
     public GameObject player_Boomerang_Prefab;
     GameObject[] player_Boomerang;
+    public GameObject player_Electricity_Prefab;
+    GameObject[] player_Electricity;
 
 
     //各 鸥百
@@ -51,6 +53,7 @@ public class ObjectPool : MonoBehaviour
         player_Tornado = new GameObject[5];
         player_Tree = new GameObject[3];
         player_Boomerang = new GameObject[10];
+        player_Electricity = new GameObject[10];
 
         normalAkt_letter = new GameObject[10];
 
@@ -119,6 +122,11 @@ public class ObjectPool : MonoBehaviour
             player_Boomerang[index] = Instantiate(player_Boomerang_Prefab); //积己
             player_Boomerang[index].SetActive(false); //老窜 波初扁
         }
+        for (int index = 0; index < player_Electricity.Length; index++)
+        {
+            player_Electricity[index] = Instantiate(player_Electricity_Prefab); //积己
+            player_Electricity[index].SetActive(false); //老窜 波初扁
+        }
     }
 
     public GameObject MakeObj(string type)
@@ -160,6 +168,9 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "Boomerang":
                 targetPool = player_Boomerang;
+                break;
+            case "Electricity":
+                targetPool = player_Electricity;
                 break;
         }
         for (int index = 0; index < targetPool.Length; index++)

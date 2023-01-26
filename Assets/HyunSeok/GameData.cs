@@ -23,6 +23,7 @@ public class GameData
     public int tornado_lv;//토네이도
     public int tree_lv; // 트리
     public int boomerang_lv; // 부메랑
+    public int electricity_lv; // 번개의신 번개의 왕
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 }
