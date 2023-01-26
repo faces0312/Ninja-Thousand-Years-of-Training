@@ -297,6 +297,29 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
+
+        if (collision.tag == "Boomerang")
+        {
+            if (Data.Instance.gameData.boomerang_lv == 1)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.boomerang_lv == 2)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.boomerang_lv == 3)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.boomerang_lv == 4)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.boomerang_lv == 5)
+                mob.hp -= 20;
+            else if (Data.Instance.gameData.boomerang_lv == 6)
+                mob.hp -= 20;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
     }
 
     IEnumerator AttackHit()

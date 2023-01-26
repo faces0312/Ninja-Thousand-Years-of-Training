@@ -16,6 +16,11 @@ TagManager:
   - FireColumn
   - Tree
   - TreeHeal
+  - Bounce
+  - VoltTackle
+  - WoodTrap
+  - Tornado
+  - Boomerang
   layers:
   - Default
   - TransparentFX
