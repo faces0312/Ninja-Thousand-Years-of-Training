@@ -19,6 +19,10 @@ public class ObjectPool : MonoBehaviour
     GameObject[] player_Talisman;
     public GameObject player_FireColumn_Prefab;
     GameObject[] player_FireColumn;
+    public GameObject player_WoodTrap_Prefab;
+    GameObject[] player_WoodTrap;
+    public GameObject player_Tornado_Prefab;
+    GameObject[] player_Tornado;
 
 
     //¸÷ Å¸°Ù
@@ -39,6 +43,9 @@ public class ObjectPool : MonoBehaviour
         player_Lighting = new GameObject[12];
         player_Talisman = new GameObject[36];
         player_FireColumn = new GameObject[5];
+        player_WoodTrap = new GameObject[5];
+        player_Tornado = new GameObject[5];
+
 
         normalAkt_letter = new GameObject[10];
 
@@ -82,6 +89,16 @@ public class ObjectPool : MonoBehaviour
             player_FireColumn[index] = Instantiate(player_FireColumn_Prefab);
             player_FireColumn[index].SetActive(false);
         }
+        for (int index = 0; index < player_WoodTrap.Length; index++)
+        {
+            player_WoodTrap[index] = Instantiate(player_WoodTrap_Prefab);
+            player_WoodTrap[index].SetActive(false);
+        }
+        for (int index = 0; index < player_Tornado.Length; index++)
+        {
+            player_Tornado[index] = Instantiate(player_Tornado_Prefab);
+            player_Tornado[index].SetActive(false);
+        }
         for (int index = 0; index < normalAkt_letter.Length; index++)
         {
             normalAkt_letter[index] = Instantiate(normalAkt_letter_Prefab);
@@ -110,6 +127,12 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "FireColumn":
                 targetPool = player_FireColumn;
+                break;
+            case "WoodTrap":
+                targetPool = player_WoodTrap;
+                break;
+            case "Tornado":
+                targetPool = player_Tornado;
                 break;
             case "Mob1":
                 targetPool = mob1;

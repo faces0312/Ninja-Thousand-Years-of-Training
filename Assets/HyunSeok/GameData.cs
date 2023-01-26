@@ -17,7 +17,10 @@ public class GameData
     public int lightning_lv;//堝菩
     public int wind_lv;//Ё菩
     public int talisman_lv;//睡瞳
-    public int fire_column_lv;
+    public int fire_column_lv;//碳晦菅
+    public int woodTrap_lv;//濠檜塭 掙樓夢
+    public int voltTackle_lv;//獐お鷓贗
+    public int tornado_lv;//饜啻檜紫
     //天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天
 
 }

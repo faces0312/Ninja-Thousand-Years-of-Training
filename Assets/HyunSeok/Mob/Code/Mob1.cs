@@ -15,7 +15,7 @@ public class Mob1 : MonoBehaviour
     bool target_on;
 
     public int hp;
-
+    public int speed;
     // Update is called once per frame
 
     private void Start()
@@ -27,6 +27,7 @@ public class Mob1 : MonoBehaviour
     {
         rend = GetComponent<SpriteRenderer>();
         hp = 10;
+        speed = 1;
         target_on = false;
         mob1_Body.gameObject.SetActive(true);
     }
@@ -52,7 +53,7 @@ public class Mob1 : MonoBehaviour
             else
                 rend.flipX = false;
 
-            transform.position = Vector3.MoveTowards(start, end, 1 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(start, end, speed * Time.deltaTime);
         }
     }
 

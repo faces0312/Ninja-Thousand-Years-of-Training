@@ -48,7 +48,13 @@ public class Joy_Stick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     {
         touchPosition = Vector2.zero;
 
-        if(RectTransformUtility.ScreenPointToLocalPointInRectangle(imageBackGround.rectTransform, eventData.position, eventData.pressEventCamera, out touchPosition))
+        player.animator_walk.SetBool("Is_Walk", true);
+        if(shadowPartner1.gameObject.activeSelf == true)
+            shadowPartner1.animator_walk.SetBool("Is_Walk", true);
+        if (shadowPartner2.gameObject.activeSelf == true)
+            shadowPartner2.animator_walk.SetBool("Is_Walk", true);
+
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(imageBackGround.rectTransform, eventData.position, eventData.pressEventCamera, out touchPosition))
         {
             touchPosition.x = (touchPosition.x / imageBackGround.rectTransform.sizeDelta.x);
             touchPosition.y = (touchPosition.y / imageBackGround.rectTransform.sizeDelta.y);
@@ -65,8 +71,10 @@ public class Joy_Stick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     public void OnPointerDown(PointerEventData eventData)
     {
         player.animator_walk.SetBool("Is_Walk", true);
-        shadowPartner1.animator_walk.SetBool("Is_Walk", true);
-        shadowPartner2.animator_walk.SetBool("Is_Walk", true);
+        if (shadowPartner1.gameObject.activeSelf == true)
+            shadowPartner1.animator_walk.SetBool("Is_Walk", true);
+        if (shadowPartner2.gameObject.activeSelf == true)
+            shadowPartner2.animator_walk.SetBool("Is_Walk", true);
     }
 
 
@@ -74,8 +82,10 @@ public class Joy_Stick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     public void OnPointerUp(PointerEventData eventData)
     {
         player.animator_walk.SetBool("Is_Walk", false);
-        shadowPartner1.animator_walk.SetBool("Is_Walk", false);
-        shadowPartner2.animator_walk.SetBool("Is_Walk", false);
+        if(shadowPartner1.gameObject.activeSelf == true)
+            shadowPartner1.animator_walk.SetBool("Is_Walk", false);
+        if (shadowPartner2.gameObject.activeSelf == true)
+            shadowPartner2.animator_walk.SetBool("Is_Walk", false);
         imageController.rectTransform.anchoredPosition = Vector2.zero;
         touchPosition = Vector2.zero;
     }
