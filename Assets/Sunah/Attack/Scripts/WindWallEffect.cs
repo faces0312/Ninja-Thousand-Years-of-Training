@@ -37,7 +37,7 @@ public class WindWallEffect : MonoBehaviour
             yield return new WaitForSeconds(0.01f); //특정시간 뒤에 함수 호출
 
         }
-        yield return new WaitForSeconds(1f); //delay 주기
+        yield return new WaitForSeconds(1f); //delay 주기 히히
         gameObject.SetActive(false);
 
     }
