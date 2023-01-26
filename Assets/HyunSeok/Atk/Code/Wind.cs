@@ -4,26 +4,38 @@ using UnityEngine;
 
 public class Wind : MonoBehaviour
 {
-    public Player player;
-    public GameObject wind_Location;
-    public float speed;
+    bool is_back;
 
-    private void Update()
+    private void OnEnable()
     {
-        /*if (player.transform.localScale.x < 0)
-        {
-            Vector3 scale = new Vector3(-0.7f,0.7f,1);
-            transform.localScale = scale;
-        }
-        else if (player.transform.localScale.x > 0)
-        {
-            Vector3 scale = new Vector3(0.7f, 0.7f, 1);
-            transform.localScale = scale;
-        }*/
-
-
-        transform.RotateAround(wind_Location.transform.position, Vector3.forward, Time.deltaTime * speed);
+        is_back = false;
+        StartCoroutine(Move_Go());
     }
 
+    void Update()
+    {
+        if(is_back == false)
+        {
+            transform.Translate(Vector3.right * 10 * Time.deltaTime);
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(gameObject.transform.position, Manager.manager.player.transform.position, 5 * Time.deltaTime);
+        }
+    }
 
+    IEnumerator Move_Go()
+    {
+        yield return new WaitForSeconds(0.4f);
+        is_back = true;
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "PlayerBody" && is_back == true)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
