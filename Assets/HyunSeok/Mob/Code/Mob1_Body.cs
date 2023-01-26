@@ -230,6 +230,51 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
+
+        if (collision.tag == "Electricity")
+        {
+            if (Data.Instance.gameData.electricity_lv == 1)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.electricity_lv == 2)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.electricity_lv == 3)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.electricity_lv == 4)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.electricity_lv == 5)
+                mob.hp -= 20;
+            else if (Data.Instance.gameData.electricity_lv == 6)
+                mob.hp -= 20;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
+        if (collision.tag == "Electric")
+        {
+            if (Data.Instance.gameData.electricity_lv == 1)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.electricity_lv == 2)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.electricity_lv == 3)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.electricity_lv == 4)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.electricity_lv == 5)
+                mob.hp -= 20;
+            else if (Data.Instance.gameData.electricity_lv == 6)
+                mob.hp -= 20;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
     }
 
     IEnumerator AttackHit()

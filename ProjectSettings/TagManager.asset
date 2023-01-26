@@ -18,6 +18,8 @@ TagManager:
   - VoltTackle
   - Tornado
   - Boomerang
+  - Electricity
+  - Electric
   layers:
   - Default
   - TransparentFX

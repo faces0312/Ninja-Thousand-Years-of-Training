@@ -22,6 +22,7 @@ public class ObjectManager : MonoBehaviour
     GameObject atk_shadow;
     GameObject frieColumn;
     GameObject wind;
+    GameObject electricity;
 
     public bool is_atk;//(맵안에 몹이 있는 상태인지)
 
@@ -114,7 +115,7 @@ public class ObjectManager : MonoBehaviour
         }
 
 
-        if (is_atk == true)
+        /*if (is_atk == true)
         {
             if (atk_normal_Tmp_CT > 0)
                 atk_normal_Tmp_CT -= Time.deltaTime;
@@ -140,7 +141,7 @@ public class ObjectManager : MonoBehaviour
                     shadow_partner_Tmp_CT = shadow_partner_CT;
                 }
             }
-        }
+        }*/
 
 
         if (Data.Instance.gameData.fire_lv > 0)
@@ -712,7 +713,6 @@ public class ObjectManager : MonoBehaviour
         atk_normal.transform.rotation = Quaternion.Euler(atk_normal.transform.rotation.x, atk_normal.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);*/
     }
 
-
     public void Tornado_General()
     {
         GameObject tornado;
@@ -720,6 +720,7 @@ public class ObjectManager : MonoBehaviour
         tornado = objectPool.MakeObj(atk_str[5]);
         tornado.gameObject.transform.position = player.transform.position;
     }
+    
     public void Tree_General()
     {
         GameObject tree;
@@ -738,11 +739,27 @@ public class ObjectManager : MonoBehaviour
 
     public void Electric_General()
     {
-        GameObject electricity;
+        float distanceClosetEnemy = 13f;
+        closetEnemy = null;
+        Mob[] allenemys = GameObject.FindObjectsOfType<Mob>();
 
-        electricity = objectPool.MakeObj(atk_str[8]);
-        electricity.gameObject.transform.position = player.transform.position;
+        if (allenemys.Length == 0)
+            return;
+
+        foreach (Mob currentEnemy in allenemys)
+        {
+            float distanceToEnemy = (currentEnemy.transform.position - player.transform.position).sqrMagnitude;
+            if (distanceToEnemy < distanceClosetEnemy)
+            {
+                distanceClosetEnemy = distanceToEnemy;
+                closetEnemy = currentEnemy;
+                electricity = objectPool.MakeObj(atk_str[8]);
+                electricity.transform.position = closetEnemy.transform.position;
+                break;
+            }
+        }
     }
+
     public void WindWall_General()
     {
         GameObject windwall;
