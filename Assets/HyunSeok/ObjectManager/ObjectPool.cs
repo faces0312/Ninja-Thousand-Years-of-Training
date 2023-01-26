@@ -29,6 +29,8 @@ public class ObjectPool : MonoBehaviour
     GameObject[] player_Boomerang;
     public GameObject player_Electricity_Prefab;
     GameObject[] player_Electricity;
+    public GameObject player_WindWall_Prefab;
+    GameObject[] player_WindWall;
 
 
     //¸÷ Å¸°Ù
@@ -54,6 +56,7 @@ public class ObjectPool : MonoBehaviour
         player_Tree = new GameObject[3];
         player_Boomerang = new GameObject[10];
         player_Electricity = new GameObject[10];
+        player_WindWall = new GameObject[5];
 
         normalAkt_letter = new GameObject[10];
 

@@ -33,6 +33,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.tree_lv = 0;
         Data.Instance.gameData.boomerang_lv = 0;
         Data.Instance.gameData.electricity_lv = 1;
+        Data.Instance.gameData.windwall_lv = 0;
 
 
         lv = 1;

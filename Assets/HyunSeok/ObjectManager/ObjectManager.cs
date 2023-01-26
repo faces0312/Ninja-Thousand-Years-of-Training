@@ -36,6 +36,7 @@ public class ObjectManager : MonoBehaviour
     public float tree_CT;
     public float boomerang_CT;
     public float electricity_CT;
+    public float WindWall_CT;
 
 
     //-------------현재 시간 쿨타임
@@ -55,9 +56,10 @@ public class ObjectManager : MonoBehaviour
 
 
 
+
     void Awake()
     {
-        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado", "Tree", "Boomerang", "Electricity"};
+        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall"};
         mob_str = new string[] { "Mob1" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
@@ -99,6 +101,9 @@ public class ObjectManager : MonoBehaviour
 
         electricity_CT = 3f;
         electricity_Tmp_CT = electricity_CT;
+        
+        WindWall_CT = 3f;
+        WindWall_Tmp_CT = WindWall_CT;
     }
 
     private void Update()

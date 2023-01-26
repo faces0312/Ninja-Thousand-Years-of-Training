@@ -24,6 +24,7 @@ public class GameData
     public int tree_lv; // お葬
     public int boomerang_lv; // 睡詭嫌
     public int electricity_lv; // 廓偃曖褐 廓偃曖 諾
+    public int windwall_lv; //
     //天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天
 
 }
