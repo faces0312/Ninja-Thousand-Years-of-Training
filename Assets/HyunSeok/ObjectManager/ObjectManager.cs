@@ -34,7 +34,8 @@ public class ObjectManager : MonoBehaviour
     public float woodTrap_CT;
     public float tornado_CT;
     public float tree_CT;
-    
+    public float boomerang_CT;
+
 
     //-------------현재 시간 쿨타임
     private float atk_normal_Tmp_CT;
@@ -46,12 +47,13 @@ public class ObjectManager : MonoBehaviour
     public float woodTrap_Tmp_CT;
     public float tornado_Tmp_CT;
     private float tree_Tmp_CT;
+    private float boomerang_Tmp_CT;
 
 
 
     void Awake()
     {
-        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado", "Tree"};
+        atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Lighting", "Talisman", "FireColumn", "WoodTrap", "Tornado", "Tree", "Boomerang"};
         mob_str = new string[] { "Mob1" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
@@ -87,6 +89,9 @@ public class ObjectManager : MonoBehaviour
 
         tree_CT = 3f;
         tree_Tmp_CT = tree_CT;
+
+        boomerang_CT = 3f;
+        boomerang_Tmp_CT = boomerang_CT;
     }
 
     private void Update()
@@ -228,6 +233,16 @@ public class ObjectManager : MonoBehaviour
             { //
                 Tree_General(); 
                 tree_Tmp_CT = tree_CT;
+            }
+        }
+        if (Data.Instance.gameData.boomerang_lv > 0)
+        {
+            if (boomerang_Tmp_CT > 0)
+                boomerang_Tmp_CT -= Time.deltaTime;
+            else
+            { //
+                Boomerang_General();
+                boomerang_Tmp_CT = boomerang_CT;
             }
         }
     }
@@ -742,5 +757,13 @@ public class ObjectManager : MonoBehaviour
 
         tree = objectPool.MakeObj(atk_str[8]);
         tree.gameObject.transform.position = player.transform.position;
+    }
+
+    public void Boomerang_General()
+    {
+        GameObject boomerang;
+
+        boomerang = objectPool.MakeObj(atk_str[9]);
+        boomerang.gameObject.transform.position = player.transform.position;
     }
 }

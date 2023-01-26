@@ -22,6 +22,7 @@ public class GameData
     public int voltTackle_lv;//볼트태클
     public int tornado_lv;//토네이도
     public int tree_lv; // 트리
+    public int boomerang_lv; // 부메랑
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 }
