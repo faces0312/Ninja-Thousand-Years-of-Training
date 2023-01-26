@@ -86,7 +86,7 @@ public class ObjectManager : MonoBehaviour
         tornado_CT = 5f;
         tornado_Tmp_CT = tornado_CT;
 
-        tree_CT = 3f;
+        tree_CT = 30f;
         tree_Tmp_CT = tree_CT;
 
         boomerang_CT = 3f;
@@ -113,8 +113,8 @@ public class ObjectManager : MonoBehaviour
             mob_Tmp_CT = mob_CT;
         }
 
-        
-        /*if (is_atk == true)
+
+        if (is_atk == true)
         {
             if (atk_normal_Tmp_CT > 0)
                 atk_normal_Tmp_CT -= Time.deltaTime;
@@ -140,8 +140,8 @@ public class ObjectManager : MonoBehaviour
                     shadow_partner_Tmp_CT = shadow_partner_CT;
                 }
             }
-        }*/
-        
+        }
+
 
         if (Data.Instance.gameData.fire_lv > 0)
         {
