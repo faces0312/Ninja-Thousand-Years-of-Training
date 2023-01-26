@@ -50,6 +50,8 @@ public class ObjectManager : MonoBehaviour
     private float tree_Tmp_CT;
     private float boomerang_Tmp_CT;
     private float electricity_Tmp_CT;
+    private float WindWall_Tmp_CT;
+
 
 
 
