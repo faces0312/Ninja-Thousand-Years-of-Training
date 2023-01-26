@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176804983354131201}
   - component: {fileID: 6463428542052084083}
+  - component: {fileID: 2001762741855252107}
   m_Layer: 0
   m_Name: Tree
   m_TagString: TreeHeal
@@ -43,12 +44,26 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0071220463, y: -0.04804397}
   m_Size: {x: 4.88476, y: 3.1139197}
   m_Direction: 1
+--- !u!114 &2001762741855252107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176804983354131202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 581cd6578fc457b4e8cad777a1e3aba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree_CT: 0
+  tree_Tmp_CT: 0
 --- !u!1 &176804984190127505
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 176804984190127504}
   - component: {fileID: 176804984190127519}
+  - component: {fileID: 470755873926553825}
   m_Layer: 0
   m_Name: tree_under_0
   m_TagString: Untagged
@@ -131,6 +147,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &470755873926553825
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176804984190127505}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebffc9fecb0c8ba4fab3ad78924994af, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &176804985018515054
 GameObject:
   m_ObjectHideFlags: 0

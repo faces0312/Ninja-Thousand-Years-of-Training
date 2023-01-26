@@ -11,13 +11,21 @@ public class msaTreeEffect : MonoBehaviour
 
     // Start is called before the first frame update
 
-    public Player player;
-    public int hp = 10;
-    public int time = 10;
+
+    public float tree_CT;
+    public float tree_Tmp_CT;
     //aadadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    private void OnEnable()
+    {
+        tree_CT = 1f;
+        tree_Tmp_CT = tree_CT;
+        // Manager.manager.player.hp 
+        StartCoroutine(dis_tree());
+
+    }
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -26,22 +34,29 @@ public class msaTreeEffect : MonoBehaviour
         
     }
 
+    IEnumerator dis_tree()
+    {
+        yield return new WaitForSeconds(10f);
+        gameObject.SetActive(false);
+    }
     
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
+    private void OnTriggerStay2D(Collider2D collision)
+    { //오브젝트간 충돌이 일어나는 동안 지속적으로 호출되는 함수
+        if (collision.gameObject.tag == "PlayerBody")
         {
-           
-            if (hp == 10)  //이건if(collision.gameObject.tag == "Tree")로 해서
-                           //player코드에 있어야할거같음
-            {
-                hp += 0;
-            }
+            if (tree_Tmp_CT > 0) //hp를 채워주는 쿨타임
+                tree_Tmp_CT -= Time.deltaTime;
             else
             {
-                hp += 1;
+                if(Manager.manager.player.hp < Manager.manager.player.hp_max)
+                {
+                    Manager.manager.player.hp++;
+                    tree_Tmp_CT = tree_CT;
+                }
+                   
             }
+
         }
     }
 }

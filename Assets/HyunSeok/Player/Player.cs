@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         //animator_voltTackle = GetComponent<Animator>();
 
         hp_max = 100;
-        hp = hp_max;
+        hp = 10;
         speed = 3;
 
         volttackle_CT = 5f;
