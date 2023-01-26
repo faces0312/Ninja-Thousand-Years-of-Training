@@ -14,11 +14,9 @@ public class GameData
     public int normal_atk_lv;//표창
     public int shadow_partner_lv;//분신
     public int fire_lv;//화둔
-    public int lightning_lv;//뇌둔
     public int wind_lv;//풍둔
     public int talisman_lv;//부적
     public int fire_column_lv;//불기둥
-    public int woodTrap_lv;//자이라 궁속박
     public int voltTackle_lv;//볼트태클
     public int tornado_lv;//토네이도
     public int tree_lv; // 트리

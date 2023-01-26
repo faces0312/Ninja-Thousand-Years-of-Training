@@ -13,14 +13,10 @@ public class ObjectPool : MonoBehaviour
     GameObject[] player_shadowAtk;
     public GameObject player_Fire_Prefab;
     GameObject[] player_Fire;
-    public GameObject player_Lighting_Prefab;
-    GameObject[] player_Lighting;
     public GameObject player_Talisman_Prefab;
     GameObject[] player_Talisman;
     public GameObject player_FireColumn_Prefab;
     GameObject[] player_FireColumn;
-    public GameObject player_WoodTrap_Prefab;
-    GameObject[] player_WoodTrap;
     public GameObject player_Tornado_Prefab;
     GameObject[] player_Tornado;
     public GameObject player_Tree_Prefab;
@@ -48,10 +44,8 @@ public class ObjectPool : MonoBehaviour
         player_nomralAtk = new GameObject[40];
         player_shadowAtk = new GameObject[100];
         player_Fire = new GameObject[24];
-        player_Lighting = new GameObject[12];
         player_Talisman = new GameObject[36];
         player_FireColumn = new GameObject[5];
-        player_WoodTrap = new GameObject[5];
         player_Tornado = new GameObject[5];
         player_Tree = new GameObject[3];
         player_Boomerang = new GameObject[10];
@@ -85,11 +79,6 @@ public class ObjectPool : MonoBehaviour
             player_Fire[index] = Instantiate(player_Fire_Prefab);
             player_Fire[index].SetActive(false);
         }
-        for (int index = 0; index < player_Lighting.Length; index++)
-        {
-            player_Lighting[index] = Instantiate(player_Lighting_Prefab);
-            player_Lighting[index].SetActive(false);
-        }
         for (int index = 0; index < player_Talisman.Length; index++)
         {
             player_Talisman[index] = Instantiate(player_Talisman_Prefab);
@@ -99,11 +88,6 @@ public class ObjectPool : MonoBehaviour
         {
             player_FireColumn[index] = Instantiate(player_FireColumn_Prefab);
             player_FireColumn[index].SetActive(false);
-        }
-        for (int index = 0; index < player_WoodTrap.Length; index++)
-        {
-            player_WoodTrap[index] = Instantiate(player_WoodTrap_Prefab);
-            player_WoodTrap[index].SetActive(false);
         }
         for (int index = 0; index < player_Tornado.Length; index++)
         {
@@ -145,17 +129,11 @@ public class ObjectPool : MonoBehaviour
             case "Fire":
                 targetPool = player_Fire;
                 break;
-            case "Lighting":
-                targetPool = player_Lighting;
-                break;
             case "Talisman":
                 targetPool = player_Talisman;
                 break;
             case "FireColumn":
                 targetPool = player_FireColumn;
-                break;
-            case "WoodTrap":
-                targetPool = player_WoodTrap;
                 break;
             case "Tornado":
                 targetPool = player_Tornado;

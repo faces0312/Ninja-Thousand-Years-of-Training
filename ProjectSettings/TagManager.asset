@@ -8,8 +8,6 @@ TagManager:
   - Normal_Atk
   - Fire
   - Shadow_Atk
-  - Lighting
-  - Lighting_Line
   - Wind
   - Talisman
   - PlayerBody
@@ -18,7 +16,6 @@ TagManager:
   - TreeHeal
   - Bounce
   - VoltTackle
-  - WoodTrap
   - Tornado
   - Boomerang
   layers:

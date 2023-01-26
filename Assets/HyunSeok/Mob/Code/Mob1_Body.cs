@@ -41,60 +41,7 @@ public class Mob1_Body : MonoBehaviour
             mob.speed = 1;
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.tag == "Lighting_Line")
-        {
-            if(is_lighting_hit == true)
-            {
-                if(Data.Instance.gameData.lightning_lv ==1)
-                {
-                    mob.hp -= 1;
-                    is_lighting_hit = false;
-                    lighting_hit_CT = 0.5f;
-                }
-                else if (Data.Instance.gameData.lightning_lv == 2)
-                {
-                    mob.hp -= 2;
-                    is_lighting_hit = false;
-                    lighting_hit_CT = 0.5f;
-                }
-                else if (Data.Instance.gameData.lightning_lv == 3)
-                {
-                    mob.hp -= 3;
-                    is_lighting_hit = false;
-                    lighting_hit_CT = 0.5f;
-                }
-                else if (Data.Instance.gameData.lightning_lv == 4)
-                {
-                    mob.hp -= 5;
-                    is_lighting_hit = false;
-                    lighting_hit_CT = 0.5f;
-                }
-                else if (Data.Instance.gameData.lightning_lv == 5)
-                {
-                    mob.hp -= 7;
-                    is_lighting_hit = false;
-                    lighting_hit_CT = 0.5f;
-                }
-                else if (Data.Instance.gameData.lightning_lv == 6)
-                {
-                    mob.hp -= 10;
-                    is_lighting_hit = false;
-                    lighting_hit_CT = 0.5f;
-                }
-
-                if (mob.hp <= 0)
-                {
-                    //Manager.manager.objectManager.Normal_Atk_Letter_General(mob.gameObject.transform.position);
-                    mob.die.SetBool("Is_Die", true);
-                    gameObject.SetActive(false);
-                    return;
-                }
-                StartCoroutine(AttackHit());
-            }
-        }
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Normal_Atk")
@@ -169,19 +116,6 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
-        if (collision.tag == "Lighting")
-        {
-            if (Data.Instance.gameData.lightning_lv == 6)
-                mob.hp -= 25;
-            if (mob.hp <= 0)
-            {
-                mob.die.SetBool("Is_Die", true);
-                gameObject.SetActive(false);
-                return;
-            }
-            StartCoroutine(AttackHit());
-        }
-
         if (collision.tag == "Wind")
         {
             if (Data.Instance.gameData.wind_lv == 1)
@@ -227,31 +161,7 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-
-        if (collision.tag == "WoodTrap")
-        {
-            woodTrap_Hit_Tmp_CT = 1.5f;
-            if (Data.Instance.gameData.woodTrap_lv == 1)
-                mob.hp -= 1;
-            else if (Data.Instance.gameData.woodTrap_lv == 2)
-                mob.hp -= 10;
-            else if (Data.Instance.gameData.woodTrap_lv == 3)
-                mob.hp -= 15;
-            else if (Data.Instance.gameData.woodTrap_lv == 4)
-                mob.hp -= 15;
-            else if (Data.Instance.gameData.woodTrap_lv == 5)
-                mob.hp -= 20;
-            else if (Data.Instance.gameData.woodTrap_lv == 6)
-                mob.hp -= 20;
-            if (mob.hp <= 0)
-            {
-                mob.die.SetBool("Is_Die", true);
-                gameObject.SetActive(false);
-                return;
-            }
-            StartCoroutine(AttackHit());
-        }
-
+       
         if (collision.tag == "VoltTackle")
         {
             if (Data.Instance.gameData.voltTackle_lv == 1)
