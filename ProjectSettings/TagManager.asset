@@ -13,6 +13,9 @@ TagManager:
   - Wind
   - Talisman
   - PlayerBody
+  - FireColumn
+  - Tree
+  - TreeHeal
   layers:
   - Default
   - TransparentFX
