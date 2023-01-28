@@ -8,6 +8,7 @@ public class Manager : MonoBehaviour
     public static Manager manager;
     public ObjectManager objectManager;
     public Player player;
+    public Mob1 mob;
 
     public int lv;
     public float exp_Tmp;
@@ -31,7 +32,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.tree_lv = 0;
         Data.Instance.gameData.boomerang_lv = 0;
         Data.Instance.gameData.electricity_lv = 1;
-        Data.Instance.gameData.windwall_lv = 0;
+        Data.Instance.gameData.windwall_lv = 1;
 
 
         lv = 1;
