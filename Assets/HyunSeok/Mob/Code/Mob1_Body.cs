@@ -276,7 +276,7 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
-        if (collision.tag == "WindWall")
+        if (collision.tag == "WindWall")    //°Çµé
         {
             if (Data.Instance.gameData.windwall_lv == 1)
                 mob.hp -= 1;

@@ -20,7 +20,7 @@ public class msaTreeEffect : MonoBehaviour
         tree_CT = 1f;
         tree_Tmp_CT = tree_CT;
         // Manager.manager.player.hp 
-        StartCoroutine(dis_tree());
+        StartCoroutine(Dis_tree());
 
     }
     void Start()
@@ -34,7 +34,7 @@ public class msaTreeEffect : MonoBehaviour
         
     }
 
-    IEnumerator dis_tree()
+    IEnumerator Dis_tree()
     {
         yield return new WaitForSeconds(10f);
         gameObject.SetActive(false);
