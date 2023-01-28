@@ -115,6 +115,7 @@ MonoBehaviour:
   mob: {fileID: 5289893217853964095}
   lighting_hit_CT: 0
   is_lighting_hit: 0
+  woodTrap_Hit_CT: 0
 --- !u!1 &2326340946556538745
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +218,8 @@ MonoBehaviour:
   die: {fileID: 3682798853463492335}
   mob1_Body: {fileID: 3041621250364092564}
   rend: {fileID: 2326340946556538744}
-  hp: 5
+  hp: 0
+  speed: 0
 --- !u!95 &3682798853463492335
 Animator:
   serializedVersion: 3

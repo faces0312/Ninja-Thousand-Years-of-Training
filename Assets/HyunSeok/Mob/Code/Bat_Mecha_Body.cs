@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mob1_Body : MonoBehaviour
+public class Bat_Mecha_Body : MonoBehaviour
 {
-    public Mob1 mob;
+    public Bat_Mecha mob;
 
     private void OnEnable()
     {
         mob.rend.material.color = Color.white;
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Normal_Atk")
+        if (collision.tag == "Normal_Atk")
         {
-            if(Data.Instance.gameData.normal_atk_lv == 1)
+            if (Data.Instance.gameData.normal_atk_lv == 1)
                 mob.hp -= 1;
             else if (Data.Instance.gameData.normal_atk_lv == 2)
                 mob.hp -= 2;
@@ -130,7 +130,7 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-       
+
         if (collision.tag == "VoltTackle")
         {
             if (Data.Instance.gameData.voltTackle_lv == 1)
