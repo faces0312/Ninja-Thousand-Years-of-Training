@@ -20,6 +20,7 @@ TagManager:
   - Boomerang
   - Electricity
   - Electric
+  - WindWall
   layers:
   - Default
   - TransparentFX
