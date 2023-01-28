@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WindWallEffect : MonoBehaviour
 {
@@ -14,7 +15,14 @@ public class WindWallEffect : MonoBehaviour
     private Rigidbody2D rb2d;
     private float strength = 16; //넉백의 강도
     private float delay = 0.15f; //적이 다시 움직일 수 있도록 하는 지연시간
+    public UnityEvent OnBegin, OnDone;
+    
+    private void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();//이 스크립트 오브젝트에서 rigidbody를 가져옴
 
+
+    }
 
     private void OnEnable()
     {
@@ -53,13 +61,13 @@ public class WindWallEffect : MonoBehaviour
     }
 
     IEnumerator KnockBack(Vector3 reactVec)
-    {
+    {// 지금 넉백은 player에서 windwall이 밀리는거같음
         yield return new WaitForSeconds(delay);
         if (Manager.manager.mob.hp > 0)
         {
             reactVec = reactVec.normalized; //벡터는 떄에따라 수치가 계속 바뀌어서 값 통일되게
             
-            rb2d.AddForce(reactVec * 3);
+            rb2d.AddForce(reactVec * 3, ForceMode2D.Impulse);
             
         }
 
