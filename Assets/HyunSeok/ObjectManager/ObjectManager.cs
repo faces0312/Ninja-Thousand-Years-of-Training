@@ -39,7 +39,6 @@ public class ObjectManager : MonoBehaviour
     public float windwall_CT;
     public float wind_CT;
 
-
     //-------------현재 시간 쿨타임
     private float atk_normal_Tmp_CT;
     private float shadow_partner_Tmp_CT;
@@ -53,14 +52,10 @@ public class ObjectManager : MonoBehaviour
     private float windwall_Tmp_CT;
     private float wind_Tmp_CT;
 
-
-
-
-
     void Awake()
     {
         atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall", "Wind"};
-        mob_str = new string[] { "Mob1" };
+        mob_str = new string[] { "Mob1", "Bat_Normal", "Bat_Fire", "Bat_Wood", "Bat_Mecha" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
 

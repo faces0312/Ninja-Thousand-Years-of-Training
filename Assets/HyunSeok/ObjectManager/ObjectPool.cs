@@ -34,6 +34,14 @@ public class ObjectPool : MonoBehaviour
     //¸÷ Å¸°Ù
     public GameObject mob1_Prefab;
     GameObject[] mob1;
+    public GameObject bat_Normal_Prefab;
+    GameObject[] bat_Normal;
+    public GameObject bat_Fire_Prefab;
+    GameObject[] bat_Fire;
+    public GameObject bat_Wood_Prefab;
+    GameObject[] bat_Wood;
+    public GameObject bat_Mecha_Prefab;
+    GameObject[] bat_Mecha;
 
     //ºñ±Þ¼­ Å¸°Ù
     public GameObject normalAkt_letter_Prefab;
@@ -42,7 +50,12 @@ public class ObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mob1 = new GameObject[100];
+        mob1 = new GameObject[50];
+        bat_Normal = new GameObject[50];
+        bat_Fire = new GameObject[50];
+        bat_Wood = new GameObject[50];
+        bat_Mecha = new GameObject[50];
+
         player_nomralAtk = new GameObject[40];
         player_shadowAtk = new GameObject[100];
         player_Fire = new GameObject[24];
@@ -66,6 +79,26 @@ public class ObjectPool : MonoBehaviour
         {
             mob1[index] = Instantiate(mob1_Prefab);
             mob1[index].SetActive(false);
+        }
+        for (int index = 0; index < bat_Normal.Length; index++)
+        {
+            bat_Normal[index] = Instantiate(bat_Normal_Prefab);
+            bat_Normal[index].SetActive(false);
+        }
+        for (int index = 0; index < bat_Fire.Length; index++)
+        {
+            bat_Fire[index] = Instantiate(bat_Fire_Prefab);
+            bat_Fire[index].SetActive(false);
+        }
+        for (int index = 0; index < bat_Wood.Length; index++)
+        {
+            bat_Wood[index] = Instantiate(bat_Wood_Prefab);
+            bat_Wood[index].SetActive(false);
+        }
+        for (int index = 0; index < bat_Mecha.Length; index++)
+        {
+            bat_Mecha[index] = Instantiate(bat_Mecha_Prefab);
+            bat_Mecha[index].SetActive(false);
         }
         for (int index = 0; index < player_nomralAtk.Length; index++)
         {
@@ -153,6 +186,18 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "Mob1":
                 targetPool = mob1; 
+                break;
+            case "Bat_Normal":
+                targetPool = bat_Normal;
+                break;
+            case "Bat_Fire":
+                targetPool = bat_Fire;
+                break;
+            case "Bat_Wood":
+                targetPool = bat_Wood;
+                break;
+            case "Bat_Mecha":
+                targetPool = bat_Mecha;
                 break;
             case "Normal_Atk_Letter":
                 targetPool = normalAkt_letter;
