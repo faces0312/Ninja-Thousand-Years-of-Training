@@ -36,7 +36,7 @@ public class Letter_Range : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerBody" )
         {
-            transform.position = Vector3.MoveTowards(gameObject.transform.position, collision.transform.position, 3 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(gameObject.transform.position, collision.transform.position, 4 * Time.deltaTime);
         }
     }
 }

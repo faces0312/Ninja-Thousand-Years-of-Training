@@ -27,7 +27,7 @@ public class Bat_Wood : MonoBehaviour
     private void OnEnable()
     {
         rend = GetComponent<SpriteRenderer>();
-        hp = 10;
+        hp = 100;
         speed = 1;
         target_on = true;
         bat_Wood_Body.gameObject.SetActive(true);
