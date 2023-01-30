@@ -101,6 +101,12 @@ MonoBehaviour:
   y: 0
   windwall_CT: 0
   windwall_Tmp_CT: 0
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDone:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1291902554829068071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,7 +148,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 3
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

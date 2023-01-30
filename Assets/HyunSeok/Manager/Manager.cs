@@ -36,7 +36,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.windwall_lv = 0;
 //=======
         Data.Instance.gameData.electricity_lv = 0;
-        Data.Instance.gameData.windwall_lv = 0;
+        Data.Instance.gameData.windwall_lv = 1;
 //>>>>>>> 9c799be554b5ba7c15336efdb075ce872ec3a481
 
 

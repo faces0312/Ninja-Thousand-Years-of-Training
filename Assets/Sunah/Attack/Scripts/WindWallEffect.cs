@@ -31,7 +31,9 @@ public class WindWallEffect : MonoBehaviour
         windwall_CT = 1f;   //이게뭐지????????????????????????????????????????????????
         windwall_CT = windwall_CT;
         gameObject.transform.localScale = new Vector3(x, y);
+     
         StartCoroutine(Dis_WindWall());
+       
     }
     // Start is called before the first frame update
     void Start()
@@ -47,7 +49,7 @@ public class WindWallEffect : MonoBehaviour
  
     IEnumerator Dis_WindWall()
     {
-        for(int i=0; i<100; i++)
+        for(int i=0; i<50; i++)
         {
             x += 0.05f;
             y += 0.05f;
@@ -61,7 +63,7 @@ public class WindWallEffect : MonoBehaviour
     }
 
     IEnumerator KnockBack(Vector3 reactVec)
-    {// 지금 넉백은 player에서 windwall이 밀리는거같음
+    {// 넉백에 ㄴ자도 안됨 다시구현
         yield return new WaitForSeconds(delay);
         if (Manager.manager.mob.hp > 0)
         {
