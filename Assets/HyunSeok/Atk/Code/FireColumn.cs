@@ -20,7 +20,7 @@ public class FireColumn : MonoBehaviour
     }
     IEnumerator Dmg_on()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.3f);
         dmg_area.gameObject.SetActive(true);
     }
 }

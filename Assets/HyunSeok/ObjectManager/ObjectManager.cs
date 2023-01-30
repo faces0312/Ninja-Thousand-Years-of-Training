@@ -104,6 +104,11 @@ public class ObjectManager : MonoBehaviour
 
         wind_CT = 3f;
         wind_Tmp_CT = wind_CT;
+
+        for(int i=0; i<15; i++)
+        {
+            Mob_General();
+        }
     }
 
     private void Update()
@@ -114,11 +119,12 @@ public class ObjectManager : MonoBehaviour
         else
         {
             Mob_General();
+            Mob_General();
             mob_Tmp_CT = mob_CT;
         }
 
 
-        /*if (is_atk == true)
+        if (is_atk == true)
         {
             if (atk_normal_Tmp_CT > 0)
                 atk_normal_Tmp_CT -= Time.deltaTime;
@@ -144,7 +150,7 @@ public class ObjectManager : MonoBehaviour
                     shadow_partner_Tmp_CT = shadow_partner_CT;
                 }
             }
-        }*/
+        }
 
 
         if (Data.Instance.gameData.fire_lv > 0)

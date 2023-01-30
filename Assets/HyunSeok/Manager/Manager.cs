@@ -14,6 +14,7 @@ public class Manager : MonoBehaviour
     public float exp_Tmp;
     public Slider exp_Bar;
 
+    public float play_time;
     private void Awake()
     {
         manager = this;
@@ -35,8 +36,6 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.electricity_lv = 0;
         Data.Instance.gameData.windwall_lv = 0;
 //=======
-        Data.Instance.gameData.electricity_lv = 1;
-        Data.Instance.gameData.windwall_lv = 0;
 //>>>>>>> 9c799be554b5ba7c15336efdb075ce872ec3a481
 
 
@@ -49,6 +48,8 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
+        play_time += Time.deltaTime;
+
         exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
 
         if(Data.Instance.gameData.exp >= exp_Tmp)

@@ -6,6 +6,7 @@ public class Mob1_Body : MonoBehaviour
 {
     public Mob1 mob;
 
+    private bool is_windwall;
     private void OnEnable()
     {
         mob.rend.material.color = Color.white;
@@ -134,7 +135,7 @@ public class Mob1_Body : MonoBehaviour
         if (collision.tag == "VoltTackle")
         {
             if (Data.Instance.gameData.voltTackle_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= 1;
             else if (Data.Instance.gameData.voltTackle_lv == 2)
                 mob.hp -= 10;
             else if (Data.Instance.gameData.voltTackle_lv == 3)
