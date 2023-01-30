@@ -12,12 +12,13 @@ public class WindWallEffect : MonoBehaviour
     public float windwall_CT;
     public float windwall_Tmp_CT;
 
-    private Rigidbody2D rb2d;
-    private float strength = 16; //넉백의 강도
-    private float delay = 0.15f; //적이 다시 움직일 수 있도록 하는 지연시간
+    //private Rigidbody2D rb2d;
+    //private float strength = 16; //넉백의 강도
+    //private float delay = 0.15f; //적이 다시 움직일 수 있도록 하는 지연시간
     public Vector2 MobVector;
+    public GameObject windwall2;
 
-/*    private void Awake()
+ /*   private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();//이 스크립트 오브젝트에서 rigidbody를 가져옴
 
@@ -31,7 +32,7 @@ public class WindWallEffect : MonoBehaviour
         windwall_CT = 1f;   //이게뭐지????????????????????????????????????????????????
         windwall_CT = windwall_CT;
         gameObject.transform.localScale = new Vector3(x, y);
-     
+        //windwall2.gameObject.transform.localScale = new Vector3(x, y);
 
         StartCoroutine(Dis_WindWall());
        
@@ -44,6 +45,7 @@ public class WindWallEffect : MonoBehaviour
             x += 0.05f;
             y += 0.05f;
             gameObject.transform.localScale = new Vector3(x, y);
+            //windwall2.gameObject.transform.localScale = new Vector3(x, y);
             yield return new WaitForSeconds(0.01f); //특정시간 뒤에 함수 호출
 
         }
@@ -56,18 +58,20 @@ public class WindWallEffect : MonoBehaviour
     {
         if (collision.gameObject.tag == "Mob")
         {
+
+
             //MobVector = Vector2.Reflect(gameObject.transform.position, collision.contacts[0].normal);
-            Vector2 direction = (collision.gameObject.transform.position - this.gameObject.transform.position).normalized;
+            Vector2 direction =((collision.gameObject.transform.position - this.gameObject.transform.position).normalized)*13f;
             MobVector = direction;
             //new Vector2(collision.gameObject.transform.position - this.gameObject.transform.position).normalized;
             //StartCoroutine(MoveMob(collision.gameObject));
-            collision.gameObject.transform.parent.Translate(MobVector * 3f * Time.deltaTime);
+            collision.gameObject.transform.parent.Translate(MobVector * 5f * Time.deltaTime);
         }
     }
 
     IEnumerator MoveMob(GameObject mob)
     {
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 800; i++)
         {
             mob.gameObject.transform.Translate(MobVector*7f*Time.deltaTime);
             yield return new WaitForSeconds(0.001f);
