@@ -8,7 +8,7 @@ public class Manager : MonoBehaviour
     public static Manager manager;
     public ObjectManager objectManager;
     public Player player;
-    public Mob1 mob;  //�ǵ�
+    //public Mob1 mob;  //�ǵ�
 
     public int lv;
     public float exp_Tmp;

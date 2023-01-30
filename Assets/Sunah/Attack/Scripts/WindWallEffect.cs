@@ -68,15 +68,15 @@ public class WindWallEffect : MonoBehaviour
             collision.gameObject.transform.parent.Translate(MobVector * 5f * Time.deltaTime);
         }
     }
-
-    IEnumerator MoveMob(GameObject mob)
+    
+    /*IEnumerator MoveMob(GameObject mob)
     {
         for (int i = 0; i < 800; i++)
         {
             mob.gameObject.transform.Translate(MobVector*7f*Time.deltaTime);
             yield return new WaitForSeconds(0.001f);
         }
-    }
+    }*/
     /*
         IEnumerator KnockBack(Vector3 reactVec)
         {// 넉백에 ㄴ자도 안됨 다시구현
