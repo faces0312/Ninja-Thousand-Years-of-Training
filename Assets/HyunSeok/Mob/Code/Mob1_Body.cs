@@ -200,20 +200,20 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
-        if (collision.tag == "Electricity")
+        if (collision.tag == "Electric")
         {
             if (Data.Instance.gameData.electricity_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= 1;
             else if (Data.Instance.gameData.electricity_lv == 2)
-                mob.hp -= 10;
+                mob.hp -= 1;
             else if (Data.Instance.gameData.electricity_lv == 3)
-                mob.hp -= 15;
+                mob.hp -= 1;
             else if (Data.Instance.gameData.electricity_lv == 4)
-                mob.hp -= 15;
+                mob.hp -= 1;
             else if (Data.Instance.gameData.electricity_lv == 5)
-                mob.hp -= 20;
+                mob.hp -= 2;
             else if (Data.Instance.gameData.electricity_lv == 6)
-                mob.hp -= 20;
+                mob.hp -= 2;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
@@ -222,7 +222,7 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-        if (collision.tag == "Electric")
+        if (collision.tag == "Electric_Area")
         {
             if (Data.Instance.gameData.electricity_lv == 1)
                 mob.hp -= 10;

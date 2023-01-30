@@ -6,13 +6,18 @@ public class ObjectManager : MonoBehaviour
 {
     public ObjectPool objectPool;
     public Player player;
+    public Player_Body player_Body;
     public ShadowPartner shadowPartner1;
     public ShadowPartner shadowPartner2;
 
     private string[] atk_str;
-    private string[] mob_str;
+    private string[] mob_Normal_str;
+    private string[] mob_Fire_str;
+    private string[] mob_Wood_str;
+    private string[] mob_Mecha_str;
     private string[] letter_str;
 
+    GameObject mob1;
     public GameObject[] mob_Location;
     private float mob_CT;//¸÷ ÄðÅ¸ÀÓ
     private float mob_Tmp_CT;
@@ -55,7 +60,10 @@ public class ObjectManager : MonoBehaviour
     void Awake()
     {
         atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall", "Wind"};
-        mob_str = new string[] { "Mob1", "Bat_Normal", "Bat_Fire", "Bat_Wood", "Bat_Mecha" };
+        mob_Normal_str = new string[] { "Mob1", "Bat_Normal" };
+        mob_Fire_str = new string[] { "Mob1", "Bat_Fire" };
+        mob_Wood_str = new string[] { "Mob1", "Bat_Wood" };
+        mob_Mecha_str = new string[] { "Mob1", "Bat_Mecha" };
         letter_str = new string[] { "Normal_Atk_Letter" };
     }
 
@@ -261,23 +269,43 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
+    public void Mob_General()
+    {
+        int ran_location;//¸÷ À§Ä¡ ·£´ý°ª
+        int ran_mob;//¸÷ »ý¼º ·£´ý°ª
+
+        ran_location = 0;
+        ran_mob = 0;
+        ran_mob = Random.Range(0, 2);
+
+        if (player_Body.in_Normal == true)
+        {
+            mob1 = objectPool.MakeObj(mob_Normal_str[ran_mob]);
+        }
+        else if (player_Body.in_Fire == true)
+        {
+            mob1 = objectPool.MakeObj(mob_Fire_str[ran_mob]);
+        }
+        else if (player_Body.in_Wood == true)
+        {
+            mob1 = objectPool.MakeObj(mob_Wood_str[ran_mob]);
+        }
+        else if (player_Body.in_Mecha == true)
+        {
+            mob1 = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
+        }
+
+        ran_location = Random.Range(0, 29);
+        mob1.transform.position = mob_Location[ran_location].transform.position;
+    }
+
+
     public void Normal_Atk_Letter_General(Vector3 vector3)
     {
         GameObject letter;
         letter = objectPool.MakeObj(letter_str[0]);
 
         letter.transform.position = vector3;
-    }
-
-    public void Mob_General()
-    {
-        GameObject mob1;
-        mob1 = objectPool.MakeObj(mob_str[0]);
-
-        int ran_location;
-
-        ran_location = Random.Range(0, 29);
-        mob1.transform.position = mob_Location[ran_location].transform.position;
     }
 
     public void Normal_Atk_General()
