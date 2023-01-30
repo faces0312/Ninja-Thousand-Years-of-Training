@@ -8,7 +8,7 @@ public class Manager : MonoBehaviour
     public static Manager manager;
     public ObjectManager objectManager;
     public Player player;
-    public Mob1 mob;  //°Çµé
+    public Mob1 mob;  //ï¿½Çµï¿½
 
     public int lv;
     public float exp_Tmp;
@@ -32,11 +32,15 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.tornado_lv = 0;
         Data.Instance.gameData.tree_lv = 0;
         Data.Instance.gameData.boomerang_lv = 0;
-//<<<<<<< HEAD
+
         Data.Instance.gameData.electricity_lv = 0;
+//<<<<<<< HEAD
         Data.Instance.gameData.windwall_lv = 0;
 //=======
 //>>>>>>> 9c799be554b5ba7c15336efdb075ce872ec3a481
+//=======
+
+//>>>>>>> 3332473574b317f1912200c25bf3501dc0538e64
 
 
         lv = 1;

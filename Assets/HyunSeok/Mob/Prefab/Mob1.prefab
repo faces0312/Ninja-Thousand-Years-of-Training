@@ -113,9 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 5289893217853964095}
-  lighting_hit_CT: 0
-  is_lighting_hit: 0
-  woodTrap_Hit_CT: 0
 --- !u!1 &2326340946556538745
 GameObject:
   m_ObjectHideFlags: 0

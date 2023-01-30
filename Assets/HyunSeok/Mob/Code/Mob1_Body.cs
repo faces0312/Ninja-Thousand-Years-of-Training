@@ -225,6 +225,7 @@ public class Mob1_Body : MonoBehaviour
         }
         if (collision.tag == "Electric_Area")
         {
+
             if (Data.Instance.gameData.electricity_lv == 1)
                 mob.hp -= 10;
             else if (Data.Instance.gameData.electricity_lv == 2)
@@ -248,6 +249,7 @@ public class Mob1_Body : MonoBehaviour
 
         if (collision.tag == "WindWall")    //°Çµé
         {
+            StartCoroutine(Stun());
             if (Data.Instance.gameData.windwall_lv == 1)
                 mob.hp -= 1;
             else if (Data.Instance.gameData.windwall_lv == 2)
@@ -267,7 +269,15 @@ public class Mob1_Body : MonoBehaviour
                 return;
             }
             StartCoroutine(AttackHit());
+          
         }
+    }
+
+    IEnumerator Stun()
+    {
+        mob.speed = 0;
+        yield return new WaitForSeconds(1f);
+        mob.speed = 1;
     }
 
     IEnumerator AttackHit()

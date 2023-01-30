@@ -244,7 +244,39 @@ public class Bat_Fire_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
+        if (collision.tag == "WindWall")    //°Çµé
+        {
+            StartCoroutine(Stun());
+            if (Data.Instance.gameData.windwall_lv == 1)
+                mob.hp -= 1;
+            else if (Data.Instance.gameData.windwall_lv == 2)
+                mob.hp -= 2;
+            else if (Data.Instance.gameData.windwall_lv == 3)
+                mob.hp -= 3;
+            else if (Data.Instance.gameData.windwall_lv == 4)
+                mob.hp -= 4;
+            else if (Data.Instance.gameData.windwall_lv == 5)
+                mob.hp -= 5;
+            else if (Data.Instance.gameData.windwall_lv == 6)
+                mob.hp -= 6;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+
+        }
     }
+
+    IEnumerator Stun()
+    {
+        mob.speed = 0;
+        yield return new WaitForSeconds(1f);
+        mob.speed = 1;
+    }
+
 
     IEnumerator AttackHit()
     {
