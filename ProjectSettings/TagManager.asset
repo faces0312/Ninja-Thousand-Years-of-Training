@@ -18,9 +18,9 @@ TagManager:
   - VoltTackle
   - Tornado
   - Boomerang
-  - Electricity
-  - Electric
   - WindWall
+  - Electric
+  - Electric_Area
   layers:
   - Default
   - TransparentFX
