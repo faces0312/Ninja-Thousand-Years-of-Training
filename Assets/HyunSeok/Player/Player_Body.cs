@@ -12,6 +12,11 @@ public class Player_Body : MonoBehaviour
     public bool in_Wood;//플레이어가 있는 지형(숲)
     public bool in_Mecha;//플레이어가 있는 지형(기계)
 
+    private void OnEnable()
+    {
+        player.rend.material.color = Color.white;
+    }
+
     private void Start()
     {
         in_Normal = true;
@@ -26,15 +31,42 @@ public class Player_Body : MonoBehaviour
             if(is_invin == false)
             {
                 StartCoroutine(Damage());
+                StartCoroutine(Sick());
             }
         }
     }
 
     IEnumerator Damage()
     {
+
         player.hp -= 1;
         is_invin = true; 
+
         yield return new WaitForSeconds(0.1f);
         is_invin = false;
+    }
+
+    IEnumerator Sick()
+    {  // 데미지랑 합치자
+        int count = 0;
+        is_invin = true;
+        while (count < 2)
+        {
+
+            if (count % 2 == 0)
+                player.rend.material.color = new Color32(255, 255, 255, 40);
+            else
+                player.rend.material.color = new Color32(255, 255, 255, 250);
+
+            yield return new WaitForSeconds(0.2f);
+
+            count++;
+
+
+        }
+        player.rend.material.color = Color.white;
+
+        is_invin = false;
+        yield return null;
     }
 }

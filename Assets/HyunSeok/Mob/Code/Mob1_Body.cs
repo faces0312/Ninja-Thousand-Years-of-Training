@@ -47,12 +47,12 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 2;
             else if (Data.Instance.gameData.shadow_partner_lv == 3)
                 mob.hp -= 2;
-            else if (Data.Instance.gameData.shadow_partner_lv == 4)
-                mob.hp -= 3;
+            else if (Data.Instance.gameData.shadow_partner_lv == 4)  //분신이 두명이래
+                mob.hp -= 2;
             else if (Data.Instance.gameData.shadow_partner_lv == 5)
-                mob.hp -= 5;
+                mob.hp -= 3;
             else if (Data.Instance.gameData.shadow_partner_lv == 6)
-                mob.hp -= 5;
+                mob.hp -= 4;
 
             if (mob.hp <= 0)
             {
@@ -63,6 +63,29 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
+        if (collision.tag == "Boomerang")
+        {
+            if (Data.Instance.gameData.boomerang_lv == 1)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.boomerang_lv == 2)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.boomerang_lv == 3)
+                mob.hp -= 20;
+            else if (Data.Instance.gameData.boomerang_lv == 4)
+                mob.hp -= 25;
+            else if (Data.Instance.gameData.boomerang_lv == 5)
+                mob.hp -= 28;
+            else if (Data.Instance.gameData.boomerang_lv == 6)
+                mob.hp -= 30;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
+        
         if (collision.tag == "Fire")
         {
             if (Data.Instance.gameData.fire_lv == 1)
@@ -85,21 +108,20 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-
-        if (collision.tag == "Wind")
+        if (collision.tag == "Talisman")
         {
-            if (Data.Instance.gameData.wind_lv == 1)
+            if (Data.Instance.gameData.fire_lv == 1)
+                mob.hp -= 5;
+            else if (Data.Instance.gameData.fire_lv == 2)
+                mob.hp -= 7;
+            else if (Data.Instance.gameData.fire_lv == 3)
                 mob.hp -= 10;
-            else if (Data.Instance.gameData.wind_lv == 2)
-                mob.hp -= 10;
-            else if (Data.Instance.gameData.wind_lv == 3)
+            else if (Data.Instance.gameData.fire_lv == 4)
                 mob.hp -= 15;
-            else if (Data.Instance.gameData.wind_lv == 4)
-                mob.hp -= 15;
-            else if (Data.Instance.gameData.wind_lv == 5)
+            else if (Data.Instance.gameData.fire_lv == 5)
                 mob.hp -= 20;
-            else if (Data.Instance.gameData.wind_lv == 6)
-                mob.hp -= 20;
+            else if (Data.Instance.gameData.fire_lv == 6)
+                mob.hp -= 25;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
@@ -114,15 +136,15 @@ public class Mob1_Body : MonoBehaviour
             if (Data.Instance.gameData.fire_column_lv == 1)
                 mob.hp -= 10;
             else if (Data.Instance.gameData.fire_column_lv == 2)
-                mob.hp -= 10;
+                mob.hp -= 15;
             else if (Data.Instance.gameData.fire_column_lv == 3)
-                mob.hp -= 15;
+                mob.hp -= 20;
             else if (Data.Instance.gameData.fire_column_lv == 4)
-                mob.hp -= 15;
+                mob.hp -= 25;
             else if (Data.Instance.gameData.fire_column_lv == 5)
-                mob.hp -= 20;
+                mob.hp -= 28;
             else if (Data.Instance.gameData.fire_column_lv == 6)
-                mob.hp -= 20;
+                mob.hp -= 30;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
@@ -131,44 +153,22 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-       
-        if (collision.tag == "VoltTackle")
-        {
-            if (Data.Instance.gameData.voltTackle_lv == 1)
-                mob.hp -= 1;
-            else if (Data.Instance.gameData.voltTackle_lv == 2)
-                mob.hp -= 10;
-            else if (Data.Instance.gameData.voltTackle_lv == 3)
-                mob.hp -= 15;
-            else if (Data.Instance.gameData.voltTackle_lv == 4)
-                mob.hp -= 15;
-            else if (Data.Instance.gameData.voltTackle_lv == 5)
-                mob.hp -= 20;
-            else if (Data.Instance.gameData.voltTackle_lv == 6)
-                mob.hp -= 20;
-            if (mob.hp <= 0)
-            {
-                mob.die.SetBool("Is_Die", true);
-                gameObject.SetActive(false);
-                return;
-            }
-            StartCoroutine(AttackHit());
-        }
+
 
         if (collision.tag == "Tornado")
         {
             if (Data.Instance.gameData.tornado_lv == 1)
                 mob.hp -= 10;
             else if (Data.Instance.gameData.tornado_lv == 2)
-                mob.hp -= 10;
+                mob.hp -= 15;
             else if (Data.Instance.gameData.tornado_lv == 3)
-                mob.hp -= 15;
+                mob.hp -= 20;
             else if (Data.Instance.gameData.tornado_lv == 4)
-                mob.hp -= 15;
+                mob.hp -= 25;
             else if (Data.Instance.gameData.tornado_lv == 5)
-                mob.hp -= 20;
+                mob.hp -= 28;
             else if (Data.Instance.gameData.tornado_lv == 6)
-                mob.hp -= 20;
+                mob.hp -= 30;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
@@ -178,20 +178,24 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
-        if (collision.tag == "Boomerang")
+
+
+
+       
+        if (collision.tag == "VoltTackle")
         {
-            if (Data.Instance.gameData.boomerang_lv == 1)
+            if (Data.Instance.gameData.voltTackle_lv == 1)
+                mob.hp -= 3;
+            else if (Data.Instance.gameData.voltTackle_lv == 2)
+                mob.hp -= 5;
+            else if (Data.Instance.gameData.voltTackle_lv == 3)
+                mob.hp -= 7;
+            else if (Data.Instance.gameData.voltTackle_lv == 4)
                 mob.hp -= 10;
-            else if (Data.Instance.gameData.boomerang_lv == 2)
-                mob.hp -= 10;
-            else if (Data.Instance.gameData.boomerang_lv == 3)
+            else if (Data.Instance.gameData.voltTackle_lv == 5)
+                mob.hp -= 12;
+            else if (Data.Instance.gameData.voltTackle_lv == 6)
                 mob.hp -= 15;
-            else if (Data.Instance.gameData.boomerang_lv == 4)
-                mob.hp -= 15;
-            else if (Data.Instance.gameData.boomerang_lv == 5)
-                mob.hp -= 20;
-            else if (Data.Instance.gameData.boomerang_lv == 6)
-                mob.hp -= 20;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
@@ -201,20 +205,21 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
+       
         if (collision.tag == "Electric")
         {
             if (Data.Instance.gameData.electricity_lv == 1)
-                mob.hp -= 1;
+                mob.hp -= 7;
             else if (Data.Instance.gameData.electricity_lv == 2)
-                mob.hp -= 1;
+                mob.hp -= 10;
             else if (Data.Instance.gameData.electricity_lv == 3)
-                mob.hp -= 1;
+                mob.hp -= 13;
             else if (Data.Instance.gameData.electricity_lv == 4)
-                mob.hp -= 1;
+                mob.hp -= 16;
             else if (Data.Instance.gameData.electricity_lv == 5)
-                mob.hp -= 2;
+                mob.hp -= 18;
             else if (Data.Instance.gameData.electricity_lv == 6)
-                mob.hp -= 2;
+                mob.hp -= 22;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
@@ -227,17 +232,17 @@ public class Mob1_Body : MonoBehaviour
         {
 
             if (Data.Instance.gameData.electricity_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= 3;
             else if (Data.Instance.gameData.electricity_lv == 2)
-                mob.hp -= 10;
+                mob.hp -= 4;
             else if (Data.Instance.gameData.electricity_lv == 3)
-                mob.hp -= 15;
+                mob.hp -= 5;
             else if (Data.Instance.gameData.electricity_lv == 4)
-                mob.hp -= 15;
+                mob.hp -= 6;
             else if (Data.Instance.gameData.electricity_lv == 5)
-                mob.hp -= 20;
+                mob.hp -= 7;
             else if (Data.Instance.gameData.electricity_lv == 6)
-                mob.hp -= 20;
+                mob.hp -= 8;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
@@ -247,21 +252,47 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
+
+        if (collision.tag == "Wind")
+        {
+            if (Data.Instance.gameData.wind_lv == 1)
+                mob.hp -= 5;
+            else if (Data.Instance.gameData.wind_lv == 2)
+                mob.hp -= 8;
+            else if (Data.Instance.gameData.wind_lv == 3)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.wind_lv == 4)
+                mob.hp -= 12;
+            else if (Data.Instance.gameData.wind_lv == 5)
+                mob.hp -= 15;
+            else if (Data.Instance.gameData.wind_lv == 6)
+                mob.hp -= 18;
+            if (mob.hp <= 0)
+            {
+                mob.die.SetBool("Is_Die", true);
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
+
+
+
         if (collision.tag == "WindWall")    //건들
         {
             StartCoroutine(Stun());
             if (Data.Instance.gameData.windwall_lv == 1)
-                mob.hp -= 1;
-            else if (Data.Instance.gameData.windwall_lv == 2)
                 mob.hp -= 2;
-            else if (Data.Instance.gameData.windwall_lv == 3)
-                mob.hp -= 3;
-            else if (Data.Instance.gameData.windwall_lv == 4)
+            else if (Data.Instance.gameData.windwall_lv == 2)
                 mob.hp -= 4;
-            else if (Data.Instance.gameData.windwall_lv == 5)
-                mob.hp -= 5;
-            else if (Data.Instance.gameData.windwall_lv == 6)
+            else if (Data.Instance.gameData.windwall_lv == 3)
                 mob.hp -= 6;
+            else if (Data.Instance.gameData.windwall_lv == 4)
+                mob.hp -= 8;
+            else if (Data.Instance.gameData.windwall_lv == 5)
+                mob.hp -= 10;
+            else if (Data.Instance.gameData.windwall_lv == 6)
+                mob.hp -= 12;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);

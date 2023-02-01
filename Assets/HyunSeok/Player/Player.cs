@@ -27,11 +27,15 @@ public class Player : MonoBehaviour
     private float volttackle_CT;
     private float volttackle_Tmp_CT;
 
+
+    public SpriteRenderer rend;
+
     // Start is called before the first frame update
     void Start()
     {
         animator_walk = GetComponent<Animator>();
         //animator_voltTackle = GetComponent<Animator>();
+        rend = GetComponent<SpriteRenderer>();
 
         hp_max = 100;
         hp = hp_max;
@@ -40,7 +44,10 @@ public class Player : MonoBehaviour
         volttackle_CT = 5f;
         volttackle_Tmp_CT = volttackle_CT;
     }
-
+  /*  private void OnEnable()
+    {
+        rend = GetComponent<SpriteRenderer>();  //이게 필요한가??????????????????????????
+    }*/
     private void Update()
     {
         if(hp <=0)

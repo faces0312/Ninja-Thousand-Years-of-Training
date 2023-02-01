@@ -69,5 +69,5 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.exp += 10;
         Invoke("Exp_Practice", 1f);
     }
-
+   
 }
