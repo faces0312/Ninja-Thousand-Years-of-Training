@@ -31,7 +31,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
-                Manager.manager.objectManager.Normal_Atk_Letter_General(mob.gameObject.transform.position);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -56,6 +56,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -79,6 +80,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -102,6 +104,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -110,21 +113,22 @@ public class Bat_Wood_Body : MonoBehaviour
 
         if (collision.tag == "Talisman")
         {
-            if (Data.Instance.gameData.fire_lv == 1)
+            if (Data.Instance.gameData.talisman_lv == 1)
                 mob.hp -= 5;
-            else if (Data.Instance.gameData.fire_lv == 2)
+            else if (Data.Instance.gameData.talisman_lv == 2)
                 mob.hp -= 7;
-            else if (Data.Instance.gameData.fire_lv == 3)
+            else if (Data.Instance.gameData.talisman_lv == 3)
                 mob.hp -= 10;
-            else if (Data.Instance.gameData.fire_lv == 4)
+            else if (Data.Instance.gameData.talisman_lv == 4)
                 mob.hp -= 15;
-            else if (Data.Instance.gameData.fire_lv == 5)
+            else if (Data.Instance.gameData.talisman_lv == 5)
                 mob.hp -= 20;
-            else if (Data.Instance.gameData.fire_lv == 6)
+            else if (Data.Instance.gameData.talisman_lv == 6)
                 mob.hp -= 25;
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -148,6 +152,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -171,6 +176,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -194,6 +200,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -217,6 +224,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -241,6 +249,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -264,6 +273,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -288,6 +298,7 @@ public class Bat_Wood_Body : MonoBehaviour
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
                 gameObject.SetActive(false);
                 return;
             }
@@ -307,5 +318,16 @@ public class Bat_Wood_Body : MonoBehaviour
         mob.rend.material.color = Color.red;
         yield return new WaitForSeconds(0.2f);
         mob.rend.material.color = Color.white;
+    }
+
+    public void Drop_Letter()
+    {
+        int drop;
+        drop = Random.Range(0, 100);
+
+        if (drop == 0)
+            Manager.manager.objectManager.Wood_Letter_General(mob.gameObject.transform.position);
+        else
+            return;
     }
 }

@@ -46,6 +46,12 @@ public class ObjectPool : MonoBehaviour
     //비급서 타겟
     public GameObject normalAkt_letter_Prefab;
     GameObject[] normalAkt_letter;
+    public GameObject fire_letter_Prefab;
+    GameObject[] fire_letter;
+    public GameObject wood_letter_Prefab;
+    GameObject[] wood_letter;
+    public GameObject mecha_letter_Prefab;
+    GameObject[] mecha_letter;
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +74,10 @@ public class ObjectPool : MonoBehaviour
         player_WindWall = new GameObject[5];
         player_Wind = new GameObject[5];
 
-        normalAkt_letter = new GameObject[10];
+        normalAkt_letter = new GameObject[30];
+        fire_letter = new GameObject[30];
+        wood_letter = new GameObject[30];
+        mecha_letter = new GameObject[30];
 
         Generate();
     }
@@ -130,11 +139,6 @@ public class ObjectPool : MonoBehaviour
             player_Tornado[index] = Instantiate(player_Tornado_Prefab);
             player_Tornado[index].SetActive(false);
         }
-        for (int index = 0; index < normalAkt_letter.Length; index++)
-        {
-            normalAkt_letter[index] = Instantiate(normalAkt_letter_Prefab);
-            normalAkt_letter[index].SetActive(false);
-        }
         for (int index = 0; index < player_Tree.Length; index++)
         {
             player_Tree[index] = Instantiate(player_Tree_Prefab); //생성
@@ -159,6 +163,26 @@ public class ObjectPool : MonoBehaviour
         {
             player_Wind[index] = Instantiate(player_Wind_Prefab); //생성
             player_Wind[index].SetActive(false); //일단 꺼놓기
+        }
+        for (int index = 0; index < normalAkt_letter.Length; index++)
+        {
+            normalAkt_letter[index] = Instantiate(normalAkt_letter_Prefab);
+            normalAkt_letter[index].SetActive(false);
+        }
+        for (int index = 0; index < fire_letter.Length; index++)
+        {
+            fire_letter[index] = Instantiate(fire_letter_Prefab);
+            fire_letter[index].SetActive(false);
+        }
+        for (int index = 0; index < wood_letter.Length; index++)
+        {
+            wood_letter[index] = Instantiate(wood_letter_Prefab);
+            wood_letter[index].SetActive(false);
+        }
+        for (int index = 0; index < mecha_letter.Length; index++)
+        {
+            mecha_letter[index] = Instantiate(mecha_letter_Prefab);
+            mecha_letter[index].SetActive(false);
         }
     }
 
@@ -199,9 +223,6 @@ public class ObjectPool : MonoBehaviour
             case "Bat_Mecha":
                 targetPool = bat_Mecha;
                 break;
-            case "Normal_Atk_Letter":
-                targetPool = normalAkt_letter;
-                break;
             case "Tree":
                 targetPool = player_Tree;
                 break;
@@ -216,6 +237,18 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "Wind":
                 targetPool = player_Wind;
+                break;
+            case "Normal_Atk_Letter":
+                targetPool = normalAkt_letter;
+                break;
+            case "Fire_Letter":
+                targetPool = fire_letter;
+                break;
+            case "Wood_Letter":
+                targetPool = wood_letter;
+                break;
+            case "Mecha_Letter":
+                targetPool = mecha_letter;
                 break;
 
         }

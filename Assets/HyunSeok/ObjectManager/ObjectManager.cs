@@ -65,12 +65,12 @@ public class ObjectManager : MonoBehaviour
         mob_Fire_str = new string[] { "Mob1", "Bat_Fire" };
         mob_Wood_str = new string[] { "Mob1", "Bat_Wood" };
         mob_Mecha_str = new string[] { "Mob1", "Bat_Mecha" };
-        letter_str = new string[] { "Normal_Atk_Letter" };
+        letter_str = new string[] { "Normal_Atk_Letter" , "Fire_Letter", "Wood_Letter", "Mecha_Letter" };
     }
 
     private void Start()
     {
-        mob_CT = 5f;
+        mob_CT = 2f;
         mob_Tmp_CT = mob_CT;
 
         atk_normal_CT = 0.5f;
@@ -121,6 +121,7 @@ public class ObjectManager : MonoBehaviour
             mob_Tmp_CT -= Time.deltaTime;
         else
         {
+            Mob_General();
             Mob_General();
             Mob_General();
             mob_Tmp_CT = mob_CT;
@@ -360,6 +361,27 @@ public class ObjectManager : MonoBehaviour
     {
         GameObject letter;
         letter = objectPool.MakeObj(letter_str[0]);
+
+        letter.transform.position = vector3;
+    }
+    public void Fire_Letter_General(Vector3 vector3)
+    {
+        GameObject letter;
+        letter = objectPool.MakeObj(letter_str[1]);
+
+        letter.transform.position = vector3;
+    }
+    public void Wood_Letter_General(Vector3 vector3)
+    {
+        GameObject letter;
+        letter = objectPool.MakeObj(letter_str[2]);
+
+        letter.transform.position = vector3;
+    }
+    public void Mehca_Letter_General(Vector3 vector3)
+    {
+        GameObject letter;
+        letter = objectPool.MakeObj(letter_str[3]);
 
         letter.transform.position = vector3;
     }

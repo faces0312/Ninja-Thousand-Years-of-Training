@@ -44,11 +44,11 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.electricity_lv = 0;
         Data.Instance.gameData.windwall_lv = 0;
 
-        Data.Instance.gameData.mob1_hp = 5;
-        Data.Instance.gameData.bat_normal_hp = 5;
-        Data.Instance.gameData.bat_fire_hp = 5;
-        Data.Instance.gameData.bat_wood_hp = 5;
-        Data.Instance.gameData.bat_mecha_hp = 5;
+        Data.Instance.gameData.mob1_hp = 1;
+        Data.Instance.gameData.bat_normal_hp = 1;
+        Data.Instance.gameData.bat_fire_hp = 1;
+        Data.Instance.gameData.bat_wood_hp = 1;
+        Data.Instance.gameData.bat_mecha_hp = 1;
         /*
         Data.Instance.gameData.exp = 0;
         exp_Tmp = 100;*/
@@ -69,7 +69,7 @@ public class Manager : MonoBehaviour
         time_text.text = string.Format("{0:D2} : {1:D2}", time_min, (int)time_sec);
 
         time_bigWave += Time.deltaTime;
-        if((int)time_bigWave >= 19)
+        if((int)time_bigWave >= 89)
         {
             time_bigWave = 0;
             lv++;
