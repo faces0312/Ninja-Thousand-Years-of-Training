@@ -6,6 +6,8 @@ using TMPro;
 
 public class Manager : MonoBehaviour
 {
+    public Camera camera;
+
     public static Manager manager;
     public ObjectManager objectManager;
     public Player player;
@@ -26,6 +28,7 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        camera.orthographicSize = 5f;
         lv = 0;
 
         Data.Instance.gameData.normal_atk_lv = 1;
@@ -66,12 +69,11 @@ public class Manager : MonoBehaviour
         time_text.text = string.Format("{0:D2} : {1:D2}", time_min, (int)time_sec);
 
         time_bigWave += Time.deltaTime;
-        if((int)time_bigWave >= 10)
+        if((int)time_bigWave >= 19)
         {
             time_bigWave = 0;
             lv++;
-            StartCoroutine(BigWave());
-
+            StartCoroutine(Camera_Up());
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
 
@@ -96,5 +98,29 @@ public class Manager : MonoBehaviour
             objectManager.Mob_BigWave_General();
             yield return new WaitForSeconds(1f);
         }
+
+        yield return new WaitForSeconds(5f);
+        StartCoroutine(Camera_Down());
+    }
+
+    IEnumerator Camera_Up()
+    {
+        for (int i = 0; i < 200; i++)
+        {
+            camera.orthographicSize += 0.01f;
+            yield return new WaitForSeconds(0.01f);
+        }
+        camera.orthographicSize = 7f;
+        StartCoroutine(BigWave());
+    }
+
+    IEnumerator Camera_Down()
+    {
+        for (int i = 0; i < 200; i++)
+        {
+            camera.orthographicSize -= 0.01f;
+            yield return new WaitForSeconds(0.01f);
+        }
+        camera.orthographicSize = 5f;
     }
 }
