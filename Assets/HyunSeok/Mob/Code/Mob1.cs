@@ -26,7 +26,7 @@ public class Mob1 : MonoBehaviour
     private void OnEnable()
     {
         rend = GetComponent<SpriteRenderer>();
-        hp = 10;
+        hp = 1000;
         speed = 1;
         target_on = false;
         mob1_Body.gameObject.SetActive(true);

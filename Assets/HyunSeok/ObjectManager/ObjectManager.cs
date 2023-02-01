@@ -60,6 +60,7 @@ public class ObjectManager : MonoBehaviour
     void Awake()
     {
         atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall", "Wind"};
+        //몹마다 퍼센트 확률로 등장
         mob_Normal_str = new string[] { "Mob1", "Bat_Normal" };
         mob_Fire_str = new string[] { "Mob1", "Bat_Fire" };
         mob_Wood_str = new string[] { "Mob1", "Bat_Wood" };

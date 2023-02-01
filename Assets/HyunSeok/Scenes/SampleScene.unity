@@ -2896,10 +2896,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectManager: {fileID: 2067862462}
   player: {fileID: 2106791451}
-  mob: {fileID: 0}
   lv: 0
   exp_Tmp: 0
   exp_Bar: {fileID: 377229317}
+  play_time: 0
 --- !u!4 &1314174042
 Transform:
   m_ObjectHideFlags: 0
@@ -3406,7 +3406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c3578251c6f6d41a30e9825c69e201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 2067862462}
   player: {fileID: 2015173481}
 --- !u!1 &1601005019
 GameObject:
