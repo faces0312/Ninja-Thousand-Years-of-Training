@@ -82,29 +82,31 @@ public class ObjectManager : MonoBehaviour
         fire_CT = 7f;
         fire_Tmp_CT = fire_CT;
 
-        talisman_CT = 3.7f;
+        talisman_CT = 18f;
         talisman_Tmp_CT = talisman_CT;
 
-        firecolumn_CT = 3f;
+        firecolumn_CT = 10f;
         firecolumn_Tmp_CT = firecolumn_CT;
 
-        tornado_CT = 5f;
+        tornado_CT = 10f;
         tornado_Tmp_CT = tornado_CT;
 
-        tree_CT = 30f;
-        tree_Tmp_CT = tree_CT;
-
-        boomerang_CT = 3f;
+        boomerang_CT = 10f;
         boomerang_Tmp_CT = boomerang_CT;
 
-        electricity_CT = 3f;
+        electricity_CT = 23f;  
         electricity_Tmp_CT = electricity_CT;
 
-        windwall_CT = 3f;
+        wind_CT = 17f;
+        wind_Tmp_CT = wind_CT;
+
+        windwall_CT = 20f;
         windwall_Tmp_CT = windwall_CT;
 
-        wind_CT = 3f;
-        wind_Tmp_CT = wind_CT;
+        tree_CT = 70f;
+        tree_Tmp_CT = tree_CT;
+
+      
 
         for(int i=0; i<15; i++)
         {
