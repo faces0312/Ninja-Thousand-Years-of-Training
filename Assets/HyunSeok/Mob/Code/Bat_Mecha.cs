@@ -15,7 +15,7 @@ public class Bat_Mecha : MonoBehaviour
 
     public bool target_on;
 
-    public int hp;
+    public float hp;
     public int speed;
     // Update is called once per frame
 
@@ -27,7 +27,7 @@ public class Bat_Mecha : MonoBehaviour
     private void OnEnable()
     {
         rend = GetComponent<SpriteRenderer>();
-        hp = 100;
+        hp = Data.Instance.gameData.bat_mecha_hp;
         speed = 1;
         target_on = true;
         bat_Mecha_Body.gameObject.SetActive(true);

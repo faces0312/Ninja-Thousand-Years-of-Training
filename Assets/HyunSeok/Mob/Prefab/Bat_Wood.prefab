@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 4017674256091556790}
   - component: {fileID: 4017674256091556791}
   - component: {fileID: 93334106230266077}
-  - component: {fileID: 5597136451649923406}
   - component: {fileID: 4695012316787701838}
   m_Layer: 0
   m_Name: Bat_Wood
@@ -334,18 +333,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 30
---- !u!114 &5597136451649923406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4017674256091556792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4695012316787701838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +364,7 @@ GameObject:
   - component: {fileID: 3246070674206146464}
   - component: {fileID: 1033822529333380925}
   - component: {fileID: 6560981999802276359}
+  - component: {fileID: 2850284048041630160}
   m_Layer: 0
   m_Name: Bat_Wood_Body
   m_TagString: Mob
@@ -462,8 +450,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01525895, y: 0.09873768}
-  m_Size: {x: 0.9407345, y: 0.59488237}
+  m_Offset: {x: -0.013653325, y: 0.040951613}
+  m_Size: {x: 0.3275648, y: 0.30596074}
   m_Direction: 1
 --- !u!114 &6560981999802276359
 MonoBehaviour:
@@ -478,3 +466,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 4695012316787701838}
+--- !u!114 &2850284048041630160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390416155903740519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 40293194009895893}
   - component: {fileID: 40293194009895894}
   - component: {fileID: 1060918098206337393}
-  - component: {fileID: 127881881886389634}
   - component: {fileID: 1760475600879403494}
   m_Layer: 0
   m_Name: Bat_Mecha
@@ -124,18 +123,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 30
---- !u!114 &127881881886389634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40293194009895895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1760475600879403494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +364,7 @@ GameObject:
   - component: {fileID: 8128731413697886514}
   - component: {fileID: 8702698998997114690}
   - component: {fileID: 9108628759781270414}
+  - component: {fileID: 3352026416558774337}
   m_Layer: 0
   m_Name: Bat_Mecha_Body
   m_TagString: Mob
@@ -462,8 +450,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015258964, y: -0.0150810825}
-  m_Size: {x: 0.9407346, y: 0.82252187}
+  m_Offset: {x: -0.16848448, y: -0.022291567}
+  m_Size: {x: 0.446813, y: 0.38268277}
   m_Direction: 1
 --- !u!114 &9108628759781270414
 MonoBehaviour:
@@ -478,3 +466,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 1760475600879403494}
+--- !u!114 &3352026416558774337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8737794944202551163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5303548329158130412}
   - component: {fileID: 9110737994272396799}
   - component: {fileID: 3041621250364092564}
+  - component: {fileID: 1666853463027379949}
   m_Layer: 0
   m_Name: Mob1_Body
   m_TagString: Mob
@@ -113,6 +114,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 5289893217853964095}
+--- !u!114 &1666853463027379949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395805164782864492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2326340946556538745
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +138,6 @@ GameObject:
   - component: {fileID: 2326340946556538744}
   - component: {fileID: 5289893217853964095}
   - component: {fileID: 3682798853463492335}
-  - component: {fileID: 9141161307685342325}
   - component: {fileID: 2490739933452220950}
   m_Layer: 0
   m_Name: Mob1
@@ -236,18 +248,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9141161307685342325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2326340946556538745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &2490739933452220950
 CircleCollider2D:
   m_ObjectHideFlags: 0

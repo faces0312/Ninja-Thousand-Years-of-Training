@@ -15,7 +15,7 @@ public class Bat_Wood : MonoBehaviour
 
     public bool target_on;
 
-    public int hp;
+    public float hp;
     public int speed;
     // Update is called once per frame
 
@@ -27,7 +27,7 @@ public class Bat_Wood : MonoBehaviour
     private void OnEnable()
     {
         rend = GetComponent<SpriteRenderer>();
-        hp = 100;
+        hp = Data.Instance.gameData.bat_wood_hp;
         speed = 1;
         target_on = true;
         bat_Wood_Body.gameObject.SetActive(true);

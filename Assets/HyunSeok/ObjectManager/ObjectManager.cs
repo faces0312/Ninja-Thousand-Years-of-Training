@@ -280,32 +280,79 @@ public class ObjectManager : MonoBehaviour
 
     public void Mob_General()
     {
-        int ran_location;//¸÷ À§Ä¡ ·£´ý°ª
         int ran_mob;//¸÷ »ý¼º ·£´ý°ª
+        int ran_location;//¸÷ À§Ä¡ ·£´ý°ª
 
-        ran_location = 0;
-        ran_mob = 0;
         ran_mob = Random.Range(0, 2);
+        ran_location = Random.Range(0, 28);
 
         if (player_Body.in_Normal == true)
         {
             mob1 = objectPool.MakeObj(mob_Normal_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
         }
         else if (player_Body.in_Fire == true)
         {
             mob1 = objectPool.MakeObj(mob_Fire_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
         }
         else if (player_Body.in_Wood == true)
         {
             mob1 = objectPool.MakeObj(mob_Wood_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
         }
         else if (player_Body.in_Mecha == true)
         {
             mob1 = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
+        }
+    }
+
+    public void Mob_BigWave_General()
+    {
+        int ran_mob;//¸÷ »ý¼º ·£´ý°ª
+        
+        if (player_Body.in_Normal == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Normal_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
+        }
+        else if (player_Body.in_Fire == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Fire_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
+        }
+        else if (player_Body.in_Wood == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Wood_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
+        }
+        else if (player_Body.in_Mecha == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
         }
 
-        ran_location = Random.Range(0, 29);
-        mob1.transform.position = mob_Location[ran_location].transform.position;
     }
 
 

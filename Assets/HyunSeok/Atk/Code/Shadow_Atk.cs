@@ -6,6 +6,7 @@ public class Shadow_Atk : MonoBehaviour
 {
     private void OnEnable()
     {
+        StartCoroutine("Dis_Atk");
         //transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 
@@ -23,5 +24,10 @@ public class Shadow_Atk : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+    IEnumerator Dis_Atk()
+    {
+        yield return new WaitForSeconds(3f);
+        gameObject.SetActive(false);
     }
 }

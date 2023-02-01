@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 7957190243139850724}
   - component: {fileID: 7957190243139850727}
   - component: {fileID: 1871077141163645652}
-  - component: {fileID: 353243211617704174}
   - component: {fileID: 3343899128873438330}
   m_Layer: 0
   m_Name: Bat_Fire
@@ -219,18 +218,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 30
---- !u!114 &353243211617704174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7957190243139850726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3343899128873438330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +249,7 @@ GameObject:
   - component: {fileID: 8464792643749697400}
   - component: {fileID: 1080434975796066289}
   - component: {fileID: 5105041227814210756}
+  - component: {fileID: 4903028397671201323}
   m_Layer: 0
   m_Name: Bat_Fire_Body
   m_TagString: Mob
@@ -347,8 +335,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01525895, y: 0.09873768}
-  m_Size: {x: 0.9407345, y: 0.59488237}
+  m_Offset: {x: -0.017229639, y: 0.019057482}
+  m_Size: {x: 0.3729315, y: 0.31729355}
   m_Direction: 1
 --- !u!114 &5105041227814210756
 MonoBehaviour:
@@ -363,6 +351,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 3343899128873438330}
+--- !u!114 &4903028397671201323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8555070280304813646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8856287394199906790
 GameObject:
   m_ObjectHideFlags: 0

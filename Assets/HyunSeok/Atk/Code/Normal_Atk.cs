@@ -21,14 +21,13 @@ public class Normal_Atk : MonoBehaviour
     {
         if (collision.tag == "Mob")
         {
-            StopCoroutine("Dis_Atk");
             gameObject.SetActive(false);
         }
     }
 
     IEnumerator Dis_Atk()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         gameObject.SetActive(false);
     }
 }

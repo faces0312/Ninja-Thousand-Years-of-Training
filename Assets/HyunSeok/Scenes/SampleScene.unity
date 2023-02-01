@@ -2897,6 +2897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectManager: {fileID: 2067862462}
   player: {fileID: 2106791451}
+  lv: 0
   time_text: {fileID: 1601032689}
 --- !u!4 &1314174042
 Transform:
@@ -5192,6 +5193,7 @@ MonoBehaviour:
   shadowPartner2_Loca: {fileID: 1243003141}
   volttackle: {fileID: 1991456517}
   volttackle_CT: 0
+  rend: {fileID: 2106791449}
 --- !u!95 &2106791452
 Animator:
   serializedVersion: 3

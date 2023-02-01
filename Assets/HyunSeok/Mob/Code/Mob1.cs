@@ -14,7 +14,7 @@ public class Mob1 : MonoBehaviour
 
     bool target_on;
 
-    public int hp;
+    public float hp;
     public int speed;
     // Update is called once per frame
 
@@ -26,7 +26,7 @@ public class Mob1 : MonoBehaviour
     private void OnEnable()
     {
         rend = GetComponent<SpriteRenderer>();
-        hp = 1000;
+        hp = Data.Instance.gameData.mob1_hp;
         speed = 1;
         target_on = false;
         mob1_Body.gameObject.SetActive(true);
