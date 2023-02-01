@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     //볼트 태클
     //public Animator animator_voltTackle; // 걷기
     public GameObject volttackle;
-    private float volttackle_CT;
+    public float volttackle_CT;
     private float volttackle_Tmp_CT;
 
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         hp = hp_max;
         speed = 2;
 
-        volttackle_CT = 5f;
+        volttackle_CT = 23f;
         volttackle_Tmp_CT = volttackle_CT;
     }
 

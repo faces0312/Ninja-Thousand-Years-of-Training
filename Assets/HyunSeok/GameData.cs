@@ -9,7 +9,7 @@ using System;
 public class GameData
 {
     //인게임ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-    public float exp;
+    //public float exp;
 
     public int normal_atk_lv;//표창
     public int shadow_partner_lv;//분신

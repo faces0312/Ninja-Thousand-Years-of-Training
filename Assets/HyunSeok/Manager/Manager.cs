@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Manager : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class Manager : MonoBehaviour
     //public Mob1 mob;  //�ǵ�
 
     public int lv;
-    public float exp_Tmp;
-    public Slider exp_Bar;
+    /*public float exp_Tmp;
+    public Slider exp_Bar;*/
 
-    public float play_time;
+    private int time_min;
+    private float time_sec;
+    public TextMeshProUGUI time_text;
     private void Awake()
     {
         manager = this;
@@ -32,42 +35,43 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.tornado_lv = 0;
         Data.Instance.gameData.tree_lv = 0;
         Data.Instance.gameData.boomerang_lv = 0;
-
         Data.Instance.gameData.electricity_lv = 0;
-//<<<<<<< HEAD
         Data.Instance.gameData.windwall_lv = 0;
-//=======
-//>>>>>>> 9c799be554b5ba7c15336efdb075ce872ec3a481
-//=======
-
-//>>>>>>> 3332473574b317f1912200c25bf3501dc0538e64
 
 
-        lv = 1;
+        lv = 0;
+        /*
         Data.Instance.gameData.exp = 0;
-        exp_Tmp = 100;
-
+        exp_Tmp = 100;*/
+        time_min = 0;
+        time_sec = 0f;
         Invoke("Exp_Practice",1f);
     }
 
     private void Update()
     {
-        play_time += Time.deltaTime;
+        time_sec += Time.deltaTime;
+        if ((int)time_sec > 59)
+        {
+            time_sec = 0;
+            time_min++;
+        }
+        time_text.text = string.Format("{0:D2} : {1:D2}", time_min, (int)time_sec);
 
-        exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
+        /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
 
         if(Data.Instance.gameData.exp >= exp_Tmp)
         {
             Data.Instance.gameData.exp -= exp_Tmp;
             exp_Tmp *= 2;
             lv++;
-        }
+        }*/
     }
 
-    public void Exp_Practice()
+    /*public void Exp_Practice()
     {
         Data.Instance.gameData.exp += 10;
         Invoke("Exp_Practice", 1f);
-    }
+    }*/
 
 }
