@@ -16,7 +16,7 @@ public class Bat_Normal : MonoBehaviour
     public bool target_on;
 
     public float hp;
-    public int speed;
+    public float speed;
     // Update is called once per frame
 
     private void Start()
@@ -28,7 +28,7 @@ public class Bat_Normal : MonoBehaviour
     {
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.bat_normal_hp;
-        speed = 1;
+        speed = 1.3f;
         target_on = true;
         bat_Normal_Body.gameObject.SetActive(true);
         atk.gameObject.SetActive(false);

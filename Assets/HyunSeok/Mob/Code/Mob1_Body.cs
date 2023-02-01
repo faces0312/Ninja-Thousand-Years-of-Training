@@ -329,7 +329,7 @@ public class Mob1_Body : MonoBehaviour
         int drop;
         drop = Random.Range(0, 100);
 
-        if (drop == 0)
+        if (drop <= 10)
             Manager.manager.objectManager.Normal_Atk_Letter_General(mob.gameObject.transform.position);
         else
             return;

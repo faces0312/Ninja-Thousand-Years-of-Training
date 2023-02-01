@@ -12,7 +12,7 @@ public class Bat_Fire_Area : MonoBehaviour
 
     private void OnEnable()
     {
-        atk_CT = 5f;
+        atk_CT = 3f;
         atk_Tmp_CT = atk_CT;
     }
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
+    public Manager manager;
+
     public ObjectPool objectPool;
     public Player player;
     public Player_Body player_Body;
@@ -70,7 +72,7 @@ public class ObjectManager : MonoBehaviour
 
     private void Start()
     {
-        mob_CT = 2f;
+        mob_CT = 1f;
         mob_Tmp_CT = mob_CT;
 
         atk_normal_CT = 0.5f;
@@ -121,9 +123,51 @@ public class ObjectManager : MonoBehaviour
             mob_Tmp_CT -= Time.deltaTime;
         else
         {
-            Mob_General();
-            Mob_General();
-            Mob_General();
+            if(manager.lv == 0)
+            {
+                for(int i=0; i<3; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 1)
+            {
+                for (int i = 0; i < 4; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 2)
+            {
+                for (int i = 0; i < 5; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 3)
+            {
+                for (int i = 0; i < 6; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 4)
+            {
+                for (int i = 0; i < 7; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 5)
+            {
+                for (int i = 0; i < 8; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 6)
+            {
+                for (int i = 0; i < 9; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 7)
+            {
+                for (int i = 0; i < 10; i++)
+                    Mob_General();
+            }
+            else
+            {
+                for (int i = 0; i < 3; i++)
+                    Mob_General();
+            }
             mob_Tmp_CT = mob_CT;
         }
 

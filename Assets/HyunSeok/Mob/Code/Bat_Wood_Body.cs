@@ -325,7 +325,7 @@ public class Bat_Wood_Body : MonoBehaviour
         int drop;
         drop = Random.Range(0, 100);
 
-        if (drop == 0)
+        if (drop <= 10)
             Manager.manager.objectManager.Wood_Letter_General(mob.gameObject.transform.position);
         else
             return;

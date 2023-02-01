@@ -325,7 +325,7 @@ public class Bat_Mecha_Body : MonoBehaviour
         int drop;
         drop = Random.Range(0, 100);
 
-        if (drop == 0)
+        if (drop <= 10)
             Manager.manager.objectManager.Mehca_Letter_General(mob.gameObject.transform.position);
         else
             return;

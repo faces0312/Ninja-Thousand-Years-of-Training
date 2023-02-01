@@ -13,8 +13,10 @@ public class Manager : MonoBehaviour
     public Player player;
     //public Mob1 mob;  //�ǵ�
 
-    public int lv;
-    private float time_bigWave;
+    public int lv;//난이도(몹 수와 연관됨)
+    private float time_bigWave;//빅웨이브 등장 시간
+    private float time_mob_hp;//몹 체력 증가 시간
+
     /*public float exp_Tmp;
     public Slider exp_Bar;*/
 
@@ -53,6 +55,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.exp = 0;
         exp_Tmp = 100;*/
         time_bigWave = 0;
+        time_mob_hp = 0;
         time_min = 0;
         time_sec = 0f;
         //Invoke("Exp_Practice",1f);
@@ -60,6 +63,7 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
+        //시간 측정
         time_sec += Time.deltaTime;
         if ((int)time_sec > 59)
         {
@@ -68,12 +72,25 @@ public class Manager : MonoBehaviour
         }
         time_text.text = string.Format("{0:D2} : {1:D2}", time_min, (int)time_sec);
 
+        //빅 웨이브 쿨타임
         time_bigWave += Time.deltaTime;
-        if((int)time_bigWave >= 89)
+        if((int)time_bigWave >= 59)
         {
             time_bigWave = 0;
             lv++;
             StartCoroutine(Camera_Up());
+        }
+
+        //몹 체력 증가 쿨타임
+        time_mob_hp += Time.deltaTime;
+        if((int)time_mob_hp > 19)
+        {
+            time_mob_hp = 0;
+            Data.Instance.gameData.mob1_hp += 1;
+            Data.Instance.gameData.bat_normal_hp += 1;
+            Data.Instance.gameData.bat_fire_hp += 1;
+            Data.Instance.gameData.bat_wood_hp += 1;
+            Data.Instance.gameData.bat_mecha_hp += 1;
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
 

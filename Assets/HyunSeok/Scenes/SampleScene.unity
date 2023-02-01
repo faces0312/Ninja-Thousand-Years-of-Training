@@ -5022,6 +5022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92e2e0e5db9c3f459b3bef3f9debb8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 1314174041}
   objectPool: {fileID: 204111284}
   player: {fileID: 2106791451}
   player_Body: {fileID: 2015173481}

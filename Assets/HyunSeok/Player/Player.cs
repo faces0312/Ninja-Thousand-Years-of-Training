@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         //animator_voltTackle = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
 
-        hp_max = 1000000000000000;
+        hp_max = 30;
         hp = hp_max;
         speed = 2;
 
