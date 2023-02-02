@@ -25,6 +25,7 @@ public class Manager : MonoBehaviour
     public TextMeshProUGUI time_text;
     private void Awake()
     {
+        //Application.targetFrameRate = 60;
         manager = this;
 
         camera.orthographicSize = 5f;
@@ -89,18 +90,17 @@ public class Manager : MonoBehaviour
         if((int)time_mob_hp > 19)
         {
             time_mob_hp = 0;
-            Data.Instance.gameData.mob1_hp += 1;
-            Data.Instance.gameData.bat_normal_hp += 1;
-            Data.Instance.gameData.bat_fire_hp += 1;
-            Data.Instance.gameData.bat_wood_hp += 1;
-            Data.Instance.gameData.bat_mecha_hp += 1;
+            Data.Instance.gameData.mob1_hp += 2;
+            Data.Instance.gameData.bat_normal_hp += 2;
+            Data.Instance.gameData.bat_fire_hp += 2;
+            Data.Instance.gameData.bat_wood_hp += 2;
+            Data.Instance.gameData.bat_mecha_hp += 2;
 
             Data.Instance.gameData.mob1_dmg += 1;
             Data.Instance.gameData.bat_body_dmg += 1;
             Data.Instance.gameData.bat_atk_dmg += 2;
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
-
         if(Data.Instance.gameData.exp >= exp_Tmp)
         {
             Data.Instance.gameData.exp -= exp_Tmp;
@@ -120,10 +120,10 @@ public class Manager : MonoBehaviour
         for (int i = 0; i < lv; i++)
         {
             objectManager.Mob_BigWave_General();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(5f);
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         StartCoroutine(Camera_Down());
     }
 

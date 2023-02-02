@@ -29,10 +29,12 @@ public class Mob1_Body : MonoBehaviour
             else if (Data.Instance.gameData.normal_atk_lv == 6)
                 mob.hp -= 5;
 
+            collision.gameObject.SetActive(false);
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -54,10 +56,12 @@ public class Mob1_Body : MonoBehaviour
             else if (Data.Instance.gameData.shadow_partner_lv == 6)
                 mob.hp -= 4;
 
+            collision.gameObject.SetActive(false);
             if (mob.hp <= 0)
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -82,6 +86,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -106,6 +111,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -129,6 +135,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -153,6 +160,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -178,6 +186,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -202,6 +211,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -227,6 +237,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -250,6 +261,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -275,6 +287,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -302,6 +315,7 @@ public class Mob1_Body : MonoBehaviour
             {
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
+                mob.StopAllCoroutines();
                 gameObject.SetActive(false);
                 return;
             }
@@ -329,7 +343,7 @@ public class Mob1_Body : MonoBehaviour
         int drop;
         drop = Random.Range(0, 100);
 
-        if (drop <= 10)
+        if (drop <= 5)
             Manager.manager.objectManager.Normal_Atk_Letter_General(mob.gameObject.transform.position);
         else
             return;

@@ -9,7 +9,7 @@ public class Mob1 : MonoBehaviour
 
     public SpriteRenderer rend;
     Vector3 start;
-    Vector3 end;
+    Transform end;
     Vector3 fin;
 
     bool target_on;
@@ -30,31 +30,40 @@ public class Mob1 : MonoBehaviour
         speed = 1;
         target_on = false;
         mob1_Body.gameObject.SetActive(true);
+        StartCoroutine(FindPlayer());
     }
 
-    private void Update()
-    {
-        if(target_on == false)
-        {
-            transform.Translate(Vector3.right * 0.1f * Time.deltaTime);
-        }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
+    /*private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && hp > 0)
         {
             target_on = true;
-            start = this.transform.position;
             end = collision.transform.position;
-            fin = end - start;
 
+            fin = end - start;
             if (fin.x > 0)
                 rend.flipX = true;
             else
                 rend.flipX = false;
-
-            transform.position = Vector3.MoveTowards(start, end, speed * Time.deltaTime);
         }
+    }*/
+
+    public IEnumerator FindPlayer()
+    {
+        end = GameObject.FindObjectOfType<Player>().transform;
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(FindPlayer());
+    }
+
+    private void FixedUpdate()
+    {
+        fin = end.position - start;
+        if (fin.x > 0)
+            rend.flipX = true;
+        else
+            rend.flipX = false;
+        start = this.transform.position;
+        transform.position = Vector3.MoveTowards(start, end.position, speed * Time.deltaTime);
     }
 
     public void Die()
