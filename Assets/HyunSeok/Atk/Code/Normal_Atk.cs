@@ -19,7 +19,7 @@ public class Normal_Atk : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Mob")
+        if (collision.tag == "Mob1" || collision.tag == "Bat_Body")
         {
             gameObject.SetActive(false);
         }

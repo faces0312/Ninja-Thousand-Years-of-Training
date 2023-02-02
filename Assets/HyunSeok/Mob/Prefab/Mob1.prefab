@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1666853463027379949}
   m_Layer: 0
   m_Name: Mob1_Body
-  m_TagString: Mob
+  m_TagString: Mob1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

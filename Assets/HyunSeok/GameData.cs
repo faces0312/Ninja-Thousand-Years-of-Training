@@ -11,6 +11,7 @@ public class GameData
     //인게임ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     //public float exp;
 
+    public float player_hp;//플레이어 체력
     //플레이어 스킬
     public int normal_atk_lv;//표창
     public int shadow_partner_lv;//분신
@@ -31,6 +32,11 @@ public class GameData
     public float bat_fire_hp;
     public float bat_wood_hp;
     public float bat_mecha_hp;
+
+    //몹 공격력
+    public float mob1_dmg;
+    public float bat_body_dmg;
+    public float bat_atk_dmg;
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
 }

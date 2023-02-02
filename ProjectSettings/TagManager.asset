@@ -21,6 +21,9 @@ TagManager:
   - WindWall
   - Electric
   - Electric_Area
+  - Mob1
+  - Bat_Body
+  - Bat_Atk
   layers:
   - Default
   - TransparentFX

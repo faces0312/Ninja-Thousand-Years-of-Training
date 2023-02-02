@@ -26,12 +26,11 @@ public class Manager : MonoBehaviour
     private void Awake()
     {
         manager = this;
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+
         camera.orthographicSize = 5f;
         lv = 0;
+
+        Data.Instance.gameData.player_hp = 50;
 
         Data.Instance.gameData.normal_atk_lv = 1;
         Data.Instance.gameData.shadow_partner_lv = 0;
@@ -51,6 +50,10 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.bat_fire_hp = 1;
         Data.Instance.gameData.bat_wood_hp = 1;
         Data.Instance.gameData.bat_mecha_hp = 1;
+
+        Data.Instance.gameData.mob1_dmg = 1;
+        Data.Instance.gameData.bat_body_dmg = 1;
+        Data.Instance.gameData.bat_atk_dmg = 2;
         /*
         Data.Instance.gameData.exp = 0;
         exp_Tmp = 100;*/
@@ -91,6 +94,10 @@ public class Manager : MonoBehaviour
             Data.Instance.gameData.bat_fire_hp += 1;
             Data.Instance.gameData.bat_wood_hp += 1;
             Data.Instance.gameData.bat_mecha_hp += 1;
+
+            Data.Instance.gameData.mob1_dmg += 1;
+            Data.Instance.gameData.bat_body_dmg += 1;
+            Data.Instance.gameData.bat_atk_dmg += 2;
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
 

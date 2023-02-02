@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2091609697388690659}
   m_Layer: 0
   m_Name: Attack
-  m_TagString: Mob
+  m_TagString: Bat_Atk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +303,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1281692307444232483, guid: d7b570cb6338e6d49ac010f5ea5d784d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 2850284048041630160}
   m_Layer: 0
   m_Name: Bat_Wood_Body
-  m_TagString: Mob
+  m_TagString: Bat_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
