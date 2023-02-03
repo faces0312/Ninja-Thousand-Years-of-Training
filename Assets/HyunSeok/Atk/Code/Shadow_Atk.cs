@@ -6,6 +6,7 @@ public class Shadow_Atk : MonoBehaviour
 {
     private void OnEnable()
     {
+        StartCoroutine("Dis_Atk");
         //transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 
@@ -17,11 +18,16 @@ public class Shadow_Atk : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Mob")
+        if (collision.tag == "Mob1" || collision.tag == "Bat_Body")
         {
             gameObject.SetActive(false);
         }
+    }*/
+    IEnumerator Dis_Atk()
+    {
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
     }
 }

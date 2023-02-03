@@ -26,21 +26,54 @@ public class Player_Body : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Mob")
+        if (collision.tag == "Mob1")
         {
             if(is_invin == false)
             {
-                StartCoroutine(Damage());
+                StartCoroutine(Damage_Mob1());
+                StartCoroutine(Sick());
+            }
+        }
+        else if (collision.tag == "Bat_Body")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Damage_Bat_Body());
+                StartCoroutine(Sick());
+            }
+        }
+        else if (collision.tag == "Bat_Atk")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Damage_Bat_Atk());
                 StartCoroutine(Sick());
             }
         }
     }
 
-    IEnumerator Damage()
+    IEnumerator Damage_Mob1()
     {
-
-        player.hp -= 1;
+        player.hp -= Data.Instance.gameData.mob1_dmg;
         is_invin = true; 
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Bat_Body()
+    {
+        player.hp -= Data.Instance.gameData.bat_body_dmg;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Bat_Atk()
+    {
+        player.hp -= Data.Instance.gameData.bat_atk_dmg;
+        is_invin = true;
 
         yield return new WaitForSeconds(0.1f);
         is_invin = false;

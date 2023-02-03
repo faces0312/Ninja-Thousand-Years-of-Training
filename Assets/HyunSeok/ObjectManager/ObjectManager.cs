@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
+    public Manager manager;
+
     public ObjectPool objectPool;
     public Player player;
     public Player_Body player_Body;
@@ -65,12 +67,12 @@ public class ObjectManager : MonoBehaviour
         mob_Fire_str = new string[] { "Mob1", "Bat_Fire" };
         mob_Wood_str = new string[] { "Mob1", "Bat_Wood" };
         mob_Mecha_str = new string[] { "Mob1", "Bat_Mecha" };
-        letter_str = new string[] { "Normal_Atk_Letter" };
+        letter_str = new string[] { "Normal_Atk_Letter" , "Fire_Letter", "Wood_Letter", "Mecha_Letter" };
     }
 
     private void Start()
     {
-        mob_CT = 5f;
+        mob_CT = 1f;
         mob_Tmp_CT = mob_CT;
 
         atk_normal_CT = 0.5f;
@@ -121,8 +123,51 @@ public class ObjectManager : MonoBehaviour
             mob_Tmp_CT -= Time.deltaTime;
         else
         {
-            Mob_General();
-            Mob_General();
+            if(manager.lv == 0)
+            {
+                for(int i=0; i<3; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 1)
+            {
+                for (int i = 0; i < 4; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 2)
+            {
+                for (int i = 0; i < 5; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 3)
+            {
+                for (int i = 0; i < 6; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 4)
+            {
+                for (int i = 0; i < 7; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 5)
+            {
+                for (int i = 0; i < 8; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 6)
+            {
+                for (int i = 0; i < 9; i++)
+                    Mob_General();
+            }
+            else if (manager.lv == 7)
+            {
+                for (int i = 0; i < 10; i++)
+                    Mob_General();
+            }
+            else
+            {
+                for (int i = 0; i < 3; i++)
+                    Mob_General();
+            }
             mob_Tmp_CT = mob_CT;
         }
 
@@ -280,32 +325,79 @@ public class ObjectManager : MonoBehaviour
 
     public void Mob_General()
     {
-        int ran_location;//¸÷ À§Ä¡ ·£´ý°ª
         int ran_mob;//¸÷ »ý¼º ·£´ý°ª
+        int ran_location;//¸÷ À§Ä¡ ·£´ý°ª
 
-        ran_location = 0;
-        ran_mob = 0;
         ran_mob = Random.Range(0, 2);
+        ran_location = Random.Range(0, 28);
 
         if (player_Body.in_Normal == true)
         {
             mob1 = objectPool.MakeObj(mob_Normal_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
         }
         else if (player_Body.in_Fire == true)
         {
             mob1 = objectPool.MakeObj(mob_Fire_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
         }
         else if (player_Body.in_Wood == true)
         {
             mob1 = objectPool.MakeObj(mob_Wood_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
         }
         else if (player_Body.in_Mecha == true)
         {
             mob1 = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
+            mob1.transform.position = mob_Location[ran_location].transform.position;
+        }
+    }
+
+    public void Mob_BigWave_General()
+    {
+        int ran_mob;//¸÷ »ý¼º ·£´ý°ª
+        
+        if (player_Body.in_Normal == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Normal_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
+        }
+        else if (player_Body.in_Fire == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Fire_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
+        }
+        else if (player_Body.in_Wood == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Wood_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
+        }
+        else if (player_Body.in_Mecha == true)
+        {
+            for (int i = 0; i < 28; i++)
+            {
+                GameObject mob;
+                ran_mob = Random.Range(0, 2);
+                mob = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
+                mob.transform.position = mob_Location[i].transform.position;
+            }
         }
 
-        ran_location = Random.Range(0, 29);
-        mob1.transform.position = mob_Location[ran_location].transform.position;
     }
 
 
@@ -313,6 +405,27 @@ public class ObjectManager : MonoBehaviour
     {
         GameObject letter;
         letter = objectPool.MakeObj(letter_str[0]);
+
+        letter.transform.position = vector3;
+    }
+    public void Fire_Letter_General(Vector3 vector3)
+    {
+        GameObject letter;
+        letter = objectPool.MakeObj(letter_str[1]);
+
+        letter.transform.position = vector3;
+    }
+    public void Wood_Letter_General(Vector3 vector3)
+    {
+        GameObject letter;
+        letter = objectPool.MakeObj(letter_str[2]);
+
+        letter.transform.position = vector3;
+    }
+    public void Mehca_Letter_General(Vector3 vector3)
+    {
+        GameObject letter;
+        letter = objectPool.MakeObj(letter_str[3]);
 
         letter.transform.position = vector3;
     }

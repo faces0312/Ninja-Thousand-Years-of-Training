@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4799623843437296596}
   - component: {fileID: 6872038361443506170}
   - component: {fileID: 8625944184838310449}
+  - component: {fileID: 2091609697388690659}
   m_Layer: 0
   m_Name: Attack
-  m_TagString: Untagged
+  m_TagString: Bat_Atk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 239799417508578654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4017674256091556789}
   m_RootOrder: 2
@@ -95,6 +96,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09bfdb61534fb794d9b90a6a16f13d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &2091609697388690659
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239799417508578654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.125
 --- !u!1 &1424478638507652551
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,12 +206,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 2.9
 --- !u!114 &7691284722509422723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +239,6 @@ GameObject:
   - component: {fileID: 4017674256091556790}
   - component: {fileID: 4017674256091556791}
   - component: {fileID: 93334106230266077}
-  - component: {fileID: 5597136451649923406}
   - component: {fileID: 4695012316787701838}
   m_Layer: 0
   m_Name: Bat_Wood
@@ -287,7 +303,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1281692307444232483, guid: d7b570cb6338e6d49ac010f5ea5d784d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -328,24 +344,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 30
---- !u!114 &5597136451649923406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4017674256091556792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4695012316787701838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,9 +381,10 @@ GameObject:
   - component: {fileID: 3246070674206146464}
   - component: {fileID: 1033822529333380925}
   - component: {fileID: 6560981999802276359}
+  - component: {fileID: 2850284048041630160}
   m_Layer: 0
   m_Name: Bat_Wood_Body
-  m_TagString: Mob
+  m_TagString: Bat_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,8 +467,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01525895, y: 0.09873768}
-  m_Size: {x: 0.9407345, y: 0.59488237}
+  m_Offset: {x: -0.013653325, y: 0.040951613}
+  m_Size: {x: 0.3275648, y: 0.30596074}
   m_Direction: 1
 --- !u!114 &6560981999802276359
 MonoBehaviour:
@@ -478,3 +483,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 4695012316787701838}
+--- !u!114 &2850284048041630160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4390416155903740519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

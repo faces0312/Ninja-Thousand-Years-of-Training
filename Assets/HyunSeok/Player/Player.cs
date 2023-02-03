@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         //animator_voltTackle = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
 
-        hp_max = 100;
+        hp_max = Data.Instance.gameData.player_hp;
         hp = hp_max;
         speed = 2;
 
@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Mob")
+        if(collision.tag == "Mob1" || collision.tag == "Bat_Body")
         {
             objectManager.is_atk = true;
         }
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Mob")
+        if (collision.tag == "Mob1" || collision.tag == "Bat_Body")
         {
             objectManager.is_atk = false;
         }

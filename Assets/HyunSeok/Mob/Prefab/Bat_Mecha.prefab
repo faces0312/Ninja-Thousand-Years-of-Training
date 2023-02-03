@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 40293194009895893}
   - component: {fileID: 40293194009895894}
   - component: {fileID: 1060918098206337393}
-  - component: {fileID: 127881881886389634}
   - component: {fileID: 1760475600879403494}
   m_Layer: 0
   m_Name: Bat_Mecha
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2527564516697735159, guid: c2580038a0aa54d44a3b0f3596fd2df9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,24 +117,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 30
---- !u!114 &127881881886389634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40293194009895895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1760475600879403494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,9 +153,10 @@ GameObject:
   - component: {fileID: 1106869541009116320}
   - component: {fileID: 8477176961979136861}
   - component: {fileID: 21337678015134564}
+  - component: {fileID: 1269213361011110023}
   m_Layer: 0
   m_Name: Attack
-  m_TagString: Untagged
+  m_TagString: Bat_Atk
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +170,7 @@ Transform:
   m_GameObject: {fileID: 966729563602302822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 40293194009895892}
   m_RootOrder: 2
@@ -250,6 +238,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09bfdb61534fb794d9b90a6a16f13d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &1269213361011110023
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966729563602302822}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.125
 --- !u!1 &4085068465622575291
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +353,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 2.9
 --- !u!114 &5988261851536569837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,9 +381,10 @@ GameObject:
   - component: {fileID: 8128731413697886514}
   - component: {fileID: 8702698998997114690}
   - component: {fileID: 9108628759781270414}
+  - component: {fileID: 3352026416558774337}
   m_Layer: 0
   m_Name: Bat_Mecha_Body
-  m_TagString: Mob
+  m_TagString: Bat_Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,8 +467,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.015258964, y: -0.0150810825}
-  m_Size: {x: 0.9407346, y: 0.82252187}
+  m_Offset: {x: -0.16848448, y: -0.022291567}
+  m_Size: {x: 0.446813, y: 0.38268277}
   m_Direction: 1
 --- !u!114 &9108628759781270414
 MonoBehaviour:
@@ -478,3 +483,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mob: {fileID: 1760475600879403494}
+--- !u!114 &3352026416558774337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8737794944202551163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
