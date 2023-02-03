@@ -108,6 +108,7 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
+
         if (collision.tag == "Talisman")
         {
             if (Data.Instance.gameData.fire_lv == 1)
@@ -154,7 +155,6 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
-
         if (collision.tag == "Tornado")
         {
             if (Data.Instance.gameData.tornado_lv == 1)
@@ -177,10 +177,6 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-
-
-
-
        
         if (collision.tag == "VoltTackle")
         {
@@ -204,8 +200,7 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-
-       
+  
         if (collision.tag == "Electric")
         {
             if (Data.Instance.gameData.electricity_lv == 1)
@@ -228,6 +223,7 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
+
         if (collision.tag == "Electric_Area")
         {
 
@@ -252,7 +248,6 @@ public class Mob1_Body : MonoBehaviour
             StartCoroutine(AttackHit());
         }
 
-
         if (collision.tag == "Wind")
         {
             if (Data.Instance.gameData.wind_lv == 1)
@@ -275,8 +270,6 @@ public class Mob1_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
-
-
 
         if (collision.tag == "WindWall")    //°Çµé
         {
