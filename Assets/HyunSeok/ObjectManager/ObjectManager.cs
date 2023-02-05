@@ -102,7 +102,7 @@ public class ObjectManager : MonoBehaviour
         wind_CT = 17f;
         wind_Tmp_CT = wind_CT;
 
-        windwall_CT = 20f;
+        windwall_CT = 5f;
         windwall_Tmp_CT = windwall_CT;
 
         tree_CT = 70f;

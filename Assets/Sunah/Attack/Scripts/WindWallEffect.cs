@@ -16,7 +16,7 @@ public class WindWallEffect : MonoBehaviour
     //private float strength = 16; //넉백의 강도
     //private float delay = 0.15f; //적이 다시 움직일 수 있도록 하는 지연시간
     public Vector2 MobVector;
-    public GameObject windwall2;
+    public GameObject windwall;
 
  /*   private void Awake()
     {

@@ -1,0 +1,1308 @@
+fileFormatVersion: 2
+guid: 40c8848ef98e54e4487eb4d4af6f8b98
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8882384226390199374
+    second: windwall_0
+  - first:
+      213: -5758053235425761134
+    second: windwall_1
+  - first:
+      213: 1684681127565747827
+    second: windwall_2
+  - first:
+      213: 4989102488347478872
+    second: windwall_3
+  - first:
+      213: 1002113467522500713
+    second: windwall_4
+  - first:
+      213: -7119415632526551956
+    second: windwall_5
+  - first:
+      213: -489600486532981571
+    second: windwall_6
+  - first:
+      213: 8612891198352401723
+    second: windwall_7
+  - first:
+      213: -6985923911096952698
+    second: windwall_8
+  - first:
+      213: 6396657054284480802
+    second: windwall_9
+  - first:
+      213: -8606200311710382610
+    second: windwall_10
+  - first:
+      213: 6557907717203119273
+    second: windwall_11
+  - first:
+      213: -560067742205576224
+    second: windwall_12
+  - first:
+      213: -7525838891393850902
+    second: windwall_13
+  - first:
+      213: -4936866653018295469
+    second: windwall_14
+  - first:
+      213: 5808718647010459517
+    second: windwall_15
+  - first:
+      213: 3897498353732631945
+    second: windwall_16
+  - first:
+      213: 6301470688387536302
+    second: windwall_17
+  - first:
+      213: -3155889009099953590
+    second: windwall_18
+  - first:
+      213: 1372407071097191249
+    second: windwall_19
+  - first:
+      213: -3241243461347586042
+    second: windwall_20
+  - first:
+      213: -327280503146670964
+    second: windwall_21
+  - first:
+      213: -481502020435101432
+    second: windwall_22
+  - first:
+      213: 6399327073441315102
+    second: windwall_23
+  - first:
+      213: -2107063497058589588
+    second: windwall_24
+  - first:
+      213: -2539876511194983108
+    second: windwall_25
+  - first:
+      213: 6725661354689685120
+    second: windwall_26
+  - first:
+      213: 4259034052148730722
+    second: windwall_27
+  - first:
+      213: -561063212609494721
+    second: windwall_28
+  - first:
+      213: 1478080194206619548
+    second: windwall_29
+  - first:
+      213: 6834265726127967766
+    second: windwall_30
+  - first:
+      213: 1683473061359737607
+    second: windwall_31
+  - first:
+      213: 386345134882625349
+    second: windwall_32
+  - first:
+      213: -134999025969059958
+    second: windwall_33
+  - first:
+      213: -7224328132622911258
+    second: windwall_34
+  - first:
+      213: -282894100339163925
+    second: windwall_35
+  - first:
+      213: 5119507127976779383
+    second: windwall_36
+  - first:
+      213: 7120129460960040796
+    second: windwall_37
+  - first:
+      213: 7307170171480758096
+    second: windwall_38
+  - first:
+      213: -6611121324586961992
+    second: windwall_39
+  - first:
+      213: 7530842919744937134
+    second: windwall_40
+  - first:
+      213: -4906466993997180512
+    second: windwall_41
+  - first:
+      213: 1229493539697478845
+    second: windwall_42
+  - first:
+      213: 6879306539297869631
+    second: windwall_43
+  - first:
+      213: -9126384144101653749
+    second: windwall_44
+  - first:
+      213: -4087977428743311173
+    second: windwall_45
+  - first:
+      213: 421137008375783523
+    second: windwall_46
+  - first:
+      213: 4796805407307690943
+    second: windwall_47
+  - first:
+      213: -2485147809877749017
+    second: windwall_48
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: windwall_0
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 3314
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3ba736b9e6bb480800000000000000
+      internalID: -8882384226390199374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_1
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 3290
+        width: 81
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298a8a007194710b0800000000000000
+      internalID: -5758053235425761134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_2
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 3280
+        width: 99
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3766c584f80316710800000000000000
+      internalID: 1684681127565747827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_3
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 3274
+        width: 105
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b08fd974adc3540800000000000000
+      internalID: 4989102488347478872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_4
+      rect:
+        serializedVersion: 2
+        x: 2251
+        y: 3274
+        width: 106
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9684058a3e838ed00800000000000000
+      internalID: 1002113467522500713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_5
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 3274
+        width: 105
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6454e6d331c23d90800000000000000
+      internalID: -7119415632526551956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_6
+      rect:
+        serializedVersion: 2
+        x: 3274
+        y: 3274
+        width: 107
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcd75693f69439f0800000000000000
+      internalID: -489600486532981571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_7
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 2763
+        width: 107
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3522ee69e2278770800000000000000
+      internalID: 8612891198352401723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_8
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2763
+        width: 107
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688982347330d0f90800000000000000
+      internalID: -6985923911096952698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_9
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 2763
+        width: 106
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2218f9e23bd75c850800000000000000
+      internalID: 6396657054284480802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_10
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 2763
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee585a20a62a09880800000000000000
+      internalID: -8606200311710382610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_11
+      rect:
+        serializedVersion: 2
+        x: 2251
+        y: 2763
+        width: 106
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac4fa1d25e520b50800000000000000
+      internalID: 6557907717203119273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_12
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 2763
+        width: 106
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb7ea71b5d3a38f0800000000000000
+      internalID: -560067742205576224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_13
+      rect:
+        serializedVersion: 2
+        x: 3274
+        y: 2763
+        width: 107
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae166a1e669de8790800000000000000
+      internalID: -7525838891393850902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2252
+        width: 118
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3537f5b8fe9bc7bb0800000000000000
+      internalID: -4936866653018295469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_15
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 2251
+        width: 116
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ffe3365d6bc9050800000000000000
+      internalID: 5808718647010459517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_16
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 2251
+        width: 105
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d37e65a12b61630800000000000000
+      internalID: 3897498353732631945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_17
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 2251
+        width: 104
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea510e75432537750800000000000000
+      internalID: 6301470688387536302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_18
+      rect:
+        serializedVersion: 2
+        x: 2251
+        y: 2251
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4aa906baa70434d0800000000000000
+      internalID: -3155889009099953590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_19
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 2251
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b7bf7b5f4cb0310800000000000000
+      internalID: 1372407071097191249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_20
+      rect:
+        serializedVersion: 2
+        x: 3274
+        y: 2251
+        width: 107
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 600d1d7ae3ac403d0800000000000000
+      internalID: -3241243461347586042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_21
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1740
+        width: 107
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84180ccd14457bf0800000000000000
+      internalID: -327280503146670964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_22
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1740
+        width: 109
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8093559a67c5159f0800000000000000
+      internalID: -481502020435101432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_23
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1740
+        width: 105
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e197206711afec850800000000000000
+      internalID: 6399327073441315102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_24
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1740
+        width: 104
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6461a2c9e432c2e0800000000000000
+      internalID: -2107063497058589588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_25
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1706
+        width: 166
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c355dd815cb80ccd0800000000000000
+      internalID: -2539876511194983108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_26
+      rect:
+        serializedVersion: 2
+        x: 2714
+        y: 1694
+        width: 198
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086e9d53e59565d50800000000000000
+      internalID: 6725661354689685120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_27
+      rect:
+        serializedVersion: 2
+        x: 3197
+        y: 1664
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b1e94b7e02b1b30800000000000000
+      internalID: 4259034052148730722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_28
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1270
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f312fd31bf3b638f0800000000000000
+      internalID: -561063212609494721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_29
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 1147
+        width: 249
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c97d93dfa12338410800000000000000
+      internalID: 1478080194206619548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_30
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 1148
+        width: 277
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e0c7ae77038de50800000000000000
+      internalID: 6834265726127967766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_31
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 1163
+        width: 335
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b594374d5ec5710800000000000000
+      internalID: 1683473061359737607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_32
+      rect:
+        serializedVersion: 2
+        x: 2621
+        y: 1144
+        width: 391
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547116d6ad29c5500800000000000000
+      internalID: 386345134882625349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_33
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 1121
+        width: 453
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a872714e913602ef0800000000000000
+      internalID: -134999025969059958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_34
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1147
+        width: 195
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8762ae6d70ebb90800000000000000
+      internalID: -7224328132622911258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_35
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 673
+        width: 327
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becfa388055f21cf0800000000000000
+      internalID: -282894100339163925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_36
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 665
+        width: 366
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ed22ccb942c0740800000000000000
+      internalID: 5119507127976779383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_37
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 661
+        width: 367
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57115b4508cfc260800000000000000
+      internalID: 7120129460960040796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_38
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 655
+        width: 354
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057d0705e88486560800000000000000
+      internalID: 7307170171480758096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_39
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 655
+        width: 356
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3fbf8be249044a0800000000000000
+      internalID: -6611121324586961992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_40
+      rect:
+        serializedVersion: 2
+        x: 2649
+        y: 665
+        width: 348
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac99a24cbde28860800000000000000
+      internalID: 7530842919744937134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_41
+      rect:
+        serializedVersion: 2
+        x: 3163
+        y: 673
+        width: 336
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a19e98b34ab8ebb0800000000000000
+      internalID: -4906466993997180512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_42
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 134
+        width: 343
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc4e473cd9001110800000000000000
+      internalID: 1229493539697478845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_43
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 133
+        width: 345
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f0fdf69d4387f50800000000000000
+      internalID: 6879306539297869631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_44
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 134
+        width: 339
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03401f79f1985180800000000000000
+      internalID: -9126384144101653749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_45
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 134
+        width: 311
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0b0f500369447c0800000000000000
+      internalID: -4087977428743311173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_46
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 134
+        width: 310
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360620ab0ed28d500800000000000000
+      internalID: 421137008375783523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_47
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 134
+        width: 314
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb37f377a1da19240800000000000000
+      internalID: 4796805407307690943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windwall_48
+      rect:
+        serializedVersion: 2
+        x: 3170
+        y: 134
+        width: 313
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e295e9db3bf28dd0800000000000000
+      internalID: -2485147809877749017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

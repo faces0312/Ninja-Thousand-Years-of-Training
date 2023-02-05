@@ -44,9 +44,9 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.tree_lv = 0;
         Data.Instance.gameData.boomerang_lv = 0;
         Data.Instance.gameData.electricity_lv = 0;
-        Data.Instance.gameData.windwall_lv = 0;
+        Data.Instance.gameData.windwall_lv = 1;
 
-        Data.Instance.gameData.mob1_hp = 1;
+        Data.Instance.gameData.mob1_hp = 100;
         Data.Instance.gameData.bat_normal_hp = 1;
         Data.Instance.gameData.bat_fire_hp = 1;
         Data.Instance.gameData.bat_wood_hp = 1;
