@@ -16,7 +16,7 @@ public class WindWallEffect : MonoBehaviour
     //private float strength = 16; //넉백의 강도
     //private float delay = 0.15f; //적이 다시 움직일 수 있도록 하는 지연시간
     public Vector2 MobVector;
-    public GameObject windwall;
+    //public GameObject windwall;
 
  /*   private void Awake()
     {
@@ -50,13 +50,13 @@ public class WindWallEffect : MonoBehaviour
 
         }
         yield return new WaitForSeconds(1f); //delay 주기
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
     }
     // collision 쓸때는 rigidbody에 dynamic으로 설정. 그러면 튕김. kinematic쓰면 통과됨.
     private void OnCollisionStay2D(Collision2D collision) 
     {
-        if (collision.gameObject.tag == "Mob")
+        if (collision.gameObject.tag == "Mob1" || collision.gameObject.tag == "Bat_Body")
         {
 
 

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3737997255931928577}
   - component: {fileID: 7579516175625322062}
   - component: {fileID: 3212389795665805486}
+  - component: {fileID: 4898910959947569150}
+  - component: {fileID: 9144002054872685342}
   m_Layer: 0
   m_Name: WindWall
   m_TagString: WindWall
@@ -99,7 +101,6 @@ MonoBehaviour:
   x: 0
   y: 0
   MobVector: {x: 0, y: 0}
-  windwall: {fileID: 0}
 --- !u!95 &3212389795665805486
 Animator:
   serializedVersion: 3
@@ -119,3 +120,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &4898910959947569150
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706442097502544773}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!58 &9144002054872685342
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706442097502544773}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.675
