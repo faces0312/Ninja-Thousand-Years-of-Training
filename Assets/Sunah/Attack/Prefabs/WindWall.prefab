@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3212389795665805486}
   - component: {fileID: 4898910959947569150}
   - component: {fileID: 9144002054872685342}
+  - component: {fileID: 8647371686645811105}
   m_Layer: 0
   m_Name: WindWall
   m_TagString: WindWall
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.07, y: 1.07}
+  m_Size: {x: 3.35, y: 2.1499999}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -157,3 +158,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.675
+--- !u!111 &8647371686645811105
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706442097502544773}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 56883827b5600314d8c98a80ece54199, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
