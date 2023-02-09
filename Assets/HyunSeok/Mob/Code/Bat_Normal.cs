@@ -52,7 +52,7 @@ public class Bat_Normal : MonoBehaviour
     public IEnumerator FindPlayer()
     {
         end = GameObject.FindObjectOfType<Player>().transform;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
         StartCoroutine(FindPlayer());
     }
     private void FixedUpdate()
