@@ -43,7 +43,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.voltTackle_lv = 0;
         Data.Instance.gameData.tornado_lv = 0;
         Data.Instance.gameData.tree_lv = 0;
-        Data.Instance.gameData.boomerang_lv = 6;
+        Data.Instance.gameData.boomerang_lv = 0;
         Data.Instance.gameData.electricity_lv = 0;
         Data.Instance.gameData.windwall_lv = 0;
 
