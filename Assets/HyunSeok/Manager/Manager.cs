@@ -25,13 +25,15 @@ public class Manager : MonoBehaviour
     public TextMeshProUGUI time_text;
     private void Awake()
     {
-        //Application.targetFrameRate = 60;
+        //Screen.SetResolution(640, 360, true);
+        Application.targetFrameRate = 30;
         manager = this;
 
         camera.orthographicSize = 5f;
         lv = 0;
 
-        Data.Instance.gameData.player_hp = 50;
+        Data.Instance.gameData.player_Location = new Vector2(0, 0);
+        Data.Instance.gameData.player_hp = 200;
 
         Data.Instance.gameData.normal_atk_lv = 1;
         Data.Instance.gameData.shadow_partner_lv = 0;
@@ -44,9 +46,9 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.tree_lv = 0;
         Data.Instance.gameData.boomerang_lv = 0;
         Data.Instance.gameData.electricity_lv = 0;
-        Data.Instance.gameData.windwall_lv = 1;
+        Data.Instance.gameData.windwall_lv = 0;
 
-        Data.Instance.gameData.mob1_hp = 100;
+        Data.Instance.gameData.mob1_hp = 1;
         Data.Instance.gameData.bat_normal_hp = 1;
         Data.Instance.gameData.bat_fire_hp = 1;
         Data.Instance.gameData.bat_wood_hp = 1;
@@ -63,6 +65,8 @@ public class Manager : MonoBehaviour
         time_min = 0;
         time_sec = 0f;
         //Invoke("Exp_Practice",1f);
+
+        StartCoroutine(Player_Location());
     }
 
     private void Update()
@@ -96,9 +100,6 @@ public class Manager : MonoBehaviour
             Data.Instance.gameData.bat_wood_hp += 2;
             Data.Instance.gameData.bat_mecha_hp += 2;
 
-            Data.Instance.gameData.mob1_dmg += 1;
-            Data.Instance.gameData.bat_body_dmg += 1;
-            Data.Instance.gameData.bat_atk_dmg += 2;
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
         if(Data.Instance.gameData.exp >= exp_Tmp)
@@ -146,5 +147,12 @@ public class Manager : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
         camera.orthographicSize = 5f;
+    }
+    
+    IEnumerator Player_Location()
+    {
+        Data.Instance.gameData.player_Location = player.gameObject.transform.position;
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(Player_Location());
     }
 }

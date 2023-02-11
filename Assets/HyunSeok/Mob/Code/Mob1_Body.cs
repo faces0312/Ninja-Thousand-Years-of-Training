@@ -32,6 +32,7 @@ public class Mob1_Body : MonoBehaviour
             collision.gameObject.SetActive(false);
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -59,6 +60,7 @@ public class Mob1_Body : MonoBehaviour
             collision.gameObject.SetActive(false);
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -84,6 +86,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 30;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -109,6 +112,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 30;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -134,6 +138,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 25;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -159,6 +164,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 30;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -184,6 +190,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 30;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -209,6 +216,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 15;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -234,6 +242,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 22;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -259,6 +268,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 8;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -284,6 +294,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 18;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();
@@ -310,6 +321,7 @@ public class Mob1_Body : MonoBehaviour
                 mob.hp -= 12;
             if (mob.hp <= 0)
             {
+                mob.speed = 0;
                 mob.die.SetBool("Is_Die", true);
                 Drop_Letter();
                 mob.StopAllCoroutines();

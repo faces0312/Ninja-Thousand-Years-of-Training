@@ -26,7 +26,7 @@ public class Tornado : MonoBehaviour
         StartCoroutine(Dis_Tornado());
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.Translate(moveVector * speed * Time.deltaTime);
     }

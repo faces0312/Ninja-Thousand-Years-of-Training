@@ -13,7 +13,7 @@ public class Letter_Range : MonoBehaviour
     {
         for (int i = 0; i < 50; i++)
         {
-            transform.Translate(0, -1 * Time.deltaTime, 0);
+            transform.Translate(0, -0.4f * Time.deltaTime, 0);
             yield return new WaitForSeconds(0.01f);
         }
 
@@ -24,7 +24,7 @@ public class Letter_Range : MonoBehaviour
     {
         for (int i = 0; i < 50; i++)
         {
-            transform.Translate(0, 1 * Time.deltaTime, 0);
+            transform.Translate(0, 0.4f * Time.deltaTime, 0);
             yield return new WaitForSeconds(0.01f);
         }
 

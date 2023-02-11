@@ -9,9 +9,8 @@ public class Bat_Fire : MonoBehaviour
     public Mob_Atk atk;
 
     public SpriteRenderer rend;
-    Vector3 start;
-    Transform end;
-    Vector3 fin;
+    Vector2 start;
+    Vector2 fin;
 
     public bool target_on;
 
@@ -32,7 +31,7 @@ public class Bat_Fire : MonoBehaviour
         target_on = true;
         bat_Fire_Body.gameObject.SetActive(true);
         atk.gameObject.SetActive(false);
-        StartCoroutine(FindPlayer());
+        //StartCoroutine(nameof(FindPlayer));
     }
 
     /*private void OnTriggerStay2D(Collider2D collision)
@@ -47,16 +46,16 @@ public class Bat_Fire : MonoBehaviour
                 rend.flipX = false;
         }
     }*/
-    public IEnumerator FindPlayer()
+    /*public IEnumerator FindPlayer()
     {
         end = GameObject.FindObjectOfType<Player>().transform;
-        yield return new WaitForSeconds(1f);
-        StartCoroutine(FindPlayer());
-    }
+        yield return new WaitForSeconds(find_num);
+        StartCoroutine(nameof(FindPlayer));
+    }*/
 
     private void FixedUpdate()
     {
-        fin = end.position - start;
+        fin = Data.Instance.gameData.player_Location - start;
         if (fin.x > 0)
             rend.flipX = true;
         else
@@ -64,12 +63,14 @@ public class Bat_Fire : MonoBehaviour
         if (target_on == true)
         {
             start = this.transform.position;
-            transform.position = Vector3.MoveTowards(start, end.position, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(start, Data.Instance.gameData.player_Location, speed * Time.deltaTime);
         }
     }
 
     public void Die()
     {
+        //StopCoroutine(nameof(FindPlayer));
+        bat_Fire_Body.StopAllCoroutines();
         atk.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }

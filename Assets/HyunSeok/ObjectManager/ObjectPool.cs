@@ -56,11 +56,11 @@ public class ObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mob1 = new GameObject[200];
-        bat_Normal = new GameObject[100];
-        bat_Fire = new GameObject[100];
-        bat_Wood = new GameObject[100];
-        bat_Mecha = new GameObject[100];
+        mob1 = new GameObject[400];
+        bat_Normal = new GameObject[200];
+        bat_Fire = new GameObject[200];
+        bat_Wood = new GameObject[200];
+        bat_Mecha = new GameObject[200];
 
         player_nomralAtk = new GameObject[20];
         player_shadowAtk = new GameObject[20];

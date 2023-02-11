@@ -9,7 +9,7 @@ public class Fire : MonoBehaviour
         StartCoroutine(Dis_Fire());
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector3.right * 6 * Time.deltaTime);
     }

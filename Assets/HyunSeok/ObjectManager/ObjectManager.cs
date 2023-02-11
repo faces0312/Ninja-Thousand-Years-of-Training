@@ -133,39 +133,9 @@ public class ObjectManager : MonoBehaviour
                 for (int i = 0; i < 4; i++)
                     Mob_General();
             }
-            else if (manager.lv == 2)
-            {
-                for (int i = 0; i < 5; i++)
-                    Mob_General();
-            }
-            else if (manager.lv == 3)
-            {
-                for (int i = 0; i < 6; i++)
-                    Mob_General();
-            }
-            else if (manager.lv == 4)
-            {
-                for (int i = 0; i < 7; i++)
-                    Mob_General();
-            }
-            else if (manager.lv == 5)
-            {
-                for (int i = 0; i < 8; i++)
-                    Mob_General();
-            }
-            else if (manager.lv == 6)
-            {
-                for (int i = 0; i < 9; i++)
-                    Mob_General();
-            }
-            else if (manager.lv == 7)
-            {
-                for (int i = 0; i < 10; i++)
-                    Mob_General();
-            }
             else
             {
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < 5; i++)
                     Mob_General();
             }
             mob_Tmp_CT = mob_CT;
