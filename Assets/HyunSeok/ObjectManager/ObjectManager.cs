@@ -142,7 +142,7 @@ public class ObjectManager : MonoBehaviour
         }
 
 
-        if (is_atk == true)
+      /*  if (is_atk == true)
         {
             if (atk_normal_Tmp_CT > 0)
                 atk_normal_Tmp_CT -= Time.deltaTime;
@@ -168,7 +168,7 @@ public class ObjectManager : MonoBehaviour
                     shadow_partner_Tmp_CT = shadow_partner_CT;
                 }
             }
-        }
+        }*/
 
 
         if (Data.Instance.gameData.fire_lv > 0)
