@@ -8,7 +8,7 @@ public class WindWallEffect : MonoBehaviour
 
     public float x;
     public float y;
-
+    public GameObject parent;
     /*public float windwall_CT;
     public float windwall_Tmp_CT;*/
 
@@ -34,11 +34,18 @@ public class WindWallEffect : MonoBehaviour
         gameObject.transform.localScale = new Vector3(x, y);
         //windwall2.gameObject.transform.localScale = new Vector3(x, y);
 
-        StartCoroutine(Dis_WindWall());
+        StartCoroutine(Exe_WindWall());
        
     }
- 
-    IEnumerator Dis_WindWall()  
+
+    public void Dis_WindWall()
+    {
+        //gameObject.SetActive(false);
+        parent.transform.gameObject.SetActive(false);
+
+
+    }
+    IEnumerator Exe_WindWall()  
     {  //windwall 크기 확대
         for(int i=0; i<50; i++)
         {
@@ -52,6 +59,7 @@ public class WindWallEffect : MonoBehaviour
         }
         yield return new WaitForSeconds(1f); //delay 주기
         //gameObject.SetActive(false);
+        //parent.transform.gameObject.SetActive(false);
 
     }
 
