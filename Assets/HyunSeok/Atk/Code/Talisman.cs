@@ -12,7 +12,7 @@ public class Talisman : MonoBehaviour
         move_talisman = true;
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(move_talisman == true)
             transform.Translate(Vector3.up * 13 * Time.deltaTime);

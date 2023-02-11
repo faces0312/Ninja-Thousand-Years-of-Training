@@ -9,7 +9,7 @@ public class Mob_Atk : MonoBehaviour
         StartCoroutine(Dis_Atk());
     }
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector3.right * 5 * Time.deltaTime);
     }

@@ -10,7 +10,7 @@ public class Normal_Atk : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //transform.Rotate(0, 0, 10 , Space.Self);
         transform.Translate(Vector3.right * 8 * Time.deltaTime);

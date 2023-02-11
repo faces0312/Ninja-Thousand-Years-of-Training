@@ -12,7 +12,7 @@ public class Wind : MonoBehaviour
         StartCoroutine(Move_Go());
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(is_back == false)
         {

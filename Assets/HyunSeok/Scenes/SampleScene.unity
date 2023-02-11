@@ -1528,7 +1528,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 1
   orthographic size: 5
@@ -3154,8 +3154,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1380643636}
   - component: {fileID: 1380643637}
-  - component: {fileID: 1380643639}
   - component: {fileID: 1380643638}
+  - component: {fileID: 1380643639}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -3228,7 +3228,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1380643638
+--- !u!114 &1380643638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380643635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c2ad0fa7d63f04982771058db931a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2015173481}
+--- !u!61 &1380643639
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3254,20 +3267,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.8, y: 16.18}
   m_EdgeRadius: 0
---- !u!114 &1380643639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380643635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44c2ad0fa7d63f04982771058db931a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 2067862462}
-  player: {fileID: 2015173481}
 --- !u!1 &1429876651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3442,8 +3441,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1553325645}
   - component: {fileID: 1553325644}
-  - component: {fileID: 1553325647}
   - component: {fileID: 1553325646}
+  - component: {fileID: 1553325647}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -3516,7 +3515,20 @@ Transform:
   m_Father: {fileID: 34458388}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1553325646
+--- !u!114 &1553325646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553325643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c3578251c6f6d41a30e9825c69e201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2015173481}
+--- !u!61 &1553325647
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3542,19 +3554,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.8, y: 16.18}
   m_EdgeRadius: 0
---- !u!114 &1553325647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1553325643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7c3578251c6f6d41a30e9825c69e201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2015173481}
 --- !u!1 &1558198355
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,8 +3666,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1582186421}
   - component: {fileID: 1582186424}
-  - component: {fileID: 1582186423}
   - component: {fileID: 1582186422}
+  - component: {fileID: 1582186423}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -3690,7 +3689,20 @@ Transform:
   m_Father: {fileID: 1314070856}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1582186422
+--- !u!114 &1582186422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582186420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60db138cff9bd3740a00f64a61887b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2015173481}
+--- !u!61 &1582186423
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3716,20 +3728,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.8, y: 16.18}
   m_EdgeRadius: 0
---- !u!114 &1582186423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582186420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60db138cff9bd3740a00f64a61887b5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 2067862462}
-  player: {fileID: 2015173481}
 --- !u!212 &1582186424
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4420,8 +4418,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1845473789}
   - component: {fileID: 1845473790}
-  - component: {fileID: 1845473792}
   - component: {fileID: 1845473791}
+  - component: {fileID: 1845473792}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -4494,7 +4492,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1845473791
+--- !u!114 &1845473791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845473788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595604d4a1942914bbe7a1ba4e899aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2015173481}
+--- !u!61 &1845473792
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4520,20 +4531,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.8, y: 16.18}
   m_EdgeRadius: 0
---- !u!114 &1845473792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845473788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 595604d4a1942914bbe7a1ba4e899aa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 2067862462}
-  player: {fileID: 2015173481}
 --- !u!1 &1859846294
 GameObject:
   m_ObjectHideFlags: 0

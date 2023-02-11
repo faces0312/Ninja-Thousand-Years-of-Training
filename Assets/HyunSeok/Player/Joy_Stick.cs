@@ -21,7 +21,7 @@ public class Joy_Stick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
         imageController = transform.GetChild(0).GetComponent<Image>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (touchPosition.x < 0)
         {
