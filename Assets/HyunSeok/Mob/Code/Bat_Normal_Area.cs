@@ -10,15 +10,15 @@ public class Bat_Normal_Area : MonoBehaviour
     public float atk_CT;
     private float atk_Tmp_CT;
 
+    bool is_area;
     private void OnEnable()
     {
         atk_CT = 5f;
         atk_Tmp_CT = atk_CT;
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.gameObject.tag == "PlayerBody")
+        if (is_area == true)
         {
             mob.target_on = false;
             if (atk_Tmp_CT > 0)
@@ -27,7 +27,7 @@ public class Bat_Normal_Area : MonoBehaviour
             {
                 atk.gameObject.transform.position = mob.gameObject.transform.position;
                 Vector3 start = atk.transform.position;
-                Vector3 end = collision.transform.position;
+                Vector3 end = Data.Instance.gameData.player_Location;
                 Vector3 fin = end - start;
                 atk.transform.rotation = Quaternion.Euler(atk.transform.rotation.x, atk.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);
                 atk.gameObject.SetActive(true);
@@ -35,11 +35,19 @@ public class Bat_Normal_Area : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "PlayerBody")
+        {
+            is_area = true;
+        }
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PlayerBody")
         {
+            is_area = false;
             mob.target_on = true;
         }
     }

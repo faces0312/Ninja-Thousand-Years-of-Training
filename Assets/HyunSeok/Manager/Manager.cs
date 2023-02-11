@@ -57,6 +57,8 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.mob1_dmg = 1;
         Data.Instance.gameData.bat_body_dmg = 1;
         Data.Instance.gameData.bat_atk_dmg = 2;
+
+        Data.Instance.gameData.mob_cnt = 0;
         /*
         Data.Instance.gameData.exp = 0;
         exp_Tmp = 100;*/
@@ -99,7 +101,6 @@ public class Manager : MonoBehaviour
             Data.Instance.gameData.bat_fire_hp += 2;
             Data.Instance.gameData.bat_wood_hp += 2;
             Data.Instance.gameData.bat_mecha_hp += 2;
-
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
         if(Data.Instance.gameData.exp >= exp_Tmp)
@@ -121,7 +122,7 @@ public class Manager : MonoBehaviour
         for (int i = 0; i < lv; i++)
         {
             objectManager.Mob_BigWave_General();
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
         }
 
         yield return new WaitForSeconds(10f);
@@ -152,7 +153,7 @@ public class Manager : MonoBehaviour
     IEnumerator Player_Location()
     {
         Data.Instance.gameData.player_Location = player.gameObject.transform.position;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         StartCoroutine(Player_Location());
     }
 }

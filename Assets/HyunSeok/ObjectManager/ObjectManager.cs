@@ -301,26 +301,32 @@ public class ObjectManager : MonoBehaviour
         ran_mob = Random.Range(0, 2);
         ran_location = Random.Range(0, 28);
 
-        if (player_Body.in_Normal == true)
+        if (Data.Instance.gameData.mob_cnt <= 200)
         {
-            mob1 = objectPool.MakeObj(mob_Normal_str[ran_mob]);
-            mob1.transform.position = mob_Location[ran_location].transform.position;
+            if (player_Body.in_Normal == true)
+            {
+                mob1 = objectPool.MakeObj(mob_Normal_str[ran_mob]);
+                mob1.transform.position = mob_Location[ran_location].transform.position;
+            }
+            else if (player_Body.in_Fire == true)
+            {
+                mob1 = objectPool.MakeObj(mob_Fire_str[ran_mob]);
+                mob1.transform.position = mob_Location[ran_location].transform.position;
+            }
+            else if (player_Body.in_Wood == true)
+            {
+                mob1 = objectPool.MakeObj(mob_Wood_str[ran_mob]);
+                mob1.transform.position = mob_Location[ran_location].transform.position;
+            }
+            else if (player_Body.in_Mecha == true)
+            {
+                mob1 = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
+                mob1.transform.position = mob_Location[ran_location].transform.position;
+            }
+            Data.Instance.gameData.mob_cnt++;
         }
-        else if (player_Body.in_Fire == true)
-        {
-            mob1 = objectPool.MakeObj(mob_Fire_str[ran_mob]);
-            mob1.transform.position = mob_Location[ran_location].transform.position;
-        }
-        else if (player_Body.in_Wood == true)
-        {
-            mob1 = objectPool.MakeObj(mob_Wood_str[ran_mob]);
-            mob1.transform.position = mob_Location[ran_location].transform.position;
-        }
-        else if (player_Body.in_Mecha == true)
-        {
-            mob1 = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
-            mob1.transform.position = mob_Location[ran_location].transform.position;
-        }
+        else
+            return;
     }
 
     public void Mob_BigWave_General()
@@ -367,7 +373,7 @@ public class ObjectManager : MonoBehaviour
                 mob.transform.position = mob_Location[i].transform.position;
             }
         }
-
+        Data.Instance.gameData.mob_cnt += 28;
     }
 
 

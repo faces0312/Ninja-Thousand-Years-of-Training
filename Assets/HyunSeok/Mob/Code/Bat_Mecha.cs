@@ -70,6 +70,7 @@ public class Bat_Mecha : MonoBehaviour
 
     public void Die()
     {
+        Data.Instance.gameData.mob_cnt--;
         //StopCoroutine(nameof(FindPlayer));
         bat_Mecha_Body.StopAllCoroutines();
         atk.gameObject.SetActive(false);

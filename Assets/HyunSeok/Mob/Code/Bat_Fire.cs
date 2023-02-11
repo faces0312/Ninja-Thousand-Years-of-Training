@@ -69,6 +69,7 @@ public class Bat_Fire : MonoBehaviour
 
     public void Die()
     {
+        Data.Instance.gameData.mob_cnt--;
         //StopCoroutine(nameof(FindPlayer));
         bat_Fire_Body.StopAllCoroutines();
         atk.gameObject.SetActive(false);

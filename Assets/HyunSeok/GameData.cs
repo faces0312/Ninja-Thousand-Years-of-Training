@@ -28,6 +28,7 @@ public class GameData
     public int electricity_lv; // 번개의신 번개의 왕
     public int windwall_lv; //
 
+    public int mob_cnt;
     //몹 체력
     public float mob1_hp;
     public float bat_normal_hp;
