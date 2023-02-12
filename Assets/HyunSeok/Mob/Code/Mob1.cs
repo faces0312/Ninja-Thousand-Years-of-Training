@@ -8,8 +8,10 @@ public class Mob1 : MonoBehaviour
     public Mob1_Body mob1_Body;
 
     public SpriteRenderer rend;
-    Vector2 start;
-    Vector2 fin;
+    Vector3 start;
+    Vector3 fin;
+
+    public Rigidbody2D target;
 
     public float hp;
     public int speed;
@@ -22,6 +24,7 @@ public class Mob1 : MonoBehaviour
 
     private void OnEnable()
     {
+        target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.mob1_hp;
         speed = 1;
@@ -54,14 +57,14 @@ public class Mob1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        fin = Data.Instance.gameData.player_Location - start;
+        fin = target.transform.position - start;
         if (fin.x > 0)
             rend.flipX = true;
         else
             rend.flipX = false;
         start = this.transform.position;
-        transform.position = Vector3.MoveTowards(start, Data.Instance.gameData.player_Location, speed * Time.deltaTime);
-        
+        transform.position = Vector3.MoveTowards(start, target.transform.position, speed * Time.deltaTime);
+
         //transform.position = Vector3.MoveTowards(start, Camera.main.transform.position, speed * Time.deltaTime);
     }
 

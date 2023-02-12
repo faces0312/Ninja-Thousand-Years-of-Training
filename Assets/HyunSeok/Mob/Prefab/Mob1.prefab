@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 2326340946556538744}
   - component: {fileID: 5289893217853964095}
   - component: {fileID: 3682798853463492335}
-  - component: {fileID: 1064239368909930777}
+  - component: {fileID: 9185172159467154421}
   m_Layer: 7
   m_Name: Mob1
   m_TagString: Untagged
@@ -227,6 +227,7 @@ MonoBehaviour:
   die: {fileID: 3682798853463492335}
   mob1_Body: {fileID: 3041621250364092564}
   rend: {fileID: 2326340946556538744}
+  target: {fileID: 0}
   hp: 0
   speed: 0
 --- !u!95 &3682798853463492335
@@ -248,7 +249,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &1064239368909930777
+--- !u!50 &9185172159467154421
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 7957190243139850724}
   - component: {fileID: 7957190243139850727}
   - component: {fileID: 3343899128873438330}
-  - component: {fileID: 6768744315002809842}
+  - component: {fileID: 384312682513515532}
   m_Layer: 0
   m_Name: Bat_Fire
   m_TagString: Untagged
@@ -235,10 +235,11 @@ MonoBehaviour:
   bat_Fire_Body: {fileID: 5105041227814210756}
   atk: {fileID: 3849909984941125236}
   rend: {fileID: 7957190243139850724}
+  target: {fileID: 0}
   target_on: 0
   hp: 0
   speed: 0
---- !u!50 &6768744315002809842
+--- !u!50 &384312682513515532
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -395,7 +396,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2393977018026478934}
   - component: {fileID: 4258871115948675883}
-  - component: {fileID: 3155353214087101870}
   - component: {fileID: 2311194491358139407}
   m_Layer: 0
   m_Name: Bat_Fire_Area
@@ -469,22 +469,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3155353214087101870
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8856287394199906790}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.9
 --- !u!114 &2311194491358139407
 MonoBehaviour:
   m_ObjectHideFlags: 0

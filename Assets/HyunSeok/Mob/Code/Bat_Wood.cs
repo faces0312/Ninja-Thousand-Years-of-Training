@@ -9,9 +9,10 @@ public class Bat_Wood : MonoBehaviour
     public Mob_Atk atk;
 
     public SpriteRenderer rend;
-    Vector2 start;
-    Vector2 fin;
+    Vector3 start;
+    Vector3 fin;
 
+    public Rigidbody2D target;
     public bool target_on;
 
     public float hp;
@@ -25,6 +26,7 @@ public class Bat_Wood : MonoBehaviour
 
     private void OnEnable()
     {
+        target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.bat_wood_hp;
         speed = 1.3f;
@@ -56,7 +58,7 @@ public class Bat_Wood : MonoBehaviour
 
     private void FixedUpdate()
     {
-        fin = Data.Instance.gameData.player_Location - start;
+        fin = target.transform.position - start;
         if (fin.x > 0)
             rend.flipX = true;
         else
@@ -64,7 +66,7 @@ public class Bat_Wood : MonoBehaviour
         if (target_on == true)
         {
             start = this.transform.position;
-            transform.position = Vector3.MoveTowards(start, Data.Instance.gameData.player_Location, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(start, target.transform.position, speed * Time.deltaTime);
         }
     }
 

@@ -136,7 +136,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7755949756815887198}
   - component: {fileID: 1627935231143139526}
-  - component: {fileID: 5702875303240474462}
   - component: {fileID: 8948276878706428322}
   m_Layer: 0
   m_Name: Bat_Normal_Area
@@ -210,22 +209,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &5702875303240474462
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4365548674394930606}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.9
 --- !u!114 &8948276878706428322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +236,7 @@ GameObject:
   - component: {fileID: 4387183298431147857}
   - component: {fileID: 4387183298431147856}
   - component: {fileID: 4222316873644127866}
-  - component: {fileID: 4270241690850928791}
+  - component: {fileID: 2931572617186685602}
   m_Layer: 0
   m_Name: Bat_Normal
   m_TagString: Untagged
@@ -364,10 +347,11 @@ MonoBehaviour:
   bat_Normal_Body: {fileID: 6080470705181415994}
   atk: {fileID: 8208006022858415260}
   rend: {fileID: 4387183298431147857}
+  target: {fileID: 0}
   target_on: 0
   hp: 0
   speed: 0
---- !u!50 &4270241690850928791
+--- !u!50 &2931572617186685602
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ public class GameData
     //public float exp;
 
     public float player_hp;//플레이어 체력
-    public Vector2 player_Location;
 
     //플레이어 스킬
     public int normal_atk_lv;//표창

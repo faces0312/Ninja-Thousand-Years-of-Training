@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2841073573716010887}
   - component: {fileID: 7167642016505535125}
-  - component: {fileID: 7311098611599054277}
   - component: {fileID: 7691284722509422723}
   m_Layer: 0
   m_Name: Bat_Wood_Area
@@ -196,22 +195,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7311098611599054277
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424478638507652551}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.9
 --- !u!114 &7691284722509422723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +222,7 @@ GameObject:
   - component: {fileID: 4017674256091556790}
   - component: {fileID: 4017674256091556791}
   - component: {fileID: 4695012316787701838}
-  - component: {fileID: 229794095916935873}
+  - component: {fileID: 4792119005784345636}
   m_Layer: 0
   m_Name: Bat_Wood
   m_TagString: Untagged
@@ -350,10 +333,11 @@ MonoBehaviour:
   bat_Wood_Body: {fileID: 6560981999802276359}
   atk: {fileID: 8625944184838310449}
   rend: {fileID: 4017674256091556790}
+  target: {fileID: 0}
   target_on: 0
   hp: 0
   speed: 0
---- !u!50 &229794095916935873
+--- !u!50 &4792119005784345636
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

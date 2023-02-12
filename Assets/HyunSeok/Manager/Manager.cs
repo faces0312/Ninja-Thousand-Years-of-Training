@@ -32,7 +32,6 @@ public class Manager : MonoBehaviour
         camera.orthographicSize = 5f;
         lv = 0;
 
-        Data.Instance.gameData.player_Location = new Vector2(0, 0);
         Data.Instance.gameData.player_hp = 200;
 
         Data.Instance.gameData.normal_atk_lv = 1;
@@ -68,7 +67,7 @@ public class Manager : MonoBehaviour
         time_sec = 0f;
         //Invoke("Exp_Practice",1f);
 
-        StartCoroutine(Player_Location());
+        //StartCoroutine(Player_Location());
     }
 
     private void Update()
@@ -150,10 +149,10 @@ public class Manager : MonoBehaviour
         camera.orthographicSize = 5f;
     }
     
-    IEnumerator Player_Location()
+    /*IEnumerator Player_Location()
     {
         Data.Instance.gameData.player_Location = player.gameObject.transform.position;
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(Player_Location());
-    }
+    }*/
 }
