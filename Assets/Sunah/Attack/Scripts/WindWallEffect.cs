@@ -8,7 +8,6 @@ public class WindWallEffect : MonoBehaviour
 
     public float x;
     public float y;
-
     /*public float windwall_CT;
     public float windwall_Tmp_CT;*/
 
@@ -27,31 +26,38 @@ public class WindWallEffect : MonoBehaviour
 */
     private void OnEnable()
     {
-        x = 0f;
-        y = 0f;
+        x = 1f;
+        y = 1f;
         /*windwall_CT = 1f;   //이게뭐지????????????????????????????????????????????????
         windwall_CT = windwall_CT;*/
         gameObject.transform.localScale = new Vector3(x, y);
         //windwall2.gameObject.transform.localScale = new Vector3(x, y);
 
-        StartCoroutine(Dis_WindWall());
+        //StartCoroutine(Exe_WindWall());
        
     }
- 
-    IEnumerator Dis_WindWall()  
+    
+    public void Exe_WindWallStart()
+    {
+        StartCoroutine(Exe_WindWall());
+    }
+
+
+    IEnumerator Exe_WindWall()  
     {  //windwall 크기 확대
         for(int i=0; i<50; i++)
         {
-            x += 0.05f;   // 애니메이션에서 어느 시점부터 커지게 하려면 이 더하는 걸 따로 함수로 만들어???
-            y += 0.05f;
+            x += 0.028f;   // 애니메이션에서 어느 시점부터 커지게 하려면 이 더하는 걸 따로 함수로 만들어???
+            y += 0.028f;
             gameObject.transform.localScale = new Vector3(x, y); //현재 애니메이션 오브젝트 자체에 커지는 스크립트가 있어서 애니메이션 자체가 커지는 현상이 발생함
                                                                  //커지는 스크립트를 실제로 밀리는 범위(자식오브젝트)로 따로 만들어서 넣어야함
             //windwall2.gameObject.transform.localScale = new Vector3(x, y);
-            yield return new WaitForSeconds(0.01f); //특정시간 뒤에 함수 호출
+            yield return new WaitForSeconds(0.001f); //특정시간 뒤에 함수 호출
 
         }
         yield return new WaitForSeconds(1f); //delay 주기
         //gameObject.SetActive(false);
+        //parent.transform.gameObject.SetActive(false);
 
     }
 
@@ -64,11 +70,11 @@ public class WindWallEffect : MonoBehaviour
 
 
             //MobVector = Vector2.Reflect(gameObject.transform.position, collision.contacts[0].normal);
-            Vector2 direction =((collision.gameObject.transform.position - this.gameObject.transform.position).normalized)*13f;
+            Vector2 direction =((collision.gameObject.transform.position - this.gameObject.transform.position).normalized)*11.4f;
             MobVector = direction;
             //new Vector2(collision.gameObject.transform.position - this.gameObject.transform.position).normalized;
             //StartCoroutine(MoveMob(collision.gameObject));
-            collision.gameObject.transform.parent.Translate(MobVector * 5f * Time.deltaTime);
+            collision.gameObject.transform.parent.Translate(MobVector * 1f * Time.deltaTime);
         }
     }
     
