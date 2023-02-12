@@ -11,6 +11,11 @@ public class Manager : MonoBehaviour
     public static Manager manager;
     public ObjectManager objectManager;
     public Player player;
+
+    public Slot_Normal slot_Normal;
+    public Slot_Fire slot_Fire;
+    public Slot_Wood slot_Wood;
+    public Slot_Mecha slot_Mecha;
     //public Mob1 mob;  //�ǵ�
 
     public int lv;//난이도(몹 수와 연관됨)
@@ -45,7 +50,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.tree_lv = 0;
         Data.Instance.gameData.boomerang_lv = 0;
         Data.Instance.gameData.electricity_lv = 0;
-        Data.Instance.gameData.windwall_lv = 2;
+        Data.Instance.gameData.windwall_lv = 0;
 
         Data.Instance.gameData.mob1_hp = 1;
         Data.Instance.gameData.bat_normal_hp = 1;
