@@ -113,7 +113,7 @@ public class Slot_Mecha : MonoBehaviour
 
         close_page.gameObject.SetActive(true);
     }
-
+    //
     public void Close_Page()
     {
         Time.timeScale = 1;

@@ -2637,8 +2637,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Slot_Normal, Assembly-CSharp
+      - m_Target: {fileID: 1255856296}
+        m_TargetAssemblyTypeName: Slot_Mecha, Assembly-CSharp
         m_MethodName: Close_Page
         m_Mode: 1
         m_Arguments:
@@ -4082,9 +4082,9 @@ MonoBehaviour:
   objectManager: {fileID: 2067862462}
   player: {fileID: 2106791451}
   slot_Normal: {fileID: 2002215494}
-  slot_Fire: {fileID: 0}
-  slot_Wood: {fileID: 0}
-  slot_Mecha: {fileID: 0}
+  slot_Fire: {fileID: 575825847}
+  slot_Wood: {fileID: 712793609}
+  slot_Mecha: {fileID: 1255856296}
   lv: 0
   time_text: {fileID: 1601032689}
 --- !u!4 &1314174042
@@ -6006,8 +6006,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Slot_Normal, Assembly-CSharp
+      - m_Target: {fileID: 712793609}
+        m_TargetAssemblyTypeName: Slot_Wood, Assembly-CSharp
         m_MethodName: Close_Page
         m_Mode: 1
         m_Arguments:
@@ -7208,8 +7208,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Slot_Normal, Assembly-CSharp
+      - m_Target: {fileID: 575825847}
+        m_TargetAssemblyTypeName: Slot_Fire, Assembly-CSharp
         m_MethodName: Close_Page
         m_Mode: 1
         m_Arguments:
