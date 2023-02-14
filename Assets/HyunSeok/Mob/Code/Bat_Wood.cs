@@ -28,8 +28,8 @@ public class Bat_Wood : MonoBehaviour
     {
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
-        hp = Data.Instance.gameData.bat_wood_hp;
-        speed = 1.3f;
+        hp = Data.Instance.gameData.bat_hp;
+        speed = 1.4f;
         target_on = true;
         bat_Wood_Body.gameObject.SetActive(true);
         atk.gameObject.SetActive(false);

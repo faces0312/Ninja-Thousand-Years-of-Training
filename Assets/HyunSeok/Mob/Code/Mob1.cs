@@ -14,7 +14,7 @@ public class Mob1 : MonoBehaviour
     public Rigidbody2D target;
 
     public float hp;
-    public int speed;
+    public float speed;
     // Update is called once per frame
 
     private void Start()
@@ -27,7 +27,7 @@ public class Mob1 : MonoBehaviour
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.mob1_hp;
-        speed = 1;
+        speed = 1.1f;
         //target_on = false;
         mob1_Body.gameObject.SetActive(true);
         //StartCoroutine(FindPlayer());

@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1346234591043205478}
   - component: {fileID: 1319800341361827552}
   - component: {fileID: 5454823586663930918}
-  m_Layer: 0
+  - component: {fileID: 1651858239648038394}
+  - component: {fileID: 8988788509420183192}
+  m_Layer: 7
   m_Name: WifiMob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,6 +105,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &1651858239648038394
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4156708534531067767}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &8988788509420183192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4156708534531067767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc94089c5d8db2849adc32e64ac49d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  die: {fileID: 5454823586663930918}
+  wifi_Body: {fileID: 2378981787196886746}
+  rend: {fileID: 1319800341361827552}
+  target: {fileID: 0}
+  hp: 0
+  speed: 0
 --- !u!1 &4609321268051973285
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,9 +155,11 @@ GameObject:
   - component: {fileID: 4852210492480990404}
   - component: {fileID: 1764886896619179486}
   - component: {fileID: 9059532758325125228}
-  m_Layer: 0
+  - component: {fileID: 4054779300091393464}
+  - component: {fileID: 2378981787196886746}
+  m_Layer: 7
   m_Name: Wifi_Body
-  m_TagString: Untagged
+  m_TagString: Mob1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +219,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.21176471}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -202,3 +245,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &4054779300091393464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609321268051973285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2378981787196886746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4609321268051973285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556599f2e7a86cc40a7a1f23a49a6a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mob: {fileID: 8988788509420183192}

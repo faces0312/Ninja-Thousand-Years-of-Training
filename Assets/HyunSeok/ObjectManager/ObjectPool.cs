@@ -34,6 +34,12 @@ public class ObjectPool : MonoBehaviour
     //¸÷ Å¸°Ù
     public GameObject mob1_Prefab;
     GameObject[] mob1;
+    public GameObject rayven_Prefab;
+    GameObject[] rayven;
+    public GameObject redspit_Prefab;
+    GameObject[] redspit;
+    public GameObject wifi_Prefab;
+    GameObject[] wifi;
     public GameObject bat_Normal_Prefab;
     GameObject[] bat_Normal;
     public GameObject bat_Fire_Prefab;
@@ -56,11 +62,14 @@ public class ObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mob1 = new GameObject[400];
-        bat_Normal = new GameObject[200];
-        bat_Fire = new GameObject[200];
-        bat_Wood = new GameObject[200];
-        bat_Mecha = new GameObject[200];
+        mob1 = new GameObject[300];
+        rayven = new GameObject[300];
+        redspit = new GameObject[300];
+        wifi = new GameObject[300];
+        bat_Normal = new GameObject[300];
+        bat_Fire = new GameObject[300];
+        bat_Wood = new GameObject[300];
+        bat_Mecha = new GameObject[300];
 
         player_nomralAtk = new GameObject[20];
         player_shadowAtk = new GameObject[20];
@@ -88,6 +97,21 @@ public class ObjectPool : MonoBehaviour
         {
             mob1[index] = Instantiate(mob1_Prefab);
             mob1[index].SetActive(false);
+        }
+        for (int index = 0; index < rayven.Length; index++)
+        {
+            rayven[index] = Instantiate(rayven_Prefab);
+            rayven[index].SetActive(false);
+        }
+        for (int index = 0; index < redspit.Length; index++)
+        {
+            redspit[index] = Instantiate(redspit_Prefab);
+            redspit[index].SetActive(false);
+        }
+        for (int index = 0; index < wifi.Length; index++)
+        {
+            wifi[index] = Instantiate(wifi_Prefab);
+            wifi[index].SetActive(false);
         }
         for (int index = 0; index < bat_Normal.Length; index++)
         {
@@ -210,6 +234,15 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "Mob1":
                 targetPool = mob1; 
+                break;
+            case "Rayven":
+                targetPool = rayven;
+                break;
+            case "Redspit":
+                targetPool = redspit;
+                break;
+            case "Wifi":
+                targetPool = wifi;
                 break;
             case "Bat_Normal":
                 targetPool = bat_Normal;

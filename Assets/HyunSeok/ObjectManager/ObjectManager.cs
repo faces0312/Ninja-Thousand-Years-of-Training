@@ -64,9 +64,9 @@ public class ObjectManager : MonoBehaviour
         atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall", "Wind"};
         //몹마다 퍼센트 확률로 등장
         mob_Normal_str = new string[] { "Mob1", "Bat_Normal" };
-        mob_Fire_str = new string[] { "Mob1", "Bat_Fire" };
-        mob_Wood_str = new string[] { "Mob1", "Bat_Wood" };
-        mob_Mecha_str = new string[] { "Mob1", "Bat_Mecha" };
+        mob_Fire_str = new string[] { "Redspit", "Bat_Fire" };
+        mob_Wood_str = new string[] { "Rayven", "Bat_Wood" };
+        mob_Mecha_str = new string[] { "Wifi", "Bat_Mecha" };
         letter_str = new string[] { "Normal_Atk_Letter" , "Fire_Letter", "Wood_Letter", "Mecha_Letter" };
     }
 
@@ -102,7 +102,7 @@ public class ObjectManager : MonoBehaviour
         wind_CT = 17f;
         wind_Tmp_CT = wind_CT;
 
-        windwall_CT = 3f;
+        windwall_CT = 6f;
         windwall_Tmp_CT = windwall_CT;
 
         tree_CT = 70f;

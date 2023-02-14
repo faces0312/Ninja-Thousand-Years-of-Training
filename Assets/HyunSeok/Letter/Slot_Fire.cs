@@ -11,7 +11,154 @@ public class Slot_Fire : MonoBehaviour
 
     private void OnEnable()
     {
-        ran_num = Random.Range(0, 3);
+        if(Data.Instance.gameData.skill_cnt == 6)//스킬카운트가 꽉찼을 때
+        {
+            if ((Data.Instance.gameData.fire_lv == 6 || Data.Instance.gameData.fire_lv == 0) && 
+                (Data.Instance.gameData.talisman_lv == 6 || Data.Instance.gameData.talisman_lv == 0) &&
+                (Data.Instance.gameData.fire_column_lv == 6 || Data.Instance.gameData.fire_column_lv == 0))
+            {
+                Debug.Log("스킬 카운트가 다 안찼는데 지역 스킬이 모두 레벨 6인 경우");
+                gameObject.SetActive(false);
+                return;
+            }
+            else
+            {
+                if (Data.Instance.gameData.fire_lv == 6 || Data.Instance.gameData.fire_lv == 0)//불이 6렙이거나 0일 때
+                {
+                    if (Data.Instance.gameData.talisman_lv == 6 || Data.Instance.gameData.talisman_lv == 0)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.fire_column_lv == 6 || Data.Instance.gameData.fire_column_lv == 0)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(1, 3);
+                        Debug.Log("2,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.talisman_lv == 6 || Data.Instance.gameData.talisman_lv == 0)
+                {
+                    if (Data.Instance.gameData.fire_lv == 6 || Data.Instance.gameData.fire_lv == 0)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.fire_column_lv == 6 || Data.Instance.gameData.fire_column_lv == 0)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        if (ran_num == 1)
+                            ran_num = 2;
+                        Debug.Log("1,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.fire_column_lv == 6 || Data.Instance.gameData.fire_column_lv == 0)
+                {
+                    if (Data.Instance.gameData.fire_lv == 6 || Data.Instance.gameData.fire_lv == 0)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.talisman_lv == 6 || Data.Instance.gameData.talisman_lv == 0)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        Debug.Log("1,2 중 하나가 가동되어야 함");
+                    }
+                }
+                else
+                {
+                    ran_num = Random.Range(0, 3);
+                    Debug.Log("스킬 카운트가 다 안찼고 셋 중 모두가 레벨 6이 아닌 경우");
+                }
+            }
+        }
+        else//스킬카운트가 다 안찼을 때
+        {
+            if (Data.Instance.gameData.fire_lv == 6 && Data.Instance.gameData.talisman_lv == 6 && Data.Instance.gameData.fire_column_lv == 6)
+            {
+                Debug.Log("스킬 카운트가 다 안찼는데 지역 스킬이 모두 레벨 6인 경우");
+                gameObject.SetActive(false);
+                return;
+            }
+            else
+            {
+                if(Data.Instance.gameData.fire_lv == 6)
+                {
+                    if (Data.Instance.gameData.talisman_lv == 6)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.fire_column_lv == 6)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(1, 3);
+                        Debug.Log("2,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.talisman_lv == 6)
+                {
+                    if (Data.Instance.gameData.fire_lv == 6)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.fire_column_lv == 6)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        if (ran_num == 1)
+                            ran_num = 2;
+                        Debug.Log("1,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.fire_column_lv == 6)
+                {
+                    if (Data.Instance.gameData.fire_lv == 6)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.talisman_lv == 6)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        Debug.Log("1,2 중 하나가 가동되어야 함");
+                    }
+                }
+                else
+                {
+                    ran_num = Random.Range(0, 3);
+                    Debug.Log("스킬 카운트가 다 안찼고 셋 중 모두가 레벨 6이 아닌 경우");
+                }
+            }
+        }
         Time.timeScale = 0;
         close_page.gameObject.SetActive(false);
         for (int i = 0; i < 3; i++)
@@ -65,6 +212,8 @@ public class Slot_Fire : MonoBehaviour
             {
                 if (Data.Instance.gameData.fire_lv < 6)
                 {
+                    if (Data.Instance.gameData.fire_lv == 0)
+                        Data.Instance.gameData.skill_cnt++;
                     Data.Instance.gameData.fire_lv++;
                     if (Data.Instance.gameData.fire_lv == 2)
                         Manager.manager.objectManager.fire_CT = 7f;
@@ -82,6 +231,8 @@ public class Slot_Fire : MonoBehaviour
             {
                 if (Data.Instance.gameData.talisman_lv < 6)
                 {
+                    if (Data.Instance.gameData.talisman_lv == 0)
+                        Data.Instance.gameData.skill_cnt++;
                     Data.Instance.gameData.talisman_lv++;
                     if (Data.Instance.gameData.talisman_lv == 2)
                         Manager.manager.objectManager.talisman_CT = 15f;
@@ -99,6 +250,8 @@ public class Slot_Fire : MonoBehaviour
             {
                 if (Data.Instance.gameData.fire_column_lv < 6)
                 {
+                    if (Data.Instance.gameData.fire_column_lv == 0)
+                        Data.Instance.gameData.skill_cnt++;
                     Data.Instance.gameData.fire_column_lv++;
                     if (Data.Instance.gameData.fire_column_lv == 2)
                         Manager.manager.objectManager.firecolumn_CT = 9f;

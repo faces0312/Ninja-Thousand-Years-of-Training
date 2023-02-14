@@ -5,16 +5,163 @@ using UnityEngine.UI;
 
 public class Slot_Normal : MonoBehaviour
 {
-    int ran_num;//결정지울 숫자
+    public int ran_num;//결정지울 숫자
     public GameObject[] result_obj;//슬롯 결과 이미지들
     public GameObject close_page;
 
     private void OnEnable()
     {
-        ran_num = Random.Range(0, 3);
+        if (Data.Instance.gameData.skill_cnt == 6)//스킬카운트가 꽉찼을 때
+        {
+            if ((Data.Instance.gameData.normal_atk_lv == 6 || Data.Instance.gameData.normal_atk_lv == 0) &&
+                (Data.Instance.gameData.shadow_partner_lv == 6 || Data.Instance.gameData.shadow_partner_lv == 0) &&
+                (Data.Instance.gameData.boomerang_lv == 6 || Data.Instance.gameData.boomerang_lv == 0))
+            {
+                Debug.Log("스킬 카운트가 찼는데 지역 스킬이 모두 레벨 6이거나 0인 경우");
+                gameObject.SetActive(false);
+                return;
+            }
+            else
+            {
+                if (Data.Instance.gameData.normal_atk_lv == 6 || Data.Instance.gameData.normal_atk_lv == 0)//불이 6렙이거나 0일 때
+                {
+                    if (Data.Instance.gameData.shadow_partner_lv == 6 || Data.Instance.gameData.shadow_partner_lv == 0)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.boomerang_lv == 6 || Data.Instance.gameData.boomerang_lv == 0)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(1, 3);
+                        Debug.Log("2,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.shadow_partner_lv == 6 || Data.Instance.gameData.shadow_partner_lv == 0)
+                {
+                    if (Data.Instance.gameData.normal_atk_lv == 6 || Data.Instance.gameData.normal_atk_lv == 0)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.boomerang_lv == 6 || Data.Instance.gameData.boomerang_lv == 0)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        if (ran_num == 1)
+                            ran_num = 2;
+                        Debug.Log("1,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.boomerang_lv == 6 || Data.Instance.gameData.boomerang_lv == 0)
+                {
+                    if (Data.Instance.gameData.normal_atk_lv == 6 || Data.Instance.gameData.normal_atk_lv == 0)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.shadow_partner_lv == 6 || Data.Instance.gameData.shadow_partner_lv == 0)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        Debug.Log("1,2 중 하나가 가동되어야 함");
+                    }
+                }
+                else
+                {
+                    ran_num = Random.Range(0, 3);
+                    Debug.Log("스킬 카운트가 찼고 셋 중 모두가 레벨 6이 아닌 경우");
+                }
+            }
+        }
+        else//스킬카운트가 다 안찼을 때
+        {
+            if (Data.Instance.gameData.normal_atk_lv == 6 && Data.Instance.gameData.shadow_partner_lv == 6 && Data.Instance.gameData.boomerang_lv == 6)
+            {
+                Debug.Log("스킬 카운트가 다 안찼는데 지역 스킬이 모두 레벨 6인 경우");
+                gameObject.SetActive(false);
+                return;
+            }
+            else
+            {
+                if (Data.Instance.gameData.normal_atk_lv == 6)
+                {
+                    if (Data.Instance.gameData.shadow_partner_lv == 6)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.boomerang_lv == 6)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(1, 3);
+                        Debug.Log("2,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.shadow_partner_lv == 6)
+                {
+                    if (Data.Instance.gameData.normal_atk_lv == 6)
+                    {
+                        ran_num = 2;
+                        Debug.Log("3번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.boomerang_lv == 6)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        if (ran_num == 1)
+                            ran_num = 2;
+                        Debug.Log("1,3 중 하나가 가동되어야 함");
+                    }
+                }
+                else if (Data.Instance.gameData.boomerang_lv == 6)
+                {
+                    if (Data.Instance.gameData.normal_atk_lv == 6)
+                    {
+                        ran_num = 1;
+                        Debug.Log("2번째 스킬만 가동되어야 함");
+                    }
+                    else if (Data.Instance.gameData.shadow_partner_lv == 6)
+                    {
+                        ran_num = 0;
+                        Debug.Log("1번째 스킬만 가동되어야 함");
+                    }
+                    else
+                    {
+                        ran_num = Random.Range(0, 2);
+                        Debug.Log("1,2 중 하나가 가동되어야 함");
+                    }
+                }
+                else
+                {
+                    ran_num = Random.Range(0, 3);
+                    Debug.Log("스킬 카운트가 다 안찼고 셋 중 모두가 레벨 6이 아닌 경우");
+                }
+            }
+        }
         Time.timeScale = 0;
         close_page.gameObject.SetActive(false);
-        for(int i=0;i<3;i++)
+        for (int i = 0; i < 3; i++)
             result_obj[i].gameObject.SetActive(false);
         StartCoroutine(Start_Slot());
     }
@@ -80,6 +227,8 @@ public class Slot_Normal : MonoBehaviour
         {
             if (Data.Instance.gameData.shadow_partner_lv < 6)
             {
+                if (Data.Instance.gameData.shadow_partner_lv == 0)
+                    Data.Instance.gameData.skill_cnt++;
                 Data.Instance.gameData.shadow_partner_lv++;
                 if (Data.Instance.gameData.shadow_partner_lv == 1)
                     Manager.manager.player.shadowPartner1.gameObject.SetActive(true);
@@ -102,6 +251,8 @@ public class Slot_Normal : MonoBehaviour
         {
             if (Data.Instance.gameData.boomerang_lv < 6)
             {
+                if (Data.Instance.gameData.boomerang_lv == 0)
+                    Data.Instance.gameData.skill_cnt++;
                 Data.Instance.gameData.boomerang_lv++;
                 if (Data.Instance.gameData.boomerang_lv == 2)
                     Manager.manager.objectManager.boomerang_CT = 9f;

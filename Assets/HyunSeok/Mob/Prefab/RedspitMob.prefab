@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 2318281108583889049}
   - component: {fileID: 3653649388240641791}
   - component: {fileID: 9117122109144373753}
-  m_Layer: 0
+  - component: {fileID: 489284151676359324}
+  - component: {fileID: 1475294484996691186}
+  m_Layer: 7
   m_Name: RedspitMob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,6 +105,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &489284151676359324
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284852609295738732}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1475294484996691186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284852609295738732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165066a6ec51d7e41a3fbb6b1606577f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  die: {fileID: 9117122109144373753}
+  redspit_Body: {fileID: 4309636172945118480}
+  rend: {fileID: 3653649388240641791}
+  target: {fileID: 0}
+  hp: 0
+  speed: 0
 --- !u!1 &1261292713590078533
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,9 +155,11 @@ GameObject:
   - component: {fileID: 649607783943512961}
   - component: {fileID: 7802740827510759337}
   - component: {fileID: 4468564037489200925}
-  m_Layer: 0
+  - component: {fileID: 421763300996342733}
+  - component: {fileID: 4309636172945118480}
+  m_Layer: 7
   m_Name: Redspit_Body
-  m_TagString: Untagged
+  m_TagString: Mob1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,7 +219,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.4117647}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -202,3 +245,28 @@ CapsuleCollider2D:
   m_Offset: {x: -0.00000023841858, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &421763300996342733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261292713590078533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565a8b8218006ec418c2ee535e61c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4309636172945118480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261292713590078533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d490fdf7feddfe439048edfb114e172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mob: {fileID: 1475294484996691186}

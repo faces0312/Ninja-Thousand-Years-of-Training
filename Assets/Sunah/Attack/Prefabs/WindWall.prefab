@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3212389795665805486}
   - component: {fileID: 4898910959947569150}
   - component: {fileID: 9144002054872685342}
-  - component: {fileID: 8647371686645811105}
   m_Layer: 0
   m_Name: WindWall
   m_TagString: WindWall
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1683473061359737607, guid: 40c8848ef98e54e4487eb4d4af6f8b98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -112,7 +111,7 @@ Animator:
   m_GameObject: {fileID: 1706442097502544773}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b26cfd785fb86fc4dabee6fd9e3d7b0b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3c6413511e33b464da8da1affde020a5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -158,18 +157,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.675
---- !u!111 &8647371686645811105
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706442097502544773}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 56883827b5600314d8c98a80ece54199, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0

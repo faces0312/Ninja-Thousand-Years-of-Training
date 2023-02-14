@@ -14,7 +14,7 @@ public class Redspit : MonoBehaviour
     public Rigidbody2D target;
 
     public float hp;
-    public int speed;
+    public float speed;
     // Update is called once per frame
 
     private void Start()
@@ -27,7 +27,7 @@ public class Redspit : MonoBehaviour
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.mob1_hp;
-        speed = 1;
+        speed = 1.1f;
         //target_on = false;
         redspit_Body.gameObject.SetActive(true);
         //StartCoroutine(FindPlayer());
@@ -59,9 +59,9 @@ public class Redspit : MonoBehaviour
     {
         fin = target.transform.position - start;
         if (fin.x > 0)
-            rend.flipX = true;
-        else
             rend.flipX = false;
+        else
+            rend.flipX = true;
         start = this.transform.position;
         transform.position = Vector3.MoveTowards(start, target.transform.position, speed * Time.deltaTime);
 

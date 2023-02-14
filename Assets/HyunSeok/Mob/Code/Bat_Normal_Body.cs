@@ -348,10 +348,14 @@ public class Bat_Normal_Body : MonoBehaviour
     public void Drop_Letter()
     {
         int drop;
-        drop = Random.Range(0, 100);
+        drop = Random.Range(1, 101);
 
-        if (drop <= 5)
+        if (drop <= Data.Instance.gameData.drop_percent)
+        {
+            if (Data.Instance.gameData.drop_percent > 1)
+                Data.Instance.gameData.drop_percent--;
             Manager.manager.objectManager.Normal_Atk_Letter_General(mob.gameObject.transform.position);
+        }
         else
             return;
     }

@@ -37,8 +37,10 @@ public class Manager : MonoBehaviour
         camera.orthographicSize = 5f;
         lv = 0;
 
+        Data.Instance.gameData.skill_cnt = 1;
         Data.Instance.gameData.player_hp = 200;
 
+        Data.Instance.gameData.drop_percent = 18;
         Data.Instance.gameData.normal_atk_lv = 1;
         Data.Instance.gameData.shadow_partner_lv = 0;
         Data.Instance.gameData.fire_lv = 0;
@@ -53,10 +55,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.windwall_lv = 0;
 
         Data.Instance.gameData.mob1_hp = 1;
-        Data.Instance.gameData.bat_normal_hp = 1;
-        Data.Instance.gameData.bat_fire_hp = 1;
-        Data.Instance.gameData.bat_wood_hp = 1;
-        Data.Instance.gameData.bat_mecha_hp = 1;
+        Data.Instance.gameData.bat_hp = 1;
 
         Data.Instance.gameData.mob1_dmg = 1;
         Data.Instance.gameData.bat_body_dmg = 1;
@@ -101,10 +100,7 @@ public class Manager : MonoBehaviour
         {
             time_mob_hp = 0;
             Data.Instance.gameData.mob1_hp += 2;
-            Data.Instance.gameData.bat_normal_hp += 2;
-            Data.Instance.gameData.bat_fire_hp += 2;
-            Data.Instance.gameData.bat_wood_hp += 2;
-            Data.Instance.gameData.bat_mecha_hp += 2;
+            Data.Instance.gameData.bat_hp += 2;
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
         if(Data.Instance.gameData.exp >= exp_Tmp)

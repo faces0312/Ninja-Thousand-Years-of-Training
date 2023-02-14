@@ -11,9 +11,12 @@ public class GameData
     //인게임ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     //public float exp;
 
+    public int skill_cnt;//몇개의 스킬을 가지고 있는지(최대 6개)
+
     public float player_hp;//플레이어 체력
 
     //플레이어 스킬
+    public int drop_percent;//드랍 확률
     public int normal_atk_lv;//표창
     public int shadow_partner_lv;//분신
     public int fire_lv;//화둔
@@ -29,11 +32,8 @@ public class GameData
 
     public int mob_cnt;
     //몹 체력
-    public float mob1_hp;
-    public float bat_normal_hp;
-    public float bat_fire_hp;
-    public float bat_wood_hp;
-    public float bat_mecha_hp;
+    public float mob1_hp;//벌레형 체력
+    public float bat_hp;
 
     //몹 공격력
     public float mob1_dmg;
