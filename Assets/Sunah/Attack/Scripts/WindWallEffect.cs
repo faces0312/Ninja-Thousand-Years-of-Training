@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class WindWallEffect : MonoBehaviour
 {
-
     public float x;
     public float y;
     /*public float windwall_CT;
@@ -17,13 +16,13 @@ public class WindWallEffect : MonoBehaviour
     public Vector2 MobVector;
     //public GameObject windwall;
 
- /*   private void Awake()
-    {
-        rb2d = GetComponent<Rigidbody2D>();//이 스크립트 오브젝트에서 rigidbody를 가져옴
+    /*   private void Awake()
+       {
+           rb2d = GetComponent<Rigidbody2D>();//이 스크립트 오브젝트에서 rigidbody를 가져옴
 
 
-    }
-*/
+       }
+   */
     private void OnEnable()
     {
         x = 1f;
@@ -34,24 +33,24 @@ public class WindWallEffect : MonoBehaviour
         //windwall2.gameObject.transform.localScale = new Vector3(x, y);
 
         //StartCoroutine(Exe_WindWall());
-       
+
     }
-    
+
     public void Exe_WindWallStart()
     {
         StartCoroutine(Exe_WindWall());
     }
 
 
-    IEnumerator Exe_WindWall()  
+    IEnumerator Exe_WindWall()
     {  //windwall 크기 확대
-        for(int i=0; i<50; i++)
+        for (int i = 0; i < 50; i++)
         {
             x += 0.028f;   // 애니메이션에서 어느 시점부터 커지게 하려면 이 더하는 걸 따로 함수로 만들어???
             y += 0.028f;
             gameObject.transform.localScale = new Vector3(x, y); //현재 애니메이션 오브젝트 자체에 커지는 스크립트가 있어서 애니메이션 자체가 커지는 현상이 발생함
                                                                  //커지는 스크립트를 실제로 밀리는 범위(자식오브젝트)로 따로 만들어서 넣어야함
-            //windwall2.gameObject.transform.localScale = new Vector3(x, y);
+                                                                 //windwall2.gameObject.transform.localScale = new Vector3(x, y);
             yield return new WaitForSeconds(0.001f); //특정시간 뒤에 함수 호출
 
         }
@@ -61,23 +60,21 @@ public class WindWallEffect : MonoBehaviour
 
     }
 
-   
+
     // collision 쓸때는 rigidbody에 dynamic으로 설정. 그러면 튕김. kinematic쓰면 통과됨.
     private void OnCollisionStay2D(Collision2D collision)  //피격함수를 따로 만들어야하나?? 
     {
-        if (collision.gameObject.tag == "Mob1" || collision.gameObject.tag == "Bat_Body")
+        if (collision.gameObject.tag == "Mob1" || collision.gameObject.tag == "Bat_Body" || collision.gameObject.tag == "GateKeeper" || collision.gameObject.tag == "Golem")
         {
-
-
             //MobVector = Vector2.Reflect(gameObject.transform.position, collision.contacts[0].normal);
-            Vector2 direction =((collision.gameObject.transform.position - this.gameObject.transform.position).normalized)*11.4f;
+            Vector2 direction = ((collision.gameObject.transform.position - this.gameObject.transform.position).normalized) * 11.4f;
             MobVector = direction;
             //new Vector2(collision.gameObject.transform.position - this.gameObject.transform.position).normalized;
             //StartCoroutine(MoveMob(collision.gameObject));
             collision.gameObject.transform.parent.Translate(MobVector * 1f * Time.deltaTime);
         }
     }
-    
+
     /*IEnumerator MoveMob(GameObject mob)
     {
         for (int i = 0; i < 800; i++)
@@ -123,5 +120,6 @@ public class WindWallEffect : MonoBehaviour
 
             }
         }*/
+
 
 }

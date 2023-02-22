@@ -30,6 +30,23 @@ public class ObjectPool : MonoBehaviour
     public GameObject player_Wind_Prefab;
     GameObject[] player_Wind;
 
+    //º¸½º Å¸°Ù
+    public GameObject bat_Boss_Prefab;
+    GameObject[] bat_Boss;
+    public GameObject golem_Boss_Prefab;
+    GameObject[] golem_Boss;
+
+    //¹ÚÁã º¸½º °ø°Ý Å¸°Ù
+    public GameObject bat_Boss_ShotGun_Prefab;
+    GameObject[] bat_Boss_ShotGun;
+    public GameObject bat_Boss_GunGroup_Prefab;
+    GameObject[] bat_Boss_GunGroup;
+
+    //°ñ·½ º¸½º °ø°Ý
+    public GameObject golem_Boss_Lighting_Prefab;
+    GameObject[] golem_Boss_Lighting;
+    public GameObject golem_Boss_Wire_Prefab;
+    GameObject[] golem_Boss_Wire;
 
     //¸÷ Å¸°Ù
     public GameObject mob1_Prefab;
@@ -48,6 +65,23 @@ public class ObjectPool : MonoBehaviour
     GameObject[] bat_Wood;
     public GameObject bat_Mecha_Prefab;
     GameObject[] bat_Mecha;
+    public GameObject zombie_normal_Prefab;
+    GameObject[] zombie_normal;
+    public GameObject fox_Fire_Prefab;
+    GameObject[] fox_Fire;
+    public GameObject tree_Wood_Prefab;
+    GameObject[] tree_Wood;
+    public GameObject tree_Mecha_Prefab;
+    GameObject[] tree_Mecha;
+    public GameObject golem_Normal_Prefab;
+    GameObject[] golem_Normal;
+    public GameObject golem_Fire_Prefab;
+    GameObject[] golem_Fire;
+    public GameObject golem_Wood_Prefab;
+    GameObject[] golem_Wood;
+    public GameObject golem_Mecha_Prefab;
+    GameObject[] golem_Mecha;
+
 
     //ºñ±Þ¼­ Å¸°Ù
     public GameObject normalAkt_letter_Prefab;
@@ -62,6 +96,15 @@ public class ObjectPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bat_Boss = new GameObject[5];
+        golem_Boss = new GameObject[5];
+
+        bat_Boss_ShotGun = new GameObject[10];
+        bat_Boss_GunGroup = new GameObject[5];
+
+        golem_Boss_Lighting = new GameObject[60];
+        golem_Boss_Wire = new GameObject[60];
+
         mob1 = new GameObject[300];
         rayven = new GameObject[300];
         redspit = new GameObject[300];
@@ -70,6 +113,14 @@ public class ObjectPool : MonoBehaviour
         bat_Fire = new GameObject[300];
         bat_Wood = new GameObject[300];
         bat_Mecha = new GameObject[300];
+        zombie_normal = new GameObject[300];
+        fox_Fire = new GameObject[300];
+        tree_Wood = new GameObject[300];
+        tree_Mecha = new GameObject[300];
+        golem_Normal = new GameObject[300];
+        golem_Fire = new GameObject[300];
+        golem_Wood = new GameObject[300];
+        golem_Mecha = new GameObject[300];
 
         player_nomralAtk = new GameObject[20];
         player_shadowAtk = new GameObject[20];
@@ -93,6 +144,36 @@ public class ObjectPool : MonoBehaviour
 
     void Generate()
     {
+        for (int index = 0; index < bat_Boss.Length; index++)
+        {
+            bat_Boss[index] = Instantiate(bat_Boss_Prefab);
+            bat_Boss[index].SetActive(false);
+        }
+        for (int index = 0; index < bat_Boss_ShotGun.Length; index++)
+        {
+            bat_Boss_ShotGun[index] = Instantiate(bat_Boss_ShotGun_Prefab);
+            bat_Boss_ShotGun[index].SetActive(false);
+        }
+        for (int index = 0; index < bat_Boss_GunGroup.Length; index++)
+        {
+            bat_Boss_GunGroup[index] = Instantiate(bat_Boss_GunGroup_Prefab);
+            bat_Boss_GunGroup[index].SetActive(false);
+        }
+        for (int index = 0; index < golem_Boss.Length; index++)
+        {
+            golem_Boss[index] = Instantiate(golem_Boss_Prefab);
+            golem_Boss[index].SetActive(false);
+        }
+        for (int index = 0; index < golem_Boss_Lighting.Length; index++)
+        {
+            golem_Boss_Lighting[index] = Instantiate(golem_Boss_Lighting_Prefab);
+            golem_Boss_Lighting[index].SetActive(false);
+        }
+        for (int index = 0; index < golem_Boss_Wire.Length; index++)
+        {
+            golem_Boss_Wire[index] = Instantiate(golem_Boss_Wire_Prefab);
+            golem_Boss_Wire[index].SetActive(false);
+        }
         for (int index = 0; index < mob1.Length; index++)
         {
             mob1[index] = Instantiate(mob1_Prefab);
@@ -132,6 +213,46 @@ public class ObjectPool : MonoBehaviour
         {
             bat_Mecha[index] = Instantiate(bat_Mecha_Prefab);
             bat_Mecha[index].SetActive(false);
+        }
+        for (int index = 0; index < zombie_normal.Length; index++)
+        {
+            zombie_normal[index] = Instantiate(zombie_normal_Prefab);
+            zombie_normal[index].SetActive(false);
+        }
+        for (int index = 0; index < fox_Fire.Length; index++)
+        {
+            fox_Fire[index] = Instantiate(fox_Fire_Prefab);
+            fox_Fire[index].SetActive(false);
+        }
+        for (int index = 0; index < tree_Wood.Length; index++)
+        {
+            tree_Wood[index] = Instantiate(tree_Wood_Prefab);
+            tree_Wood[index].SetActive(false);
+        }
+        for (int index = 0; index < tree_Mecha.Length; index++)
+        {
+            tree_Mecha[index] = Instantiate(tree_Mecha_Prefab);
+            tree_Mecha[index].SetActive(false);
+        }
+        for (int index = 0; index < golem_Normal.Length; index++)
+        {
+            golem_Normal[index] = Instantiate(golem_Normal_Prefab);
+            golem_Normal[index].SetActive(false);
+        }
+        for (int index = 0; index < golem_Fire.Length; index++)
+        {
+            golem_Fire[index] = Instantiate(golem_Fire_Prefab);
+            golem_Fire[index].SetActive(false);
+        }
+        for (int index = 0; index < golem_Wood.Length; index++)
+        {
+            golem_Wood[index] = Instantiate(golem_Wood_Prefab);
+            golem_Wood[index].SetActive(false);
+        }
+        for (int index = 0; index < golem_Mecha.Length; index++)
+        {
+            golem_Mecha[index] = Instantiate(golem_Mecha_Prefab);
+            golem_Mecha[index].SetActive(false);
         }
         for (int index = 0; index < player_nomralAtk.Length; index++)
         {
@@ -232,6 +353,24 @@ public class ObjectPool : MonoBehaviour
             case "Tornado":
                 targetPool = player_Tornado;
                 break;
+            case "Bat_Boss":
+                targetPool = bat_Boss;
+                break;
+            case "Bat_Boss_ShotGun":
+                targetPool = bat_Boss_ShotGun;
+                break;
+            case "Bat_Boss_GunGroup":
+                targetPool = bat_Boss_GunGroup;
+                break;
+            case "Golem_Boss":
+                targetPool = golem_Boss;
+                break;
+            case "Golem_Boss_Lighting":
+                targetPool = golem_Boss_Lighting;
+                break;
+            case "Golem_Boss_Wire":
+                targetPool = golem_Boss_Wire;
+                break;
             case "Mob1":
                 targetPool = mob1; 
                 break;
@@ -255,6 +394,30 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "Bat_Mecha":
                 targetPool = bat_Mecha;
+                break;
+            case "Zombie_Normal":
+                targetPool = zombie_normal;
+                break;
+            case "Fox_Fire":
+                targetPool = fox_Fire;
+                break;
+            case "Tree_Wood":
+                targetPool = tree_Wood;
+                break;
+            case "Tree_Mecha":
+                targetPool = tree_Mecha;
+                break;
+            case "Golem_Normal":
+                targetPool = golem_Normal;
+                break;
+            case "Golem_Fire":
+                targetPool = golem_Fire;
+                break;
+            case "Golem_Wood":
+                targetPool = golem_Wood;
+                break;
+            case "Golem_Mecha":
+                targetPool = golem_Mecha;
                 break;
             case "Tree":
                 targetPool = player_Tree;

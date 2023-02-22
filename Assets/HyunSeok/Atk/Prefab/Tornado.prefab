@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2367401048455392590}
-  - component: {fileID: 5941876159783826322}
-  m_Layer: 0
+  - component: {fileID: 7752187371620773019}
+  m_Layer: 8
   m_Name: Tornado
   m_TagString: Tornado
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 8358387555212799343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &5941876159783826322
+--- !u!70 &7752187371620773019
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,8 +44,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.044507086, y: -0.091020614}
-  m_Size: {x: 3.7273555, y: 4.317993}
+  m_Offset: {x: 0.098809004, y: -0.091020614}
+  m_Size: {x: 4.6287036, y: 4.6287036}
   m_Direction: 0
 --- !u!1 &8358387555212799346
 GameObject:
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 8358387555212799337}
   - component: {fileID: 8358387555212799342}
   - component: {fileID: 200363618235986796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tornado
   m_TagString: Tornado
   m_Icon: {fileID: 0}
@@ -187,8 +187,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.044507086, y: -0.091020614}
-  m_Size: {x: 3.7273555, y: 4.317993}
+  m_Offset: {x: 0.098809004, y: -0.091020614}
+  m_Size: {x: 4.6287036, y: 4.6287036}
   m_Direction: 0
 --- !u!114 &200363618235986796
 MonoBehaviour:

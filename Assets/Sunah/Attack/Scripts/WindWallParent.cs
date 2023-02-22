@@ -11,7 +11,7 @@ public class WindWallParent : MonoBehaviour
         startwindwall.Exe_WindWallStart();
     }
     // Start is called before the first frame update
-   
+
     public void Dis_WindWall()
     {
         gameObject.SetActive(false);

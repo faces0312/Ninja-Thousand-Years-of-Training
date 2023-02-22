@@ -14,7 +14,23 @@ public class Mob1_Body : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Normal_Atk")
+        if (collision.tag == "Max_Dmg")
+        {
+            mob.hp -= 10000000000;
+
+            if (mob.hp <= 0)
+            {
+                mob.speed = 0;
+                mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
+                mob.StopAllCoroutines();
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
+
+        if (collision.tag == "Normal_Atk")
         {
             if(Data.Instance.gameData.normal_atk_lv == 1)
                 mob.hp -= 1;

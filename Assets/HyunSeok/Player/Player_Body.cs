@@ -30,24 +30,66 @@ public class Player_Body : MonoBehaviour
         {
             if(is_invin == false)
             {
-                StartCoroutine(Damage_Mob1());
                 StartCoroutine(Sick());
+                StartCoroutine(Damage_Mob1());
             }
         }
         else if (collision.tag == "Bat_Body")
         {
             if (is_invin == false)
             {
-                StartCoroutine(Damage_Bat_Body());
                 StartCoroutine(Sick());
+                StartCoroutine(Damage_Bat_Body());
             }
         }
         else if (collision.tag == "Bat_Atk")
         {
             if (is_invin == false)
             {
-                StartCoroutine(Damage_Bat_Atk());
                 StartCoroutine(Sick());
+                StartCoroutine(Damage_Bat_Atk());
+                collision.gameObject.SetActive(false);
+            }
+        }
+        else if (collision.tag == "GateKeeper")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_GateKeeper());
+            }
+        }
+        else if (collision.tag == "Bat_Boss")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Bat_Boss());
+            }
+        }
+        else if (collision.tag == "Bat_Boss_Attack")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Bat_Boss_Atk());
+                collision.gameObject.SetActive(false);
+            }
+        }
+        else if (collision.tag == "Bat_Boss_Laser")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Bat_Boss_Laser());
+            }
+        }
+        else if (collision.tag == "Golem")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Golem_Laser());
             }
         }
     }
@@ -73,6 +115,51 @@ public class Player_Body : MonoBehaviour
     IEnumerator Damage_Bat_Atk()
     {
         player.hp -= Data.Instance.gameData.bat_atk_dmg;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_GateKeeper()
+    {
+        player.hp -= Data.Instance.gameData.gatekeeper_dmg;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Bat_Boss()
+    {
+        player.hp -= Data.Instance.gameData.bat_boss_body;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Bat_Boss_Atk()
+    {
+        player.hp -= Data.Instance.gameData.bat_boss_atk;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Bat_Boss_Laser()
+    {
+        player.hp -= Data.Instance.gameData.bat_boss_laser;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Golem_Laser()
+    {
+        player.hp -= Data.Instance.gameData.golem_dmg;
         is_invin = true;
 
         yield return new WaitForSeconds(0.1f);

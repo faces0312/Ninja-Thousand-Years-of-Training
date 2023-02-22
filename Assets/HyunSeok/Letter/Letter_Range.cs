@@ -6,6 +6,7 @@ public class Letter_Range : MonoBehaviour
 {
     private void OnEnable()
     {
+        StartCoroutine(nameof(Dis_Letter));
         StartCoroutine(nameof(Down));
     }
 
@@ -31,6 +32,11 @@ public class Letter_Range : MonoBehaviour
         StartCoroutine(nameof(Down));
     }
 
+    IEnumerator Dis_Letter()
+    {
+        yield return new WaitForSeconds(30f);
+        gameObject.SetActive(false);
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {

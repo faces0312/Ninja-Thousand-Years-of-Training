@@ -20,19 +20,23 @@ public class Mob_Atk : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    /*private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "PlayerBody")
         {
             gameObject.SetActive(false);
         }
 
-    }
+    }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "WindWall")
         {
             gameObject.SetActive(false);
         }
+        /*if (collision.gameObject.tag == "PlayerBody")
+        {
+            gameObject.SetActive(false);
+        }*/
     }
 }

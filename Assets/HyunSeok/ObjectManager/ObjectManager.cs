@@ -8,11 +8,15 @@ public class ObjectManager : MonoBehaviour
 
     public ObjectPool objectPool;
     public Player player;
+    public GameObject player_wall;
     public Player_Body player_Body;
     public ShadowPartner shadowPartner1;
     public ShadowPartner shadowPartner2;
 
     private string[] atk_str;
+    private string[] mob_Boss_str;//보스몹 종류
+    private string[] bat_Boss_str;//박쥐 보스 공격
+    private string[] golem_Boss_str;//기계 보스 공격
     private string[] mob_Normal_str;
     private string[] mob_Fire_str;
     private string[] mob_Wood_str;
@@ -21,6 +25,19 @@ public class ObjectManager : MonoBehaviour
 
     GameObject mob1;
     public GameObject[] mob_Location;
+
+    public GameObject mob_wall;
+    GameObject boss1;
+    public GameObject boss_Location;
+
+    public float boss_CT;//몹 쿨타임
+    public float boss_Tmp_CT;
+
+    public bool is_mob;//몹이 나올수 있는 상태인지(true일때 가능)
+    public bool is_bigwave;//빅웨이브가 나올수 있는 상태인지(true일때 가능)
+    public bool is_boss;//보스가 나올수 있는 상태인지(true일때 가능)
+
+
     private float mob_CT;//몹 쿨타임
     private float mob_Tmp_CT;
 
@@ -59,19 +76,33 @@ public class ObjectManager : MonoBehaviour
     private float windwall_Tmp_CT;
     private float wind_Tmp_CT;
 
+    public GameObject max_dmg;
+
     void Awake()
     {
         atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall", "Wind"};
+        
+        mob_Boss_str = new string[] { "Bat_Boss" , "Golem_Boss"};
+        bat_Boss_str = new string[] { "Bat_Boss_ShotGun", "Bat_Boss_GunGroup" };
+        golem_Boss_str = new string[] { "Golem_Boss_Lighting", "Golem_Boss_Wire" };
         //몹마다 퍼센트 확률로 등장
-        mob_Normal_str = new string[] { "Mob1", "Bat_Normal" };
-        mob_Fire_str = new string[] { "Redspit", "Bat_Fire" };
-        mob_Wood_str = new string[] { "Rayven", "Bat_Wood" };
-        mob_Mecha_str = new string[] { "Wifi", "Bat_Mecha" };
+        mob_Normal_str = new string[] { "Mob1", "Bat_Normal", "Zombie_Normal", "Golem_Normal" };
+        mob_Fire_str = new string[] { "Redspit", "Bat_Fire", "Fox_Fire", "Golem_Fire" };
+        mob_Wood_str = new string[] { "Rayven", "Bat_Wood", "Tree_Wood", "Golem_Wood" };
+        mob_Mecha_str = new string[] { "Wifi", "Bat_Mecha", "Tree_Mecha", "Golem_Mecha" };
         letter_str = new string[] { "Normal_Atk_Letter" , "Fire_Letter", "Wood_Letter", "Mecha_Letter" };
     }
 
     private void Start()
     {
+        is_mob = true;
+        is_bigwave = true;
+        is_boss = true;
+        player_wall.gameObject.SetActive(false);
+
+        boss_CT = 100f;
+        boss_Tmp_CT = boss_CT;
+
         mob_CT = 1f;
         mob_Tmp_CT = mob_CT;
 
@@ -108,37 +139,53 @@ public class ObjectManager : MonoBehaviour
         tree_CT = 70f;
         tree_Tmp_CT = tree_CT;
 
-      
 
-        for(int i=0; i<15; i++)
+
+        /*for (int i = 0; i < 10; i++)
         {
             Mob_General();
-        }
+        }*/
     }
 
     private void Update()
     {
         //몹 생성 쿨
-        if (mob_Tmp_CT > 0)
+        /*if (mob_Tmp_CT > 0)
             mob_Tmp_CT -= Time.deltaTime;
         else
         {
-            if(manager.lv == 0)
+            if (is_mob == true)
             {
-                for(int i=0; i<3; i++)
-                    Mob_General();
+                if (manager.lv == 0)
+                {
+                    for (int i = 0; i < 2; i++)
+                        Mob_General();
+                }
+                else if (manager.lv == 1)
+                {
+                    for (int i = 0; i < 3; i++)
+                        Mob_General();
+                }
+                else
+                {
+                    for (int i = 0; i < 4; i++)
+                        Mob_General();
+                }
+                mob_Tmp_CT = mob_CT;
             }
-            else if (manager.lv == 1)
+        }*/
+
+        if (boss_Tmp_CT > 0)
+            boss_Tmp_CT -= Time.deltaTime;
+        else
+        {
+            if(is_boss == true)
             {
-                for (int i = 0; i < 4; i++)
-                    Mob_General();
+                is_boss = false;
+                is_mob = false;
+                is_bigwave = false;
+                max_dmg.gameObject.SetActive(true);
             }
-            else
-            {
-                for (int i = 0; i < 5; i++)
-                    Mob_General();
-            }
-            mob_Tmp_CT = mob_CT;
         }
 
 
@@ -293,12 +340,94 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
+    public void Boss_General()
+    {
+        /*int ran_mob;//몹 생성 랜덤값
+
+        ran_mob = Random.Range(0, 3);*/
+
+        boss1 = objectPool.MakeObj(mob_Boss_str[0]);
+        boss1.transform.position = boss_Location.transform.position;
+        
+        Data.Instance.gameData.boss_cnt++;
+    }
+
+    public void Bat_Boss_ShotGun_General(Vector3 vector3)
+    {
+        GameObject shotGun1;
+        GameObject shotGun2;
+        GameObject shotGun3;
+
+        shotGun1 = objectPool.MakeObj(bat_Boss_str[0]);
+        shotGun2 = objectPool.MakeObj(bat_Boss_str[0]);
+        shotGun3 = objectPool.MakeObj(bat_Boss_str[0]);
+
+        shotGun1.transform.position = vector3;
+        shotGun2.transform.position = vector3;
+        shotGun3.transform.position = vector3;
+
+        Vector3 start = shotGun1.transform.position;
+        Vector3 end = player.transform.position;
+        Vector3 fin = end - start;
+
+        shotGun1.transform.rotation = Quaternion.Euler(shotGun1.transform.rotation.x, shotGun1.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + -30);
+        shotGun2.transform.rotation = Quaternion.Euler(shotGun2.transform.rotation.x, shotGun2.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 210);
+        shotGun3.transform.rotation = Quaternion.Euler(shotGun3.transform.rotation.x, shotGun3.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);
+    }
+
+    public void Bat_Boss_GunGroup_General(Vector3 vector3)
+    {
+        GameObject gunGroup;
+
+        gunGroup = objectPool.MakeObj(bat_Boss_str[1]);
+
+        gunGroup.transform.position = vector3;
+    }
+
+    public void Golem_Boss_Lighting_General(Vector3 vector3)
+    {
+        StartCoroutine(Golem_Boss_Lighting(vector3));
+    }
+
+    IEnumerator Golem_Boss_Lighting(Vector3 vector3)
+    {
+        int ran_angle;//랜덤 각도
+        float ran_distance;//랜덤 거리
+        int j;
+
+        GameObject[] lighting = new GameObject[20];
+
+        for(int i=0; i<4; i++)
+        {
+            for (j = 0; j < 5; j++)
+            {
+                lighting[i] = objectPool.MakeObj(golem_Boss_str[0]);
+                lighting[i].transform.position = vector3;
+
+                ran_angle = Random.Range(0, 360);
+                ran_distance = Random.Range(0.2f, 4.0f);
+
+                lighting[i].transform.position = new Vector3(lighting[i].transform.position.x + ran_distance * Mathf.Cos(ran_angle * Mathf.Deg2Rad), lighting[i].transform.position.y + ran_distance * Mathf.Sin(ran_angle * Mathf.Deg2Rad));
+            }
+            j = 0;
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    public void Golem_Boss_Wire_General(Vector3 vector3)
+    {
+        GameObject wire;
+
+        wire = objectPool.MakeObj(golem_Boss_str[1]);
+
+        wire.transform.position = vector3;
+    }
     public void Mob_General()
     {
         int ran_mob;//몹 생성 랜덤값
         int ran_location;//몹 위치 랜덤값
 
-        ran_mob = Random.Range(0, 2);
+        ran_mob = Random.Range(0, 4);
         ran_location = Random.Range(0, 28);
 
         if (player_Body.in_Normal == true)
@@ -333,7 +462,7 @@ public class ObjectManager : MonoBehaviour
             for (int i = 0; i < 28; i++)
             {
                 GameObject mob;
-                ran_mob = Random.Range(0, 2);
+                ran_mob = Random.Range(0, 4);
                 mob = objectPool.MakeObj(mob_Normal_str[ran_mob]);
                 mob.transform.position = mob_Location[i].transform.position;
             }
@@ -343,7 +472,7 @@ public class ObjectManager : MonoBehaviour
             for (int i = 0; i < 28; i++)
             {
                 GameObject mob;
-                ran_mob = Random.Range(0, 2);
+                ran_mob = Random.Range(0, 4);
                 mob = objectPool.MakeObj(mob_Fire_str[ran_mob]);
                 mob.transform.position = mob_Location[i].transform.position;
             }
@@ -353,7 +482,7 @@ public class ObjectManager : MonoBehaviour
             for (int i = 0; i < 28; i++)
             {
                 GameObject mob;
-                ran_mob = Random.Range(0, 2);
+                ran_mob = Random.Range(0, 4);
                 mob = objectPool.MakeObj(mob_Wood_str[ran_mob]);
                 mob.transform.position = mob_Location[i].transform.position;
             }
@@ -363,7 +492,7 @@ public class ObjectManager : MonoBehaviour
             for (int i = 0; i < 28; i++)
             {
                 GameObject mob;
-                ran_mob = Random.Range(0, 2);
+                ran_mob = Random.Range(0, 4);
                 mob = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
                 mob.transform.position = mob_Location[i].transform.position;
             }

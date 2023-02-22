@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Mob1" || collision.tag == "Bat_Body")
+        if(collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem")
         {
             objectManager.is_atk = true;
         }
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Mob1" || collision.tag == "Bat_Body")
+        if (collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem")
         {
             objectManager.is_atk = false;
         }

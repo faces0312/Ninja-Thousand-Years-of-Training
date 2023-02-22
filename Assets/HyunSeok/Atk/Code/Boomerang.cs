@@ -33,7 +33,7 @@ public class Boomerang : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Bounce")
+        if (collision.gameObject.tag == "Bounce" || collision.gameObject.layer == 7)
         {
             moveVector = Vector2.Reflect(moveVector, collision.contacts[0].normal);
             if (moveVector.x > 0)

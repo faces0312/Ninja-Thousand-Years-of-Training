@@ -23,17 +23,7 @@ public class msaTreeEffect : MonoBehaviour
         StartCoroutine(Dis_tree());
 
     }
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     IEnumerator Dis_tree()
     {
         yield return new WaitForSeconds(10f);
@@ -54,9 +44,7 @@ public class msaTreeEffect : MonoBehaviour
                     Manager.manager.player.hp++;
                     tree_Tmp_CT = tree_CT;
                 }
-                   
             }
-
         }
     }
 }

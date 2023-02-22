@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8326944261295445712}
   - component: {fileID: 3985599326519919092}
   - component: {fileID: 5269118511198942446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Boomerang
   m_TagString: Boomerang
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4290902379182960908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 325631209706956443}
   m_Father: {fileID: 0}
@@ -154,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.011365414}
+  m_Offset: {x: -0.027915955, y: -0.011365414}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 2.34271}
+  m_Size: {x: 4.365794, y: 2.34271}
   m_EdgeRadius: 0
 --- !u!1 &4536763053231315449
 GameObject:
@@ -176,8 +176,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 325631209706956443}
-  - component: {fileID: 1132630941508740969}
-  m_Layer: 0
+  - component: {fileID: 607625191228555057}
+  m_Layer: 8
   m_Name: Boomerang
   m_TagString: Boomerang
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ Transform:
   m_Father: {fileID: 4548071877125090402}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1132630941508740969
+--- !u!61 &607625191228555057
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +211,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.011365414}
+  m_Offset: {x: -0.027915955, y: -0.011365414}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -222,5 +222,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 2.34271}
+  m_Size: {x: 4.365794, y: 2.34271}
   m_EdgeRadius: 0

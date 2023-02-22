@@ -30,15 +30,28 @@ public class GameData
     public int electricity_lv; // 廓偃曖褐 廓偃曖 諾
     public int windwall_lv; //
 
+    public int boss_cnt;
     public int mob_cnt;
     //跪 羹溘
     public float mob1_hp;//弊溯⑽ 羹溘
     public float bat_hp;
+    public float gatekeeper_hp;
+    public float golem_hp;
+
+    public float bat_boss_hp;
 
     //跪 奢問溘
     public float mob1_dmg;
     public float bat_body_dmg;
     public float bat_atk_dmg;
+    public float gatekeeper_dmg;
+    public float golem_dmg;
+
+
+    public float bat_boss_body;
+    public float bat_boss_atk;
+    public float bat_boss_laser;
+
     //天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天
 
 }

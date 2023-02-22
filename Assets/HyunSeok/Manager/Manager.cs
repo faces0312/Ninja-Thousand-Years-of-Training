@@ -18,6 +18,11 @@ public class Manager : MonoBehaviour
     public Slot_Mecha slot_Mecha;
     //public Mob1 mob;  //�ǵ�
 
+    public GameObject left_bounce;
+    public GameObject right_bounce;
+    public GameObject up_bounce;
+    public GameObject down_bounce;
+
     public int lv;//난이도(몹 수와 연관됨)
     private float time_bigWave;//빅웨이브 등장 시간
     private float time_mob_hp;//몹 체력 증가 시간
@@ -56,10 +61,15 @@ public class Manager : MonoBehaviour
 
         Data.Instance.gameData.mob1_hp = 1;
         Data.Instance.gameData.bat_hp = 1;
+        Data.Instance.gameData.gatekeeper_hp = 1;
+        Data.Instance.gameData.golem_hp = 3;
+
+        Data.Instance.gameData.bat_boss_hp = 3000;
 
         Data.Instance.gameData.mob1_dmg = 1;
         Data.Instance.gameData.bat_body_dmg = 1;
         Data.Instance.gameData.bat_atk_dmg = 2;
+        Data.Instance.gameData.gatekeeper_dmg = 1;
 
         Data.Instance.gameData.mob_cnt = 0;
         /*
@@ -89,9 +99,12 @@ public class Manager : MonoBehaviour
         time_bigWave += Time.deltaTime;
         if((int)time_bigWave >= 59)
         {
-            time_bigWave = 0;
-            lv++;
-            StartCoroutine(Camera_Up());
+            if(objectManager.is_bigwave == true)
+            {
+                time_bigWave = 0;
+                lv++;
+                StartCoroutine(Camera_Up());
+            }
         }
 
         //몹 체력 증가 쿨타임
@@ -101,6 +114,8 @@ public class Manager : MonoBehaviour
             time_mob_hp = 0;
             Data.Instance.gameData.mob1_hp += 2;
             Data.Instance.gameData.bat_hp += 2;
+            Data.Instance.gameData.gatekeeper_hp += 2;
+            Data.Instance.gameData.golem_hp += 2;
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
         if(Data.Instance.gameData.exp >= exp_Tmp)
@@ -134,6 +149,11 @@ public class Manager : MonoBehaviour
         for (int i = 0; i < 200; i++)
         {
             camera.orthographicSize += 0.01f;
+            left_bounce.transform.position = new Vector3(left_bounce.transform.position.x - 0.007f, left_bounce.transform.position.y);
+            right_bounce.transform.position = new Vector3(right_bounce.transform.position.x + 0.007f, right_bounce.transform.position.y);
+            up_bounce.transform.position = new Vector3(up_bounce.transform.position.x , up_bounce.transform.position.y + 0.01f);
+            down_bounce.transform.position = new Vector3(down_bounce.transform.position.x, down_bounce.transform.position.y - 0.01f);
+
             yield return new WaitForSeconds(0.01f);
         }
         camera.orthographicSize = 7f;
@@ -145,6 +165,11 @@ public class Manager : MonoBehaviour
         for (int i = 0; i < 200; i++)
         {
             camera.orthographicSize -= 0.01f;
+            left_bounce.transform.position = new Vector3(left_bounce.transform.position.x + 0.007f, left_bounce.transform.position.y);
+            right_bounce.transform.position = new Vector3(right_bounce.transform.position.x - 0.007f, right_bounce.transform.position.y);
+            up_bounce.transform.position = new Vector3(up_bounce.transform.position.x, up_bounce.transform.position.y - 0.01f);
+            down_bounce.transform.position = new Vector3(down_bounce.transform.position.x, down_bounce.transform.position.y + 0.01f);
+
             yield return new WaitForSeconds(0.01f);
         }
         camera.orthographicSize = 5f;
