@@ -12,6 +12,8 @@ public class Golem_Boss_Area : MonoBehaviour
     public Boss_Laser laser;
     public Boss_GunGroup gunGroup;*/
 
+    public Golem_Boss_Laser laser;
+
     int atk_ran;
 
     public float atk_CT;
@@ -48,14 +50,14 @@ public class Golem_Boss_Area : MonoBehaviour
                 atk_Tmp_CT -= Time.deltaTime;
             else
             {
-                atk_ran = Random.Range(0, 2);
+                atk_ran = Random.Range(0, 3);
                 if (atk_ran == 0)
                     Manager.manager.objectManager.Golem_Boss_Lighting_General(mob.gameObject.transform.position);
                 else if (atk_ran == 1)
                     Manager.manager.objectManager.Golem_Boss_Wire_General(mob.gameObject.transform.position);
-                /*else if (atk_ran == 2)
-                    Manager.manager.objectManager.Bat_Boss_GunGroup_General(mob.gameObject.transform.position);*/
-                
+                else if (atk_ran == 2)
+                    Laser();
+
 
                 atk_Tmp_CT = atk_CT;
             }
@@ -64,17 +66,11 @@ public class Golem_Boss_Area : MonoBehaviour
             mob.target_on = true;
     }
 
-    /*void Laser()
+    void Laser()
     {
         //¼¦°Ç ÄÚµå
         laser.gameObject.transform.position = mob.gameObject.transform.position;
 
-        Vector3 start = laser.transform.position;
-        Vector3 end = mob.target.transform.position;
-        Vector3 fin = end - start;
-
-        laser.transform.rotation = Quaternion.Euler(laser.transform.rotation.x, laser.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 30);
-
         laser.gameObject.SetActive(true);
-    }*/
+    }
 }

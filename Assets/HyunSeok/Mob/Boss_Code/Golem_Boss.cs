@@ -34,7 +34,7 @@ public class Golem_Boss : MonoBehaviour
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.bat_boss_hp;
-        speed = 1.4f;
+        speed = 1f;
         target_on = true;
         golem_Boss_Body.gameObject.SetActive(true);
         /*shotGun.gameObject.SetActive(false);

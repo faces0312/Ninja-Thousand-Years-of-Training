@@ -89,7 +89,39 @@ public class Player_Body : MonoBehaviour
             if (is_invin == false)
             {
                 StartCoroutine(Sick());
-                StartCoroutine(Damage_Golem_Laser());
+                StartCoroutine(Damage_Golem());
+            }
+        }
+        else if (collision.tag == "Golem_Boss")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Golem_Boss());
+            }
+        }
+        else if (collision.tag == "Golem_Boss_Lighting")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Golem_Boss_Lighting());
+            }
+        }
+        else if (collision.tag == "Golem_Boss_Wire")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Golem_Boss_Wire());
+            }
+        }
+        else if (collision.tag == "Golem_Boss_Laser")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Golem_Boss_Laser());
             }
         }
     }
@@ -157,9 +189,45 @@ public class Player_Body : MonoBehaviour
         is_invin = false;
     }
 
-    IEnumerator Damage_Golem_Laser()
+    IEnumerator Damage_Golem()
     {
         player.hp -= Data.Instance.gameData.golem_dmg;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Golem_Boss()
+    {
+        player.hp -= Data.Instance.gameData.golem_boss_body;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Golem_Boss_Lighting()
+    {
+        player.hp -= Data.Instance.gameData.golem_boss_lighting;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Golem_Boss_Wire()
+    {
+        player.hp -= Data.Instance.gameData.golem_boss_wire;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Golem_Boss_Laser()
+    {
+        player.hp -= Data.Instance.gameData.golem_boss_laser;
         is_invin = true;
 
         yield return new WaitForSeconds(0.1f);

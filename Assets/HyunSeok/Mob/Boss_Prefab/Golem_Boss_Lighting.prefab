@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7523393531352878530}
   m_Layer: 0
   m_Name: Golem_Boss_Lighting
-  m_TagString: Untagged
+  m_TagString: Golem_Boss_Lighting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

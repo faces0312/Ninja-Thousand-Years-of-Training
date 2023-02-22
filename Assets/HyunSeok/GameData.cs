@@ -52,6 +52,12 @@ public class GameData
     public float bat_boss_atk;
     public float bat_boss_laser;
 
+    public float golem_boss_body;
+    public float golem_boss_lighting;
+    public float golem_boss_wire;
+    public float golem_boss_laser;
+
+
     //�ѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤ�
 
 }

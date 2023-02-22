@@ -71,6 +71,15 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.bat_atk_dmg = 2;
         Data.Instance.gameData.gatekeeper_dmg = 1;
 
+        Data.Instance.gameData.bat_boss_body = 3;
+        Data.Instance.gameData.bat_boss_atk = 3;
+        Data.Instance.gameData.bat_boss_laser = 3;
+
+        Data.Instance.gameData.golem_boss_body = 3;
+        Data.Instance.gameData.golem_boss_lighting = 3;
+        Data.Instance.gameData.golem_boss_wire = 3;
+        Data.Instance.gameData.golem_boss_laser = 3;
+
         Data.Instance.gameData.mob_cnt = 0;
         /*
         Data.Instance.gameData.exp = 0;
