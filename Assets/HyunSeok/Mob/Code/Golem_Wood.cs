@@ -27,7 +27,7 @@ public class Golem_Wood : MonoBehaviour
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.golem_hp;
-        speed = 0.9f;
+        speed = 0.6f;
         //target_on = false;
         golem_Wood_Body.gameObject.SetActive(true);
         //StartCoroutine(FindPlayer());

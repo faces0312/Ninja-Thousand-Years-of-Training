@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Golem_Boss_Laser : MonoBehaviour
 {
-    public Golem_Boss golem;
-
     public GameObject laser1;
     public GameObject laser2;
     public GameObject laser3;
@@ -15,7 +13,6 @@ public class Golem_Boss_Laser : MonoBehaviour
 
     private void OnEnable()
     {
-        golem.speed = 0f;
         StartCoroutine(nameof(Dis_Laser));
     }
 
@@ -33,7 +30,6 @@ public class Golem_Boss_Laser : MonoBehaviour
     IEnumerator Dis_Laser()
     {
         yield return new WaitForSeconds(4f);
-        golem.speed = 1f;
         gameObject.SetActive(false);
     }
 }

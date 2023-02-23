@@ -29,7 +29,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire1()
     {
-        for(int i=0;i<100;i++)
+        for(int i=0;i<150;i++)
         {
             if (i == 15)
                 StartCoroutine(Wire2());
@@ -41,7 +41,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire2()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Wire3());
@@ -53,7 +53,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire3()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Wire4());
@@ -65,7 +65,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire4()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Wire5());
@@ -77,7 +77,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire5()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Wire6());
@@ -89,7 +89,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire6()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Wire7());
@@ -101,7 +101,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire7()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Wire8());
@@ -113,7 +113,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Wire8()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             wire8.transform.Translate(Vector3.right * Time.deltaTime * 2);
             wire8.transform.localScale = new Vector3(wire8.transform.localScale.x, (wire8.transform.localScale.y + 0.05f));
@@ -125,7 +125,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire8()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Back_Wire7());
@@ -139,7 +139,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire7()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Back_Wire6());
@@ -152,7 +152,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire6()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Back_Wire5());
@@ -165,7 +165,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire5()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Back_Wire4());
@@ -178,7 +178,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire4()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Back_Wire3());
@@ -191,7 +191,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire3()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Back_Wire2());
@@ -204,7 +204,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire2()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             if (i == 15)
                 StartCoroutine(Back_Wire1());
@@ -217,7 +217,7 @@ public class Golem_Boss_Wire : MonoBehaviour
 
     IEnumerator Back_Wire1()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 150; i++)
         {
             wire1.transform.Translate(Vector3.left * Time.deltaTime * 2);
             wire1.transform.localScale = new Vector3(wire1.transform.localScale.x, (wire1.transform.localScale.y - 0.05f));

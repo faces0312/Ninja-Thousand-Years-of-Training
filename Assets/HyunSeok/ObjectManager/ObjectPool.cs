@@ -102,8 +102,8 @@ public class ObjectPool : MonoBehaviour
         bat_Boss_ShotGun = new GameObject[10];
         bat_Boss_GunGroup = new GameObject[5];
 
-        golem_Boss_Lighting = new GameObject[60];
-        golem_Boss_Wire = new GameObject[60];
+        golem_Boss_Lighting = new GameObject[80];
+        golem_Boss_Wire = new GameObject[30];
 
         mob1 = new GameObject[300];
         rayven = new GameObject[300];

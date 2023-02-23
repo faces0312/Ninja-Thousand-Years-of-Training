@@ -26,7 +26,7 @@ public class ObjectManager : MonoBehaviour
     GameObject mob1;
     public GameObject[] mob_Location;
 
-    public GameObject mob_wall;
+    public GameObject bat_Wall;
     GameObject boss1;
     public GameObject boss_Location;
 
@@ -141,16 +141,16 @@ public class ObjectManager : MonoBehaviour
 
 
 
-        /*for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             Mob_General();
-        }*/
+        }
     }
 
     private void Update()
     {
         //各 积己 酿
-        /*if (mob_Tmp_CT > 0)
+        if (mob_Tmp_CT > 0)
             mob_Tmp_CT -= Time.deltaTime;
         else
         {
@@ -173,7 +173,7 @@ public class ObjectManager : MonoBehaviour
                 }
                 mob_Tmp_CT = mob_CT;
             }
-        }*/
+        }
 
         if (boss_Tmp_CT > 0)
             boss_Tmp_CT -= Time.deltaTime;
@@ -342,11 +342,11 @@ public class ObjectManager : MonoBehaviour
 
     public void Boss_General()
     {
-        /*int ran_mob;//各 积己 罚待蔼
+        int ran_boss;//各 积己 罚待蔼
 
-        ran_mob = Random.Range(0, 3);*/
+        ran_boss = Random.Range(0, 2);
 
-        boss1 = objectPool.MakeObj(mob_Boss_str[0]);
+        boss1 = objectPool.MakeObj(mob_Boss_str[ran_boss]);
         boss1.transform.position = boss_Location.transform.position;
         
         Data.Instance.gameData.boss_cnt++;
@@ -395,9 +395,9 @@ public class ObjectManager : MonoBehaviour
         float ran_distance;//罚待 芭府
         int j;
 
-        GameObject[] lighting = new GameObject[20];
+        GameObject[] lighting = new GameObject[50];
 
-        for(int i=0; i<4; i++)
+        for(int i=0; i<10; i++)
         {
             for (j = 0; j < 5; j++)
             {
@@ -405,7 +405,7 @@ public class ObjectManager : MonoBehaviour
                 lighting[i].transform.position = vector3;
 
                 ran_angle = Random.Range(0, 360);
-                ran_distance = Random.Range(0.2f, 4.0f);
+                ran_distance = Random.Range(0.2f, 4.5f);
 
                 lighting[i].transform.position = new Vector3(lighting[i].transform.position.x + ran_distance * Mathf.Cos(ran_angle * Mathf.Deg2Rad), lighting[i].transform.position.y + ran_distance * Mathf.Sin(ran_angle * Mathf.Deg2Rad));
             }
