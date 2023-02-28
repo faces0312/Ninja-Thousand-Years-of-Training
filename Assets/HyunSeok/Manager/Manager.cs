@@ -124,7 +124,7 @@ public class Manager : MonoBehaviour
             Data.Instance.gameData.mob1_hp += 2;
             Data.Instance.gameData.bat_hp += 2;
             Data.Instance.gameData.gatekeeper_hp += 2;
-            Data.Instance.gameData.golem_hp += 2;
+            Data.Instance.gameData.golem_hp += 3;
         }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
         if(Data.Instance.gameData.exp >= exp_Tmp)

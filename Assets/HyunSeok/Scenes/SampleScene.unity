@@ -16149,7 +16149,7 @@ MonoBehaviour:
   - {fileID: 504608853}
   - {fileID: 1044375584}
   - {fileID: 1768879216}
-  mob_wall: {fileID: 145070366}
+  bat_Wall: {fileID: 145070366}
   boss_Location: {fileID: 176716950}
   boss_CT: 0
   boss_Tmp_CT: 0

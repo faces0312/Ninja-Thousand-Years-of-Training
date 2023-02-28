@@ -13,8 +13,8 @@ public class Max_Dmg : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         Manager.manager.objectManager.player_wall.gameObject.SetActive(true);
-        Manager.manager.objectManager.mob_wall.transform.position = Manager.manager.objectManager.player.transform.position;
-        Manager.manager.objectManager.mob_wall.gameObject.SetActive(true);
+        Manager.manager.objectManager.bat_Wall.transform.position = Manager.manager.objectManager.player.transform.position;
+        Manager.manager.objectManager.bat_Wall.gameObject.SetActive(true);
         Manager.manager.objectManager.Boss_General();
         gameObject.SetActive(false);
     }

@@ -185,7 +185,7 @@ public class Player_Body : MonoBehaviour
         player.hp -= Data.Instance.gameData.bat_boss_laser;
         is_invin = true;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.8f);
         is_invin = false;
     }
 
@@ -212,7 +212,7 @@ public class Player_Body : MonoBehaviour
         player.hp -= Data.Instance.gameData.golem_boss_lighting;
         is_invin = true;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         is_invin = false;
     }
 
@@ -221,7 +221,7 @@ public class Player_Body : MonoBehaviour
         player.hp -= Data.Instance.gameData.golem_boss_wire;
         is_invin = true;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         is_invin = false;
     }
 
@@ -230,7 +230,7 @@ public class Player_Body : MonoBehaviour
         player.hp -= Data.Instance.gameData.golem_boss_laser;
         is_invin = true;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.8f);
         is_invin = false;
     }
 
