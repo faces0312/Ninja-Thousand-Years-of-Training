@@ -141,16 +141,16 @@ public class ObjectManager : MonoBehaviour
 
 
 
-        /*for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             Mob_General();
-        }*/
+        }
     }
 
     private void Update()
     {
         //¸÷ »ý¼º Äð
-        /*if (mob_Tmp_CT > 0)
+        if (mob_Tmp_CT > 0)
             mob_Tmp_CT -= Time.deltaTime;
         else
         {
@@ -173,7 +173,7 @@ public class ObjectManager : MonoBehaviour
                 }
                 mob_Tmp_CT = mob_CT;
             }
-        }*/
+        }
 
         if (boss_Tmp_CT > 0)
             boss_Tmp_CT -= Time.deltaTime;
