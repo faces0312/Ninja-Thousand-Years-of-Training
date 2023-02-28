@@ -21,6 +21,8 @@ public class HPbar : MonoBehaviour
     void Update()
     {
         HP();
+        // 오브젝트에 따른 HP Bar 위치 이동
+        hpbar.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.8f, 0));
     }
 
     private void HP()
