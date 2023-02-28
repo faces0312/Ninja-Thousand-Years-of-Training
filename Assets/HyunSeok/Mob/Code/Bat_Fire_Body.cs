@@ -28,6 +28,7 @@ public class Bat_Fire_Body : MonoBehaviour
             }
             StartCoroutine(AttackHit());
         }
+
         if (collision.tag == "Normal_Atk")
         {
             if (Data.Instance.gameData.normal_atk_lv == 1)
@@ -87,17 +88,17 @@ public class Bat_Fire_Body : MonoBehaviour
         if (collision.tag == "Boomerang")
         {
             if (Data.Instance.gameData.boomerang_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= 5;
             else if (Data.Instance.gameData.boomerang_lv == 2)
-                mob.hp -= 15;
+                mob.hp -= 7;
             else if (Data.Instance.gameData.boomerang_lv == 3)
-                mob.hp -= 20;
+                mob.hp -= 10;
             else if (Data.Instance.gameData.boomerang_lv == 4)
-                mob.hp -= 25;
+                mob.hp -= 15;
             else if (Data.Instance.gameData.boomerang_lv == 5)
-                mob.hp -= 28;
+                mob.hp -= 20;
             else if (Data.Instance.gameData.boomerang_lv == 6)
-                mob.hp -= 30;
+                mob.hp -= 25;
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -119,11 +120,11 @@ public class Bat_Fire_Body : MonoBehaviour
             else if (Data.Instance.gameData.fire_lv == 3)
                 mob.hp -= 10;
             else if (Data.Instance.gameData.fire_lv == 4)
-                mob.hp -= 10;
+                mob.hp -= 20;
             else if (Data.Instance.gameData.fire_lv == 5)
-                mob.hp -= 15;
-            else if (Data.Instance.gameData.fire_lv == 6)
                 mob.hp -= 30;
+            else if (Data.Instance.gameData.fire_lv == 6)
+                mob.hp -= 40;
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -173,9 +174,9 @@ public class Bat_Fire_Body : MonoBehaviour
             else if (Data.Instance.gameData.fire_column_lv == 4)
                 mob.hp -= 25;
             else if (Data.Instance.gameData.fire_column_lv == 5)
-                mob.hp -= 28;
-            else if (Data.Instance.gameData.fire_column_lv == 6)
                 mob.hp -= 30;
+            else if (Data.Instance.gameData.fire_column_lv == 6)
+                mob.hp -= 50;
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -191,17 +192,17 @@ public class Bat_Fire_Body : MonoBehaviour
         if (collision.tag == "Tornado")
         {
             if (Data.Instance.gameData.tornado_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= 3;
             else if (Data.Instance.gameData.tornado_lv == 2)
-                mob.hp -= 15;
+                mob.hp -= 5;
             else if (Data.Instance.gameData.tornado_lv == 3)
-                mob.hp -= 20;
+                mob.hp -= 7;
             else if (Data.Instance.gameData.tornado_lv == 4)
-                mob.hp -= 25;
+                mob.hp -= 10;
             else if (Data.Instance.gameData.tornado_lv == 5)
-                mob.hp -= 28;
+                mob.hp -= 15;
             else if (Data.Instance.gameData.tornado_lv == 6)
-                mob.hp -= 30;
+                mob.hp -= 20;
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -247,13 +248,13 @@ public class Bat_Fire_Body : MonoBehaviour
             else if (Data.Instance.gameData.electricity_lv == 2)
                 mob.hp -= 10;
             else if (Data.Instance.gameData.electricity_lv == 3)
-                mob.hp -= 13;
+                mob.hp -= 15;
             else if (Data.Instance.gameData.electricity_lv == 4)
-                mob.hp -= 16;
+                mob.hp -= 20;
             else if (Data.Instance.gameData.electricity_lv == 5)
-                mob.hp -= 18;
+                mob.hp -= 25;
             else if (Data.Instance.gameData.electricity_lv == 6)
-                mob.hp -= 22;
+                mob.hp -= 30;
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -268,19 +269,18 @@ public class Bat_Fire_Body : MonoBehaviour
 
         if (collision.tag == "Electric_Area")
         {
-
             if (Data.Instance.gameData.electricity_lv == 1)
                 mob.hp -= 3;
             else if (Data.Instance.gameData.electricity_lv == 2)
-                mob.hp -= 4;
+                mob.hp -= 3;
             else if (Data.Instance.gameData.electricity_lv == 3)
                 mob.hp -= 5;
             else if (Data.Instance.gameData.electricity_lv == 4)
-                mob.hp -= 6;
+                mob.hp -= 5;
             else if (Data.Instance.gameData.electricity_lv == 5)
                 mob.hp -= 7;
             else if (Data.Instance.gameData.electricity_lv == 6)
-                mob.hp -= 8;
+                mob.hp -= 10;
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -296,17 +296,17 @@ public class Bat_Fire_Body : MonoBehaviour
         if (collision.tag == "Wind")
         {
             if (Data.Instance.gameData.wind_lv == 1)
-                mob.hp -= 5;
+                mob.hp -= 7;
             else if (Data.Instance.gameData.wind_lv == 2)
-                mob.hp -= 8;
+                mob.hp -= 10;
             else if (Data.Instance.gameData.wind_lv == 3)
                 mob.hp -= 10;
             else if (Data.Instance.gameData.wind_lv == 4)
-                mob.hp -= 12;
-            else if (Data.Instance.gameData.wind_lv == 5)
                 mob.hp -= 15;
+            else if (Data.Instance.gameData.wind_lv == 5)
+                mob.hp -= 20;
             else if (Data.Instance.gameData.wind_lv == 6)
-                mob.hp -= 18;
+                mob.hp -= 25;
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -346,6 +346,7 @@ public class Bat_Fire_Body : MonoBehaviour
             StartCoroutine(AttackHit());
 
         }
+
     }
     IEnumerator Stun()
     {

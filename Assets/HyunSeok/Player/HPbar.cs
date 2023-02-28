@@ -11,6 +11,9 @@ public class HPbar : MonoBehaviour
     private float maxHP = Data.Instance.gameData.player_hp;
     private float curHP; //어케연결하지 
 
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,7 @@ public class HPbar : MonoBehaviour
     {
         HP();
         // 오브젝트에 따른 HP Bar 위치 이동
-        hpbar.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.8f, 0));
+        //hpbar.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 0.8f, 0));
     }
 
     private void HP()
