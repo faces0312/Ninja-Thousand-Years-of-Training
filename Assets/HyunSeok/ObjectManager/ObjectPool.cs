@@ -35,6 +35,8 @@ public class ObjectPool : MonoBehaviour
     GameObject[] bat_Boss;
     public GameObject golem_Boss_Prefab;
     GameObject[] golem_Boss;
+    public GameObject redspit_Boss_Prefab;
+    GameObject[] redspit_Boss;
 
     //¹ÚÁã º¸½º °ø°Ý Å¸°Ù
     public GameObject bat_Boss_ShotGun_Prefab;
@@ -47,6 +49,14 @@ public class ObjectPool : MonoBehaviour
     GameObject[] golem_Boss_Lighting;
     public GameObject golem_Boss_Wire_Prefab;
     GameObject[] golem_Boss_Wire;
+
+    //Áö··ÀÌ º¸½º °ø°Ý
+    public GameObject redspit_Boss_Arrow_Prefab;
+    GameObject[] redspit_Boss_Arrow;
+    public GameObject redspit_Boss_MachineGun_Prefab;
+    GameObject[] redspit_Boss_MachineGun;
+    public GameObject redspit_Boss_Cremore_Prefab;
+    GameObject[] redspit_Boss_Cremore;
 
     //¸÷ Å¸°Ù
     public GameObject mob1_Prefab;
@@ -98,12 +108,18 @@ public class ObjectPool : MonoBehaviour
     {
         bat_Boss = new GameObject[5];
         golem_Boss = new GameObject[5];
+        redspit_Boss = new GameObject[5];
 
         bat_Boss_ShotGun = new GameObject[10];
         bat_Boss_GunGroup = new GameObject[5];
 
         golem_Boss_Lighting = new GameObject[80];
         golem_Boss_Wire = new GameObject[30];
+
+        redspit_Boss_Arrow = new GameObject[15];
+        redspit_Boss_MachineGun = new GameObject[100];
+        redspit_Boss_Cremore = new GameObject[20];
+
 
         mob1 = new GameObject[300];
         rayven = new GameObject[300];
@@ -126,7 +142,7 @@ public class ObjectPool : MonoBehaviour
         player_shadowAtk = new GameObject[20];
         player_Fire = new GameObject[24];
         player_Talisman = new GameObject[36];
-        player_FireColumn = new GameObject[5];
+        player_FireColumn = new GameObject[20];
         player_Tornado = new GameObject[5];
         player_Tree = new GameObject[3];
         player_Boomerang = new GameObject[10];
@@ -173,6 +189,26 @@ public class ObjectPool : MonoBehaviour
         {
             golem_Boss_Wire[index] = Instantiate(golem_Boss_Wire_Prefab);
             golem_Boss_Wire[index].SetActive(false);
+        }
+        for (int index = 0; index < redspit_Boss.Length; index++)
+        {
+            redspit_Boss[index] = Instantiate(redspit_Boss_Prefab);
+            redspit_Boss[index].SetActive(false);
+        }
+        for (int index = 0; index < redspit_Boss_Arrow.Length; index++)
+        {
+            redspit_Boss_Arrow[index] = Instantiate(redspit_Boss_Arrow_Prefab);
+            redspit_Boss_Arrow[index].SetActive(false);
+        }
+        for (int index = 0; index < redspit_Boss_MachineGun.Length; index++)
+        {
+            redspit_Boss_MachineGun[index] = Instantiate(redspit_Boss_MachineGun_Prefab);
+            redspit_Boss_MachineGun[index].SetActive(false);
+        }
+        for (int index = 0; index < redspit_Boss_Cremore.Length; index++)
+        {
+            redspit_Boss_Cremore[index] = Instantiate(redspit_Boss_Cremore_Prefab);
+            redspit_Boss_Cremore[index].SetActive(false);
         }
         for (int index = 0; index < mob1.Length; index++)
         {
@@ -370,6 +406,18 @@ public class ObjectPool : MonoBehaviour
                 break;
             case "Golem_Boss_Wire":
                 targetPool = golem_Boss_Wire;
+                break;
+            case "Redspit_Boss":
+                targetPool = redspit_Boss;
+                break;
+            case "Redspit_Boss_Arrow":
+                targetPool = redspit_Boss_Arrow;
+                break;
+            case "Redspit_Boss_MachineGun":
+                targetPool = redspit_Boss_MachineGun;
+                break;
+            case "Redspit_Boss_Cremore":
+                targetPool = redspit_Boss_Cremore;
                 break;
             case "Mob1":
                 targetPool = mob1; 

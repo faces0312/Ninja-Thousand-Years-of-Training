@@ -8,6 +8,7 @@ public class ObjectManager : MonoBehaviour
 
     public ObjectPool objectPool;
     public Player player;
+    public Vector3 player_vector;
     public GameObject player_wall;
     public Player_Body player_Body;
     public ShadowPartner shadowPartner1;
@@ -17,6 +18,7 @@ public class ObjectManager : MonoBehaviour
     private string[] mob_Boss_str;//보스몹 종류
     private string[] bat_Boss_str;//박쥐 보스 공격
     private string[] golem_Boss_str;//기계 보스 공격
+    private string[] redspit_Boss_str;//지렁이 보스 공격
     private string[] mob_Normal_str;
     private string[] mob_Fire_str;
     private string[] mob_Wood_str;
@@ -27,6 +29,8 @@ public class ObjectManager : MonoBehaviour
     public GameObject[] mob_Location;
 
     public GameObject bat_Wall;
+    public GameObject bat_Macha_Wall;
+    public GameObject bat_Fire_Wall;
     GameObject boss1;
     public GameObject boss_Location;
 
@@ -36,7 +40,6 @@ public class ObjectManager : MonoBehaviour
     public bool is_mob;//몹이 나올수 있는 상태인지(true일때 가능)
     public bool is_bigwave;//빅웨이브가 나올수 있는 상태인지(true일때 가능)
     public bool is_boss;//보스가 나올수 있는 상태인지(true일때 가능)
-
 
     private float mob_CT;//몹 쿨타임
     private float mob_Tmp_CT;
@@ -82,9 +85,10 @@ public class ObjectManager : MonoBehaviour
     {
         atk_str = new string[] { "Normal_Atk" , "Shadow_Atk" ,"Fire", "Talisman", "FireColumn", "Tornado", "Tree", "Boomerang", "Electricity" ,"WindWall", "Wind"};
         
-        mob_Boss_str = new string[] { "Bat_Boss" , "Golem_Boss"};
+        mob_Boss_str = new string[] { "Bat_Boss" , "Golem_Boss", "Redspit_Boss" };
         bat_Boss_str = new string[] { "Bat_Boss_ShotGun", "Bat_Boss_GunGroup" };
         golem_Boss_str = new string[] { "Golem_Boss_Lighting", "Golem_Boss_Wire" };
+        redspit_Boss_str = new string[] { "Redspit_Boss_Arrow", "Redspit_Boss_MachineGun", "Redspit_Boss_Cremore" };
         //몹마다 퍼센트 확률로 등장
         mob_Normal_str = new string[] { "Mob1", "Bat_Normal", "Zombie_Normal", "Golem_Normal" };
         mob_Fire_str = new string[] { "Redspit", "Bat_Fire", "Fox_Fire", "Golem_Fire" };
@@ -99,6 +103,10 @@ public class ObjectManager : MonoBehaviour
         is_bigwave = true;
         is_boss = true;
         player_wall.gameObject.SetActive(false);
+
+        bat_Wall.gameObject.SetActive(false);
+        bat_Macha_Wall.gameObject.SetActive(false);
+        bat_Fire_Wall.gameObject.SetActive(false);
 
         boss_CT = 100f;
         boss_Tmp_CT = boss_CT;
@@ -115,10 +123,10 @@ public class ObjectManager : MonoBehaviour
         fire_CT = 7f;
         fire_Tmp_CT = fire_CT;
 
-        talisman_CT = 18f;
+        talisman_CT = 15f;
         talisman_Tmp_CT = talisman_CT;
 
-        firecolumn_CT = 10f;
+        firecolumn_CT = 1f;
         firecolumn_Tmp_CT = firecolumn_CT;
 
         tornado_CT = 10f;
@@ -181,6 +189,21 @@ public class ObjectManager : MonoBehaviour
         {
             if(is_boss == true)
             {
+                Data.Instance.gameData.mob1_dmg++;
+                Data.Instance.gameData.bat_body_dmg++;
+                Data.Instance.gameData.bat_atk_dmg++;
+                Data.Instance.gameData.gatekeeper_dmg++;
+                Data.Instance.gameData.golem_dmg++;
+
+                Data.Instance.gameData.bat_boss_body++;
+                Data.Instance.gameData.bat_boss_atk++;
+                Data.Instance.gameData.bat_boss_laser++;
+
+                Data.Instance.gameData.golem_boss_body++;
+                Data.Instance.gameData.golem_boss_lighting++;
+                Data.Instance.gameData.golem_boss_wire++;
+                Data.Instance.gameData.golem_boss_laser++;
+
                 is_boss = false;
                 is_mob = false;
                 is_bigwave = false;
@@ -344,7 +367,23 @@ public class ObjectManager : MonoBehaviour
     {
         int ran_boss;//몹 생성 랜덤값
 
-        ran_boss = Random.Range(0, 2);
+        ran_boss = Random.Range(0, 3);
+
+        if(ran_boss == 0)
+        {
+            bat_Wall.transform.position = player.transform.position;
+            bat_Wall.gameObject.SetActive(true);
+        }
+        else if (ran_boss == 1)
+        {
+            bat_Macha_Wall.transform.position = player.transform.position;
+            bat_Macha_Wall.gameObject.SetActive(true);
+        }
+        else if (ran_boss == 2)
+        {
+            bat_Fire_Wall.transform.position = player.transform.position;
+            bat_Fire_Wall.gameObject.SetActive(true);
+        }
 
         boss1 = objectPool.MakeObj(mob_Boss_str[ran_boss]);
         boss1.transform.position = boss_Location.transform.position;
@@ -405,7 +444,7 @@ public class ObjectManager : MonoBehaviour
                 lighting[i].transform.position = vector3;
 
                 ran_angle = Random.Range(0, 360);
-                ran_distance = Random.Range(0.2f, 4.5f);
+                ran_distance = Random.Range(0.5f, 5f);
 
                 lighting[i].transform.position = new Vector3(lighting[i].transform.position.x + ran_distance * Mathf.Cos(ran_angle * Mathf.Deg2Rad), lighting[i].transform.position.y + ran_distance * Mathf.Sin(ran_angle * Mathf.Deg2Rad));
             }
@@ -422,6 +461,75 @@ public class ObjectManager : MonoBehaviour
 
         wire.transform.position = vector3;
     }
+
+    public void Redspit_Boss_Arrow_General(Vector3 vector3)
+    {
+        GameObject arrow;
+
+        arrow = objectPool.MakeObj(redspit_Boss_str[0]);
+        arrow.transform.position = vector3;
+
+        Vector3 start = arrow.transform.position;
+        Vector3 end = player.transform.position;
+        Vector3 fin = end - start;
+
+        arrow.transform.rotation = Quaternion.Euler(arrow.transform.rotation.x, arrow.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);  
+    }
+
+    public void Redspit_Boss_MachineGun_General(Vector3 vector3)
+    {
+        GameObject machineGun;
+
+        machineGun = objectPool.MakeObj(redspit_Boss_str[1]);
+        machineGun.transform.position = vector3;
+
+        Vector3 start = machineGun.transform.position;
+        Vector3 end = player.transform.position;
+        Vector3 fin = end - start;
+
+        machineGun.transform.rotation = Quaternion.Euler(machineGun.transform.rotation.x, machineGun.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);
+
+    }
+
+    /*IEnumerator Redspit_Boss_MachineGun(Vector3 vector3)
+    {
+        GameObject[] machineGun = new GameObject[15];
+
+        for(int i=0; i<15; i++)
+        {
+            machineGun[i] = objectPool.MakeObj(redspit_Boss_str[1]);
+            machineGun[i].transform.position = vector3;
+
+            Vector3 start = machineGun[i].transform.position;
+            Vector3 end = player.transform.position;
+            Vector3 fin = end - start;
+
+            machineGun[i].transform.rotation = Quaternion.Euler(machineGun[i].transform.rotation.x, machineGun[i].transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);
+
+            yield return new WaitForSeconds(0.3f);
+        }
+    }*/
+
+    public void Redspit_Boss_Cremore_General(Vector3 vector3)
+    {
+        StartCoroutine(Redspit_Boss_Cremore(vector3));
+    }
+
+    IEnumerator Redspit_Boss_Cremore(Vector3 vector3)
+    {
+        GameObject[] cremore = new GameObject[5];
+
+        for (int i = 0; i < 5; i++)
+        {
+            cremore[i] = objectPool.MakeObj(redspit_Boss_str[2]);
+            cremore[i].transform.position = vector3;
+
+            player_vector = player.transform.position;
+
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
     public void Mob_General()
     {
         int ran_mob;//몹 생성 랜덤값
@@ -714,218 +822,218 @@ public class ObjectManager : MonoBehaviour
         talisman1 = objectPool.MakeObj(atk_str[3]);
         talisman1.transform.position = player.transform.position;
         talisman1.transform.localEulerAngles = new Vector3(0, 0, -90);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman2;
         talisman2 = objectPool.MakeObj(atk_str[3]);
         talisman2.transform.position = player.transform.position;
         talisman2.transform.localEulerAngles = new Vector3(0, 0, -80);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman3;
         talisman3 = objectPool.MakeObj(atk_str[3]);
         talisman3.transform.position = player.transform.position;
         talisman3.transform.localEulerAngles = new Vector3(0, 0, -70);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman4;
         talisman4 = objectPool.MakeObj(atk_str[3]);
         talisman4.transform.position = player.transform.position;
         talisman4.transform.localEulerAngles = new Vector3(0, 0, -60);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman5;
         talisman5 = objectPool.MakeObj(atk_str[3]);
         talisman5.transform.position = player.transform.position;
         talisman5.transform.localEulerAngles = new Vector3(0, 0, -50);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman6;
         talisman6 = objectPool.MakeObj(atk_str[3]);
         talisman6.transform.position = player.transform.position;
         talisman6.transform.localEulerAngles = new Vector3(0, 0, -40);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman7;
         talisman7 = objectPool.MakeObj(atk_str[3]);
         talisman7.transform.position = player.transform.position;
         talisman7.transform.localEulerAngles = new Vector3(0, 0, -30);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman8;
         talisman8 = objectPool.MakeObj(atk_str[3]);
         talisman8.transform.position = player.transform.position;
         talisman8.transform.localEulerAngles = new Vector3(0, 0, -20);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman9;
         talisman9 = objectPool.MakeObj(atk_str[3]);
         talisman9.transform.position = player.transform.position;
         talisman9.transform.localEulerAngles = new Vector3(0, 0, -10);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman10;
         talisman10 = objectPool.MakeObj(atk_str[3]);
         talisman10.transform.position = player.transform.position;
         talisman10.transform.localEulerAngles = new Vector3(0, 0, 0);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman11;
         talisman11 = objectPool.MakeObj(atk_str[3]);
         talisman11.transform.position = player.transform.position;
         talisman11.transform.localEulerAngles = new Vector3(0, 0, 10);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman12;
         talisman12 = objectPool.MakeObj(atk_str[3]);
         talisman12.transform.position = player.transform.position;
         talisman12.transform.localEulerAngles = new Vector3(0, 0, 20);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman13;
         talisman13 = objectPool.MakeObj(atk_str[3]);
         talisman13.transform.position = player.transform.position;
         talisman13.transform.localEulerAngles = new Vector3(0, 0, 30);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman14;
         talisman14 = objectPool.MakeObj(atk_str[3]);
         talisman14.transform.position = player.transform.position;
         talisman14.transform.localEulerAngles = new Vector3(0, 0, 40);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman15;
         talisman15 = objectPool.MakeObj(atk_str[3]);
         talisman15.transform.position = player.transform.position;
         talisman15.transform.localEulerAngles = new Vector3(0, 0, 50);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman16;
         talisman16 = objectPool.MakeObj(atk_str[3]);
         talisman16.transform.position = player.transform.position;
         talisman16.transform.localEulerAngles = new Vector3(0, 0, 60);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman17;
         talisman17 = objectPool.MakeObj(atk_str[3]);
         talisman17.transform.position = player.transform.position;
         talisman17.transform.localEulerAngles = new Vector3(0, 0, 70);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman18;
         talisman18 = objectPool.MakeObj(atk_str[3]);
         talisman18.transform.position = player.transform.position;
         talisman18.transform.localEulerAngles = new Vector3(0, 0, 80);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman19;
         talisman19 = objectPool.MakeObj(atk_str[3]);
         talisman19.transform.position = player.transform.position;
         talisman19.transform.localEulerAngles = new Vector3(0, 0, 90);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman20;
         talisman20 = objectPool.MakeObj(atk_str[3]);
         talisman20.transform.position = player.transform.position;
         talisman20.transform.localEulerAngles = new Vector3(0, 0, 100);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman21;
         talisman21 = objectPool.MakeObj(atk_str[3]);
         talisman21.transform.position = player.transform.position;
         talisman21.transform.localEulerAngles = new Vector3(0, 0, 110);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman22;
         talisman22 = objectPool.MakeObj(atk_str[3]);
         talisman22.transform.position = player.transform.position;
         talisman22.transform.localEulerAngles = new Vector3(0, 0, 120);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman23;
         talisman23 = objectPool.MakeObj(atk_str[3]);
         talisman23.transform.position = player.transform.position;
         talisman23.transform.localEulerAngles = new Vector3(0, 0, 130);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman24;
         talisman24 = objectPool.MakeObj(atk_str[3]);
         talisman24.transform.position = player.transform.position;
         talisman24.transform.localEulerAngles = new Vector3(0, 0, 140);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman25;
         talisman25 = objectPool.MakeObj(atk_str[3]);
         talisman25.transform.position = player.transform.position;
         talisman25.transform.localEulerAngles = new Vector3(0, 0, 150);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman26;
         talisman26 = objectPool.MakeObj(atk_str[3]);
         talisman26.transform.position = player.transform.position;
         talisman26.transform.localEulerAngles = new Vector3(0, 0, 160);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman27;
         talisman27 = objectPool.MakeObj(atk_str[3]);
         talisman27.transform.position = player.transform.position;
         talisman27.transform.localEulerAngles = new Vector3(0, 0, 170);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
 
         GameObject talisman28;
         talisman28 = objectPool.MakeObj(atk_str[3]);
         talisman28.transform.position = player.transform.position;
         talisman28.transform.localEulerAngles = new Vector3(0, 0, 180);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman29;
         talisman29 = objectPool.MakeObj(atk_str[3]);
         talisman29.transform.position = player.transform.position;
         talisman29.transform.localEulerAngles = new Vector3(0, 0, 190);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman30;
         talisman30 = objectPool.MakeObj(atk_str[3]);
         talisman30.transform.position = player.transform.position;
         talisman30.transform.localEulerAngles = new Vector3(0, 0, 200);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman31;
         talisman31 = objectPool.MakeObj(atk_str[3]);
         talisman31.transform.position = player.transform.position;
         talisman31.transform.localEulerAngles = new Vector3(0, 0, 210);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman32;
         talisman32 = objectPool.MakeObj(atk_str[3]);
         talisman32.transform.position = player.transform.position;
         talisman32.transform.localEulerAngles = new Vector3(0, 0, 220);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman33;
         talisman33 = objectPool.MakeObj(atk_str[3]);
         talisman33.transform.position = player.transform.position;
         talisman33.transform.localEulerAngles = new Vector3(0, 0, 230);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman34;
         talisman34 = objectPool.MakeObj(atk_str[3]);
         talisman34.transform.position = player.transform.position;
         talisman34.transform.localEulerAngles = new Vector3(0, 0, 240);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman35;
         talisman35 = objectPool.MakeObj(atk_str[3]);
         talisman35.transform.position = player.transform.position;
         talisman35.transform.localEulerAngles = new Vector3(0, 0, 250);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
         GameObject talisman36;
         talisman36 = objectPool.MakeObj(atk_str[3]);
         talisman36.transform.position = player.transform.position;
         talisman36.transform.localEulerAngles = new Vector3(0, 0, 260);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.06f);
 
     }
 
