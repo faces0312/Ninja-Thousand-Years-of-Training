@@ -220,9 +220,9 @@ public class Slot_Mecha : MonoBehaviour
                 else if (Data.Instance.gameData.tornado_lv == 4)
                     Manager.manager.objectManager.tornado_CT = 7f;
                 else if (Data.Instance.gameData.tornado_lv == 5)
-                    Manager.manager.objectManager.tornado_CT = 6f;
-                else if (Data.Instance.gameData.tornado_lv == 6)
                     Manager.manager.objectManager.tornado_CT = 5f;
+                else if (Data.Instance.gameData.tornado_lv == 6)
+                    Manager.manager.objectManager.tornado_CT = 3f;
             }
         }
         if (result_obj[1].gameObject.activeSelf == true)
@@ -237,11 +237,11 @@ public class Slot_Mecha : MonoBehaviour
                 else if (Data.Instance.gameData.voltTackle_lv == 3)
                     Manager.manager.player.volttackle_CT = 18f;
                 else if (Data.Instance.gameData.voltTackle_lv == 4)
-                    Manager.manager.player.volttackle_CT = 17f;
-                else if (Data.Instance.gameData.voltTackle_lv == 5)
-                    Manager.manager.player.volttackle_CT = 16f;
-                else if (Data.Instance.gameData.voltTackle_lv == 6)
                     Manager.manager.player.volttackle_CT = 15f;
+                else if (Data.Instance.gameData.voltTackle_lv == 5)
+                    Manager.manager.player.volttackle_CT = 13f;
+                else if (Data.Instance.gameData.voltTackle_lv == 6)
+                    Manager.manager.player.volttackle_CT = 10f;
             }
         }
         if (result_obj[2].gameObject.activeSelf == true)
@@ -252,15 +252,15 @@ public class Slot_Mecha : MonoBehaviour
                     Data.Instance.gameData.skill_cnt++;
                 Data.Instance.gameData.electricity_lv++;
                 if (Data.Instance.gameData.electricity_lv == 2)
-                    Manager.manager.objectManager.electricity_CT = 21f;
+                    Manager.manager.objectManager.electricity_CT = 10f;
                 else if (Data.Instance.gameData.electricity_lv == 3)
-                    Manager.manager.objectManager.electricity_CT = 18f;
+                    Manager.manager.objectManager.electricity_CT = 8f;
                 else if (Data.Instance.gameData.electricity_lv == 4)
-                    Manager.manager.objectManager.electricity_CT = 17f;
+                    Manager.manager.objectManager.electricity_CT = 8f;
                 else if (Data.Instance.gameData.electricity_lv == 5)
-                    Manager.manager.objectManager.electricity_CT = 16f;
+                    Manager.manager.objectManager.electricity_CT = 5f;
                 else if (Data.Instance.gameData.electricity_lv == 6)
-                    Manager.manager.objectManager.electricity_CT = 15f;
+                    Manager.manager.objectManager.electricity_CT = 3f;
             }
         }
 

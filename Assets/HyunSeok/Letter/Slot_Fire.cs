@@ -216,15 +216,15 @@ public class Slot_Fire : MonoBehaviour
                         Data.Instance.gameData.skill_cnt++;
                     Data.Instance.gameData.fire_lv++;
                     if (Data.Instance.gameData.fire_lv == 2)
-                        Manager.manager.objectManager.fire_CT = 7f;
+                        Manager.manager.objectManager.fire_CT = 5f;
                     else if (Data.Instance.gameData.fire_lv == 3)
-                        Manager.manager.objectManager.fire_CT = 7f;
+                        Manager.manager.objectManager.fire_CT = 5f;
                     else if (Data.Instance.gameData.fire_lv == 4)
                         Manager.manager.objectManager.fire_CT = 5f;
                     else if (Data.Instance.gameData.fire_lv == 5)
-                        Manager.manager.objectManager.fire_CT = 5f;
+                        Manager.manager.objectManager.fire_CT = 4f;
                     else if (Data.Instance.gameData.fire_lv == 6)
-                        Manager.manager.objectManager.fire_CT = 5f;
+                        Manager.manager.objectManager.fire_CT = 3f;
                 }
             }
             if (result_obj[1].gameObject.activeSelf == true)
@@ -235,15 +235,15 @@ public class Slot_Fire : MonoBehaviour
                         Data.Instance.gameData.skill_cnt++;
                     Data.Instance.gameData.talisman_lv++;
                     if (Data.Instance.gameData.talisman_lv == 2)
-                        Manager.manager.objectManager.talisman_CT = 15f;
+                        Manager.manager.objectManager.talisman_CT = 13f;
                     else if (Data.Instance.gameData.talisman_lv == 3)
-                        Manager.manager.objectManager.talisman_CT = 12f;
-                    else if (Data.Instance.gameData.talisman_lv == 4)
                         Manager.manager.objectManager.talisman_CT = 10f;
+                    else if (Data.Instance.gameData.talisman_lv == 4)
+                        Manager.manager.objectManager.talisman_CT = 8f;
                     else if (Data.Instance.gameData.talisman_lv == 5)
-                        Manager.manager.objectManager.talisman_CT = 9f;
-                    else if (Data.Instance.gameData.talisman_lv == 6)
                         Manager.manager.objectManager.talisman_CT = 7f;
+                    else if (Data.Instance.gameData.talisman_lv == 6)
+                        Manager.manager.objectManager.talisman_CT = 5f;
                 }
             }
             if (result_obj[2].gameObject.activeSelf == true)
@@ -254,15 +254,15 @@ public class Slot_Fire : MonoBehaviour
                         Data.Instance.gameData.skill_cnt++;
                     Data.Instance.gameData.fire_column_lv++;
                     if (Data.Instance.gameData.fire_column_lv == 2)
-                        Manager.manager.objectManager.firecolumn_CT = 9f;
-                    else if (Data.Instance.gameData.fire_column_lv == 3)
-                        Manager.manager.objectManager.firecolumn_CT = 8f;
-                    else if (Data.Instance.gameData.fire_column_lv == 4)
                         Manager.manager.objectManager.firecolumn_CT = 7f;
-                    else if (Data.Instance.gameData.fire_column_lv == 5)
+                    else if (Data.Instance.gameData.fire_column_lv == 3)
                         Manager.manager.objectManager.firecolumn_CT = 6f;
-                    else if (Data.Instance.gameData.fire_column_lv == 6)
+                    else if (Data.Instance.gameData.fire_column_lv == 4)
                         Manager.manager.objectManager.firecolumn_CT = 5f;
+                    else if (Data.Instance.gameData.fire_column_lv == 5)
+                        Manager.manager.objectManager.firecolumn_CT = 3f;
+                    else if (Data.Instance.gameData.fire_column_lv == 6)
+                        Manager.manager.objectManager.firecolumn_CT = 1f;
                 }
             }
         }

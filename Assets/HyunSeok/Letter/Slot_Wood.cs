@@ -214,15 +214,15 @@ public class Slot_Wood : MonoBehaviour
                     Data.Instance.gameData.skill_cnt++;
                 Data.Instance.gameData.wind_lv++;
                 if (Data.Instance.gameData.wind_lv == 2)
-                    Manager.manager.objectManager.wind_CT = 15f;
-                else if (Data.Instance.gameData.wind_lv == 3)
-                    Manager.manager.objectManager.wind_CT = 12f;
-                else if (Data.Instance.gameData.wind_lv == 4)
-                    Manager.manager.objectManager.wind_CT = 10f;
-                else if (Data.Instance.gameData.wind_lv == 5)
-                    Manager.manager.objectManager.wind_CT = 9f;
-                else if (Data.Instance.gameData.wind_lv == 6)
                     Manager.manager.objectManager.wind_CT = 8f;
+                else if (Data.Instance.gameData.wind_lv == 3)
+                    Manager.manager.objectManager.wind_CT = 6f;
+                else if (Data.Instance.gameData.wind_lv == 4)
+                    Manager.manager.objectManager.wind_CT = 6f;
+                else if (Data.Instance.gameData.wind_lv == 5)
+                    Manager.manager.objectManager.wind_CT = 3f;
+                else if (Data.Instance.gameData.wind_lv == 6)
+                    Manager.manager.objectManager.wind_CT = 3f;
             }
         }
         if (result_obj[1].gameObject.activeSelf == true)
@@ -233,13 +233,13 @@ public class Slot_Wood : MonoBehaviour
                     Data.Instance.gameData.skill_cnt++;
                 Data.Instance.gameData.windwall_lv++;
                 if (Data.Instance.gameData.windwall_lv == 2)
-                    Manager.manager.objectManager.windwall_CT = 18f;
+                    Manager.manager.objectManager.windwall_CT = 20f;
                 else if (Data.Instance.gameData.windwall_lv == 3)
-                    Manager.manager.objectManager.windwall_CT = 16f;
+                    Manager.manager.objectManager.windwall_CT = 17f;
                 else if (Data.Instance.gameData.windwall_lv == 4)
                     Manager.manager.objectManager.windwall_CT = 15f;
                 else if (Data.Instance.gameData.windwall_lv == 5)
-                    Manager.manager.objectManager.windwall_CT = 12f;
+                    Manager.manager.objectManager.windwall_CT = 13f;
                 else if (Data.Instance.gameData.windwall_lv == 6)
                     Manager.manager.objectManager.windwall_CT = 10f;
             }
@@ -252,15 +252,15 @@ public class Slot_Wood : MonoBehaviour
                     Data.Instance.gameData.skill_cnt++;
                 Data.Instance.gameData.tree_lv++;
                 if (Data.Instance.gameData.tree_lv == 2)
-                    Manager.manager.objectManager.tree_CT = 65f;
+                    Manager.manager.objectManager.tree_CT = 58f;
                 else if (Data.Instance.gameData.tree_lv == 3)
-                    Manager.manager.objectManager.tree_CT = 60f;
+                    Manager.manager.objectManager.tree_CT = 54f;
                 else if (Data.Instance.gameData.tree_lv == 4)
-                    Manager.manager.objectManager.tree_CT = 60f;
-                else if (Data.Instance.gameData.tree_lv == 5)
-                    Manager.manager.objectManager.tree_CT = 55f;
-                else if (Data.Instance.gameData.tree_lv == 6)
                     Manager.manager.objectManager.tree_CT = 50f;
+                else if (Data.Instance.gameData.tree_lv == 5)
+                    Manager.manager.objectManager.tree_CT = 45f;
+                else if (Data.Instance.gameData.tree_lv == 6)
+                    Manager.manager.objectManager.tree_CT = 40f;
             }
         }
 
