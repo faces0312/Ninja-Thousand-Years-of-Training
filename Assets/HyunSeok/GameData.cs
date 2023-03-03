@@ -63,6 +63,9 @@ public class GameData
     public float golem_boss_wire;
     public float golem_boss_laser;
 
+    public float redspit_boss_body;
+    public float redspit_boss_atk;
+
 
     //�ѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤѤ�
 

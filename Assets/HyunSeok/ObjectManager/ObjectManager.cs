@@ -187,7 +187,7 @@ public class ObjectManager : MonoBehaviour
             boss_Tmp_CT -= Time.deltaTime;
         else
         {
-            if(is_boss == true)
+            if (is_boss == true)
             {
                 Data.Instance.gameData.mob1_dmg++;
                 Data.Instance.gameData.bat_body_dmg++;
@@ -203,6 +203,9 @@ public class ObjectManager : MonoBehaviour
                 Data.Instance.gameData.golem_boss_lighting++;
                 Data.Instance.gameData.golem_boss_wire++;
                 Data.Instance.gameData.golem_boss_laser++;
+
+                Data.Instance.gameData.redspit_boss_body++;
+                Data.Instance.gameData.redspit_boss_atk++;
 
                 is_boss = false;
                 is_mob = false;
@@ -473,7 +476,7 @@ public class ObjectManager : MonoBehaviour
         Vector3 end = player.transform.position;
         Vector3 fin = end - start;
 
-        arrow.transform.rotation = Quaternion.Euler(arrow.transform.rotation.x, arrow.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);  
+        arrow.transform.rotation = Quaternion.Euler(arrow.transform.rotation.x, arrow.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 90);
     }
 
     public void Redspit_Boss_MachineGun_General(Vector3 vector3)
@@ -521,12 +524,11 @@ public class ObjectManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
+            player_vector = player.transform.position;
             cremore[i] = objectPool.MakeObj(redspit_Boss_str[2]);
             cremore[i].transform.position = vector3;
 
-            player_vector = player.transform.position;
-
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.8f);
         }
     }
 

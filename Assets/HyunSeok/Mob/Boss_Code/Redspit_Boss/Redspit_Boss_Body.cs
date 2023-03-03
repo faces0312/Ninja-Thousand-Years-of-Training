@@ -13,6 +13,7 @@ public class Redspit_Boss_Body : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.tag == "Normal_Atk")
         {
             if (Data.Instance.gameData.normal_atk_lv == 1)

@@ -124,6 +124,42 @@ public class Player_Body : MonoBehaviour
                 StartCoroutine(Damage_Golem_Boss_Laser());
             }
         }
+        else if (collision.tag == "Redspit_Boss")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Redspit_Boss());
+            }
+        }
+        else if (collision.tag == "Redspit_Boss_Attack")
+        {
+            if (is_invin == false)
+            {
+                StartCoroutine(Sick());
+                StartCoroutine(Damage_Redspit_Boss_Attack());
+                collision.gameObject.SetActive(false);
+            }
+        }
+
+    }
+
+    IEnumerator Damage_Redspit_Boss()
+    {
+        player.hp -= Data.Instance.gameData.redspit_boss_body;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
+    }
+
+    IEnumerator Damage_Redspit_Boss_Attack()
+    {
+        player.hp -= Data.Instance.gameData.redspit_boss_atk;
+        is_invin = true;
+
+        yield return new WaitForSeconds(0.1f);
+        is_invin = false;
     }
 
     IEnumerator Damage_Mob1()

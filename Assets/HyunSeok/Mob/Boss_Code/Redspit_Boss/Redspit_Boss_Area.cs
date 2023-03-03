@@ -41,7 +41,7 @@ public class Redspit_Boss_Area : MonoBehaviour
                 atk_Tmp_CT = atk_CT;
             }
         }*/
-        if ((mob.target.transform.position - gameObject.transform.position).sqrMagnitude < 18f)
+        if ((mob.target.transform.position - gameObject.transform.position).sqrMagnitude < 30)
         {
             mob.target_on = false;
             if (atk_Tmp_CT > 0)
@@ -67,10 +67,10 @@ public class Redspit_Boss_Area : MonoBehaviour
 
     IEnumerator MachineGun()
     {
-        for(int i=0; i<15; i++)
+        for(int i=0; i<20; i++)
         {
             Manager.manager.objectManager.Redspit_Boss_MachineGun_General(mob.gameObject.transform.position);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 

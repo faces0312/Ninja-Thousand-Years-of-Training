@@ -34,7 +34,7 @@ public class Redspit_Boss : MonoBehaviour
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.bat_boss_hp;
-        speed = 0.8f;
+        speed = 0.6f;
         target_on = true;
         redspit_Boss_Body.gameObject.SetActive(true);
         /*shotGun.gameObject.SetActive(false);

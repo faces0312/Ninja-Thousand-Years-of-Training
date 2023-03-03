@@ -58,53 +58,8 @@ public class Redspit_Boss_Arrow : MonoBehaviour
     private void OnEnable()
     {
         main_Arrow.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow1.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow2.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow3.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow4.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow5.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow6.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow7.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow8.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow9.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow10.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow11.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow12.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow13.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow14.gameObject.transform.position = gameObject.transform.position;
-        sub_Arrow15.gameObject.transform.position = gameObject.transform.position;
 
-        up1.gameObject.transform.position = sub_Arrow1.transform.position;
-        down1.gameObject.transform.position = sub_Arrow1.transform.position;
-        up2.gameObject.transform.position = sub_Arrow2.transform.position;
-        down2.gameObject.transform.position = sub_Arrow2.transform.position;
-        up3.gameObject.transform.position = sub_Arrow3.transform.position;
-        down3.gameObject.transform.position = sub_Arrow3.transform.position;
-        up4.gameObject.transform.position = sub_Arrow4.transform.position;
-        down4.gameObject.transform.position = sub_Arrow4.transform.position;
-        up5.gameObject.transform.position = sub_Arrow5.transform.position;
-        down5.gameObject.transform.position = sub_Arrow5.transform.position;
-        up6.gameObject.transform.position = sub_Arrow6.transform.position;
-        down6.gameObject.transform.position = sub_Arrow6.transform.position;
-        up7.gameObject.transform.position = sub_Arrow7.transform.position;
-        down7.gameObject.transform.position = sub_Arrow7.transform.position;
-        up8.gameObject.transform.position = sub_Arrow8.transform.position;
-        down8.gameObject.transform.position = sub_Arrow8.transform.position;
-        up9.gameObject.transform.position = sub_Arrow9.transform.position;
-        down9.gameObject.transform.position = sub_Arrow9.transform.position;
-        up10.gameObject.transform.position = sub_Arrow10.transform.position;
-        down10.gameObject.transform.position = sub_Arrow10.transform.position;
-        up11.gameObject.transform.position = sub_Arrow11.transform.position;
-        down11.gameObject.transform.position = sub_Arrow11.transform.position;
-        up12.gameObject.transform.position = sub_Arrow12.transform.position;
-        down12.gameObject.transform.position = sub_Arrow12.transform.position;
-        up13.gameObject.transform.position = sub_Arrow13.transform.position;
-        down13.gameObject.transform.position = sub_Arrow13.transform.position;
-        up14.gameObject.transform.position = sub_Arrow14.transform.position;
-        down14.gameObject.transform.position = sub_Arrow14.transform.position;
-        up15.gameObject.transform.position = sub_Arrow15.transform.position;
-        down15.gameObject.transform.position = sub_Arrow15.transform.position;
-
+        main_Arrow.gameObject.SetActive(true);
 
         sub_Arrow1.gameObject.SetActive(false);
         sub_Arrow2.gameObject.SetActive(false);
@@ -122,6 +77,38 @@ public class Redspit_Boss_Arrow : MonoBehaviour
         sub_Arrow14.gameObject.SetActive(false);
         sub_Arrow15.gameObject.SetActive(false);
 
+        up1.gameObject.SetActive(true);
+        up2.gameObject.SetActive(true);
+        up3.gameObject.SetActive(true);
+        up4.gameObject.SetActive(true);
+        up5.gameObject.SetActive(true);
+        up6.gameObject.SetActive(true);
+        up7.gameObject.SetActive(true);
+        up8.gameObject.SetActive(true);
+        up9.gameObject.SetActive(true);
+        up10.gameObject.SetActive(true);
+        up11.gameObject.SetActive(true);
+        up12.gameObject.SetActive(true);
+        up13.gameObject.SetActive(true);
+        up14.gameObject.SetActive(true);
+        up15.gameObject.SetActive(true);
+
+        down1.gameObject.SetActive(true);
+        down2.gameObject.SetActive(true);
+        down3.gameObject.SetActive(true);
+        down4.gameObject.SetActive(true);
+        down5.gameObject.SetActive(true);
+        down6.gameObject.SetActive(true);
+        down7.gameObject.SetActive(true);
+        down8.gameObject.SetActive(true);
+        down9.gameObject.SetActive(true);
+        down10.gameObject.SetActive(true);
+        down11.gameObject.SetActive(true);
+        down12.gameObject.SetActive(true);
+        down13.gameObject.SetActive(true);
+        down14.gameObject.SetActive(true);
+        down15.gameObject.SetActive(true);
+
         StartCoroutine(Sub_Arrow());
         StartCoroutine(Dis_Arrow());
     }
@@ -136,62 +123,92 @@ public class Redspit_Boss_Arrow : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         sub_Arrow1.gameObject.transform.position = main_Arrow.transform.position;
+        up1.gameObject.transform.position = sub_Arrow1.transform.position;
+        down1.gameObject.transform.position = sub_Arrow1.transform.position;
         sub_Arrow1.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow2.gameObject.transform.position = main_Arrow.transform.position;
+        up2.gameObject.transform.position = sub_Arrow2.transform.position;
+        down2.gameObject.transform.position = sub_Arrow2.transform.position;
         sub_Arrow2.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow3.gameObject.transform.position = main_Arrow.transform.position;
+        up3.gameObject.transform.position = sub_Arrow3.transform.position;
+        down3.gameObject.transform.position = sub_Arrow3.transform.position;
         sub_Arrow3.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow4.gameObject.transform.position = main_Arrow.transform.position;
+        up4.gameObject.transform.position = sub_Arrow4.transform.position;
+        down4.gameObject.transform.position = sub_Arrow4.transform.position;
         sub_Arrow4.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow5.gameObject.transform.position = main_Arrow.transform.position;
+        up5.gameObject.transform.position = sub_Arrow5.transform.position;
+        down5.gameObject.transform.position = sub_Arrow5.transform.position;
         sub_Arrow5.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow6.gameObject.transform.position = main_Arrow.transform.position;
+        up6.gameObject.transform.position = sub_Arrow6.transform.position;
+        down6.gameObject.transform.position = sub_Arrow6.transform.position;
         sub_Arrow6.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow7.gameObject.transform.position = main_Arrow.transform.position;
+        up7.gameObject.transform.position = sub_Arrow7.transform.position;
+        down7.gameObject.transform.position = sub_Arrow7.transform.position;
         sub_Arrow7.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow8.gameObject.transform.position = main_Arrow.transform.position;
+        up8.gameObject.transform.position = sub_Arrow8.transform.position;
+        down8.gameObject.transform.position = sub_Arrow8.transform.position;
         sub_Arrow8.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow9.gameObject.transform.position = main_Arrow.transform.position;
+        up9.gameObject.transform.position = sub_Arrow9.transform.position;
+        down9.gameObject.transform.position = sub_Arrow9.transform.position;
         sub_Arrow9.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow10.gameObject.transform.position = main_Arrow.transform.position;
+        up10.gameObject.transform.position = sub_Arrow10.transform.position;
+        down10.gameObject.transform.position = sub_Arrow10.transform.position;
         sub_Arrow10.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow11.gameObject.transform.position = main_Arrow.transform.position;
+        up11.gameObject.transform.position = sub_Arrow11.transform.position;
+        down11.gameObject.transform.position = sub_Arrow11.transform.position;
         sub_Arrow11.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow12.gameObject.transform.position = main_Arrow.transform.position;
+        up12.gameObject.transform.position = sub_Arrow12.transform.position;
+        down12.gameObject.transform.position = sub_Arrow12.transform.position;
         sub_Arrow12.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow13.gameObject.transform.position = main_Arrow.transform.position;
+        up13.gameObject.transform.position = sub_Arrow13.transform.position;
+        down13.gameObject.transform.position = sub_Arrow13.transform.position;
         sub_Arrow13.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow14.gameObject.transform.position = main_Arrow.transform.position;
+        up14.gameObject.transform.position = sub_Arrow14.transform.position;
+        down14.gameObject.transform.position = sub_Arrow14.transform.position;
         sub_Arrow14.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(0.3f);
         sub_Arrow15.gameObject.transform.position = main_Arrow.transform.position;
+        up15.gameObject.transform.position = sub_Arrow15.transform.position;
+        down15.gameObject.transform.position = sub_Arrow15.transform.position;
         sub_Arrow15.gameObject.SetActive(true);
     }
 }

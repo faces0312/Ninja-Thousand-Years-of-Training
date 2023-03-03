@@ -34,6 +34,8 @@ TagManager:
   - Golem_Boss_Lighting
   - Golem_Boss_Wire
   - Golem_Boss_Laser
+  - Redspit_Boss
+  - Redspit_Boss_Attack
   layers:
   - Default
   - TransparentFX

@@ -51,7 +51,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.fire_lv = 0;
         Data.Instance.gameData.wind_lv = 0;
         Data.Instance.gameData.talisman_lv = 0;
-        Data.Instance.gameData.fire_column_lv = 6;
+        Data.Instance.gameData.fire_column_lv = 0;
         Data.Instance.gameData.voltTackle_lv = 0;
         Data.Instance.gameData.tornado_lv = 0;
         Data.Instance.gameData.tree_lv = 0;
@@ -80,6 +80,9 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.golem_boss_lighting = 3;
         Data.Instance.gameData.golem_boss_wire = 0;
         Data.Instance.gameData.golem_boss_laser = 4;
+
+        Data.Instance.gameData.redspit_boss_body = 0;
+        Data.Instance.gameData.redspit_boss_atk = 2;
 
         Data.Instance.gameData.mob_cnt = 0;
         /*

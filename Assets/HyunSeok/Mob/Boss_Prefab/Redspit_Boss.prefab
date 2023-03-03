@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2380327670391502940}
   m_Layer: 7
   m_Name: Redspit_Boss_Body
-  m_TagString: Mob1
+  m_TagString: Redspit_Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,9 +136,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2380327671117561200}
   - component: {fileID: 2380327671117561203}
-  - component: {fileID: 2380327671117561202}
   - component: {fileID: 2380327671117561101}
   - component: {fileID: 2380327671117561100}
+  - component: {fileID: 6484334436393249181}
   m_Layer: 7
   m_Name: Redspit_Boss
   m_TagString: Untagged
@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 2380327671117561103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.140114, y: 0.73164225, z: 0}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 2380327670391502912}
   - {fileID: 2380327671452201701}
@@ -202,8 +202,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8242590556618962429, guid: 8b7579c2a2a83bf498d10c32614405ce, type: 3}
-  m_Color: {r: 0.6320754, g: 0.18783373, b: 0.60870856, a: 1}
+  m_Sprite: {fileID: 3979843190728700257, guid: c382b35de9f234a49adab2989a8ea1b8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -213,25 +213,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2380327671117561202
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2380327671117561103}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 10f2e7285a17fb648a7eefc0dcf253c0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &2380327671117561101
 Rigidbody2D:
   serializedVersion: 4
@@ -265,13 +246,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589d2d8d7b77ad14d8fe9d77bb348b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  die: {fileID: 2380327671117561202}
+  die: {fileID: 6484334436393249181}
   redspit_Boss_Body: {fileID: 2380327670391502940}
   rend: {fileID: 2380327671117561203}
   target: {fileID: 0}
   target_on: 0
   hp: 0
   speed: 0
+--- !u!95 &6484334436393249181
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2380327671117561103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3a731a4aa2190f4ba19907e237cf203, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2380327671452201700
 GameObject:
   m_ObjectHideFlags: 0

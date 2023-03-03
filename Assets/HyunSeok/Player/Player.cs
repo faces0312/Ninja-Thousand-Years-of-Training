@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public float hp_max;
     public float hp;
-    public Slider hpbar;
+    //public Slider hpbar;
     [SerializeField]
     private Joy_Stick joy_Stick;
 
@@ -28,9 +28,9 @@ public class Player : MonoBehaviour
     public float volttackle_CT;
     private float volttackle_Tmp_CT;
 
-
     public SpriteRenderer rend;
 
+    public Player_Body player_Body;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         hp = hp_max;
         speed = 2;
 
-        hpbar.value = (float)hp / (float)hp_max;
+        //hpbar.value = (float)hp / (float)hp_max;
 
         volttackle_CT = 23f;
         volttackle_Tmp_CT = volttackle_CT;
@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
 
 
         Vector3 flip = transform.localScale;
-        if (hp == hp_max)
+        /*if (hp == hp_max)
         {
             hpbar.gameObject.SetActive(false);
         }
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
             //hpbar.gameObject.transform.localPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0, 0.8f, 0));
             //hpbar.gameObject.transform.localPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 45f);
             hpbar.gameObject.transform.localScale = flip;
-        }
+        }*/
 
 
         if (Data.Instance.gameData.voltTackle_lv>0)
@@ -100,9 +100,9 @@ public class Player : MonoBehaviour
                 volttackle_Tmp_CT = volttackle_CT;
             }
         }
-        HP();
+        //HP();
         StopAllCoroutines();
-        StartCoroutine(HPCoroutine()); //망할 왜안됨?
+        //StartCoroutine(HPCoroutine()); //망할 왜안됨?
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -120,14 +120,14 @@ public class Player : MonoBehaviour
             objectManager.is_atk = false;
         }
     }
-    private void HP()
+    /*private void HP()
     {
        hpbar.value = (float)hp / (float)hp_max;
-    }
+    }*/
 
-    IEnumerator HPCoroutine()  //몇초동안 공격 안받으면 다시 끄는 코루틴인데 왜안댐?;;;;
+    /*IEnumerator HPCoroutine()  //몇초동안 공격 안받으면 다시 끄는 코루틴인데 왜안댐?;;;;
     {
         yield return new WaitForSeconds(3f);
         hpbar.gameObject.SetActive(false);
-    }
+    }*/
 }
