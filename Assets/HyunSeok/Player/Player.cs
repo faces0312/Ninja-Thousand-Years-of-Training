@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
                 volttackle_Tmp_CT = volttackle_CT;
             }
         }
-        HP();
+        //HP();
         //StopAllCoroutines();//HPCoroutine() 돌리려면 이거 해야된데 
         //StartCoroutine(HPCoroutine()); //망할 왜안됨?
     }
