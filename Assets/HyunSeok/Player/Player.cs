@@ -101,8 +101,8 @@ public class Player : MonoBehaviour
             }
         }
         HP();
-        StopAllCoroutines();
-        StartCoroutine(HPCoroutine()); //¸ÁÇÒ ¿Ö¾ÈµÊ?
+        //StopAllCoroutines();//HPCoroutine() µ¹¸®·Á¸é ÀÌ°Å ÇØ¾ßµÈµ¥ 
+        //StartCoroutine(HPCoroutine()); //¸ÁÇÒ ¿Ö¾ÈµÊ?
     }
 
     private void OnTriggerStay2D(Collider2D collision)
