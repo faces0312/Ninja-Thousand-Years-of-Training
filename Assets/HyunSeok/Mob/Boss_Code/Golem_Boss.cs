@@ -93,7 +93,7 @@ public class Golem_Boss : MonoBehaviour
         Manager.manager.objectManager.is_mob = true;
         Manager.manager.objectManager.is_bigwave = true;
         Manager.manager.objectManager.is_boss = true;
-        Manager.manager.objectManager.bat_Wall.gameObject.SetActive(false);
+        Manager.manager.objectManager.bat_Macha_Wall.gameObject.SetActive(false);
         Manager.manager.objectManager.player_wall.gameObject.SetActive(false);
         Manager.manager.objectManager.boss_Tmp_CT = Manager.manager.objectManager.boss_CT;
         Data.Instance.gameData.bat_boss_hp += 1000;

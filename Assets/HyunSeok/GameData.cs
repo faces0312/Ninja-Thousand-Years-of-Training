@@ -15,6 +15,12 @@ public class GameData
 
     public float player_hp;//플레이어 체력
 
+    public float player_normal;//플레이어 무 속성 데미지
+    public float player_fire;//플레이어 불 속성 데미지
+    public float player_wood;//플레이어 숲 속성 데미지
+    public float player_mecha;//플레이어 기계 속성 데미지
+
+
     //플레이어 스킬
     public int drop_percent;//드랍 확률
     public int normal_atk_lv;//표창

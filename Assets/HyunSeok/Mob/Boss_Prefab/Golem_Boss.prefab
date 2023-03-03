@@ -408,8 +408,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616440274633660120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9000001, y: 0.8999999, z: 0}
-  m_LocalScale: {x: 1.8333334, y: 1.8333334, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 616440272962313438}
   m_RootOrder: 0
@@ -638,7 +638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af95300a52ea83c4681294d566e578df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  golem: {fileID: 616440272962313434}
   laser1: {fileID: 1849179417552131789}
   laser2: {fileID: 369244491842405030}
   laser3: {fileID: 4287239772392008377}

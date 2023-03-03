@@ -20,7 +20,7 @@ public class Bat_Wall : MonoBehaviour
     }
     private void Update()
     {
-        if ((player.transform.position - gameObject.transform.position).sqrMagnitude < 6f)
+        if ((player.transform.position - gameObject.transform.position).sqrMagnitude < 3f)
         {
             if (atk_Tmp_CT > 0)
                 atk_Tmp_CT -= Time.deltaTime;
