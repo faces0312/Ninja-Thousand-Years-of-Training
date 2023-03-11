@@ -21,6 +21,10 @@ public class Redspit_Boss_ArrowUp : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D coll)
     {
+        if (coll.gameObject.tag == "WindWall")
+        {
+            gameObject.SetActive(false);
+        }
         if (coll.gameObject.layer == 11)
         {
             //speed = lastVelocity.magnitude;

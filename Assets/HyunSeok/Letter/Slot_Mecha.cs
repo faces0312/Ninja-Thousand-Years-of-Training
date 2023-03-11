@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Slot_Mecha : MonoBehaviour
 {
     int ran_num;//결정지울 숫자
     public GameObject[] result_obj;//슬롯 결과 이미지들
     public GameObject close_page;
+    public TextMeshProUGUI[] result_text;
 
     private void OnEnable()
     {
@@ -162,7 +164,10 @@ public class Slot_Mecha : MonoBehaviour
         Time.timeScale = 0;
         close_page.gameObject.SetActive(false);
         for (int i = 0; i < 3; i++)
+        {
             result_obj[i].gameObject.SetActive(false);
+            result_text[i].gameObject.SetActive(false);
+        }
         StartCoroutine(Start_Slot());
     }
 
@@ -171,6 +176,7 @@ public class Slot_Mecha : MonoBehaviour
         if (ran_num == 0)
         {
             result_obj[0].gameObject.SetActive(true);
+            result_text[0].gameObject.SetActive(true);
             for (float i = 0.4f; i < 1f; i += 0.05f)
             {
                 result_obj[0].gameObject.transform.localScale = new Vector3(i, i);
@@ -182,6 +188,7 @@ public class Slot_Mecha : MonoBehaviour
         else if (ran_num == 1)
         {
             result_obj[1].gameObject.SetActive(true);
+            result_text[1].gameObject.SetActive(true);
             for (float i = 0.4f; i < 1f; i += 0.05f)
             {
                 result_obj[1].gameObject.transform.localScale = new Vector3(i, i);
@@ -193,6 +200,7 @@ public class Slot_Mecha : MonoBehaviour
         else if (ran_num == 2)
         {
             result_obj[2].gameObject.SetActive(true);
+            result_text[2].gameObject.SetActive(true);
             for (float i = 0.4f; i < 1f; i += 0.05f)
             {
                 result_obj[2].gameObject.transform.localScale = new Vector3(i, i);
@@ -211,7 +219,10 @@ public class Slot_Mecha : MonoBehaviour
             if (Data.Instance.gameData.tornado_lv < 6)
             {
                 if (Data.Instance.gameData.tornado_lv == 0)
+                {
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[9].gameObject.SetActive(true);
                     Data.Instance.gameData.skill_cnt++;
+                }
                 Data.Instance.gameData.tornado_lv++;
                 if (Data.Instance.gameData.tornado_lv == 2)
                     Manager.manager.objectManager.tornado_CT = 9f;
@@ -230,7 +241,10 @@ public class Slot_Mecha : MonoBehaviour
             if (Data.Instance.gameData.voltTackle_lv < 6)
             {
                 if (Data.Instance.gameData.voltTackle_lv == 0)
+                {
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[10].gameObject.SetActive(true);
                     Data.Instance.gameData.skill_cnt++;
+                }
                 Data.Instance.gameData.voltTackle_lv++;
                 if (Data.Instance.gameData.voltTackle_lv == 2)
                     Manager.manager.player.volttackle_CT = 21f;
@@ -249,7 +263,10 @@ public class Slot_Mecha : MonoBehaviour
             if (Data.Instance.gameData.electricity_lv < 6)
             {
                 if (Data.Instance.gameData.electricity_lv == 0)
+                {
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[11].gameObject.SetActive(true);
                     Data.Instance.gameData.skill_cnt++;
+                }
                 Data.Instance.gameData.electricity_lv++;
                 if (Data.Instance.gameData.electricity_lv == 2)
                     Manager.manager.objectManager.electricity_CT = 10f;

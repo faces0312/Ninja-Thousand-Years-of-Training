@@ -31,6 +31,11 @@ public class Joy_Stick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
             player.transform.localScale = scale;
             shadowPartner1.transform.localScale = scale;
             shadowPartner2.transform.localScale = scale;
+
+            Vector3 scale_hp = transform.localScale;
+            scale_hp.x *= -1f;
+            scale_hp.y *= 1f;
+            player.hpbar.transform.localScale = scale_hp;
         }
         else if (touchPosition.x > 0)
         {
@@ -40,6 +45,11 @@ public class Joy_Stick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
             player.transform.localScale = scale;
             shadowPartner1.transform.localScale = scale;
             shadowPartner2.transform.localScale = scale;
+
+            Vector3 scale_hp = transform.localScale;
+            scale_hp.x *= 1f;
+            scale_hp.y *= 1f;
+            player.hpbar.transform.localScale = scale_hp;
         }
     }
 

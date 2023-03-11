@@ -33,7 +33,7 @@ public class Golem_Boss : MonoBehaviour
     {
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
-        hp = Data.Instance.gameData.bat_boss_hp;
+        hp = Data.Instance.gameData.boss_hp;
         speed = 0.8f;
         target_on = true;
         golem_Boss_Body.gameObject.SetActive(true);
@@ -67,6 +67,7 @@ public class Golem_Boss : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Manager.manager.objectManager.boss_hp_fill.transform.localScale = new Vector3((hp / Data.Instance.gameData.boss_hp), 1);
         fin = target.transform.position - start;
         if (fin.x > 0)
             rend.flipX = true;
@@ -95,8 +96,9 @@ public class Golem_Boss : MonoBehaviour
         Manager.manager.objectManager.is_boss = true;
         Manager.manager.objectManager.bat_Macha_Wall.gameObject.SetActive(false);
         Manager.manager.objectManager.player_wall.gameObject.SetActive(false);
+        Manager.manager.objectManager.boss_hp_fill.gameObject.SetActive(false);
         Manager.manager.objectManager.boss_Tmp_CT = Manager.manager.objectManager.boss_CT;
-        Data.Instance.gameData.bat_boss_hp += 1000;
+        Data.Instance.gameData.boss_hp += 1000;
         gameObject.SetActive(false);
     }
 }

@@ -44,7 +44,7 @@ public class GameData
     public float gatekeeper_hp;
     public float golem_hp;
 
-    public float bat_boss_hp;
+    public float boss_hp;
 
     //¸÷ °ø°Ý·Â
     public float mob1_dmg;

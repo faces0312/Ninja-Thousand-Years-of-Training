@@ -1,8 +1,10 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -33,6 +35,16 @@ public class Manager : MonoBehaviour
     private int time_min;
     private float time_sec;
     public TextMeshProUGUI time_text;
+
+    public GameObject pause_page;
+    [Serializable]
+    public class Skill_Array
+    {
+        public GameObject[] skill_Array;//스킬종류(12개)
+    }
+    public Skill_Array[] pasuse_skill;//pause에있는 스킬 칸수 (5개)
+
+
     private void Awake()
     {
         //Screen.SetResolution(640, 360, true);
@@ -43,7 +55,7 @@ public class Manager : MonoBehaviour
         lv = 0;
 
         Data.Instance.gameData.skill_cnt = 1;
-        Data.Instance.gameData.player_hp = 200;
+        Data.Instance.gameData.player_hp = 100;
 
         Data.Instance.gameData.drop_percent = 10;
         Data.Instance.gameData.normal_atk_lv = 1;
@@ -64,7 +76,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.gatekeeper_hp = 1;
         Data.Instance.gameData.golem_hp = 3;
 
-        Data.Instance.gameData.bat_boss_hp = 3000;
+        Data.Instance.gameData.boss_hp = 1000;
 
         Data.Instance.gameData.mob1_dmg = 1;
         Data.Instance.gameData.bat_body_dmg = 1;
@@ -97,6 +109,10 @@ public class Manager : MonoBehaviour
         //StartCoroutine(Player_Location());
     }
 
+    private void Start()
+    {
+        pause_page.gameObject.SetActive(false);
+    }
     private void Update()
     {
         //시간 측정
@@ -187,11 +203,28 @@ public class Manager : MonoBehaviour
         }
         camera.orthographicSize = 5f;
     }
-    
+
     /*IEnumerator Player_Location()
     {
         Data.Instance.gameData.player_Location = player.gameObject.transform.position;
         yield return new WaitForSeconds(1.5f);
         StartCoroutine(Player_Location());
     }*/
+
+    public void Pause()
+    {
+        pause_page.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void Pause_End()
+    {
+        pause_page.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void Go_Main()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainScene");
+    }
 }

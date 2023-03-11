@@ -37,6 +37,8 @@ public class ObjectManager : MonoBehaviour
     public float boss_CT;//몹 쿨타임
     public float boss_Tmp_CT;
 
+    public GameObject boss_hp_bar;
+    public GameObject boss_hp_fill;
     public bool is_mob;//몹이 나올수 있는 상태인지(true일때 가능)
     public bool is_bigwave;//빅웨이브가 나올수 있는 상태인지(true일때 가능)
     public bool is_boss;//보스가 나올수 있는 상태인지(true일때 가능)
@@ -107,6 +109,7 @@ public class ObjectManager : MonoBehaviour
         bat_Wall.gameObject.SetActive(false);
         bat_Macha_Wall.gameObject.SetActive(false);
         bat_Fire_Wall.gameObject.SetActive(false);
+        boss_hp_bar.gameObject.SetActive(false);
 
         boss_CT = 100f;
         boss_Tmp_CT = boss_CT;
@@ -371,8 +374,9 @@ public class ObjectManager : MonoBehaviour
         int ran_boss;//몹 생성 랜덤값
 
         ran_boss = Random.Range(0, 3);
-
-        if(ran_boss == 0)
+        boss_hp_fill.gameObject.transform.localScale = new Vector3(1, 1); 
+        boss_hp_bar.gameObject.SetActive(true);
+        if (ran_boss == 0)
         {
             bat_Wall.transform.position = player.transform.position;
             bat_Wall.gameObject.SetActive(true);

@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
 {
     public float hp_max;
     public float hp;
-    //public Slider hpbar;
+    public GameObject hpbar;
+    public GameObject hpbar_Fill;
     [SerializeField]
     private Joy_Stick joy_Stick;
 
@@ -100,6 +101,15 @@ public class Player : MonoBehaviour
                 volttackle_Tmp_CT = volttackle_CT;
             }
         }
+
+        if (hp == hp_max)
+            hpbar.gameObject.SetActive(false);
+        else
+            hpbar.gameObject.SetActive(true);
+
+
+        hpbar_Fill.transform.localScale = new Vector3(0.145f * (hp / hp_max), hpbar_Fill.transform.localScale.y);
+
         //HP();
         //StopAllCoroutines();//HPCoroutine() 돌리려면 이거 해야된데 
         //StartCoroutine(HPCoroutine()); //망할 왜안됨?
@@ -107,7 +117,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem" || collision.tag == "Golem_Boss")
+        if(collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem" || collision.tag == "Golem_Boss" || collision.tag == "Redspit_Boss")
         {
             objectManager.is_atk = true;
         }
@@ -115,7 +125,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem" || collision.tag == "Golem_Boss")
+        if (collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem" || collision.tag == "Golem_Boss" || collision.tag == "Redspit_Boss")
         {
             objectManager.is_atk = false;
         }

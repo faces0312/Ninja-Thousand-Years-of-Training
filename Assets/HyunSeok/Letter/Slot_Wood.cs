@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Slot_Wood : MonoBehaviour
 {
     int ran_num;//결정지울 숫자
     public GameObject[] result_obj;//슬롯 결과 이미지들
     public GameObject close_page;
+    public TextMeshProUGUI[] result_text;
 
     private void OnEnable()
     {
@@ -162,7 +164,10 @@ public class Slot_Wood : MonoBehaviour
         Time.timeScale = 0;
         close_page.gameObject.SetActive(false);
         for (int i = 0; i < 3; i++)
+        {
             result_obj[i].gameObject.SetActive(false);
+            result_text[i].gameObject.SetActive(false);
+        }
         StartCoroutine(Start_Slot());
     }
 
@@ -171,6 +176,7 @@ public class Slot_Wood : MonoBehaviour
         if (ran_num == 0)
         {
             result_obj[0].gameObject.SetActive(true);
+            result_text[0].gameObject.SetActive(true);
             for (float i = 0.4f; i < 1f; i += 0.05f)
             {
                 result_obj[0].gameObject.transform.localScale = new Vector3(i, i);
@@ -182,6 +188,7 @@ public class Slot_Wood : MonoBehaviour
         else if (ran_num == 1)
         {
             result_obj[1].gameObject.SetActive(true);
+            result_text[1].gameObject.SetActive(true);
             for (float i = 0.4f; i < 1f; i += 0.05f)
             {
                 result_obj[1].gameObject.transform.localScale = new Vector3(i, i);
@@ -193,6 +200,7 @@ public class Slot_Wood : MonoBehaviour
         else if (ran_num == 2)
         {
             result_obj[2].gameObject.SetActive(true);
+            result_text[2].gameObject.SetActive(true);
             for (float i = 0.4f; i < 1f; i += 0.05f)
             {
                 result_obj[2].gameObject.transform.localScale = new Vector3(i, i);
@@ -211,7 +219,10 @@ public class Slot_Wood : MonoBehaviour
             if (Data.Instance.gameData.wind_lv < 6)
             {
                 if (Data.Instance.gameData.wind_lv == 0)
+                {
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[6].gameObject.SetActive(true);
                     Data.Instance.gameData.skill_cnt++;
+                }
                 Data.Instance.gameData.wind_lv++;
                 if (Data.Instance.gameData.wind_lv == 2)
                     Manager.manager.objectManager.wind_CT = 8f;
@@ -230,7 +241,10 @@ public class Slot_Wood : MonoBehaviour
             if (Data.Instance.gameData.windwall_lv < 6)
             {
                 if (Data.Instance.gameData.windwall_lv == 0)
+                {
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[7].gameObject.SetActive(true);
                     Data.Instance.gameData.skill_cnt++;
+                }
                 Data.Instance.gameData.windwall_lv++;
                 if (Data.Instance.gameData.windwall_lv == 2)
                     Manager.manager.objectManager.windwall_CT = 20f;
@@ -249,7 +263,10 @@ public class Slot_Wood : MonoBehaviour
             if (Data.Instance.gameData.tree_lv < 6)
             {
                 if (Data.Instance.gameData.tree_lv == 0)
+                {
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[8].gameObject.SetActive(true);
                     Data.Instance.gameData.skill_cnt++;
+                }
                 Data.Instance.gameData.tree_lv++;
                 if (Data.Instance.gameData.tree_lv == 2)
                     Manager.manager.objectManager.tree_CT = 58f;
