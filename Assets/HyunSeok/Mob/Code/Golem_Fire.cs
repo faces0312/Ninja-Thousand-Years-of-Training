@@ -71,6 +71,7 @@ public class Golem_Fire : MonoBehaviour
     public void Die()
     {
         //StopCoroutine(nameof(FindPlayer));
+        Data.Instance.gameData.mob_cnt++;
         golem_Fire_Body.StopAllCoroutines();
         gameObject.SetActive(false);
     }

@@ -73,8 +73,8 @@ public class Bat_Normal : MonoBehaviour
 
     public void Die()
     {
-        Data.Instance.gameData.mob_cnt--;
         //StopCoroutine(nameof(FindPlayer));
+        Data.Instance.gameData.mob_cnt++;
         bat_Normal_Body.StopAllCoroutines();
         atk.gameObject.SetActive(false);
         gameObject.SetActive(false);

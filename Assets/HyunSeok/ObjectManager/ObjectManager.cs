@@ -395,7 +395,6 @@ public class ObjectManager : MonoBehaviour
         boss1 = objectPool.MakeObj(mob_Boss_str[ran_boss]);
         boss1.transform.position = boss_Location.transform.position;
         
-        Data.Instance.gameData.boss_cnt++;
     }
 
     public void Bat_Boss_ShotGun_General(Vector3 vector3)
@@ -564,7 +563,6 @@ public class ObjectManager : MonoBehaviour
             mob1 = objectPool.MakeObj(mob_Mecha_str[ran_mob]);
             mob1.transform.position = mob_Location[ran_location].transform.position;
         }
-        Data.Instance.gameData.mob_cnt++;
     }
 
     public void Mob_BigWave_General()
@@ -611,7 +609,6 @@ public class ObjectManager : MonoBehaviour
                 mob.transform.position = mob_Location[i].transform.position;
             }
         }
-        Data.Instance.gameData.mob_cnt += 28;
     }
 
 

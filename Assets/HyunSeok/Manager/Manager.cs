@@ -31,7 +31,7 @@ public class Manager : MonoBehaviour
 
     /*public float exp_Tmp;
     public Slider exp_Bar;*/
-
+    private float time_score;
     private int time_min;
     private float time_sec;
     public TextMeshProUGUI time_text;
@@ -96,6 +96,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.redspit_boss_body = 0;
         Data.Instance.gameData.redspit_boss_atk = 2;
 
+        Data.Instance.gameData.boss_cnt = 0;
         Data.Instance.gameData.mob_cnt = 0;
         /*
         Data.Instance.gameData.exp = 0;
@@ -116,6 +117,7 @@ public class Manager : MonoBehaviour
     private void Update()
     {
         //시간 측정
+        time_score += Time.deltaTime;//점수 및 돈 시간
         time_sec += Time.deltaTime;
         if ((int)time_sec > 59)
         {

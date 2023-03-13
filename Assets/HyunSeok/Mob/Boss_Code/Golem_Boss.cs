@@ -91,6 +91,7 @@ public class Golem_Boss : MonoBehaviour
         shotGun3.gameObject.SetActive(false);
         laser.gameObject.SetActive(false);
         gunGroup.gameObject.SetActive(false);*/
+        Data.Instance.gameData.boss_cnt++;
         Manager.manager.objectManager.is_mob = true;
         Manager.manager.objectManager.is_bigwave = true;
         Manager.manager.objectManager.is_boss = true;

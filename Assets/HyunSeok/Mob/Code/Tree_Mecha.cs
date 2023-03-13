@@ -71,6 +71,7 @@ public class Tree_Mecha : MonoBehaviour
     public void Die()
     {
         //StopCoroutine(nameof(FindPlayer));
+        Data.Instance.gameData.mob_cnt++;
         tree_Mecha_Body.StopAllCoroutines();
         gameObject.SetActive(false);
     }

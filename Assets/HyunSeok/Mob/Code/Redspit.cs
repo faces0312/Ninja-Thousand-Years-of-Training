@@ -71,6 +71,7 @@ public class Redspit : MonoBehaviour
     public void Die()
     {
         //StopCoroutine(nameof(FindPlayer));
+        Data.Instance.gameData.mob_cnt++;
         redspit_Body.StopAllCoroutines();
         gameObject.SetActive(false);
     }

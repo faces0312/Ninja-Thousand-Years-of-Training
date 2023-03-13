@@ -72,8 +72,8 @@ public class Bat_Wood : MonoBehaviour
 
     public void Die()
     {
-        Data.Instance.gameData.mob_cnt--;
         //StopCoroutine(nameof(FindPlayer));
+        Data.Instance.gameData.mob_cnt++;
         bat_Wood_Body.StopAllCoroutines();
         atk.gameObject.SetActive(false);
         gameObject.SetActive(false);

@@ -10,10 +10,16 @@ public class GameData
 {
     //인게임ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     //public float exp;
+    public int money;
 
     public int skill_cnt;//몇개의 스킬을 가지고 있는지(최대 6개)
 
     public float player_hp;//플레이어 체력
+
+    public float player_normal_lv;//플레이어 무 속성 데미지
+    public float player_fire_lv;//플레이어 불 속성 데미지
+    public float player_wood_lv;//플레이어 숲 속성 데미지
+    public float player_mecha_lv;//플레이어 기계 속성 데미지
 
     public float player_normal;//플레이어 무 속성 데미지
     public float player_fire;//플레이어 불 속성 데미지
@@ -65,7 +71,6 @@ public class GameData
 
     public float redspit_boss_body;
     public float redspit_boss_atk;
-
 
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 

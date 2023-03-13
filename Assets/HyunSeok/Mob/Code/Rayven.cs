@@ -71,6 +71,7 @@ public class Rayven : MonoBehaviour
     public void Die()
     {
         //StopCoroutine(nameof(FindPlayer));
+        Data.Instance.gameData.mob_cnt++;
         rayven_Body.StopAllCoroutines();
         gameObject.SetActive(false);
     }

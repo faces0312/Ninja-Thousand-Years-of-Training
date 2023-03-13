@@ -71,6 +71,7 @@ public class Fox_Fire : MonoBehaviour
     public void Die()
     {
         //StopCoroutine(nameof(FindPlayer));
+        Data.Instance.gameData.mob_cnt++;
         fox_Fire_Body.StopAllCoroutines();
         gameObject.SetActive(false);
     }
