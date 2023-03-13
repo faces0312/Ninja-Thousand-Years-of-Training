@@ -15,6 +15,14 @@ public class Main_Manager : MonoBehaviour
     public GameObject upgrade_fire_page;
     public GameObject upgrade_wood_page;
     public GameObject upgrade_mecha_page;
+    public GameObject complete_normal_page;
+    public GameObject complete_fire_page;
+    public GameObject complete_wood_page;
+    public GameObject complete_mecha_page;
+    public GameObject complete_normal;
+    public GameObject complete_fire;
+    public GameObject complete_wood;
+    public GameObject complete_mecha;
     public TextMeshProUGUI normal_change;
     public TextMeshProUGUI fire_change;
     public TextMeshProUGUI wood_change;
@@ -43,12 +51,17 @@ public class Main_Manager : MonoBehaviour
         upgrade_fire_page.gameObject.SetActive(false);
         upgrade_wood_page.gameObject.SetActive(false);
         upgrade_mecha_page.gameObject.SetActive(false);
+        complete_normal_page.gameObject.SetActive(false);
+        complete_fire_page.gameObject.SetActive(false);
+        complete_wood_page.gameObject.SetActive(false);
+        complete_mecha_page.gameObject.SetActive(false);
+
         Data.Instance.gameData.player_normal_lv = 0;
         Data.Instance.gameData.player_fire_lv = 0;
         Data.Instance.gameData.player_wood_lv = 0;
         Data.Instance.gameData.player_mecha_lv = 0;
 
-        Data.Instance.gameData.money = 1300;
+        Data.Instance.gameData.money = 3300;
     }
     public void Game_Start()
     {
@@ -93,19 +106,51 @@ public class Main_Manager : MonoBehaviour
     }
     public void Normal_Upgrade()
     {
+        complete_normal_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Normal());
         Data.Instance.gameData.player_normal_lv++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_normal_lv * 1000);
+        Data.Instance.SaveGameData();
     }
     public void Fire_Upgrade()
     {
+        complete_fire_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Fire());
         Data.Instance.gameData.player_fire_lv++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_fire_lv * 1000);
+        Data.Instance.SaveGameData();
     }
     public void Wood_Upgrade()
     {
+        complete_wood_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Wood());
         Data.Instance.gameData.player_wood_lv++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_wood_lv * 1000);
+        Data.Instance.SaveGameData();
     }
     public void Mecha_Upgrade()
     {
+        complete_mecha_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Mecha());
         Data.Instance.gameData.player_mecha_lv++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_mecha_lv * 1000);
+        Data.Instance.SaveGameData();
+    }
+    public void Dis_Complete_Normal()
+    {
+        complete_normal_page.gameObject.SetActive(false);
+    }
+    public void Dis_Complete_Fire()
+    {
+        complete_fire_page.gameObject.SetActive(false);
+    }
+    public void Dis_Complete_Wood()
+    {
+        complete_wood_page.gameObject.SetActive(false);
+    }
+    public void Dis_Complete_Mecha()
+    {
+        complete_mecha_page.gameObject.SetActive(false);
     }
     public void Dis_Upgrade_Page()
     {
@@ -158,4 +203,47 @@ public class Main_Manager : MonoBehaviour
             mecha_upgrade.interactable = true;
     }
 
+    IEnumerator Complete_Normal()
+    {
+        float scale = 0.5f;
+        for(int i=0; i<10; i++)
+        {
+            complete_normal.gameObject.transform.localScale = new Vector3(scale, scale);
+            scale += 0.05f;
+            yield return new WaitForSeconds(0.0001f);
+        }
+    }
+
+    IEnumerator Complete_Fire()
+    {
+        float scale = 0.5f;
+        for (int i = 0; i < 10; i++)
+        {
+            complete_fire.gameObject.transform.localScale = new Vector3(scale, scale);
+            scale += 0.05f;
+            yield return new WaitForSeconds(0.0001f);
+        }
+    }
+
+    IEnumerator Complete_Wood()
+    {
+        float scale = 0.5f;
+        for (int i = 0; i < 10; i++)
+        {
+            complete_wood.gameObject.transform.localScale = new Vector3(scale, scale);
+            scale += 0.05f;
+            yield return new WaitForSeconds(0.0001f);
+        }
+    }
+
+    IEnumerator Complete_Mecha()
+    {
+        float scale = 0.5f;
+        for (int i = 0; i < 10; i++)
+        {
+            complete_mecha.gameObject.transform.localScale = new Vector3(scale, scale);
+            scale += 0.05f;
+            yield return new WaitForSeconds(0.0001f);
+        }
+    }
 }

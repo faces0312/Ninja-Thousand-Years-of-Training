@@ -390,7 +390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9b59b9d86d63254980b1a95b3120774, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4046479a8e13f3a4c9c5e810d312a7c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -465,7 +465,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9b59b9d86d63254980b1a95b3120774, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85d2590d2555cc448bcfc00ff1345dec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5072,7 +5072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1236452185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5136,7 +5136,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1236452187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998028432}
+        m_TargetAssemblyTypeName: Main_Manager, Assembly-CSharp
+        m_MethodName: Dis_Complete_Mecha
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1236452187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6912,7 +6924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1802484860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6976,7 +6988,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1802484862}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998028432}
+        m_TargetAssemblyTypeName: Main_Manager, Assembly-CSharp
+        m_MethodName: Dis_Complete_Normal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1802484862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7752,6 +7776,14 @@ MonoBehaviour:
   upgrade_fire_page: {fileID: 1003213914}
   upgrade_wood_page: {fileID: 2126806877}
   upgrade_mecha_page: {fileID: 396570072}
+  complete_normal_page: {fileID: 1802484859}
+  complete_fire_page: {fileID: 2042023990}
+  complete_wood_page: {fileID: 2131519746}
+  complete_mecha_page: {fileID: 1236452184}
+  complete_normal: {fileID: 1721092564}
+  complete_fire: {fileID: 616741568}
+  complete_wood: {fileID: 496627363}
+  complete_mecha: {fileID: 402781429}
   normal_change: {fileID: 1047110035}
   fire_change: {fileID: 142523462}
   wood_change: {fileID: 129690687}
@@ -8088,7 +8120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2042023991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8152,7 +8184,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2042023993}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998028432}
+        m_TargetAssemblyTypeName: Main_Manager, Assembly-CSharp
+        m_MethodName: Dis_Complete_Fire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2042023993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8456,7 +8500,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9b59b9d86d63254980b1a95b3120774, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b7dd3984f614584a9e957796d32ca5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8704,7 +8748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2131519747
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8768,7 +8812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2131519749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998028432}
+        m_TargetAssemblyTypeName: Main_Manager, Assembly-CSharp
+        m_MethodName: Dis_Complete_Wood
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2131519749
 MonoBehaviour:
   m_ObjectHideFlags: 0

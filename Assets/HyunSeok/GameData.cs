@@ -16,10 +16,10 @@ public class GameData
 
     public float player_hp;//플레이어 체력
 
-    public float player_normal_lv;//플레이어 무 속성 데미지
-    public float player_fire_lv;//플레이어 불 속성 데미지
-    public float player_wood_lv;//플레이어 숲 속성 데미지
-    public float player_mecha_lv;//플레이어 기계 속성 데미지
+    public int player_normal_lv;//플레이어 무 속성 데미지
+    public int player_fire_lv;//플레이어 불 속성 데미지
+    public int player_wood_lv;//플레이어 숲 속성 데미지
+    public int player_mecha_lv;//플레이어 기계 속성 데미지
 
     public float player_normal;//플레이어 무 속성 데미지
     public float player_fire;//플레이어 불 속성 데미지
