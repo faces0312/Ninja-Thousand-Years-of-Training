@@ -45,7 +45,18 @@ public class Boomerang : MonoBehaviour
 
     IEnumerator Dis_Tornado()
     {
-        yield return new WaitForSeconds(10);
+        if(Data.Instance.gameData.boomerang_lv == 1)
+            yield return new WaitForSeconds(5);
+        else if (Data.Instance.gameData.boomerang_lv == 2)
+            yield return new WaitForSeconds(6);
+        else if (Data.Instance.gameData.boomerang_lv == 3)
+            yield return new WaitForSeconds(6);
+        else if (Data.Instance.gameData.boomerang_lv == 4)
+            yield return new WaitForSeconds(8);
+        else if (Data.Instance.gameData.boomerang_lv == 5)
+            yield return new WaitForSeconds(10);
+        else if (Data.Instance.gameData.boomerang_lv == 6)
+            yield return new WaitForSeconds(15);
         gameObject.SetActive(false);
     }
 }

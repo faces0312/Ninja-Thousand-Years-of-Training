@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4939021264894952219}
   - component: {fileID: 7141854701744489935}
   - component: {fileID: 3236078225650707745}
-  - component: {fileID: 2025091335586214810}
+  - component: {fileID: 253227468899180322}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2025091335586214810
+--- !u!114 &253227468899180322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,9 +109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 98355988621917160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &173882387788096225
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ GameObject:
   - component: {fileID: 7306554883631864651}
   - component: {fileID: 1664964195509520393}
   - component: {fileID: 3571752340886240850}
-  - component: {fileID: 7437669182058622885}
+  - component: {fileID: 5672384058057272348}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -212,7 +213,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7437669182058622885
+--- !u!114 &5672384058057272348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,9 +222,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 173882387788096225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &239647680863035138
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +237,7 @@ GameObject:
   - component: {fileID: 9099491799373467070}
   - component: {fileID: 2537410874860128744}
   - component: {fileID: 6749179109721201774}
-  - component: {fileID: 9202287418108957645}
+  - component: {fileID: 4897091765110643737}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -324,7 +326,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &9202287418108957645
+--- !u!114 &4897091765110643737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,9 +335,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 239647680863035138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &273896410099845403
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +350,7 @@ GameObject:
   - component: {fileID: 3031123646033187415}
   - component: {fileID: 4816353003361796837}
   - component: {fileID: 5782499214312650659}
-  - component: {fileID: 3221874373777446025}
+  - component: {fileID: 2210945242433120389}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -436,7 +439,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3221874373777446025
+--- !u!114 &2210945242433120389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,9 +448,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 273896410099845403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &287555528421273752
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +463,7 @@ GameObject:
   - component: {fileID: 5351110523772244533}
   - component: {fileID: 5042999276848749428}
   - component: {fileID: 7477911767123711914}
-  - component: {fileID: 7178459118046493768}
+  - component: {fileID: 3786257442062365032}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -548,7 +552,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7178459118046493768
+--- !u!114 &3786257442062365032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,9 +561,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 287555528421273752}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &354585172188504182
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,7 +576,7 @@ GameObject:
   - component: {fileID: 5957278725153173613}
   - component: {fileID: 8076243900195749649}
   - component: {fileID: 718106991814316790}
-  - component: {fileID: 6938571119104055928}
+  - component: {fileID: 1111095596281339318}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -660,7 +665,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6938571119104055928
+--- !u!114 &1111095596281339318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -669,9 +674,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 354585172188504182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &523785973911678285
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +689,7 @@ GameObject:
   - component: {fileID: 1344787893510981100}
   - component: {fileID: 6486760459257574704}
   - component: {fileID: 231598670445936016}
-  - component: {fileID: 6715765420610270094}
+  - component: {fileID: 4380896911305497068}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -772,7 +778,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6715765420610270094
+--- !u!114 &4380896911305497068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -781,9 +787,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 523785973911678285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &546741621302613853
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +802,7 @@ GameObject:
   - component: {fileID: 4985662795413386525}
   - component: {fileID: 3421366034909382329}
   - component: {fileID: 8957733660390378171}
-  - component: {fileID: 850171141404344596}
+  - component: {fileID: 3868052394154807585}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -884,7 +891,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &850171141404344596
+--- !u!114 &3868052394154807585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -893,9 +900,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 546741621302613853}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &582568289997693010
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +915,7 @@ GameObject:
   - component: {fileID: 8973956993935542136}
   - component: {fileID: 719643218631387408}
   - component: {fileID: 5904681301256779430}
-  - component: {fileID: 3770426763833696165}
+  - component: {fileID: 1594450211157839017}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -996,7 +1004,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3770426763833696165
+--- !u!114 &1594450211157839017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1005,9 +1013,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 582568289997693010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &620544760049711260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 3462823280164355951}
   attack2: {fileID: 1769707099055481543}
   attack3: {fileID: 6958252745591167542}
@@ -1078,7 +1088,7 @@ GameObject:
   - component: {fileID: 7737922270623414773}
   - component: {fileID: 2334825424790319112}
   - component: {fileID: 3402955224240826560}
-  - component: {fileID: 1249581098364282125}
+  - component: {fileID: 5912805501984136540}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -1167,7 +1177,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1249581098364282125
+--- !u!114 &5912805501984136540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1176,9 +1186,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 912750920462189152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &990411677775815091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1201,7 @@ GameObject:
   - component: {fileID: 6600440776159191995}
   - component: {fileID: 2196651185229730276}
   - component: {fileID: 7978924940419423198}
-  - component: {fileID: 6652355327077195471}
+  - component: {fileID: 8931007570484495408}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -1279,7 +1290,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6652355327077195471
+--- !u!114 &8931007570484495408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1288,9 +1299,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 990411677775815091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &991775743038292350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1314,7 @@ GameObject:
   - component: {fileID: 7531302107063998264}
   - component: {fileID: 2045735442214447220}
   - component: {fileID: 2656939399091031046}
-  - component: {fileID: 6507891806000967316}
+  - component: {fileID: 1891768983204612646}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -1391,7 +1403,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6507891806000967316
+--- !u!114 &1891768983204612646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1400,9 +1412,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 991775743038292350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1001171604015575896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1427,7 @@ GameObject:
   - component: {fileID: 2849179645826857991}
   - component: {fileID: 5906455420281229632}
   - component: {fileID: 7712875373315464983}
-  - component: {fileID: 5816114827369360037}
+  - component: {fileID: 2718144746281825753}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -1503,7 +1516,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5816114827369360037
+--- !u!114 &2718144746281825753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1512,9 +1525,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001171604015575896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1031107406557323605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1540,7 @@ GameObject:
   - component: {fileID: 6592025144298550517}
   - component: {fileID: 740110992451250030}
   - component: {fileID: 1259739447770862048}
-  - component: {fileID: 9025851644706230738}
+  - component: {fileID: 6991415497787143425}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -1615,7 +1629,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &9025851644706230738
+--- !u!114 &6991415497787143425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1624,9 +1638,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031107406557323605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1099956617717467478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1653,7 @@ GameObject:
   - component: {fileID: 3593281429957718146}
   - component: {fileID: 1344058673952457017}
   - component: {fileID: 6772250176209591494}
-  - component: {fileID: 867875572916440}
+  - component: {fileID: 1677598258787597769}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -1727,7 +1742,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &867875572916440
+--- !u!114 &1677598258787597769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1736,9 +1751,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099956617717467478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1177731540262815378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,7 +1766,7 @@ GameObject:
   - component: {fileID: 3888721786917790313}
   - component: {fileID: 6615963051716430037}
   - component: {fileID: 1745677348395666868}
-  - component: {fileID: 6167509840210345726}
+  - component: {fileID: 224911480760376155}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -1839,7 +1855,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6167509840210345726
+--- !u!114 &224911480760376155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1848,9 +1864,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1177731540262815378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1178511119240109198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +1879,7 @@ GameObject:
   - component: {fileID: 8844730364951693939}
   - component: {fileID: 4552064889216195357}
   - component: {fileID: 4132333252373637636}
-  - component: {fileID: 483293531004364003}
+  - component: {fileID: 3357769701949082763}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -1951,7 +1968,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &483293531004364003
+--- !u!114 &3357769701949082763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1960,9 +1977,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1178511119240109198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1282963833796590997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,7 +1992,7 @@ GameObject:
   - component: {fileID: 1129717474803451747}
   - component: {fileID: 462779089073960400}
   - component: {fileID: 7423635030726299482}
-  - component: {fileID: 4257716723057613046}
+  - component: {fileID: 8889371785669269036}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -2063,7 +2081,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4257716723057613046
+--- !u!114 &8889371785669269036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2072,9 +2090,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1282963833796590997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1314832171108702438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,7 +2105,7 @@ GameObject:
   - component: {fileID: 6875256131996792174}
   - component: {fileID: 4404216207570169567}
   - component: {fileID: 6791238901848806876}
-  - component: {fileID: 6556796900770997984}
+  - component: {fileID: 7862350792516824014}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -2175,7 +2194,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6556796900770997984
+--- !u!114 &7862350792516824014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2184,9 +2203,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1314832171108702438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1338900534656800730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2218,7 @@ GameObject:
   - component: {fileID: 3561513843254474456}
   - component: {fileID: 2258104494223400217}
   - component: {fileID: 2589109533861615048}
-  - component: {fileID: 5178924427065274904}
+  - component: {fileID: 3443431312497756413}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -2287,7 +2307,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5178924427065274904
+--- !u!114 &3443431312497756413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2296,9 +2316,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1338900534656800730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1425057447337264833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2350,6 +2371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 3975439709311444666}
   attack2: {fileID: 5299232302725678707}
   attack3: {fileID: 4386110220354678418}
@@ -2369,7 +2391,7 @@ GameObject:
   - component: {fileID: 4118074323816360841}
   - component: {fileID: 3860846016148720523}
   - component: {fileID: 6876604865668078026}
-  - component: {fileID: 4141096513286353437}
+  - component: {fileID: 8970845669985027131}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -2458,7 +2480,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4141096513286353437
+--- !u!114 &8970845669985027131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2467,9 +2489,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1435619357381363221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1465426253083877130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,7 +2504,7 @@ GameObject:
   - component: {fileID: 6907383985482521289}
   - component: {fileID: 4684634611282591938}
   - component: {fileID: 8826760877969283752}
-  - component: {fileID: 7626453611507212915}
+  - component: {fileID: 5204097649982732338}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -2570,7 +2593,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7626453611507212915
+--- !u!114 &5204097649982732338
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2579,9 +2602,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1465426253083877130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1584061574922532618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,7 +2617,7 @@ GameObject:
   - component: {fileID: 2857856499590004}
   - component: {fileID: 8072298415570536178}
   - component: {fileID: 2708590624651899883}
-  - component: {fileID: 7305077161353871245}
+  - component: {fileID: 3066780455762218534}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -2682,7 +2706,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7305077161353871245
+--- !u!114 &3066780455762218534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2691,9 +2715,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1584061574922532618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1769707099055481543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2705,7 +2730,7 @@ GameObject:
   - component: {fileID: 7962042199604525506}
   - component: {fileID: 7610882279697216969}
   - component: {fileID: 5000884645298363629}
-  - component: {fileID: 8611219909722359834}
+  - component: {fileID: 2486863635244457824}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -2794,7 +2819,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8611219909722359834
+--- !u!114 &2486863635244457824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2803,9 +2828,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1769707099055481543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1856825800951373592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,7 +2843,7 @@ GameObject:
   - component: {fileID: 6711987962720268051}
   - component: {fileID: 1730217730908517088}
   - component: {fileID: 2912983294188935818}
-  - component: {fileID: 8108575642623157867}
+  - component: {fileID: 1207903273401658415}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -2906,7 +2932,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8108575642623157867
+--- !u!114 &1207903273401658415
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2915,9 +2941,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1856825800951373592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1897726416826028969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,7 +2956,7 @@ GameObject:
   - component: {fileID: 8746316672295290857}
   - component: {fileID: 7679588505817607570}
   - component: {fileID: 1714087536745671275}
-  - component: {fileID: 3296458953799759959}
+  - component: {fileID: 4114840739536591299}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -3018,7 +3045,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3296458953799759959
+--- !u!114 &4114840739536591299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3027,9 +3054,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1897726416826028969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &1934290646715088556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,7 +3069,7 @@ GameObject:
   - component: {fileID: 4598910789339681012}
   - component: {fileID: 4329107050859209441}
   - component: {fileID: 1979263225115604412}
-  - component: {fileID: 2262532529913350146}
+  - component: {fileID: 887409519461862447}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -3130,7 +3158,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2262532529913350146
+--- !u!114 &887409519461862447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3139,9 +3167,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1934290646715088556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2024069135985309338
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,7 +3182,7 @@ GameObject:
   - component: {fileID: 5697710768292174268}
   - component: {fileID: 772057822489052265}
   - component: {fileID: 5411008115724278381}
-  - component: {fileID: 8271842508885804399}
+  - component: {fileID: 7709108377301534854}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -3242,7 +3271,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8271842508885804399
+--- !u!114 &7709108377301534854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3251,9 +3280,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024069135985309338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2032843517317027126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3265,7 +3295,7 @@ GameObject:
   - component: {fileID: 172932482898788840}
   - component: {fileID: 5243650419030350769}
   - component: {fileID: 3462152875404841830}
-  - component: {fileID: 2364293051296697991}
+  - component: {fileID: 1784100946107017835}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -3354,7 +3384,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2364293051296697991
+--- !u!114 &1784100946107017835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3363,9 +3393,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2032843517317027126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2071575606770359375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,7 +3408,7 @@ GameObject:
   - component: {fileID: 6091743481492157106}
   - component: {fileID: 986679552551223410}
   - component: {fileID: 6974547314425512865}
-  - component: {fileID: 5054775554207062223}
+  - component: {fileID: 3903814125639786099}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -3466,7 +3497,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5054775554207062223
+--- !u!114 &3903814125639786099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3475,9 +3506,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071575606770359375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2073872320937150914
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3521,7 @@ GameObject:
   - component: {fileID: 1589431981997659596}
   - component: {fileID: 7094531607414729025}
   - component: {fileID: 6520904952069187723}
-  - component: {fileID: 6908392651921972004}
+  - component: {fileID: 5258918529725999704}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -3578,7 +3610,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6908392651921972004
+--- !u!114 &5258918529725999704
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3587,9 +3619,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2073872320937150914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2153196081287460718
 GameObject:
   m_ObjectHideFlags: 0
@@ -3601,7 +3634,7 @@ GameObject:
   - component: {fileID: 6169849055958278798}
   - component: {fileID: 5453075528030398893}
   - component: {fileID: 1498758221597543824}
-  - component: {fileID: 7044326777067148489}
+  - component: {fileID: 1652731941742826666}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -3690,7 +3723,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7044326777067148489
+--- !u!114 &1652731941742826666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3699,9 +3732,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2153196081287460718}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2167265176064247501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3713,7 +3747,7 @@ GameObject:
   - component: {fileID: 1715525469103341856}
   - component: {fileID: 542863695198586057}
   - component: {fileID: 6427374218491300599}
-  - component: {fileID: 2344471661475875813}
+  - component: {fileID: 1439864248034056445}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -3802,7 +3836,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2344471661475875813
+--- !u!114 &1439864248034056445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3811,9 +3845,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2167265176064247501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2219605982196933033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,7 +3860,7 @@ GameObject:
   - component: {fileID: 1378838121739832994}
   - component: {fileID: 4189146748644349501}
   - component: {fileID: 8562632350146260251}
-  - component: {fileID: 8176206526302558677}
+  - component: {fileID: 6073564892508101661}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -3914,7 +3949,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8176206526302558677
+--- !u!114 &6073564892508101661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3923,9 +3958,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2219605982196933033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2237492767902773393
 GameObject:
   m_ObjectHideFlags: 0
@@ -3937,7 +3973,7 @@ GameObject:
   - component: {fileID: 4027243744726755289}
   - component: {fileID: 7173215043162330551}
   - component: {fileID: 1347103043016657672}
-  - component: {fileID: 4300046533605225049}
+  - component: {fileID: 6424926884882536266}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -4026,7 +4062,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4300046533605225049
+--- !u!114 &6424926884882536266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4035,9 +4071,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2237492767902773393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2355020951103928787
 GameObject:
   m_ObjectHideFlags: 0
@@ -4049,7 +4086,7 @@ GameObject:
   - component: {fileID: 4885594567173549398}
   - component: {fileID: 5207766212739890689}
   - component: {fileID: 5603356994881870192}
-  - component: {fileID: 8173945068285386397}
+  - component: {fileID: 7441861503569217221}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -4138,7 +4175,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8173945068285386397
+--- !u!114 &7441861503569217221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4147,9 +4184,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2355020951103928787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2383030583451323833
 GameObject:
   m_ObjectHideFlags: 0
@@ -4161,7 +4199,7 @@ GameObject:
   - component: {fileID: 7584502201491095608}
   - component: {fileID: 5122665096658297633}
   - component: {fileID: 7011922272929988869}
-  - component: {fileID: 6510872891095100504}
+  - component: {fileID: 5855505102385454612}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -4250,7 +4288,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6510872891095100504
+--- !u!114 &5855505102385454612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4259,9 +4297,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2383030583451323833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2474435425819410705
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,7 +4312,7 @@ GameObject:
   - component: {fileID: 4541731776658933040}
   - component: {fileID: 6972667085708228857}
   - component: {fileID: 2415477757198711233}
-  - component: {fileID: 2773655422659697683}
+  - component: {fileID: 8688058707893198276}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -4362,7 +4401,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2773655422659697683
+--- !u!114 &8688058707893198276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4371,9 +4410,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2474435425819410705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2676381816842030168
 GameObject:
   m_ObjectHideFlags: 0
@@ -4425,6 +4465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 4298171287016090446}
   attack2: {fileID: 4266588629505085483}
   attack3: {fileID: 1584061574922532618}
@@ -4444,7 +4485,7 @@ GameObject:
   - component: {fileID: 2109749273359082973}
   - component: {fileID: 4186507336717749134}
   - component: {fileID: 5808963734852355330}
-  - component: {fileID: 84101312436622302}
+  - component: {fileID: 199979885540693462}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -4533,7 +4574,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &84101312436622302
+--- !u!114 &199979885540693462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4542,9 +4583,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2733311146813744168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2834024582823358448
 GameObject:
   m_ObjectHideFlags: 0
@@ -4556,7 +4598,7 @@ GameObject:
   - component: {fileID: 6750095446952953585}
   - component: {fileID: 1075558921943274202}
   - component: {fileID: 595737661286237684}
-  - component: {fileID: 7965077658125310232}
+  - component: {fileID: 2821077309453294103}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -4645,7 +4687,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7965077658125310232
+--- !u!114 &2821077309453294103
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4654,9 +4696,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2834024582823358448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2903004041052898151
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,7 +4711,7 @@ GameObject:
   - component: {fileID: 3448923419316096676}
   - component: {fileID: 7806117720065686879}
   - component: {fileID: 6719381649711127516}
-  - component: {fileID: 1699769923680886313}
+  - component: {fileID: 9851043645161923}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -4757,7 +4800,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1699769923680886313
+--- !u!114 &9851043645161923
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4766,9 +4809,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2903004041052898151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &2987993346268970832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4780,7 +4824,7 @@ GameObject:
   - component: {fileID: 8322880158779221734}
   - component: {fileID: 6329811209220527146}
   - component: {fileID: 5809028214315419773}
-  - component: {fileID: 1895023763022553417}
+  - component: {fileID: 4070185118580519198}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -4869,7 +4913,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1895023763022553417
+--- !u!114 &4070185118580519198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4878,9 +4922,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2987993346268970832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3106336571401126124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,7 +4937,7 @@ GameObject:
   - component: {fileID: 5487958890354758547}
   - component: {fileID: 1473752275711529692}
   - component: {fileID: 6685133040289338920}
-  - component: {fileID: 984546613529006730}
+  - component: {fileID: 6104751609500290353}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -4981,7 +5026,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &984546613529006730
+--- !u!114 &6104751609500290353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4990,9 +5035,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3106336571401126124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3305046529000340707
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,7 +5050,7 @@ GameObject:
   - component: {fileID: 1653179330659174349}
   - component: {fileID: 5335568311050885926}
   - component: {fileID: 3077167869983188759}
-  - component: {fileID: 8250845161543144980}
+  - component: {fileID: 1394313080049279492}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -5093,7 +5139,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8250845161543144980
+--- !u!114 &1394313080049279492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5102,9 +5148,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3305046529000340707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3339694195896813127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5116,7 +5163,7 @@ GameObject:
   - component: {fileID: 986170628837919116}
   - component: {fileID: 278496922523002631}
   - component: {fileID: 7102015700253476782}
-  - component: {fileID: 8882932573027513552}
+  - component: {fileID: 1618214279695483691}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -5205,7 +5252,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8882932573027513552
+--- !u!114 &1618214279695483691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5214,9 +5261,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3339694195896813127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3462823280164355951
 GameObject:
   m_ObjectHideFlags: 0
@@ -5228,7 +5276,7 @@ GameObject:
   - component: {fileID: 2426180551793146072}
   - component: {fileID: 1473398733156865421}
   - component: {fileID: 3622072165277605157}
-  - component: {fileID: 3724731083608063637}
+  - component: {fileID: 718530923656462508}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -5317,7 +5365,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3724731083608063637
+--- !u!114 &718530923656462508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5326,9 +5374,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3462823280164355951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3498606134735069300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5340,7 +5389,7 @@ GameObject:
   - component: {fileID: 4903022254405634041}
   - component: {fileID: 2509023937874702312}
   - component: {fileID: 5826478930445997606}
-  - component: {fileID: 1853756237031697077}
+  - component: {fileID: 3507406339657827714}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -5429,7 +5478,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1853756237031697077
+--- !u!114 &3507406339657827714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5438,9 +5487,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3498606134735069300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3508865586403737670
 GameObject:
   m_ObjectHideFlags: 0
@@ -5452,7 +5502,7 @@ GameObject:
   - component: {fileID: 8925844429850014823}
   - component: {fileID: 6274542812863718041}
   - component: {fileID: 7338638450987217318}
-  - component: {fileID: 8470150531627929718}
+  - component: {fileID: 6820663048765869274}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -5541,7 +5591,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8470150531627929718
+--- !u!114 &6820663048765869274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5550,9 +5600,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3508865586403737670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3558563228636643157
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,7 +5615,7 @@ GameObject:
   - component: {fileID: 3635456534310786893}
   - component: {fileID: 6282691704779986889}
   - component: {fileID: 466257269000082821}
-  - component: {fileID: 8572551189571082135}
+  - component: {fileID: 2195162229019653707}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -5653,7 +5704,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8572551189571082135
+--- !u!114 &2195162229019653707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5662,9 +5713,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3558563228636643157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3564170380055653596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5676,7 +5728,7 @@ GameObject:
   - component: {fileID: 4134183361603827936}
   - component: {fileID: 4318405815243853988}
   - component: {fileID: 7597670985637203915}
-  - component: {fileID: 4115468779726781831}
+  - component: {fileID: 6240192090079368174}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -5765,7 +5817,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4115468779726781831
+--- !u!114 &6240192090079368174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5774,9 +5826,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3564170380055653596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3565890932486368759
 GameObject:
   m_ObjectHideFlags: 0
@@ -5828,6 +5881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 4775222459325781270}
   attack2: {fileID: 7970340682703851903}
   attack3: {fileID: 8561903049497114894}
@@ -5847,7 +5901,7 @@ GameObject:
   - component: {fileID: 2473572022870871105}
   - component: {fileID: 4835059791672207262}
   - component: {fileID: 8240874916878601569}
-  - component: {fileID: 915998477803181344}
+  - component: {fileID: 6789804517531415182}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -5936,7 +5990,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &915998477803181344
+--- !u!114 &6789804517531415182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5945,9 +5999,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3602258514331234338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3606297353304116426
 GameObject:
   m_ObjectHideFlags: 0
@@ -5959,7 +6014,7 @@ GameObject:
   - component: {fileID: 4426778812194069679}
   - component: {fileID: 5945747958679959678}
   - component: {fileID: 6186025719740917265}
-  - component: {fileID: 2016121000382933419}
+  - component: {fileID: 6189306164137261291}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -6048,7 +6103,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2016121000382933419
+--- !u!114 &6189306164137261291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6057,9 +6112,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3606297353304116426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3712420168037753004
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,7 +6127,7 @@ GameObject:
   - component: {fileID: 6501038953084886308}
   - component: {fileID: 7972923024763167931}
   - component: {fileID: 1835805561365923620}
-  - component: {fileID: 1327012055468466841}
+  - component: {fileID: 2042087323762078929}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -6160,7 +6216,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1327012055468466841
+--- !u!114 &2042087323762078929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6169,9 +6225,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3712420168037753004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3719051557261613288
 GameObject:
   m_ObjectHideFlags: 0
@@ -6183,7 +6240,7 @@ GameObject:
   - component: {fileID: 6499267134205051781}
   - component: {fileID: 6727786913301520106}
   - component: {fileID: 6791258142024588}
-  - component: {fileID: 1876441491698129345}
+  - component: {fileID: 519747616072730775}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -6272,7 +6329,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1876441491698129345
+--- !u!114 &519747616072730775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6281,9 +6338,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3719051557261613288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3759425246745271061
 GameObject:
   m_ObjectHideFlags: 0
@@ -6335,6 +6393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 7084716616954188563}
   attack2: {fileID: 4842763258358353529}
   attack3: {fileID: 6364690012763783807}
@@ -6354,7 +6413,7 @@ GameObject:
   - component: {fileID: 1027980667116997249}
   - component: {fileID: 3066013545735324877}
   - component: {fileID: 5330521543930149274}
-  - component: {fileID: 8353523348072407961}
+  - component: {fileID: 405248488404277981}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -6443,7 +6502,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8353523348072407961
+--- !u!114 &405248488404277981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6452,9 +6511,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3776974135763283573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3831669421266179259
 GameObject:
   m_ObjectHideFlags: 0
@@ -6466,7 +6526,7 @@ GameObject:
   - component: {fileID: 1719932860652770882}
   - component: {fileID: 481418366244569002}
   - component: {fileID: 6484270033898654202}
-  - component: {fileID: 4841098629461022033}
+  - component: {fileID: 7662812829891934283}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -6555,7 +6615,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4841098629461022033
+--- !u!114 &7662812829891934283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6564,9 +6624,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3831669421266179259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &3975439709311444666
 GameObject:
   m_ObjectHideFlags: 0
@@ -6578,7 +6639,7 @@ GameObject:
   - component: {fileID: 8286101818568618073}
   - component: {fileID: 1042918569713357462}
   - component: {fileID: 8597255167653654322}
-  - component: {fileID: 4154872456807268929}
+  - component: {fileID: 7345499133262716143}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -6667,7 +6728,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4154872456807268929
+--- !u!114 &7345499133262716143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6676,9 +6737,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3975439709311444666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4011483936346920104
 GameObject:
   m_ObjectHideFlags: 0
@@ -6690,7 +6752,7 @@ GameObject:
   - component: {fileID: 9193291477881097792}
   - component: {fileID: 6103250859357853831}
   - component: {fileID: 621616263126873620}
-  - component: {fileID: 4834086628263972564}
+  - component: {fileID: 7229007662170143614}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -6779,7 +6841,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4834086628263972564
+--- !u!114 &7229007662170143614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6788,9 +6850,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4011483936346920104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4061148637081337589
 GameObject:
   m_ObjectHideFlags: 0
@@ -6802,7 +6865,7 @@ GameObject:
   - component: {fileID: 4054271410805605703}
   - component: {fileID: 5884344462821837174}
   - component: {fileID: 5642916944316854239}
-  - component: {fileID: 642136872747344635}
+  - component: {fileID: 8422441548762459760}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -6891,7 +6954,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &642136872747344635
+--- !u!114 &8422441548762459760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6900,9 +6963,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4061148637081337589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4078960707041081715
 GameObject:
   m_ObjectHideFlags: 0
@@ -6914,7 +6978,7 @@ GameObject:
   - component: {fileID: 8629561301662687775}
   - component: {fileID: 1949384062508915509}
   - component: {fileID: 5480975605421967293}
-  - component: {fileID: 5879488097257945167}
+  - component: {fileID: 4783590671603277694}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -7003,7 +7067,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5879488097257945167
+--- !u!114 &4783590671603277694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7012,9 +7076,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4078960707041081715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4101188309400902167
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,7 +7091,7 @@ GameObject:
   - component: {fileID: 8509462109423338464}
   - component: {fileID: 6262399807294285093}
   - component: {fileID: 1232551181582628472}
-  - component: {fileID: 5344120221060960535}
+  - component: {fileID: 428973131810902065}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -7115,7 +7180,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5344120221060960535
+--- !u!114 &428973131810902065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7124,9 +7189,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4101188309400902167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4200539641382811511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7138,7 +7204,7 @@ GameObject:
   - component: {fileID: 6294688544844094920}
   - component: {fileID: 3925833358341972584}
   - component: {fileID: 1491572049089325983}
-  - component: {fileID: 8889973246101286541}
+  - component: {fileID: 1251598482786577182}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -7227,7 +7293,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8889973246101286541
+--- !u!114 &1251598482786577182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7236,9 +7302,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4200539641382811511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4266588629505085483
 GameObject:
   m_ObjectHideFlags: 0
@@ -7250,7 +7317,7 @@ GameObject:
   - component: {fileID: 5979317216163798826}
   - component: {fileID: 3584535125438439068}
   - component: {fileID: 6470647935407779363}
-  - component: {fileID: 5084452671048347147}
+  - component: {fileID: 9210259099924647427}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -7339,7 +7406,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5084452671048347147
+--- !u!114 &9210259099924647427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7348,9 +7415,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4266588629505085483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4298171287016090446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7362,7 +7430,7 @@ GameObject:
   - component: {fileID: 1762190099471552243}
   - component: {fileID: 4181889953642292585}
   - component: {fileID: 995560709521259219}
-  - component: {fileID: 1164017003264306608}
+  - component: {fileID: 5810158358194515546}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -7451,7 +7519,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1164017003264306608
+--- !u!114 &5810158358194515546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7460,9 +7528,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4298171287016090446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4386110220354678418
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,7 +7543,7 @@ GameObject:
   - component: {fileID: 5672545396308583619}
   - component: {fileID: 2766621434865722197}
   - component: {fileID: 5551386985044210478}
-  - component: {fileID: 4741705566089846669}
+  - component: {fileID: 3426827201529728789}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -7563,7 +7632,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4741705566089846669
+--- !u!114 &3426827201529728789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7572,9 +7641,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4386110220354678418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4394198997428884845
 GameObject:
   m_ObjectHideFlags: 0
@@ -7586,7 +7656,7 @@ GameObject:
   - component: {fileID: 3290191479299943973}
   - component: {fileID: 1295821185069303699}
   - component: {fileID: 6384190279278146295}
-  - component: {fileID: 815361771886508908}
+  - component: {fileID: 3359501835944624789}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -7675,7 +7745,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &815361771886508908
+--- !u!114 &3359501835944624789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7684,9 +7754,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4394198997428884845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4496220367452119702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7738,6 +7809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 3719051557261613288}
   attack2: {fileID: 2474435425819410705}
   attack3: {fileID: 8074360146756792523}
@@ -7797,6 +7869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 2834024582823358448}
   attack2: {fileID: 7388178342423516978}
   attack3: {fileID: 3602258514331234338}
@@ -7816,7 +7889,7 @@ GameObject:
   - component: {fileID: 1720584979175648329}
   - component: {fileID: 7281738989759739881}
   - component: {fileID: 6686670201890087127}
-  - component: {fileID: 2509968510155654975}
+  - component: {fileID: 8794406238295332847}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -7905,7 +7978,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2509968510155654975
+--- !u!114 &8794406238295332847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7914,9 +7987,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4775222459325781270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4842763258358353529
 GameObject:
   m_ObjectHideFlags: 0
@@ -7928,7 +8002,7 @@ GameObject:
   - component: {fileID: 537840564144188241}
   - component: {fileID: 8548929766138024707}
   - component: {fileID: 1767353831650876780}
-  - component: {fileID: 8030690760997111464}
+  - component: {fileID: 3937082862828231920}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -8017,7 +8091,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8030690760997111464
+--- !u!114 &3937082862828231920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8026,9 +8100,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4842763258358353529}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4915360992731419923
 GameObject:
   m_ObjectHideFlags: 0
@@ -8040,7 +8115,7 @@ GameObject:
   - component: {fileID: 1330269501477077401}
   - component: {fileID: 1788596360148739153}
   - component: {fileID: 5663032736168173690}
-  - component: {fileID: 6731471184813215116}
+  - component: {fileID: 1242117810115068251}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -8129,7 +8204,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6731471184813215116
+--- !u!114 &1242117810115068251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8138,9 +8213,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4915360992731419923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4924650082173873987
 GameObject:
   m_ObjectHideFlags: 0
@@ -8152,7 +8228,7 @@ GameObject:
   - component: {fileID: 4332091218109121128}
   - component: {fileID: 9105248564508039888}
   - component: {fileID: 574041532945875155}
-  - component: {fileID: 3172446522305412347}
+  - component: {fileID: 4770850367314713984}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -8241,7 +8317,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3172446522305412347
+--- !u!114 &4770850367314713984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8250,9 +8326,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4924650082173873987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4948039275135111578
 GameObject:
   m_ObjectHideFlags: 0
@@ -8264,7 +8341,7 @@ GameObject:
   - component: {fileID: 3980347618466959706}
   - component: {fileID: 4881293133174784622}
   - component: {fileID: 8770344799320495217}
-  - component: {fileID: 3883186433158896736}
+  - component: {fileID: 8351254970889424331}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -8353,7 +8430,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3883186433158896736
+--- !u!114 &8351254970889424331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8362,9 +8439,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948039275135111578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &4975299810666479021
 GameObject:
   m_ObjectHideFlags: 0
@@ -8376,7 +8454,7 @@ GameObject:
   - component: {fileID: 1310332433902921705}
   - component: {fileID: 5661478683169154891}
   - component: {fileID: 1723194946906337131}
-  - component: {fileID: 5359012879160764049}
+  - component: {fileID: 5886390207952144379}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -8465,7 +8543,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5359012879160764049
+--- !u!114 &5886390207952144379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8474,9 +8552,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4975299810666479021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5065564042863336110
 GameObject:
   m_ObjectHideFlags: 0
@@ -8488,7 +8567,7 @@ GameObject:
   - component: {fileID: 2789163008094826402}
   - component: {fileID: 7116212715749162850}
   - component: {fileID: 6617947194378308019}
-  - component: {fileID: 3028115949128471448}
+  - component: {fileID: 739447296110623362}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -8577,7 +8656,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3028115949128471448
+--- !u!114 &739447296110623362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8586,9 +8665,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5065564042863336110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5077267035909661036
 GameObject:
   m_ObjectHideFlags: 0
@@ -8600,7 +8680,7 @@ GameObject:
   - component: {fileID: 4085969951640373786}
   - component: {fileID: 1556315532081955673}
   - component: {fileID: 2573283864775513600}
-  - component: {fileID: 9197395191398997544}
+  - component: {fileID: 4753155764450039620}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -8689,7 +8769,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &9197395191398997544
+--- !u!114 &4753155764450039620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8698,9 +8778,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5077267035909661036}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5262322262675293959
 GameObject:
   m_ObjectHideFlags: 0
@@ -8712,7 +8793,7 @@ GameObject:
   - component: {fileID: 2445370148847715652}
   - component: {fileID: 7374973365579028924}
   - component: {fileID: 6203693011084329139}
-  - component: {fileID: 5412583108403688946}
+  - component: {fileID: 6457687856627708132}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -8801,7 +8882,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5412583108403688946
+--- !u!114 &6457687856627708132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8810,9 +8891,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5262322262675293959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5299232302725678707
 GameObject:
   m_ObjectHideFlags: 0
@@ -8824,7 +8906,7 @@ GameObject:
   - component: {fileID: 3604325050179136702}
   - component: {fileID: 7719203702406221419}
   - component: {fileID: 3761724369833123578}
-  - component: {fileID: 296075542001416801}
+  - component: {fileID: 5755740085399906495}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -8913,7 +8995,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &296075542001416801
+--- !u!114 &5755740085399906495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8922,9 +9004,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5299232302725678707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5437077955688400299
 GameObject:
   m_ObjectHideFlags: 0
@@ -8976,6 +9059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 1282963833796590997}
   attack2: {fileID: 6832473702741374914}
   attack3: {fileID: 4061148637081337589}
@@ -8995,7 +9079,7 @@ GameObject:
   - component: {fileID: 1841480466176195787}
   - component: {fileID: 8368577189336052653}
   - component: {fileID: 3989159087184764597}
-  - component: {fileID: 3193709499003814942}
+  - component: {fileID: 894478303897396673}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -9084,7 +9168,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3193709499003814942
+--- !u!114 &894478303897396673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9093,9 +9177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5599374926126441395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5712902606751717663
 GameObject:
   m_ObjectHideFlags: 0
@@ -9107,7 +9192,7 @@ GameObject:
   - component: {fileID: 587324597833963550}
   - component: {fileID: 143523974380885046}
   - component: {fileID: 4617514900952737502}
-  - component: {fileID: 4543754976545787804}
+  - component: {fileID: 5262394784799013027}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -9196,7 +9281,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4543754976545787804
+--- !u!114 &5262394784799013027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9205,9 +9290,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5712902606751717663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5770686286243409595
 GameObject:
   m_ObjectHideFlags: 0
@@ -9219,7 +9305,7 @@ GameObject:
   - component: {fileID: 6428673356018770259}
   - component: {fileID: 529810547304680632}
   - component: {fileID: 8619709364388986842}
-  - component: {fileID: 1684580628593359372}
+  - component: {fileID: 7697731130821816890}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -9308,7 +9394,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1684580628593359372
+--- !u!114 &7697731130821816890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9317,9 +9403,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5770686286243409595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5791019909567025943
 GameObject:
   m_ObjectHideFlags: 0
@@ -9331,7 +9418,7 @@ GameObject:
   - component: {fileID: 6513005703146896150}
   - component: {fileID: 7752404670735483979}
   - component: {fileID: 4600477242046930295}
-  - component: {fileID: 1391818204928233161}
+  - component: {fileID: 8259293293478585863}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -9420,7 +9507,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1391818204928233161
+--- !u!114 &8259293293478585863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9429,9 +9516,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5791019909567025943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5885575743652361491
 GameObject:
   m_ObjectHideFlags: 0
@@ -9443,7 +9531,7 @@ GameObject:
   - component: {fileID: 5620908351892012805}
   - component: {fileID: 7778508276822460524}
   - component: {fileID: 3356765974146194402}
-  - component: {fileID: 1109719436332815398}
+  - component: {fileID: 7944042940541234149}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -9532,7 +9620,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1109719436332815398
+--- !u!114 &7944042940541234149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9541,9 +9629,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5885575743652361491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5899815902821739726
 GameObject:
   m_ObjectHideFlags: 0
@@ -9555,7 +9644,7 @@ GameObject:
   - component: {fileID: 6725256228260779300}
   - component: {fileID: 2768938530360229391}
   - component: {fileID: 1196123638391425250}
-  - component: {fileID: 8926889670490069458}
+  - component: {fileID: 88496392383041933}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -9644,7 +9733,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8926889670490069458
+--- !u!114 &88496392383041933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9653,9 +9742,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5899815902821739726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &5968612987888023727
 GameObject:
   m_ObjectHideFlags: 0
@@ -9667,7 +9757,7 @@ GameObject:
   - component: {fileID: 7937425645324359558}
   - component: {fileID: 2981064229128821415}
   - component: {fileID: 4750612955986832880}
-  - component: {fileID: 4356280067985324051}
+  - component: {fileID: 8963846397255549211}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -9756,7 +9846,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4356280067985324051
+--- !u!114 &8963846397255549211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9765,9 +9855,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5968612987888023727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &6310421618158841755
 GameObject:
   m_ObjectHideFlags: 0
@@ -9779,7 +9870,7 @@ GameObject:
   - component: {fileID: 3036109712719801925}
   - component: {fileID: 8867870167476667420}
   - component: {fileID: 9096737671585409679}
-  - component: {fileID: 7157902173292713204}
+  - component: {fileID: 4621941802734804245}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -9868,7 +9959,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7157902173292713204
+--- !u!114 &4621941802734804245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9877,9 +9968,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6310421618158841755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &6364690012763783807
 GameObject:
   m_ObjectHideFlags: 0
@@ -9891,7 +9983,7 @@ GameObject:
   - component: {fileID: 526094702698528931}
   - component: {fileID: 3329883549238685005}
   - component: {fileID: 5303624143790343291}
-  - component: {fileID: 3418219663957400309}
+  - component: {fileID: 8468377502501536694}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -9980,7 +10072,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3418219663957400309
+--- !u!114 &8468377502501536694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9989,9 +10081,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6364690012763783807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &6561840572263217175
 GameObject:
   m_ObjectHideFlags: 0
@@ -10003,7 +10096,7 @@ GameObject:
   - component: {fileID: 156332768831462436}
   - component: {fileID: 4679325487630558920}
   - component: {fileID: 6240292550344069236}
-  - component: {fileID: 9109334983642378104}
+  - component: {fileID: 3720174899125928023}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -10092,7 +10185,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &9109334983642378104
+--- !u!114 &3720174899125928023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10101,9 +10194,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6561840572263217175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &6685335945765324351
 GameObject:
   m_ObjectHideFlags: 0
@@ -10115,7 +10209,7 @@ GameObject:
   - component: {fileID: 3085251194370925186}
   - component: {fileID: 2785503487696302273}
   - component: {fileID: 8909098161692887339}
-  - component: {fileID: 1383395052258545755}
+  - component: {fileID: 6964146078087642922}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -10204,7 +10298,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1383395052258545755
+--- !u!114 &6964146078087642922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10213,9 +10307,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6685335945765324351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &6772843690101453696
 GameObject:
   m_ObjectHideFlags: 0
@@ -10227,7 +10322,7 @@ GameObject:
   - component: {fileID: 8462477381296352674}
   - component: {fileID: 866267268366910514}
   - component: {fileID: 8173039767149402579}
-  - component: {fileID: 1263757699638124741}
+  - component: {fileID: 7953921229492742318}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -10316,7 +10411,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1263757699638124741
+--- !u!114 &7953921229492742318
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10325,9 +10420,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6772843690101453696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &6832473702741374914
 GameObject:
   m_ObjectHideFlags: 0
@@ -10339,7 +10435,7 @@ GameObject:
   - component: {fileID: 6080917799168326891}
   - component: {fileID: 6242013665945915606}
   - component: {fileID: 7681220873684793616}
-  - component: {fileID: 7961052010209929050}
+  - component: {fileID: 1922745390672368857}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -10428,7 +10524,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7961052010209929050
+--- !u!114 &1922745390672368857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10437,9 +10533,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6832473702741374914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &6958252745591167542
 GameObject:
   m_ObjectHideFlags: 0
@@ -10451,7 +10548,7 @@ GameObject:
   - component: {fileID: 2396637444707665240}
   - component: {fileID: 1712961784183313586}
   - component: {fileID: 6385073945265544286}
-  - component: {fileID: 7450733593563951836}
+  - component: {fileID: 1423463725975974467}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -10540,7 +10637,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7450733593563951836
+--- !u!114 &1423463725975974467
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10549,9 +10646,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6958252745591167542}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7011618781774856481
 GameObject:
   m_ObjectHideFlags: 0
@@ -10563,7 +10661,7 @@ GameObject:
   - component: {fileID: 5739350103221569148}
   - component: {fileID: 756613777455423996}
   - component: {fileID: 1831240695087291390}
-  - component: {fileID: 1968763670422552971}
+  - component: {fileID: 4856927677410488297}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -10652,7 +10750,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1968763670422552971
+--- !u!114 &4856927677410488297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10661,9 +10759,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7011618781774856481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7070921863934528963
 GameObject:
   m_ObjectHideFlags: 0
@@ -10675,7 +10774,7 @@ GameObject:
   - component: {fileID: 2807847387811726915}
   - component: {fileID: 6530183713133883076}
   - component: {fileID: 3398409174011228455}
-  - component: {fileID: 8029318994350982542}
+  - component: {fileID: 4831018424276424056}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -10764,7 +10863,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8029318994350982542
+--- !u!114 &4831018424276424056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10773,9 +10872,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7070921863934528963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7084716616954188563
 GameObject:
   m_ObjectHideFlags: 0
@@ -10787,7 +10887,7 @@ GameObject:
   - component: {fileID: 6404944207928046782}
   - component: {fileID: 4265245745251432298}
   - component: {fileID: 6043103215025845030}
-  - component: {fileID: 2576504408559871250}
+  - component: {fileID: 2853060805027359284}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -10876,7 +10976,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2576504408559871250
+--- !u!114 &2853060805027359284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10885,9 +10985,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7084716616954188563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7093123940180196073
 GameObject:
   m_ObjectHideFlags: 0
@@ -10899,7 +11000,7 @@ GameObject:
   - component: {fileID: 8294488654228152705}
   - component: {fileID: 1257481179596361969}
   - component: {fileID: 7519794345413824002}
-  - component: {fileID: 3830422796032353549}
+  - component: {fileID: 29132802525302168}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -10988,7 +11089,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3830422796032353549
+--- !u!114 &29132802525302168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10997,9 +11098,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7093123940180196073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7388178342423516978
 GameObject:
   m_ObjectHideFlags: 0
@@ -11011,7 +11113,7 @@ GameObject:
   - component: {fileID: 8045020526054445890}
   - component: {fileID: 4991798579870840445}
   - component: {fileID: 4371002693447359458}
-  - component: {fileID: 6342617372926622522}
+  - component: {fileID: 2883765518385168424}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -11100,7 +11202,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6342617372926622522
+--- !u!114 &2883765518385168424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11109,9 +11211,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7388178342423516978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7431320667649370871
 GameObject:
   m_ObjectHideFlags: 0
@@ -11123,7 +11226,7 @@ GameObject:
   - component: {fileID: 3194339029498909308}
   - component: {fileID: 944621007992351799}
   - component: {fileID: 7925738321691566735}
-  - component: {fileID: 2640501406554971905}
+  - component: {fileID: 6137797747158528784}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -11212,7 +11315,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &2640501406554971905
+--- !u!114 &6137797747158528784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11221,9 +11324,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7431320667649370871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7533187085666291461
 GameObject:
   m_ObjectHideFlags: 0
@@ -11235,7 +11339,7 @@ GameObject:
   - component: {fileID: 5348908652522708733}
   - component: {fileID: 8279461020133307116}
   - component: {fileID: 6252704755719796343}
-  - component: {fileID: 3832044405165005682}
+  - component: {fileID: 4223504082824677814}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -11324,7 +11428,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3832044405165005682
+--- !u!114 &4223504082824677814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11333,9 +11437,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7533187085666291461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7786985075694614687
 GameObject:
   m_ObjectHideFlags: 0
@@ -11347,7 +11452,7 @@ GameObject:
   - component: {fileID: 8066928456108174355}
   - component: {fileID: 8985810334795816913}
   - component: {fileID: 6708257600934221703}
-  - component: {fileID: 8139033522760959033}
+  - component: {fileID: 2541421761143031397}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -11436,7 +11541,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8139033522760959033
+--- !u!114 &2541421761143031397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11445,9 +11550,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7786985075694614687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7832113401042820307
 GameObject:
   m_ObjectHideFlags: 0
@@ -11459,7 +11565,7 @@ GameObject:
   - component: {fileID: 409002584524508486}
   - component: {fileID: 5613070535569239230}
   - component: {fileID: 8029356499477142043}
-  - component: {fileID: 3402105450983609817}
+  - component: {fileID: 7637091654822458839}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -11548,7 +11654,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &3402105450983609817
+--- !u!114 &7637091654822458839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11557,9 +11663,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7832113401042820307}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7902986229592775809
 GameObject:
   m_ObjectHideFlags: 0
@@ -11571,7 +11678,7 @@ GameObject:
   - component: {fileID: 2760547223237674728}
   - component: {fileID: 9114859335904276515}
   - component: {fileID: 766551169149333116}
-  - component: {fileID: 4588064351098490293}
+  - component: {fileID: 5174462004802513083}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -11660,7 +11767,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4588064351098490293
+--- !u!114 &5174462004802513083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11669,9 +11776,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7902986229592775809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &7970340682703851903
 GameObject:
   m_ObjectHideFlags: 0
@@ -11683,7 +11791,7 @@ GameObject:
   - component: {fileID: 7628516561795991394}
   - component: {fileID: 1215961735162684272}
   - component: {fileID: 6558716034141298642}
-  - component: {fileID: 275741481744880255}
+  - component: {fileID: 933739053767648115}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -11772,7 +11880,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &275741481744880255
+--- !u!114 &933739053767648115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11781,9 +11889,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7970340682703851903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8063128102333065557
 GameObject:
   m_ObjectHideFlags: 0
@@ -11795,7 +11904,7 @@ GameObject:
   - component: {fileID: 8455523611651283652}
   - component: {fileID: 527771932605389700}
   - component: {fileID: 6425625795672716602}
-  - component: {fileID: 6104999482711227771}
+  - component: {fileID: 2580681707801020485}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -11884,7 +11993,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &6104999482711227771
+--- !u!114 &2580681707801020485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11893,9 +12002,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8063128102333065557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8074360146756792523
 GameObject:
   m_ObjectHideFlags: 0
@@ -11907,7 +12017,7 @@ GameObject:
   - component: {fileID: 8025118051869565401}
   - component: {fileID: 6646712406109665199}
   - component: {fileID: 251751554903576087}
-  - component: {fileID: 774364889358794504}
+  - component: {fileID: 4336593271727951928}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -11996,7 +12106,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &774364889358794504
+--- !u!114 &4336593271727951928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12005,9 +12115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8074360146756792523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8159057641705984312
 GameObject:
   m_ObjectHideFlags: 0
@@ -12059,6 +12170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 990411677775815091}
   attack2: {fileID: 1099956617717467478}
   attack3: {fileID: 3305046529000340707}
@@ -12078,7 +12190,7 @@ GameObject:
   - component: {fileID: 7347830584364866533}
   - component: {fileID: 5948308274962279650}
   - component: {fileID: 5073401212420996962}
-  - component: {fileID: 5998178306400712486}
+  - component: {fileID: 932078515257145919}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -12167,7 +12279,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &5998178306400712486
+--- !u!114 &932078515257145919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12176,9 +12288,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8281110818660838129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747344775907463
 GameObject:
   m_ObjectHideFlags: 0
@@ -12230,6 +12343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 2355020951103928787}
   attack2: {fileID: 912750920462189152}
   attack3: {fileID: 2733311146813744168}
@@ -12249,7 +12363,7 @@ GameObject:
   - component: {fileID: 8324747345084575091}
   - component: {fileID: 8324747345084575102}
   - component: {fileID: 8324747345084575101}
-  - component: {fileID: 8324747345084575100}
+  - component: {fileID: 18324233849293491}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -12338,7 +12452,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747345084575100
+--- !u!114 &18324233849293491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12347,9 +12461,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747345084575090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747345141590539
 GameObject:
   m_ObjectHideFlags: 0
@@ -12361,7 +12476,7 @@ GameObject:
   - component: {fileID: 8324747345141590548}
   - component: {fileID: 8324747345141590551}
   - component: {fileID: 8324747345141590550}
-  - component: {fileID: 8324747345141590549}
+  - component: {fileID: 2603254440029347444}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -12450,7 +12565,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747345141590549
+--- !u!114 &2603254440029347444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12459,9 +12574,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747345141590539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747345211170085
 GameObject:
   m_ObjectHideFlags: 0
@@ -12513,6 +12629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 354585172188504182}
   attack2: {fileID: 3106336571401126124}
   attack3: {fileID: 8900986252631011044}
@@ -12532,7 +12649,7 @@ GameObject:
   - component: {fileID: 8324747345690214757}
   - component: {fileID: 8324747345690214752}
   - component: {fileID: 8324747345690214759}
-  - component: {fileID: 8324747345690214758}
+  - component: {fileID: 5922788396133703045}
   m_Layer: 0
   m_Name: Attack (1)
   m_TagString: Bat_Boss_Attack
@@ -12621,7 +12738,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747345690214758
+--- !u!114 &5922788396133703045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12630,9 +12747,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747345690214756}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747345738771116
 GameObject:
   m_ObjectHideFlags: 0
@@ -12691,6 +12809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33e67bb0014b7f44bd5066bce4b919e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move_ran: 0
   group1: {fileID: 8324747346396893589}
   group2: {fileID: 8324747345211170085}
   group3: {fileID: 8324747344775907463}
@@ -12717,7 +12836,7 @@ GameObject:
   - component: {fileID: 8324747345761542427}
   - component: {fileID: 8324747345761542438}
   - component: {fileID: 8324747345761542437}
-  - component: {fileID: 8324747345761542436}
+  - component: {fileID: 4297167807426372052}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -12806,7 +12925,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747345761542436
+--- !u!114 &4297167807426372052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12815,9 +12934,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747345761542426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747345776410743
 GameObject:
   m_ObjectHideFlags: 0
@@ -12829,7 +12949,7 @@ GameObject:
   - component: {fileID: 8324747345776410736}
   - component: {fileID: 8324747345776410739}
   - component: {fileID: 8324747345776410738}
-  - component: {fileID: 8324747345776410737}
+  - component: {fileID: 1660004298074434843}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -12918,7 +13038,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747345776410737
+--- !u!114 &1660004298074434843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12927,9 +13047,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747345776410743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747345789295721
 GameObject:
   m_ObjectHideFlags: 0
@@ -12981,6 +13102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 3606297353304116426}
   attack2: {fileID: 98355988621917160}
   attack3: {fileID: 6685335945765324351}
@@ -13000,7 +13122,7 @@ GameObject:
   - component: {fileID: 8324747345985883678}
   - component: {fileID: 8324747345985883673}
   - component: {fileID: 8324747345985883672}
-  - component: {fileID: 8324747345985883679}
+  - component: {fileID: 697760973543052631}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -13089,7 +13211,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747345985883679
+--- !u!114 &697760973543052631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13098,9 +13220,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747345985883677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747346033647637
 GameObject:
   m_ObjectHideFlags: 0
@@ -13112,7 +13235,7 @@ GameObject:
   - component: {fileID: 8324747346033647638}
   - component: {fileID: 8324747346033647633}
   - component: {fileID: 8324747346033647632}
-  - component: {fileID: 8324747346033647639}
+  - component: {fileID: 2174615303327912892}
   m_Layer: 0
   m_Name: Attack (5)
   m_TagString: Bat_Boss_Attack
@@ -13201,7 +13324,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747346033647639
+--- !u!114 &2174615303327912892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13210,9 +13333,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747346033647637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747346334024706
 GameObject:
   m_ObjectHideFlags: 0
@@ -13264,6 +13388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 8578614649608553010}
   attack2: {fileID: 4101188309400902167}
   attack3: {fileID: 4200539641382811511}
@@ -13283,7 +13408,7 @@ GameObject:
   - component: {fileID: 8324747346396196268}
   - component: {fileID: 8324747346396196271}
   - component: {fileID: 8324747346396196270}
-  - component: {fileID: 8324747346396196269}
+  - component: {fileID: 1004798017376374920}
   m_Layer: 0
   m_Name: Attack (7)
   m_TagString: Bat_Boss_Attack
@@ -13372,7 +13497,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8324747346396196269
+--- !u!114 &1004798017376374920
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13381,9 +13506,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8324747346396196259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8324747346396893589
 GameObject:
   m_ObjectHideFlags: 0
@@ -13435,6 +13561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 8324747345776410743}
   attack2: {fileID: 8324747345690214756}
   attack3: {fileID: 8324747345141590539}
@@ -13494,6 +13621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c2850e962b2904284699292b9d4757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
   attack1: {fileID: 287555528421273752}
   attack2: {fileID: 2071575606770359375}
   attack3: {fileID: 5968612987888023727}
@@ -13513,7 +13641,7 @@ GameObject:
   - component: {fileID: 9138053225774166036}
   - component: {fileID: 7470981731347411286}
   - component: {fileID: 7793569337682129912}
-  - component: {fileID: 8985064646937960588}
+  - component: {fileID: 5310269114014512797}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -13602,7 +13730,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8985064646937960588
+--- !u!114 &5310269114014512797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13611,9 +13739,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8475462249966423214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8561903049497114894
 GameObject:
   m_ObjectHideFlags: 0
@@ -13625,7 +13754,7 @@ GameObject:
   - component: {fileID: 6714441488031231481}
   - component: {fileID: 4544129884712758807}
   - component: {fileID: 6962247213980002951}
-  - component: {fileID: 8248326603547516587}
+  - component: {fileID: 9125406703727061208}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -13714,7 +13843,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &8248326603547516587
+--- !u!114 &9125406703727061208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13723,9 +13852,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8561903049497114894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8578614649608553010
 GameObject:
   m_ObjectHideFlags: 0
@@ -13737,7 +13867,7 @@ GameObject:
   - component: {fileID: 1023193996194399051}
   - component: {fileID: 287458286563900970}
   - component: {fileID: 6726251305422736619}
-  - component: {fileID: 1248514349313572669}
+  - component: {fileID: 2741157383373152927}
   m_Layer: 0
   m_Name: Attack
   m_TagString: Bat_Boss_Attack
@@ -13826,7 +13956,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1248514349313572669
+--- !u!114 &2741157383373152927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13835,9 +13965,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8578614649608553010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8742884773774459642
 GameObject:
   m_ObjectHideFlags: 0
@@ -13849,7 +13980,7 @@ GameObject:
   - component: {fileID: 5798290934348248177}
   - component: {fileID: 2410374794953407712}
   - component: {fileID: 3530409874822675581}
-  - component: {fileID: 1627375415861468579}
+  - component: {fileID: 4125290030819628566}
   m_Layer: 0
   m_Name: Attack (6)
   m_TagString: Bat_Boss_Attack
@@ -13938,7 +14069,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &1627375415861468579
+--- !u!114 &4125290030819628566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13947,9 +14078,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8742884773774459642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8900986252631011044
 GameObject:
   m_ObjectHideFlags: 0
@@ -13961,7 +14093,7 @@ GameObject:
   - component: {fileID: 3481887019192438197}
   - component: {fileID: 2920384967585964001}
   - component: {fileID: 3527647195029666141}
-  - component: {fileID: 4293734396625190999}
+  - component: {fileID: 4810160375694495395}
   m_Layer: 0
   m_Name: Attack (2)
   m_TagString: Bat_Boss_Attack
@@ -14050,7 +14182,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &4293734396625190999
+--- !u!114 &4810160375694495395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14059,9 +14191,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8900986252631011044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &8986692801010686645
 GameObject:
   m_ObjectHideFlags: 0
@@ -14073,7 +14206,7 @@ GameObject:
   - component: {fileID: 2345598213261169792}
   - component: {fileID: 5986378902286585533}
   - component: {fileID: 1833406551708685901}
-  - component: {fileID: 7407075816861926792}
+  - component: {fileID: 6356532302503304363}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -14162,7 +14295,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7407075816861926792
+--- !u!114 &6356532302503304363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14171,9 +14304,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8986692801010686645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &9159938302935990541
 GameObject:
   m_ObjectHideFlags: 0
@@ -14185,7 +14319,7 @@ GameObject:
   - component: {fileID: 974634630287679941}
   - component: {fileID: 8064449797499511096}
   - component: {fileID: 29772333634078778}
-  - component: {fileID: 663634838532472093}
+  - component: {fileID: 183572432942735283}
   m_Layer: 0
   m_Name: Attack (3)
   m_TagString: Bat_Boss_Attack
@@ -14274,7 +14408,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &663634838532472093
+--- !u!114 &183572432942735283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14283,9 +14417,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9159938302935990541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}
 --- !u!1 &9163436869062315217
 GameObject:
   m_ObjectHideFlags: 0
@@ -14297,7 +14432,7 @@ GameObject:
   - component: {fileID: 3484575873666260811}
   - component: {fileID: 590902533694660054}
   - component: {fileID: 423354251495418046}
-  - component: {fileID: 7326866639794827089}
+  - component: {fileID: 5106000379158629652}
   m_Layer: 0
   m_Name: Attack (4)
   m_TagString: Bat_Boss_Attack
@@ -14386,7 +14521,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.125
---- !u!114 &7326866639794827089
+--- !u!114 &5106000379158629652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14395,6 +14530,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9163436869062315217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8bec183d708e546b9767fcc6d53f13, type: 3}
+  m_Script: {fileID: 11500000, guid: e7c1ef84f0a94c540a5a5573d49fcf76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8324747345738771118}

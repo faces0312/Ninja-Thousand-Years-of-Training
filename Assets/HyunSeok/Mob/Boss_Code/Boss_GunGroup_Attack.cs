@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boss_GunGroup_Attack : MonoBehaviour
 {
+    public Boss_GunGroup boss;
+
     public GameObject attack1;
     public GameObject attack2;
     public GameObject attack3;
@@ -36,6 +38,9 @@ public class Boss_GunGroup_Attack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Rotate(Vector3.forward * 15 * Time.deltaTime);
+        if(boss.move_ran == 0)
+            transform.Rotate(Vector3.forward * 15 * Time.deltaTime);
+        else
+            transform.Rotate(Vector3.back * 15 * Time.deltaTime);
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boss_GunGroup : MonoBehaviour
 {
+    public int move_ran;
+
     public GameObject group1;
     public GameObject group2;
     public GameObject group3;
@@ -22,6 +24,8 @@ public class Boss_GunGroup : MonoBehaviour
 
     private void OnEnable()
     {
+        move_ran = Random.Range(0, 2);
+
         group1.gameObject.SetActive(false);
         group2.gameObject.SetActive(false);
         group3.gameObject.SetActive(false);
@@ -45,105 +49,105 @@ public class Boss_GunGroup : MonoBehaviour
 
     IEnumerator Group2()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group2.gameObject.SetActive(true);
         StartCoroutine(nameof(Group3));
     }
 
     IEnumerator Group3()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group3.gameObject.SetActive(true);
         StartCoroutine(nameof(Group4));
     }
 
     IEnumerator Group4()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group4.gameObject.SetActive(true);
         StartCoroutine(nameof(Group5));
     }
 
     IEnumerator Group5()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group5.gameObject.SetActive(true);
         StartCoroutine(nameof(Group6));
     }
 
     IEnumerator Group6()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group6.gameObject.SetActive(true);
         StartCoroutine(nameof(Group7));
     }
 
     IEnumerator Group7()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group7.gameObject.SetActive(true);
         StartCoroutine(nameof(Group8));
     }
 
     IEnumerator Group8()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group8.gameObject.SetActive(true);
         StartCoroutine(nameof(Group9));
     }
 
     IEnumerator Group9()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group9.gameObject.SetActive(true);
         StartCoroutine(nameof(Group10));
     }
 
     IEnumerator Group10()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group10.gameObject.SetActive(true);
         StartCoroutine(nameof(Group11));
     }
 
     IEnumerator Group11()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group11.gameObject.SetActive(true);
         StartCoroutine(nameof(Group12));
     }
 
     IEnumerator Group12()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group12.gameObject.SetActive(true);
         StartCoroutine(nameof(Group13));
     }
 
     IEnumerator Group13()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group13.gameObject.SetActive(true);
         StartCoroutine(nameof(Group14));
     }
 
     IEnumerator Group14()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group14.gameObject.SetActive(true);
         StartCoroutine(nameof(Group15));
     }
 
     IEnumerator Group15()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.2f);
         group15.gameObject.SetActive(true);
     }
 
 
     IEnumerator Dis_GunGroup()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(4f);
         gameObject.SetActive(false);
     }
 }

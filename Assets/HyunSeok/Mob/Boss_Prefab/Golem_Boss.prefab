@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6117442565537178160}
   - component: {fileID: 8636112839368266480}
-  - component: {fileID: 6179721919945059266}
+  - component: {fileID: 3260942818061501171}
   m_Layer: 7
   m_Name: Laser2
   m_TagString: Golem_Boss_Laser
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 369244491842405030}
   m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0.3, y: 0.2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 860598204700760396}
   m_RootOrder: 1
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6408773277176534577, guid: c3e3cd3bbe8978941aaf4ab5dc4a8fa2, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4207893659553543306, guid: a6929a1879ea4e7429463d9341a2180b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6179721919945059266
+--- !u!61 &3260942818061501171
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,18 +96,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0042655, y: 0.031268}
+  m_Offset: {x: 0, y: -0.61}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 6.0305495, y: 2.33}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.1, y: 1.22}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.637153, y: 1.8554137}
+  m_Size: {x: 0.1, y: 1.22}
   m_EdgeRadius: 0
 --- !u!1 &616440272962313435
 GameObject:
@@ -186,8 +186,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -5368071304861784378, guid: 4d39aed4253c4374495c84501a58ec0a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 47478579247895075, guid: 831786b6ef8b4184a948d688b5a9ebbf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -480,6 +480,7 @@ MonoBehaviour:
   mob: {fileID: 616440272962313434}
   laser: {fileID: 2171135868572938584}
   atk_CT: 0
+  laser_ran: 0
 --- !u!1 &1849179417552131789
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5908993598327113798}
   - component: {fileID: 969302125604296376}
-  - component: {fileID: 1410154044032471677}
+  - component: {fileID: 8026360194603517387}
   m_Layer: 7
   m_Name: Laser1
   m_TagString: Golem_Boss_Laser
@@ -506,8 +507,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849179417552131789}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 860598204700760396}
   m_RootOrder: 0
@@ -552,8 +553,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6408773277176534577, guid: c3e3cd3bbe8978941aaf4ab5dc4a8fa2, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4207893659553543306, guid: a6929a1879ea4e7429463d9341a2180b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -563,7 +564,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1410154044032471677
+--- !u!61 &8026360194603517387
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -576,18 +577,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0042655, y: 0.031268}
+  m_Offset: {x: 0, y: -0.61}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 6.0305495, y: 2.33}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.1, y: 1.22}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.637153, y: 1.8554137}
+  m_Size: {x: 0.1, y: 1.22}
   m_EdgeRadius: 0
 --- !u!1 &2949870237596524105
 GameObject:
@@ -614,7 +615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2949870237596524105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.05, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5908993598327113798}
@@ -638,6 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af95300a52ea83c4681294d566e578df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  golem: {fileID: 616440274633660126}
   laser1: {fileID: 1849179417552131789}
   laser2: {fileID: 369244491842405030}
   laser3: {fileID: 4287239772392008377}
@@ -654,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8222478279848884567}
   - component: {fileID: 1356057901197381752}
-  - component: {fileID: 2752914397283351841}
+  - component: {fileID: 114702054142532643}
   m_Layer: 7
   m_Name: Laser3
   m_TagString: Golem_Boss_Laser
@@ -670,8 +672,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4287239772392008377}
   m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0.3, y: -0.2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 860598204700760396}
   m_RootOrder: 2
@@ -716,8 +718,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6408773277176534577, guid: c3e3cd3bbe8978941aaf4ab5dc4a8fa2, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4207893659553543306, guid: a6929a1879ea4e7429463d9341a2180b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -727,7 +729,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2752914397283351841
+--- !u!61 &114702054142532643
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -740,18 +742,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0042655, y: 0.031268}
+  m_Offset: {x: 0, y: -0.61}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 6.0305495, y: 2.33}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.1, y: 1.22}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.637153, y: 1.8554137}
+  m_Size: {x: 0.1, y: 1.22}
   m_EdgeRadius: 0
 --- !u!1 &4642927849145725545
 GameObject:
@@ -763,7 +765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826366494251224860}
   - component: {fileID: 8577753760657699627}
-  - component: {fileID: 7668000944582020342}
+  - component: {fileID: 4348231607082825145}
   m_Layer: 7
   m_Name: Laser4
   m_TagString: Golem_Boss_Laser
@@ -779,8 +781,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4642927849145725545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: -0.35, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 860598204700760396}
   m_RootOrder: 3
@@ -825,8 +827,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6408773277176534577, guid: c3e3cd3bbe8978941aaf4ab5dc4a8fa2, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4207893659553543306, guid: a6929a1879ea4e7429463d9341a2180b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -836,7 +838,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7668000944582020342
+--- !u!61 &4348231607082825145
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -849,18 +851,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0042655, y: 0.031268}
+  m_Offset: {x: 0, y: -0.61}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 6.0305495, y: 2.33}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.1, y: 1.22}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.637153, y: 1.8554137}
+  m_Size: {x: 0.1, y: 1.22}
   m_EdgeRadius: 0
 --- !u!1 &6689923703557207477
 GameObject:
@@ -872,7 +874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4146143781453734547}
   - component: {fileID: 3935940152716266572}
-  - component: {fileID: 2466945575927945737}
+  - component: {fileID: 7952891051164522953}
   m_Layer: 7
   m_Name: Laser6
   m_TagString: Golem_Boss_Laser
@@ -888,8 +890,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6689923703557207477}
   m_LocalRotation: {x: 0, y: 0, z: -0.86602545, w: 0.49999994}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.2, z: 1}
+  m_LocalPosition: {x: -0.3, y: 0.2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 860598204700760396}
   m_RootOrder: 5
@@ -934,8 +936,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6408773277176534577, guid: c3e3cd3bbe8978941aaf4ab5dc4a8fa2, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4207893659553543306, guid: a6929a1879ea4e7429463d9341a2180b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -945,7 +947,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2466945575927945737
+--- !u!61 &7952891051164522953
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -958,18 +960,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0042655, y: 0.031268}
+  m_Offset: {x: 0, y: -0.61}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 6.0305495, y: 2.33}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.1, y: 1.22}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.637153, y: 1.8554137}
+  m_Size: {x: 0.1, y: 1.22}
   m_EdgeRadius: 0
 --- !u!1 &8986779683348029675
 GameObject:
@@ -981,7 +983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8941034032467739482}
   - component: {fileID: 8268435200520596421}
-  - component: {fileID: 58658070552765800}
+  - component: {fileID: 7557452704496673610}
   m_Layer: 7
   m_Name: Laser5
   m_TagString: Golem_Boss_Laser
@@ -997,8 +999,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8986779683348029675}
   m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.2, z: 1}
+  m_LocalPosition: {x: -0.3, y: -0.2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 860598204700760396}
   m_RootOrder: 4
@@ -1043,8 +1045,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6408773277176534577, guid: c3e3cd3bbe8978941aaf4ab5dc4a8fa2, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4207893659553543306, guid: a6929a1879ea4e7429463d9341a2180b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1054,7 +1056,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &58658070552765800
+--- !u!61 &7557452704496673610
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1067,16 +1069,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0042655, y: 0.031268}
+  m_Offset: {x: 0, y: -0.61}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 6.0305495, y: 2.33}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.1, y: 1.22}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.637153, y: 1.8554137}
+  m_Size: {x: 0.1, y: 1.22}
   m_EdgeRadius: 0

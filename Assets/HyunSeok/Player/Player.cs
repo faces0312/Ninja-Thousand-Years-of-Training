@@ -59,6 +59,8 @@ public class Player : MonoBehaviour
        
         if (hp <=0)
         {
+            Manager.manager.result_page.gameObject.SetActive(true);
+            Manager.manager.result.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
         float x = joy_Stick.Horizontal();

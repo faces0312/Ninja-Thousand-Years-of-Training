@@ -68,7 +68,7 @@ public class Boss_ShotGun : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(Vector3.right * 0.4f * Time.deltaTime);
+        transform.Translate(Vector3.right * 0.55f * Time.deltaTime);
     }
 
     IEnumerator Dis_Atk()

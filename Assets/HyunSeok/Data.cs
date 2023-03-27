@@ -32,7 +32,7 @@ public class Data : MonoBehaviour
         }
     }
 
-    public string GameDataFileName = "monsterXhunter.json";  //이름 변경 절대 X 
+    public string GameDataFileName = "Ninja.json";  //이름 변경 절대 X 
 
 
 

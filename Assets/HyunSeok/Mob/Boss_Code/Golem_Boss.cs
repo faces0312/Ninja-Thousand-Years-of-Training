@@ -34,7 +34,7 @@ public class Golem_Boss : MonoBehaviour
         target = Manager.manager.player.GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
         hp = Data.Instance.gameData.boss_hp;
-        speed = 0.8f;
+        speed = 0.6f;
         target_on = true;
         golem_Boss_Body.gameObject.SetActive(true);
         /*shotGun.gameObject.SetActive(false);
@@ -91,15 +91,31 @@ public class Golem_Boss : MonoBehaviour
         shotGun3.gameObject.SetActive(false);
         laser.gameObject.SetActive(false);
         gunGroup.gameObject.SetActive(false);*/
+        Data.Instance.gameData.mob1_hp += 5;
+        Data.Instance.gameData.bat_hp += 5;
+        Data.Instance.gameData.gatekeeper_hp += 5;
+        Data.Instance.gameData.golem_hp += 8;
+
+        Data.Instance.gameData.bat_boss_atk+= 3;
+        Data.Instance.gameData.bat_boss_laser+=3;
+
+        Data.Instance.gameData.golem_boss_lighting+= 3;
+        Data.Instance.gameData.golem_boss_wire+= 3;
+        Data.Instance.gameData.golem_boss_laser+= 3;
+
+        Data.Instance.gameData.redspit_boss_atk+= 3;
+
         Data.Instance.gameData.boss_cnt++;
+
+        Manager.manager.time_bigWave = 0;
         Manager.manager.objectManager.is_mob = true;
         Manager.manager.objectManager.is_bigwave = true;
         Manager.manager.objectManager.is_boss = true;
         Manager.manager.objectManager.bat_Macha_Wall.gameObject.SetActive(false);
         Manager.manager.objectManager.player_wall.gameObject.SetActive(false);
-        Manager.manager.objectManager.boss_hp_fill.gameObject.SetActive(false);
+        Manager.manager.objectManager.boss_hp_bar.gameObject.SetActive(false);
         Manager.manager.objectManager.boss_Tmp_CT = Manager.manager.objectManager.boss_CT;
-        Data.Instance.gameData.boss_hp += 1000;
+        Data.Instance.gameData.boss_hp += 400;
         gameObject.SetActive(false);
     }
 }

@@ -19,10 +19,11 @@ public class Golem_Boss_Area : MonoBehaviour
     public float atk_CT;
     private float atk_Tmp_CT;
 
+    public int laser_ran;
     //bool is_area;
     private void OnEnable()
     {
-        atk_CT = 5f;
+        atk_CT = 8f;
         atk_Tmp_CT = 1f;
     }
     private void FixedUpdate()
@@ -68,8 +69,9 @@ public class Golem_Boss_Area : MonoBehaviour
 
     void Laser()
     {
+        laser_ran = Random.Range(0, 2);
         //¼¦°Ç ÄÚµå
-        laser.gameObject.transform.position = mob.gameObject.transform.position;
+        laser.gameObject.transform.position = new Vector3(mob.gameObject.transform.position.x - 0.05f, mob.gameObject.transform.position.y - 0.25f);
 
         laser.gameObject.SetActive(true);
     }

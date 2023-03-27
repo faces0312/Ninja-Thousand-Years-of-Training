@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Boss_Laser : MonoBehaviour
 {
+    public Bat_Boss_Area bat;
     bool is_rotate;
     private void OnEnable()
     {
@@ -16,7 +17,10 @@ public class Boss_Laser : MonoBehaviour
     {
         if(is_rotate == true)
         {
-            transform.Rotate(0, 0, 45 * Time.deltaTime);
+            if(bat.laser_ran == 0)
+                transform.Rotate(0, 0, 45 * Time.deltaTime);
+            else
+                transform.Rotate(0, 0, -45 * Time.deltaTime);
         }
     }
 

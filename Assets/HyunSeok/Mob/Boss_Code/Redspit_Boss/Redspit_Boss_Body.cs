@@ -13,21 +13,35 @@ public class Redspit_Boss_Body : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "Max_Dmg")
+        {
+            mob.hp -= 10000000000;
 
+            if (mob.hp <= 0)
+            {
+                mob.speed = 0;
+                mob.die.SetBool("Is_Die", true);
+                Drop_Letter();
+                mob.StopAllCoroutines();
+                gameObject.SetActive(false);
+                return;
+            }
+            StartCoroutine(AttackHit());
+        }
         if (collision.tag == "Normal_Atk")
         {
             if (Data.Instance.gameData.normal_atk_lv == 1)
-                mob.hp -= 1;
+                mob.hp -= (1 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.normal_atk_lv == 2)
-                mob.hp -= 2;
+                mob.hp -= (2 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.normal_atk_lv == 3)
-                mob.hp -= 3;
+                mob.hp -= (3 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.normal_atk_lv == 4)
-                mob.hp -= 4;
+                mob.hp -= (4 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.normal_atk_lv == 5)
-                mob.hp -= 5;
+                mob.hp -= (5 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.normal_atk_lv == 6)
-                mob.hp -= 5;
+                mob.hp -= (5 + Data.Instance.gameData.player_normal);
 
             collision.gameObject.SetActive(false);
             if (mob.hp <= 0)
@@ -45,17 +59,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "Shadow_Atk")
         {
             if (Data.Instance.gameData.shadow_partner_lv == 1)
-                mob.hp -= 1;
+                mob.hp -= (1 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.shadow_partner_lv == 2)
-                mob.hp -= 2;
+                mob.hp -= (2 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.shadow_partner_lv == 3)
-                mob.hp -= 2;
+                mob.hp -= (2 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.shadow_partner_lv == 4)  //분신이 두명이래
-                mob.hp -= 2;
+                mob.hp -= (2 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.shadow_partner_lv == 5)
-                mob.hp -= 3;
+                mob.hp -= (3 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.shadow_partner_lv == 6)
-                mob.hp -= 4;
+                mob.hp -= (4 + Data.Instance.gameData.player_normal);
 
             collision.gameObject.SetActive(false);
             if (mob.hp <= 0)
@@ -73,17 +87,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "Boomerang")
         {
             if (Data.Instance.gameData.boomerang_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= (5 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.boomerang_lv == 2)
-                mob.hp -= 15;
+                mob.hp -= (7 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.boomerang_lv == 3)
-                mob.hp -= 20;
+                mob.hp -= (10 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.boomerang_lv == 4)
-                mob.hp -= 25;
+                mob.hp -= (15 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.boomerang_lv == 5)
-                mob.hp -= 28;
+                mob.hp -= (20 + Data.Instance.gameData.player_normal);
             else if (Data.Instance.gameData.boomerang_lv == 6)
-                mob.hp -= 30;
+                mob.hp -= (25 + Data.Instance.gameData.player_normal);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -99,17 +113,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "Fire")
         {
             if (Data.Instance.gameData.fire_lv == 1)
-                mob.hp -= 5;
+                mob.hp -= (5 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_lv == 2)
-                mob.hp -= 7;
+                mob.hp -= (7 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_lv == 3)
-                mob.hp -= 10;
+                mob.hp -= (10 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_lv == 4)
-                mob.hp -= 10;
+                mob.hp -= (20 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_lv == 5)
-                mob.hp -= 15;
+                mob.hp -= (30 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_lv == 6)
-                mob.hp -= 30;
+                mob.hp -= (40 + Data.Instance.gameData.player_fire);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -125,17 +139,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "Talisman")
         {
             if (Data.Instance.gameData.talisman_lv == 1)
-                mob.hp -= 5;
+                mob.hp -= (5 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.talisman_lv == 2)
-                mob.hp -= 7;
+                mob.hp -= (7 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.talisman_lv == 3)
-                mob.hp -= 10;
+                mob.hp -= (10 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.talisman_lv == 4)
-                mob.hp -= 15;
+                mob.hp -= (15 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.talisman_lv == 5)
-                mob.hp -= 20;
+                mob.hp -= (20 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.talisman_lv == 6)
-                mob.hp -= 25;
+                mob.hp -= (25 + Data.Instance.gameData.player_fire);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -151,17 +165,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "FireColumn")
         {
             if (Data.Instance.gameData.fire_column_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= (10 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_column_lv == 2)
-                mob.hp -= 15;
+                mob.hp -= (15 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_column_lv == 3)
-                mob.hp -= 20;
+                mob.hp -= (20 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_column_lv == 4)
-                mob.hp -= 25;
+                mob.hp -= (25 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_column_lv == 5)
-                mob.hp -= 28;
+                mob.hp -= (30 + Data.Instance.gameData.player_fire);
             else if (Data.Instance.gameData.fire_column_lv == 6)
-                mob.hp -= 30;
+                mob.hp -= (50 + Data.Instance.gameData.player_fire);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -177,17 +191,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "Tornado")
         {
             if (Data.Instance.gameData.tornado_lv == 1)
-                mob.hp -= 10;
+                mob.hp -= ((3 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.tornado_lv == 2)
-                mob.hp -= 15;
+                mob.hp -= ((5 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.tornado_lv == 3)
-                mob.hp -= 20;
+                mob.hp -= ((7 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.tornado_lv == 4)
-                mob.hp -= 25;
+                mob.hp -= ((10 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.tornado_lv == 5)
-                mob.hp -= 28;
+                mob.hp -= ((15 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.tornado_lv == 6)
-                mob.hp -= 30;
+                mob.hp -= ((20 + Data.Instance.gameData.player_mecha) * 1.3f);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -203,17 +217,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "VoltTackle")
         {
             if (Data.Instance.gameData.voltTackle_lv == 1)
-                mob.hp -= 3;
+                mob.hp -= ((3 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.voltTackle_lv == 2)
-                mob.hp -= 5;
+                mob.hp -= ((5 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.voltTackle_lv == 3)
-                mob.hp -= 7;
+                mob.hp -= ((7 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.voltTackle_lv == 4)
-                mob.hp -= 10;
+                mob.hp -= ((10 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.voltTackle_lv == 5)
-                mob.hp -= 12;
+                mob.hp -= ((12 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.voltTackle_lv == 6)
-                mob.hp -= 15;
+                mob.hp -= ((15 + Data.Instance.gameData.player_mecha) * 1.3f);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -229,17 +243,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "Electric")
         {
             if (Data.Instance.gameData.electricity_lv == 1)
-                mob.hp -= 7;
+                mob.hp -= ((7 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 2)
-                mob.hp -= 10;
+                mob.hp -= ((10 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 3)
-                mob.hp -= 13;
+                mob.hp -= ((15 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 4)
-                mob.hp -= 16;
+                mob.hp -= ((20 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 5)
-                mob.hp -= 18;
+                mob.hp -= ((25 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 6)
-                mob.hp -= 22;
+                mob.hp -= ((30 + Data.Instance.gameData.player_mecha) * 1.3f);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -254,19 +268,18 @@ public class Redspit_Boss_Body : MonoBehaviour
 
         if (collision.tag == "Electric_Area")
         {
-
             if (Data.Instance.gameData.electricity_lv == 1)
-                mob.hp -= 3;
+                mob.hp -= ((3 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 2)
-                mob.hp -= 4;
+                mob.hp -= ((3 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 3)
-                mob.hp -= 5;
+                mob.hp -= ((5 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 4)
-                mob.hp -= 6;
+                mob.hp -= ((5 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 5)
-                mob.hp -= 7;
+                mob.hp -= ((7 + Data.Instance.gameData.player_mecha) * 1.3f);
             else if (Data.Instance.gameData.electricity_lv == 6)
-                mob.hp -= 8;
+                mob.hp -= ((10 + Data.Instance.gameData.player_mecha) * 1.3f);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -282,17 +295,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         if (collision.tag == "Wind")
         {
             if (Data.Instance.gameData.wind_lv == 1)
-                mob.hp -= 5;
+                mob.hp -= (7 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.wind_lv == 2)
-                mob.hp -= 8;
+                mob.hp -= (10 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.wind_lv == 3)
-                mob.hp -= 10;
+                mob.hp -= (10 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.wind_lv == 4)
-                mob.hp -= 12;
+                mob.hp -= (15 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.wind_lv == 5)
-                mob.hp -= 15;
+                mob.hp -= (20 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.wind_lv == 6)
-                mob.hp -= 18;
+                mob.hp -= (25 + Data.Instance.gameData.player_wood);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;
@@ -309,17 +322,17 @@ public class Redspit_Boss_Body : MonoBehaviour
         {
             StartCoroutine(Stun());
             if (Data.Instance.gameData.windwall_lv == 1)
-                mob.hp -= 2;
+                mob.hp -= (2 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.windwall_lv == 2)
-                mob.hp -= 4;
+                mob.hp -= (4 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.windwall_lv == 3)
-                mob.hp -= 6;
+                mob.hp -= (6 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.windwall_lv == 4)
-                mob.hp -= 8;
+                mob.hp -= (8 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.windwall_lv == 5)
-                mob.hp -= 10;
+                mob.hp -= (10 + Data.Instance.gameData.player_wood);
             else if (Data.Instance.gameData.windwall_lv == 6)
-                mob.hp -= 12;
+                mob.hp -= (12 + Data.Instance.gameData.player_wood);
             if (mob.hp <= 0)
             {
                 mob.speed = 0;

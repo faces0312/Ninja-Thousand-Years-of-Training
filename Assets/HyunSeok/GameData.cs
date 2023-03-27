@@ -11,6 +11,8 @@ public class GameData
     //인게임ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     //public float exp;
     public int money;
+    public int score;
+    public int best_score;
 
     public int skill_cnt;//몇개의 스킬을 가지고 있는지(최대 6개)
 

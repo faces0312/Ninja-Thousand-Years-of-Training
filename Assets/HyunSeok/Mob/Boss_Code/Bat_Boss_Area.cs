@@ -13,6 +13,7 @@ public class Bat_Boss_Area : MonoBehaviour
     public Boss_GunGroup gunGroup;*/
 
     public Boss_Laser laser;
+    public int laser_ran;
 
     int atk_ran;
     
@@ -22,7 +23,7 @@ public class Bat_Boss_Area : MonoBehaviour
     //bool is_area;
     private void OnEnable()
     {
-        atk_CT = 5f;
+        atk_CT = 4.5f;
         atk_Tmp_CT = 1f;
     }
     private void Update()
@@ -74,8 +75,12 @@ public class Bat_Boss_Area : MonoBehaviour
         Vector3 end = mob.target.transform.position;
         Vector3 fin = end - start;
 
-        laser.transform.rotation = Quaternion.Euler(laser.transform.rotation.x, laser.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 30);
-        
+        laser_ran = Random.Range(0, 2);
+        if(laser_ran == 0)
+            laser.transform.rotation = Quaternion.Euler(laser.transform.rotation.x, laser.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 120);
+        else
+            laser.transform.rotation = Quaternion.Euler(laser.transform.rotation.x, laser.transform.rotation.y, Quaternion.FromToRotation(Vector3.up, fin).eulerAngles.z + 210);
+
         laser.gameObject.SetActive(true);
     }
 

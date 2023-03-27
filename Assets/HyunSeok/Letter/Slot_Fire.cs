@@ -229,11 +229,11 @@ public class Slot_Fire : MonoBehaviour
                     if (Data.Instance.gameData.fire_lv == 2)
                         Manager.manager.objectManager.fire_CT = 5f;
                     else if (Data.Instance.gameData.fire_lv == 3)
-                        Manager.manager.objectManager.fire_CT = 5f;
-                    else if (Data.Instance.gameData.fire_lv == 4)
-                        Manager.manager.objectManager.fire_CT = 5f;
-                    else if (Data.Instance.gameData.fire_lv == 5)
                         Manager.manager.objectManager.fire_CT = 4f;
+                    else if (Data.Instance.gameData.fire_lv == 4)
+                        Manager.manager.objectManager.fire_CT = 3f;
+                    else if (Data.Instance.gameData.fire_lv == 5)
+                        Manager.manager.objectManager.fire_CT = 3f;
                     else if (Data.Instance.gameData.fire_lv == 6)
                         Manager.manager.objectManager.fire_CT = 3f;
                 }

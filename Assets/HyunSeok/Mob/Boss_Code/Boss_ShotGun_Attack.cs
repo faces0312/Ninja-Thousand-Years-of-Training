@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Boss_ShotGun_Attack : MonoBehaviour
 {
-
     void FixedUpdate()
     {
-        transform.Translate(Vector3.right * 1.1f * Time.deltaTime);
+        transform.Translate(Vector3.right * 1.15f * Time.deltaTime);
     }
 
 

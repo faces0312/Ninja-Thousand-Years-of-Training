@@ -120,16 +120,16 @@ public class ObjectManager : MonoBehaviour
         atk_normal_CT = 0.5f;
         atk_normal_Tmp_CT = atk_normal_CT;
 
-        shadow_partner_CT = 1f;
+        shadow_partner_CT = 1.3f;
         shadow_partner_Tmp_CT = shadow_partner_CT;
 
-        fire_CT = 7f;
+        fire_CT = 6f;
         fire_Tmp_CT = fire_CT;
 
         talisman_CT = 15f;
         talisman_Tmp_CT = talisman_CT;
 
-        firecolumn_CT = 1f;
+        firecolumn_CT = 8f;
         firecolumn_Tmp_CT = firecolumn_CT;
 
         tornado_CT = 10f;
@@ -138,7 +138,7 @@ public class ObjectManager : MonoBehaviour
         boomerang_CT = 10f;
         boomerang_Tmp_CT = boomerang_CT;
 
-        electricity_CT = 23f;  
+        electricity_CT = 13f;  
         electricity_Tmp_CT = electricity_CT;
 
         wind_CT = 17f;
@@ -147,12 +147,12 @@ public class ObjectManager : MonoBehaviour
         windwall_CT = 6f;
         windwall_Tmp_CT = windwall_CT;
 
-        tree_CT = 70f;
+        tree_CT = 60f;
         tree_Tmp_CT = tree_CT;
 
 
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 5; i++)
         {
             Mob_General();
         }
@@ -192,24 +192,6 @@ public class ObjectManager : MonoBehaviour
         {
             if (is_boss == true)
             {
-                Data.Instance.gameData.mob1_dmg++;
-                Data.Instance.gameData.bat_body_dmg++;
-                Data.Instance.gameData.bat_atk_dmg++;
-                Data.Instance.gameData.gatekeeper_dmg++;
-                Data.Instance.gameData.golem_dmg++;
-
-                Data.Instance.gameData.bat_boss_body++;
-                Data.Instance.gameData.bat_boss_atk++;
-                Data.Instance.gameData.bat_boss_laser++;
-
-                Data.Instance.gameData.golem_boss_body++;
-                Data.Instance.gameData.golem_boss_lighting++;
-                Data.Instance.gameData.golem_boss_wire++;
-                Data.Instance.gameData.golem_boss_laser++;
-
-                Data.Instance.gameData.redspit_boss_body++;
-                Data.Instance.gameData.redspit_boss_atk++;
-
                 is_boss = false;
                 is_mob = false;
                 is_bigwave = false;

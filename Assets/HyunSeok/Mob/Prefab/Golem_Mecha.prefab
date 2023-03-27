@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3115495605824551422}
   - component: {fileID: 3115495605824551393}
   - component: {fileID: 3115495605824551392}
-  - component: {fileID: 3115495605824551423}
   - component: {fileID: 7232137160511010110}
+  - component: {fileID: 7880108715599237068}
   m_Layer: 7
   m_Name: Golem_Mecha
   m_TagString: Untagged
@@ -107,25 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &3115495605824551423
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3115495605824551395}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2effc048fc779d54f99de61ce9720205, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7232137160511010110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,12 +119,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6ed35b6899f414d85b6804cf5ca3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  die: {fileID: 3115495605824551423}
+  die: {fileID: 0}
   golem_Mecha_Body: {fileID: 465944435853512624}
   rend: {fileID: 3115495605824551393}
   target: {fileID: 0}
   hp: 0
   speed: 0
+--- !u!95 &7880108715599237068
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115495605824551395}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67f32afc439586343923f662de9d8ae7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3115495606919108680
 GameObject:
   m_ObjectHideFlags: 0

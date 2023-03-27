@@ -26,7 +26,18 @@ public class msaTreeEffect : MonoBehaviour
     
     IEnumerator Dis_tree()
     {
-        yield return new WaitForSeconds(10f);
+        if(Data.Instance.gameData.tree_lv == 1)
+            yield return new WaitForSeconds(10f);
+        else if (Data.Instance.gameData.tree_lv == 2)
+            yield return new WaitForSeconds(11f);
+        else if (Data.Instance.gameData.tree_lv == 3)
+            yield return new WaitForSeconds(12f);
+        else if (Data.Instance.gameData.tree_lv == 4)
+            yield return new WaitForSeconds(13f);
+        else if (Data.Instance.gameData.tree_lv == 5)
+            yield return new WaitForSeconds(14f);
+        else if (Data.Instance.gameData.tree_lv == 6)
+            yield return new WaitForSeconds(15f);
         gameObject.SetActive(false);
     }
     
@@ -41,7 +52,18 @@ public class msaTreeEffect : MonoBehaviour
             {
                 if(Manager.manager.player.hp < Manager.manager.player.hp_max)
                 {
-                    Manager.manager.player.hp++;
+                    if (Data.Instance.gameData.tree_lv == 1)
+                        Manager.manager.player.hp++;
+                    else if (Data.Instance.gameData.tree_lv == 2)
+                        Manager.manager.player.hp++;
+                    else if (Data.Instance.gameData.tree_lv == 3)
+                        Manager.manager.player.hp += 2;
+                    else if (Data.Instance.gameData.tree_lv == 4)
+                        Manager.manager.player.hp += 3;
+                    else if (Data.Instance.gameData.tree_lv == 5)
+                        Manager.manager.player.hp += 4;
+                    else if (Data.Instance.gameData.tree_lv == 6)
+                        Manager.manager.player.hp += 5;
                     tree_Tmp_CT = tree_CT;
                 }
             }

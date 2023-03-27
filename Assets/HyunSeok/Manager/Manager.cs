@@ -26,17 +26,20 @@ public class Manager : MonoBehaviour
     public GameObject down_bounce;
 
     public int lv;//난이도(몹 수와 연관됨)
-    private float time_bigWave;//빅웨이브 등장 시간
-    private float time_mob_hp;//몹 체력 증가 시간
+    public float time_bigWave;//빅웨이브 등장 시간
 
     /*public float exp_Tmp;
     public Slider exp_Bar;*/
-    private float time_score;
+    public float time_score;
     private int time_min;
     private float time_sec;
     public TextMeshProUGUI time_text;
 
     public GameObject pause_page;
+    
+    public GameObject result_page;
+    public GameObject result;
+
     [Serializable]
     public class Skill_Array
     {
@@ -76,33 +79,33 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.gatekeeper_hp = 1;
         Data.Instance.gameData.golem_hp = 3;
 
-        Data.Instance.gameData.boss_hp = 1000;
+        Data.Instance.gameData.boss_hp = 300;
 
         Data.Instance.gameData.mob1_dmg = 1;
         Data.Instance.gameData.bat_body_dmg = 1;
-        Data.Instance.gameData.bat_atk_dmg = 2;
+        Data.Instance.gameData.bat_atk_dmg = 3;
         Data.Instance.gameData.gatekeeper_dmg= 1;
-        Data.Instance.gameData.golem_dmg = 2;
+        Data.Instance.gameData.golem_dmg = 1;
 
-        Data.Instance.gameData.bat_boss_body = 0;
-        Data.Instance.gameData.bat_boss_atk = 2;
-        Data.Instance.gameData.bat_boss_laser = 4;
+        Data.Instance.gameData.bat_boss_body = 1;
+        Data.Instance.gameData.bat_boss_atk = 3;
+        Data.Instance.gameData.bat_boss_laser = 10;
 
-        Data.Instance.gameData.golem_boss_body = 0;
-        Data.Instance.gameData.golem_boss_lighting = 3;
-        Data.Instance.gameData.golem_boss_wire = 0;
-        Data.Instance.gameData.golem_boss_laser = 4;
+        Data.Instance.gameData.golem_boss_body = 1;
+        Data.Instance.gameData.golem_boss_lighting = 15;
+        Data.Instance.gameData.golem_boss_wire = 3;
+        Data.Instance.gameData.golem_boss_laser = 10;
 
-        Data.Instance.gameData.redspit_boss_body = 0;
-        Data.Instance.gameData.redspit_boss_atk = 2;
+        Data.Instance.gameData.redspit_boss_body = 1;
+        Data.Instance.gameData.redspit_boss_atk = 3;
 
+        Data.Instance.gameData.score = 0;
         Data.Instance.gameData.boss_cnt = 0;
         Data.Instance.gameData.mob_cnt = 0;
         /*
         Data.Instance.gameData.exp = 0;
         exp_Tmp = 100;*/
         time_bigWave = 0;
-        time_mob_hp = 0;
         time_min = 0;
         time_sec = 0f;
         //Invoke("Exp_Practice",1f);
@@ -112,12 +115,15 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
+        result.gameObject.SetActive(false);
+        result_page.gameObject.SetActive(false);
         pause_page.gameObject.SetActive(false);
     }
     private void Update()
     {
         //시간 측정
         time_score += Time.deltaTime;//점수 및 돈 시간
+
         time_sec += Time.deltaTime;
         if ((int)time_sec > 59)
         {
@@ -138,16 +144,6 @@ public class Manager : MonoBehaviour
             }
         }
 
-        //몹 체력 증가 쿨타임
-        time_mob_hp += Time.deltaTime;
-        if((int)time_mob_hp > 19)
-        {
-            time_mob_hp = 0;
-            Data.Instance.gameData.mob1_hp += 2;
-            Data.Instance.gameData.bat_hp += 2;
-            Data.Instance.gameData.gatekeeper_hp += 2;
-            Data.Instance.gameData.golem_hp += 3;
-        }
         /*exp_Bar.value = Data.Instance.gameData.exp / exp_Tmp;
         if(Data.Instance.gameData.exp >= exp_Tmp)
         {

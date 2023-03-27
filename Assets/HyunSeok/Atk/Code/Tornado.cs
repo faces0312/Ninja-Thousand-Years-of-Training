@@ -45,7 +45,18 @@ public class Tornado : MonoBehaviour
 
     IEnumerator Dis_Tornado()
     {
-        yield return new WaitForSeconds(10);
+        if(Data.Instance.gameData.tornado_lv == 1)
+            yield return new WaitForSeconds(6);
+        else if (Data.Instance.gameData.tornado_lv == 2)
+            yield return new WaitForSeconds(6);
+        else if (Data.Instance.gameData.tornado_lv == 3)
+            yield return new WaitForSeconds(9);
+        else if (Data.Instance.gameData.tornado_lv == 4)
+            yield return new WaitForSeconds(9);
+        else if (Data.Instance.gameData.tornado_lv == 5)
+            yield return new WaitForSeconds(12);
+        else if (Data.Instance.gameData.tornado_lv == 6)
+            yield return new WaitForSeconds(15);
         gameObject.SetActive(false);
     }
 }

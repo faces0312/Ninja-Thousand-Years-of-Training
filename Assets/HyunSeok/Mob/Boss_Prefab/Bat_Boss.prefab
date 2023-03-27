@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 8372487085903492594}
   - component: {fileID: 918233984257576001}
   - component: {fileID: 7563002052321508226}
-  - component: {fileID: 3578298222422644342}
+  - component: {fileID: 6464674177794150338}
   m_Layer: 7
   m_Name: Laser
   m_TagString: Bat_Boss_Laser
@@ -474,13 +474,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812551066394183209}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.2, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 6802314017234806116}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &918233984257576001
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -521,8 +521,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 6408773277176534577, guid: c3e3cd3bbe8978941aaf4ab5dc4a8fa2, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -5925093501100018818, guid: d6ed4dc848cd0b4429e8f33758ac2df7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -544,7 +544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6895d15bd009dfc40905e61cfaea7811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &3578298222422644342
+  bat: {fileID: 6802314016593027073}
+--- !u!61 &6464674177794150338
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,18 +558,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.0042655, y: 0.031268}
+  m_Offset: {x: 0, y: -0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0.5}
-    oldSize: {x: 6.0305495, y: 2.33}
+    pivot: {x: 0.5, y: 1}
+    oldSize: {x: 0.1, y: 1.2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.637153, y: 1.8554137}
+  m_Size: {x: 0.1, y: 1.2}
   m_EdgeRadius: 0
 --- !u!1 &1101652242330522794
 GameObject:
@@ -3163,6 +3164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mob: {fileID: 6802314017234806118}
   laser: {fileID: 7563002052321508226}
+  laser_ran: 0
   atk_CT: 0
 --- !u!1 &6802314016830109919
 GameObject:
