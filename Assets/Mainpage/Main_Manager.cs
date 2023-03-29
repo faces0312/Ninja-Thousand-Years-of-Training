@@ -85,6 +85,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Game_Start()
     {
+      
         SceneManager.LoadScene("SampleScene");
     }
 
@@ -92,7 +93,7 @@ public class Main_Manager : MonoBehaviour
     public void Option_Page()
     {
         option_page.gameObject.SetActive(true);
-        sound.Open_Window();
+        sound.Button_Click();
         if(Data.Instance.gameData.is_effect_sound_reverse == true)
         {
             effect_off.gameObject.SetActive(true);
@@ -180,7 +181,8 @@ public class Main_Manager : MonoBehaviour
         upgrade_normal_page.gameObject.SetActive(true);
     }
     public void Dis_Normal_Upgrade_Page()
-    {
+    { //강화서에 있는 취소 버튼
+        sound.Button_Click();
         is_not_enough_coin_normal.gameObject.SetActive(false);
         upgrade_normal_page.gameObject.SetActive(false);
     }
@@ -191,7 +193,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Dis_Fire_Upgrade_Page()
     {
-
+        sound.Button_Click();
         is_not_enough_coin_fire.gameObject.SetActive(false);
         upgrade_fire_page.gameObject.SetActive(false);
     }
@@ -201,7 +203,8 @@ public class Main_Manager : MonoBehaviour
         upgrade_wood_page.gameObject.SetActive(true);
     }
     public void Dis_Wood_Upgrade_Page()
-    {  
+    {
+        sound.Button_Click();
         is_not_enough_coin_wood.gameObject.SetActive(false);
         upgrade_wood_page.gameObject.SetActive(false);
     }
@@ -212,6 +215,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Dis_Mecha_Upgrade_Page()
     {
+        sound.Button_Click();
         is_not_enough_coin_mecha.gameObject.SetActive(false);
         upgrade_mecha_page.gameObject.SetActive(false);
     }
@@ -310,6 +314,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Dis_Upgrade_Page()
     {
+        sound.Button_Click();
         upgrade_page.gameObject.SetActive(false);
     }
     //ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
