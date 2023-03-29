@@ -55,6 +55,8 @@ public class Main_Manager : MonoBehaviour
     public GameObject effect_off;
     public GameObject bgm_on;
     public GameObject bgm_off;
+
+    public Sound_Manager sound;
     private void Start()
     {
         Time.timeScale = 1;
@@ -113,6 +115,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Dis_Option_Page()
     {
+        sound.Button_Click();
         option_page.gameObject.SetActive(false);
     }
     public void Cafe()
