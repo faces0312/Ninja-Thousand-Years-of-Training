@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class Result_Page : MonoBehaviour
 {
+    public AdmobManager ad;
+
     public Button result_page;//홈으로 돌아가기 위한 버튼
 
     public GameObject time;
@@ -112,14 +114,22 @@ public class Result_Page : MonoBehaviour
 
     public void Go_Home()
     {
-        Data.Instance.gameData.money += (Data.Instance.gameData.boss_cnt * 500 + Data.Instance.gameData.mob_cnt * 3 + (int)Manager.manager.time_score);
+        Data.Instance.gameData.play_cnt++;
+        if(Data.Instance.gameData.play_cnt % 3 == 0)
+        {
+            ad.ShowFrontAd();
+        }
+        else
+        {
+            Data.Instance.gameData.money += (Data.Instance.gameData.boss_cnt * 500 + Data.Instance.gameData.mob_cnt * 3 + (int)Manager.manager.time_score);
 
-        if (Data.Instance.gameData.best_score < (Data.Instance.gameData.boss_cnt * 500 + Data.Instance.gameData.mob_cnt * 3 + (int)Manager.manager.time_score))
-            Data.Instance.gameData.best_score = (Data.Instance.gameData.boss_cnt * 500 + Data.Instance.gameData.mob_cnt * 3 + (int)Manager.manager.time_score);
+            if (Data.Instance.gameData.best_score < (Data.Instance.gameData.boss_cnt * 500 + Data.Instance.gameData.mob_cnt * 3 + (int)Manager.manager.time_score))
+                Data.Instance.gameData.best_score = (Data.Instance.gameData.boss_cnt * 500 + Data.Instance.gameData.mob_cnt * 3 + (int)Manager.manager.time_score);
 
-        Data.Instance.SaveGameData();
+            Data.Instance.SaveGameData();
 
-        SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("MainScene");
+        }
     }
 
     public void Skip_Reusult()

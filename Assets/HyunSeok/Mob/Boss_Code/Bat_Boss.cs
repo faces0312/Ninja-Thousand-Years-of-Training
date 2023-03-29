@@ -93,9 +93,9 @@ public class Bat_Boss : MonoBehaviour
         shotGun3.gameObject.SetActive(false);
         laser.gameObject.SetActive(false);
         gunGroup.gameObject.SetActive(false);*/
-        Data.Instance.gameData.mob1_hp += 5;
-        Data.Instance.gameData.bat_hp += 5;
-        Data.Instance.gameData.gatekeeper_hp += 5;
+        Data.Instance.gameData.mob1_hp += 6;
+        Data.Instance.gameData.bat_hp += 6;
+        Data.Instance.gameData.gatekeeper_hp += 6;
         Data.Instance.gameData.golem_hp += 8;
 
         Data.Instance.gameData.bat_boss_atk += 3;

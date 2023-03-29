@@ -12,6 +12,8 @@ public class GameData
     public bool is_bgm_sound_reverse;
     //檣啪歜天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天
     //public float exp;
+    public int play_cnt;
+
     public int money;
     public int score;
     public int best_score;

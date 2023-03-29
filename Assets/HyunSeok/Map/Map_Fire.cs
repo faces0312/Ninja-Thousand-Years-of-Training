@@ -14,16 +14,6 @@ public class Map_Fire : MonoBehaviour
             {
                 Manager.manager.is_fire_name = true;
 
-                Manager.manager.map_name.gameObject.SetActive(false);
-                Manager.manager.mecha_map_name.gameObject.SetActive(false);
-                Manager.manager.mecha_map_name_image.gameObject.SetActive(false);
-                Manager.manager.mecha_map_name_text.gameObject.SetActive(false);
-                Manager.manager.wood_map_name.gameObject.SetActive(false);
-                Manager.manager.wood_map_name_image.gameObject.SetActive(false);
-                Manager.manager.wood_map_name_text.gameObject.SetActive(false);
-                Manager.manager.map_name_left.gameObject.SetActive(false);
-                Manager.manager.map_name_right.gameObject.SetActive(false);
-
                 Manager.manager.Go_Fire_Name();
             }
             player.in_Normal = false;

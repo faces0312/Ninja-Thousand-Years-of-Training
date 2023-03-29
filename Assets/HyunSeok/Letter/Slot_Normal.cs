@@ -10,6 +10,8 @@ public class Slot_Normal : MonoBehaviour
     public GameObject close_page;
     public TextMeshProUGUI[] result_text;
 
+    public int shadow_num;//몇번째 슬롯인지
+    public int boomerang_num;//몇번째 슬롯인지
     private void OnEnable()
     {
         if (Data.Instance.gameData.skill_cnt == 6)//스킬카운트가 꽉찼을 때
@@ -219,15 +221,30 @@ public class Slot_Normal : MonoBehaviour
             {
                 Data.Instance.gameData.normal_atk_lv++;
                 if (Data.Instance.gameData.normal_atk_lv == 2)
+                {
                     Manager.manager.objectManager.atk_normal_CT = 0.5f;
+                    Manager.manager.skill1_lv[1].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.normal_atk_lv == 3)
+                {
                     Manager.manager.objectManager.atk_normal_CT = 0.5f;
+                    Manager.manager.skill1_lv[2].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.normal_atk_lv == 4)
+                {
                     Manager.manager.objectManager.atk_normal_CT = 0.5f;
+                    Manager.manager.skill1_lv[3].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.normal_atk_lv == 5)
+                {
                     Manager.manager.objectManager.atk_normal_CT = 0.3f;
+                    Manager.manager.skill1_lv[4].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.normal_atk_lv == 6)
+                {
                     Manager.manager.objectManager.atk_normal_CT = 0.1f;
+                    Manager.manager.skill1_lv[5].gameObject.SetActive(true);
+                }
             }
         }
         if (result_obj[1].gameObject.activeSelf == true)
@@ -237,24 +254,39 @@ public class Slot_Normal : MonoBehaviour
                 if (Data.Instance.gameData.shadow_partner_lv == 0)
                 {
                     Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[1].gameObject.SetActive(true);
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                    shadow_num = Data.Instance.gameData.skill_cnt - 1;
                     Data.Instance.gameData.skill_cnt++;
                 }
                 Data.Instance.gameData.shadow_partner_lv++;
                 if (Data.Instance.gameData.shadow_partner_lv == 1)
                     Manager.manager.player.shadowPartner1.gameObject.SetActive(true);
                 if (Data.Instance.gameData.shadow_partner_lv == 2)
+                {
                     Manager.manager.objectManager.shadow_partner_CT = 1.2f;
+                    Manager.manager.pasuse_skill[shadow_num].skill_lv[1].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.shadow_partner_lv == 3)
+                {
                     Manager.manager.objectManager.shadow_partner_CT = 1.1f;
+                    Manager.manager.pasuse_skill[shadow_num].skill_lv[2].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.shadow_partner_lv == 4)
                 {
                     Manager.manager.objectManager.shadow_partner_CT = 1f;
+                    Manager.manager.pasuse_skill[shadow_num].skill_lv[3].gameObject.SetActive(true);
                     Manager.manager.player.shadowPartner2.gameObject.SetActive(true);
                 }
                 else if (Data.Instance.gameData.shadow_partner_lv == 5)
+                {
                     Manager.manager.objectManager.shadow_partner_CT = 0.7f;
+                    Manager.manager.pasuse_skill[shadow_num].skill_lv[4].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.shadow_partner_lv == 6)
+                {
                     Manager.manager.objectManager.shadow_partner_CT = 0.5f;
+                    Manager.manager.pasuse_skill[shadow_num].skill_lv[5].gameObject.SetActive(true);
+                }
             }
         }
         if (result_obj[2].gameObject.activeSelf == true)
@@ -264,19 +296,36 @@ public class Slot_Normal : MonoBehaviour
                 if (Data.Instance.gameData.boomerang_lv == 0)
                 {
                     Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[2].gameObject.SetActive(true);
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                    boomerang_num = Data.Instance.gameData.skill_cnt - 1;
                     Data.Instance.gameData.skill_cnt++;
                 }
                 Data.Instance.gameData.boomerang_lv++;
                 if (Data.Instance.gameData.boomerang_lv == 2)
+                {
                     Manager.manager.objectManager.boomerang_CT = 9f;
+                    Manager.manager.pasuse_skill[boomerang_num].skill_lv[1].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.boomerang_lv == 3)
+                {
                     Manager.manager.objectManager.boomerang_CT = 8f;
+                    Manager.manager.pasuse_skill[boomerang_num].skill_lv[2].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.boomerang_lv == 4)
+                {
                     Manager.manager.objectManager.boomerang_CT = 8f;
+                    Manager.manager.pasuse_skill[boomerang_num].skill_lv[3].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.boomerang_lv == 5)
+                {
                     Manager.manager.objectManager.boomerang_CT = 7f;
+                    Manager.manager.pasuse_skill[boomerang_num].skill_lv[4].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.boomerang_lv == 6)
+                {
                     Manager.manager.objectManager.boomerang_CT = 5f;
+                    Manager.manager.pasuse_skill[boomerang_num].skill_lv[5].gameObject.SetActive(true);
+                }
             }
         }
 

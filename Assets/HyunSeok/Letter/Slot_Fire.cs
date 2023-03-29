@@ -11,6 +11,9 @@ public class Slot_Fire : MonoBehaviour
     public GameObject close_page;
     public TextMeshProUGUI[] result_text;
 
+    public int fire_num;//몇번째 슬롯인지
+    public int talisman_num;//몇번째 슬롯인지
+    public int fireColumn_num;
     private void OnEnable()
     {
         if(Data.Instance.gameData.skill_cnt == 6)//스킬카운트가 꽉찼을 때
@@ -223,19 +226,36 @@ public class Slot_Fire : MonoBehaviour
                     if (Data.Instance.gameData.fire_lv == 0)
                     {
                         Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[3].gameObject.SetActive(true);
+                        Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                        fire_num = Data.Instance.gameData.skill_cnt - 1;
                         Data.Instance.gameData.skill_cnt++;
                     }
                     Data.Instance.gameData.fire_lv++;
                     if (Data.Instance.gameData.fire_lv == 2)
+                    {
                         Manager.manager.objectManager.fire_CT = 5f;
+                        Manager.manager.pasuse_skill[fire_num].skill_lv[1].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_lv == 3)
+                    {
                         Manager.manager.objectManager.fire_CT = 4f;
+                        Manager.manager.pasuse_skill[fire_num].skill_lv[2].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_lv == 4)
+                    {
                         Manager.manager.objectManager.fire_CT = 3f;
+                        Manager.manager.pasuse_skill[fire_num].skill_lv[3].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_lv == 5)
+                    {
                         Manager.manager.objectManager.fire_CT = 3f;
+                        Manager.manager.pasuse_skill[fire_num].skill_lv[4].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_lv == 6)
+                    {
                         Manager.manager.objectManager.fire_CT = 3f;
+                        Manager.manager.pasuse_skill[fire_num].skill_lv[5].gameObject.SetActive(true);
+                    }
                 }
             }
             if (result_obj[1].gameObject.activeSelf == true)
@@ -245,19 +265,37 @@ public class Slot_Fire : MonoBehaviour
                     if (Data.Instance.gameData.talisman_lv == 0)
                     {
                         Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[4].gameObject.SetActive(true);
+                        Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                        talisman_num = Data.Instance.gameData.skill_cnt - 1;
+
                         Data.Instance.gameData.skill_cnt++;
                     }
                     Data.Instance.gameData.talisman_lv++;
                     if (Data.Instance.gameData.talisman_lv == 2)
+                    {
                         Manager.manager.objectManager.talisman_CT = 13f;
+                        Manager.manager.pasuse_skill[talisman_num].skill_lv[1].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.talisman_lv == 3)
+                    {
                         Manager.manager.objectManager.talisman_CT = 10f;
+                        Manager.manager.pasuse_skill[talisman_num].skill_lv[2].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.talisman_lv == 4)
+                    {
                         Manager.manager.objectManager.talisman_CT = 8f;
+                        Manager.manager.pasuse_skill[talisman_num].skill_lv[3].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.talisman_lv == 5)
+                    {
                         Manager.manager.objectManager.talisman_CT = 7f;
+                        Manager.manager.pasuse_skill[talisman_num].skill_lv[4].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.talisman_lv == 6)
+                    {
                         Manager.manager.objectManager.talisman_CT = 5f;
+                        Manager.manager.pasuse_skill[talisman_num].skill_lv[5].gameObject.SetActive(true);
+                    }
                 }
             }
             if (result_obj[2].gameObject.activeSelf == true)
@@ -267,19 +305,36 @@ public class Slot_Fire : MonoBehaviour
                     if (Data.Instance.gameData.fire_column_lv == 0)
                     {
                         Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[5].gameObject.SetActive(true);
+                        Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                        fireColumn_num = Data.Instance.gameData.skill_cnt - 1;
                         Data.Instance.gameData.skill_cnt++;
                     }
                     Data.Instance.gameData.fire_column_lv++;
                     if (Data.Instance.gameData.fire_column_lv == 2)
+                    {
                         Manager.manager.objectManager.firecolumn_CT = 7f;
+                        Manager.manager.pasuse_skill[fireColumn_num].skill_lv[1].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_column_lv == 3)
+                    {
                         Manager.manager.objectManager.firecolumn_CT = 6f;
+                        Manager.manager.pasuse_skill[fireColumn_num].skill_lv[2].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_column_lv == 4)
+                    {
                         Manager.manager.objectManager.firecolumn_CT = 5f;
+                        Manager.manager.pasuse_skill[fireColumn_num].skill_lv[3].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_column_lv == 5)
+                    {
                         Manager.manager.objectManager.firecolumn_CT = 3f;
+                        Manager.manager.pasuse_skill[fireColumn_num].skill_lv[4].gameObject.SetActive(true);
+                    }
                     else if (Data.Instance.gameData.fire_column_lv == 6)
+                    {
                         Manager.manager.objectManager.firecolumn_CT = 1f;
+                        Manager.manager.pasuse_skill[fireColumn_num].skill_lv[5].gameObject.SetActive(true);
+                    }
                 }
             }
         }

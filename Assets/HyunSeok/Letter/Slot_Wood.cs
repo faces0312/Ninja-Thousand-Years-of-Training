@@ -11,6 +11,9 @@ public class Slot_Wood : MonoBehaviour
     public GameObject close_page;
     public TextMeshProUGUI[] result_text;
 
+    public int wind_num;//몇번째 슬롯인지
+    public int windWall_num;//몇번째 슬롯인지
+    public int tree_num;
     private void OnEnable()
     {
         if (Data.Instance.gameData.skill_cnt == 6)//스킬카운트가 꽉찼을 때
@@ -221,19 +224,36 @@ public class Slot_Wood : MonoBehaviour
                 if (Data.Instance.gameData.wind_lv == 0)
                 {
                     Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[6].gameObject.SetActive(true);
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                    wind_num = Data.Instance.gameData.skill_cnt - 1;
                     Data.Instance.gameData.skill_cnt++;
                 }
                 Data.Instance.gameData.wind_lv++;
                 if (Data.Instance.gameData.wind_lv == 2)
+                {
                     Manager.manager.objectManager.wind_CT = 8f;
+                    Manager.manager.pasuse_skill[wind_num].skill_lv[1].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.wind_lv == 3)
+                {
                     Manager.manager.objectManager.wind_CT = 6f;
+                    Manager.manager.pasuse_skill[wind_num].skill_lv[2].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.wind_lv == 4)
+                {
                     Manager.manager.objectManager.wind_CT = 6f;
+                    Manager.manager.pasuse_skill[wind_num].skill_lv[3].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.wind_lv == 5)
+                {
                     Manager.manager.objectManager.wind_CT = 3f;
+                    Manager.manager.pasuse_skill[wind_num].skill_lv[4].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.wind_lv == 6)
+                {
                     Manager.manager.objectManager.wind_CT = 3f;
+                    Manager.manager.pasuse_skill[wind_num].skill_lv[5].gameObject.SetActive(true);
+                }
             }
         }
         if (result_obj[1].gameObject.activeSelf == true)
@@ -243,19 +263,36 @@ public class Slot_Wood : MonoBehaviour
                 if (Data.Instance.gameData.windwall_lv == 0)
                 {
                     Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[7].gameObject.SetActive(true);
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                    windWall_num = Data.Instance.gameData.skill_cnt - 1;
                     Data.Instance.gameData.skill_cnt++;
                 }
                 Data.Instance.gameData.windwall_lv++;
                 if (Data.Instance.gameData.windwall_lv == 2)
+                {
                     Manager.manager.objectManager.windwall_CT = 20f;
+                    Manager.manager.pasuse_skill[windWall_num].skill_lv[1].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.windwall_lv == 3)
+                {
                     Manager.manager.objectManager.windwall_CT = 17f;
+                    Manager.manager.pasuse_skill[windWall_num].skill_lv[2].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.windwall_lv == 4)
+                {
                     Manager.manager.objectManager.windwall_CT = 15f;
+                    Manager.manager.pasuse_skill[windWall_num].skill_lv[3].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.windwall_lv == 5)
+                {
                     Manager.manager.objectManager.windwall_CT = 13f;
+                    Manager.manager.pasuse_skill[windWall_num].skill_lv[4].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.windwall_lv == 6)
+                {
                     Manager.manager.objectManager.windwall_CT = 10f;
+                    Manager.manager.pasuse_skill[windWall_num].skill_lv[5].gameObject.SetActive(true);
+                }
             }
         }
         if (result_obj[2].gameObject.activeSelf == true)
@@ -265,19 +302,36 @@ public class Slot_Wood : MonoBehaviour
                 if (Data.Instance.gameData.tree_lv == 0)
                 {
                     Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_Array[8].gameObject.SetActive(true);
+                    Manager.manager.pasuse_skill[Data.Instance.gameData.skill_cnt - 1].skill_lv[0].gameObject.SetActive(true);
+                    tree_num = Data.Instance.gameData.skill_cnt - 1;
                     Data.Instance.gameData.skill_cnt++;
                 }
                 Data.Instance.gameData.tree_lv++;
                 if (Data.Instance.gameData.tree_lv == 2)
+                {
                     Manager.manager.objectManager.tree_CT = 58f;
+                    Manager.manager.pasuse_skill[tree_num].skill_lv[1].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.tree_lv == 3)
+                {
                     Manager.manager.objectManager.tree_CT = 54f;
+                    Manager.manager.pasuse_skill[tree_num].skill_lv[2].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.tree_lv == 4)
+                {
                     Manager.manager.objectManager.tree_CT = 50f;
+                    Manager.manager.pasuse_skill[tree_num].skill_lv[3].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.tree_lv == 5)
+                {
                     Manager.manager.objectManager.tree_CT = 45f;
+                    Manager.manager.pasuse_skill[tree_num].skill_lv[4].gameObject.SetActive(true);
+                }
                 else if (Data.Instance.gameData.tree_lv == 6)
+                {
                     Manager.manager.objectManager.tree_CT = 40f;
+                    Manager.manager.pasuse_skill[tree_num].skill_lv[5].gameObject.SetActive(true);
+                }
             }
         }
 

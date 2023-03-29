@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+
     public float hp_max;
     public float hp;
     public GameObject hpbar;
@@ -59,9 +60,9 @@ public class Player : MonoBehaviour
        
         if (hp <=0)
         {
+            Time.timeScale = 0;
             Manager.manager.result_page.gameObject.SetActive(true);
             Manager.manager.result.gameObject.SetActive(true);
-            Time.timeScale = 0;
         }
         float x = joy_Stick.Horizontal();
         float y = joy_Stick.Vertical();

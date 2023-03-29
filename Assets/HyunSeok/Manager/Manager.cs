@@ -64,9 +64,10 @@ public class Manager : MonoBehaviour
     public class Skill_Array
     {
         public GameObject[] skill_Array;//스킬종류(12개)
+        public GameObject[] skill_lv;
     }
     public Skill_Array[] pasuse_skill;//pause에있는 스킬 칸수 (5개)
-
+    public GameObject[] skill1_lv;
 
     private void Awake()
     {
@@ -80,7 +81,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.skill_cnt = 1;
         Data.Instance.gameData.player_hp = 100;
 
-        Data.Instance.gameData.drop_percent = 10;
+        Data.Instance.gameData.drop_percent = 13;
         Data.Instance.gameData.normal_atk_lv = 1;
         Data.Instance.gameData.shadow_partner_lv = 0;
         Data.Instance.gameData.fire_lv = 0;
@@ -99,7 +100,7 @@ public class Manager : MonoBehaviour
         Data.Instance.gameData.gatekeeper_hp = 1;
         Data.Instance.gameData.golem_hp = 3;
 
-        Data.Instance.gameData.boss_hp = 300;
+        Data.Instance.gameData.boss_hp = 500;
 
         Data.Instance.gameData.mob1_dmg = 1;
         Data.Instance.gameData.bat_body_dmg = 1;
@@ -143,6 +144,9 @@ public class Manager : MonoBehaviour
         pause_page.gameObject.SetActive(false);
         map_name.gameObject.SetActive(false);
 
+        skill1_lv[0].gameObject.SetActive(true);
+        for (int i=1;i<6;i++)
+            skill1_lv[i].gameObject.SetActive(false);
         StartCoroutine(Normal_Name());
     }
     private void Update()
@@ -197,9 +201,9 @@ public class Manager : MonoBehaviour
         normal_map_name_image.gameObject.transform.localScale = new Vector3(1, 1);
         map_name_left.gameObject.transform.localPosition = new Vector3(-50, 680);
         map_name_right.gameObject.transform.localPosition = new Vector3(50, 680);
-        for (int i=0;i<30;i++)
+        for (int i=0;i<20;i++)
         {
-            if (i == 10)
+            if (i == 8)
                 normal_map_name_text.gameObject.SetActive(true);
 
             normal_map_name_image.gameObject.transform.localScale = new Vector3(i/2, normal_map_name_image.gameObject.transform.localScale.y);
@@ -222,6 +226,23 @@ public class Manager : MonoBehaviour
     }
     IEnumerator Fire_Name()
     {
+        StopCoroutine(nameof(Normal_Name));
+        StopCoroutine(nameof(Wood_Name));
+        StopCoroutine(nameof(Mecha_Name));
+
+        map_name.gameObject.SetActive(false);
+        fire_map_name.gameObject.SetActive(false);
+        fire_map_name_image.gameObject.SetActive(false);
+        fire_map_name_text.gameObject.SetActive(false);
+        mecha_map_name.gameObject.SetActive(false);
+        mecha_map_name_image.gameObject.SetActive(false);
+        mecha_map_name_text.gameObject.SetActive(false);
+        wood_map_name.gameObject.SetActive(false);
+        wood_map_name_image.gameObject.SetActive(false);
+        wood_map_name_text.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(false);
+        map_name_right.gameObject.SetActive(false);
+
         map_name.gameObject.SetActive(true);
         fire_map_name.gameObject.SetActive(true);
         fire_map_name_image.gameObject.SetActive(true);
@@ -232,9 +253,9 @@ public class Manager : MonoBehaviour
         fire_map_name_image.gameObject.transform.localScale = new Vector3(1, 1);
         map_name_left.gameObject.transform.localPosition = new Vector3(-50, 680);
         map_name_right.gameObject.transform.localPosition = new Vector3(50, 680);
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 20; i++)
         {
-            if (i == 10)
+            if (i == 8)
                 fire_map_name_text.gameObject.SetActive(true);
 
             fire_map_name_image.gameObject.transform.localScale = new Vector3(i / 2, fire_map_name_image.gameObject.transform.localScale.y);
@@ -256,6 +277,23 @@ public class Manager : MonoBehaviour
     }
     IEnumerator Wood_Name()
     {
+        StopCoroutine(nameof(Normal_Name));
+        StopCoroutine(nameof(Fire_Name));
+        StopCoroutine(nameof(Mecha_Name));
+
+        map_name.gameObject.SetActive(false);
+        fire_map_name.gameObject.SetActive(false);
+        fire_map_name_image.gameObject.SetActive(false);
+        fire_map_name_text.gameObject.SetActive(false);
+        mecha_map_name.gameObject.SetActive(false);
+        mecha_map_name_image.gameObject.SetActive(false);
+        mecha_map_name_text.gameObject.SetActive(false);
+        wood_map_name.gameObject.SetActive(false);
+        wood_map_name_image.gameObject.SetActive(false);
+        wood_map_name_text.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(false);
+        map_name_right.gameObject.SetActive(false);
+
         map_name.gameObject.SetActive(true);
         wood_map_name.gameObject.SetActive(true);
         wood_map_name_image.gameObject.SetActive(true);
@@ -266,9 +304,9 @@ public class Manager : MonoBehaviour
         wood_map_name_image.gameObject.transform.localScale = new Vector3(1, 1);
         map_name_left.gameObject.transform.localPosition = new Vector3(-50, 680);
         map_name_right.gameObject.transform.localPosition = new Vector3(50, 680);
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 20; i++)
         {
-            if (i == 10)
+            if (i == 8)
                 wood_map_name_text.gameObject.SetActive(true);
 
             wood_map_name_image.gameObject.transform.localScale = new Vector3(i / 2, wood_map_name_image.gameObject.transform.localScale.y);
@@ -290,6 +328,23 @@ public class Manager : MonoBehaviour
     }
     IEnumerator Mecha_Name()
     {
+        StopCoroutine(nameof(Normal_Name));
+        StopCoroutine(nameof(Wood_Name));
+        StopCoroutine(nameof(Fire_Name));
+
+        map_name.gameObject.SetActive(false);
+        fire_map_name.gameObject.SetActive(false);
+        fire_map_name_image.gameObject.SetActive(false);
+        fire_map_name_text.gameObject.SetActive(false);
+        mecha_map_name.gameObject.SetActive(false);
+        mecha_map_name_image.gameObject.SetActive(false);
+        mecha_map_name_text.gameObject.SetActive(false);
+        wood_map_name.gameObject.SetActive(false);
+        wood_map_name_image.gameObject.SetActive(false);
+        wood_map_name_text.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(false);
+        map_name_right.gameObject.SetActive(false);
+
         map_name.gameObject.SetActive(true);
         mecha_map_name.gameObject.SetActive(true);
         mecha_map_name_image.gameObject.SetActive(true);
