@@ -8,6 +8,8 @@ using System;
 [Serializable]
 public class GameData
 {
+    public bool is_effect_sound_reverse;
+    public bool is_bgm_sound_reverse;
     //檣啪歜天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天天
     //public float exp;
     public int money;

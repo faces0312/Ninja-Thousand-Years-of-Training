@@ -49,7 +49,12 @@ public class Main_Manager : MonoBehaviour
     public GameObject is_not_enough_coin_wood;
     public GameObject is_not_enough_coin_mecha;
 
-
+    //옵션관련
+    public GameObject option_page;
+    public GameObject effect_on;
+    public GameObject effect_off;
+    public GameObject bgm_on;
+    public GameObject bgm_off;
     private void Start()
     {
         Time.timeScale = 1;
@@ -79,6 +84,77 @@ public class Main_Manager : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    //옵션 관련 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    public void Option_Page()
+    {
+        option_page.gameObject.SetActive(true);
+        if(Data.Instance.gameData.is_effect_sound_reverse == true)
+        {
+            effect_off.gameObject.SetActive(true);
+            effect_on.gameObject.SetActive(false);
+        }
+        else
+        {
+            effect_off.gameObject.SetActive(false);
+            effect_on.gameObject.SetActive(true);
+        }
+
+        if (Data.Instance.gameData.is_bgm_sound_reverse == true)
+        {
+            bgm_off.gameObject.SetActive(true);
+            bgm_on.gameObject.SetActive(false);
+        }
+        else
+        {
+            bgm_off.gameObject.SetActive(false);
+            bgm_on.gameObject.SetActive(true);
+        }
+    }
+    public void Dis_Option_Page()
+    {
+        option_page.gameObject.SetActive(false);
+    }
+    public void Cafe()
+    {
+        Application.OpenURL("https://cafe.naver.com/ninja1000year");
+    }
+    public void Use()
+    {
+        Application.OpenURL("https://cafe.naver.com/ninja1000year/3");
+    }
+    public void Personal()
+    {
+        Application.OpenURL("https://cafe.naver.com/ninja1000year/2");
+    }
+    public void Effect_Off_On()//off->on
+    {
+        Data.Instance.gameData.is_effect_sound_reverse = false;
+        effect_off.gameObject.SetActive(false);
+        effect_on.gameObject.SetActive(true);
+        Data.Instance.SaveGameData();
+    }
+    public void Effect_On_Off()//off->on
+    {
+        Data.Instance.gameData.is_effect_sound_reverse = true;
+        effect_off.gameObject.SetActive(true);
+        effect_on.gameObject.SetActive(false);
+        Data.Instance.SaveGameData();
+    }
+    public void Bgm_Off_On()//off->on
+    {
+        Data.Instance.gameData.is_bgm_sound_reverse = false;
+        bgm_off.gameObject.SetActive(false);
+        bgm_on.gameObject.SetActive(true);
+    }
+    public void Bgm_On_Off()//off->on
+    {
+        Data.Instance.gameData.is_bgm_sound_reverse = true;
+        bgm_off.gameObject.SetActive(true);
+        bgm_on.gameObject.SetActive(false);
+        Data.Instance.SaveGameData();
+    }
+
     //업그레이드 관련ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     public void Upgrade_Page()
     {

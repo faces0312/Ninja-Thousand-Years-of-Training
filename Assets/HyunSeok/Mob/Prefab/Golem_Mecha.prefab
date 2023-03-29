@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da6ed35b6899f414d85b6804cf5ca3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  die: {fileID: 0}
+  die: {fileID: 7880108715599237068}
   golem_Mecha_Body: {fileID: 465944435853512624}
   rend: {fileID: 3115495605824551393}
   target: {fileID: 0}

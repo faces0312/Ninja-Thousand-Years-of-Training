@@ -40,6 +40,26 @@ public class Manager : MonoBehaviour
     public GameObject result_page;
     public GameObject result;
 
+    //맵 이름 관련
+    public bool is_fire_name;
+    public bool is_wood_name;
+    public bool is_mecha_name;
+    public GameObject map_name;
+    public GameObject normal_map_name;
+    public GameObject normal_map_name_image;
+    public GameObject normal_map_name_text;
+    public GameObject fire_map_name;
+    public GameObject fire_map_name_image;
+    public GameObject fire_map_name_text;
+    public GameObject wood_map_name;
+    public GameObject wood_map_name_image;
+    public GameObject wood_map_name_text;
+    public GameObject mecha_map_name;
+    public GameObject mecha_map_name_image;
+    public GameObject mecha_map_name_text;
+    public GameObject map_name_left;
+    public GameObject map_name_right;
+
     [Serializable]
     public class Skill_Array
     {
@@ -111,6 +131,9 @@ public class Manager : MonoBehaviour
         //Invoke("Exp_Practice",1f);
 
         //StartCoroutine(Player_Location());
+        is_fire_name = false;
+        is_wood_name = false;
+        is_mecha_name = false;
     }
 
     private void Start()
@@ -118,6 +141,9 @@ public class Manager : MonoBehaviour
         result.gameObject.SetActive(false);
         result_page.gameObject.SetActive(false);
         pause_page.gameObject.SetActive(false);
+        map_name.gameObject.SetActive(false);
+
+        StartCoroutine(Normal_Name());
     }
     private void Update()
     {
@@ -159,6 +185,139 @@ public class Manager : MonoBehaviour
         Invoke("Exp_Practice", 1f);
 <<<<<d<< HEAD
     }*/
+    IEnumerator Normal_Name()
+    {
+        map_name.gameObject.SetActive(true);
+        normal_map_name.gameObject.SetActive(true);
+        normal_map_name_image.gameObject.SetActive(true);
+        normal_map_name_text.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(true);
+        map_name_right.gameObject.SetActive(true);
+
+        normal_map_name_image.gameObject.transform.localScale = new Vector3(1, 1);
+        map_name_left.gameObject.transform.localPosition = new Vector3(-50, 680);
+        map_name_right.gameObject.transform.localPosition = new Vector3(50, 680);
+        for (int i=0;i<30;i++)
+        {
+            if (i == 10)
+                normal_map_name_text.gameObject.SetActive(true);
+
+            normal_map_name_image.gameObject.transform.localScale = new Vector3(i/2, normal_map_name_image.gameObject.transform.localScale.y);
+            map_name_left.gameObject.transform.localPosition = new Vector3(-50 - i * 14f, map_name_left.gameObject.transform.localPosition.y);
+            map_name_right.gameObject.transform.localPosition = new Vector3(50 + i * 14f, map_name_right.gameObject.transform.localPosition.y);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1f);
+        normal_map_name.gameObject.SetActive(false);
+        normal_map_name_image.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(false);
+        map_name_right.gameObject.SetActive(false);
+        map_name.gameObject.SetActive(false);
+    }
+
+    public void Go_Fire_Name()
+    {
+        StartCoroutine(Fire_Name());
+    }
+    IEnumerator Fire_Name()
+    {
+        map_name.gameObject.SetActive(true);
+        fire_map_name.gameObject.SetActive(true);
+        fire_map_name_image.gameObject.SetActive(true);
+        fire_map_name_text.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(true);
+        map_name_right.gameObject.SetActive(true);
+
+        fire_map_name_image.gameObject.transform.localScale = new Vector3(1, 1);
+        map_name_left.gameObject.transform.localPosition = new Vector3(-50, 680);
+        map_name_right.gameObject.transform.localPosition = new Vector3(50, 680);
+        for (int i = 0; i < 30; i++)
+        {
+            if (i == 10)
+                fire_map_name_text.gameObject.SetActive(true);
+
+            fire_map_name_image.gameObject.transform.localScale = new Vector3(i / 2, fire_map_name_image.gameObject.transform.localScale.y);
+            map_name_left.gameObject.transform.localPosition = new Vector3(-50 - i * 14f, map_name_left.gameObject.transform.localPosition.y);
+            map_name_right.gameObject.transform.localPosition = new Vector3(50 + i * 14f, map_name_right.gameObject.transform.localPosition.y);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1f);
+        fire_map_name.gameObject.SetActive(false);
+        fire_map_name_image.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(false);
+        map_name_right.gameObject.SetActive(false);
+        map_name.gameObject.SetActive(false);
+    }
+    public void Go_Wood_Name()
+    {
+        StartCoroutine(Wood_Name());
+    }
+    IEnumerator Wood_Name()
+    {
+        map_name.gameObject.SetActive(true);
+        wood_map_name.gameObject.SetActive(true);
+        wood_map_name_image.gameObject.SetActive(true);
+        wood_map_name_text.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(true);
+        map_name_right.gameObject.SetActive(true);
+
+        wood_map_name_image.gameObject.transform.localScale = new Vector3(1, 1);
+        map_name_left.gameObject.transform.localPosition = new Vector3(-50, 680);
+        map_name_right.gameObject.transform.localPosition = new Vector3(50, 680);
+        for (int i = 0; i < 30; i++)
+        {
+            if (i == 10)
+                wood_map_name_text.gameObject.SetActive(true);
+
+            wood_map_name_image.gameObject.transform.localScale = new Vector3(i / 2, wood_map_name_image.gameObject.transform.localScale.y);
+            map_name_left.gameObject.transform.localPosition = new Vector3(-50 - i * 14f, map_name_left.gameObject.transform.localPosition.y);
+            map_name_right.gameObject.transform.localPosition = new Vector3(50 + i * 14f, map_name_right.gameObject.transform.localPosition.y);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1f);
+        wood_map_name.gameObject.SetActive(false);
+        wood_map_name_image.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(false);
+        map_name_right.gameObject.SetActive(false);
+        map_name.gameObject.SetActive(false);
+    }
+    public void Go_Mecha_Name()
+    {
+        StartCoroutine(Mecha_Name());
+    }
+    IEnumerator Mecha_Name()
+    {
+        map_name.gameObject.SetActive(true);
+        mecha_map_name.gameObject.SetActive(true);
+        mecha_map_name_image.gameObject.SetActive(true);
+        mecha_map_name_text.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(true);
+        map_name_right.gameObject.SetActive(true);
+
+        mecha_map_name_image.gameObject.transform.localScale = new Vector3(1, 1);
+        map_name_left.gameObject.transform.localPosition = new Vector3(-50, 680);
+        map_name_right.gameObject.transform.localPosition = new Vector3(50, 680);
+        for (int i = 0; i < 30; i++)
+        {
+            if (i == 10)
+                mecha_map_name_text.gameObject.SetActive(true);
+
+            mecha_map_name_image.gameObject.transform.localScale = new Vector3(i / 2, mecha_map_name_image.gameObject.transform.localScale.y);
+            map_name_left.gameObject.transform.localPosition = new Vector3(-50 - i * 14f, map_name_left.gameObject.transform.localPosition.y);
+            map_name_right.gameObject.transform.localPosition = new Vector3(50 + i * 14f, map_name_right.gameObject.transform.localPosition.y);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1f);
+        mecha_map_name.gameObject.SetActive(false);
+        mecha_map_name_image.gameObject.SetActive(false);
+        map_name_left.gameObject.SetActive(false);
+        map_name_right.gameObject.SetActive(false);
+        map_name.gameObject.SetActive(false);
+    }
     IEnumerator BigWave()
     {
         for (int i = 0; i < lv; i++)
