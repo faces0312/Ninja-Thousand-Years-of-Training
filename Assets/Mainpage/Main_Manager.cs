@@ -57,6 +57,7 @@ public class Main_Manager : MonoBehaviour
     public GameObject bgm_off;
 
     public Sound_Manager sound;
+
     private void Start()
     {
         Time.timeScale = 1;
@@ -91,6 +92,7 @@ public class Main_Manager : MonoBehaviour
     public void Option_Page()
     {
         option_page.gameObject.SetActive(true);
+        sound.Open_Window();
         if(Data.Instance.gameData.is_effect_sound_reverse == true)
         {
             effect_off.gameObject.SetActive(true);
@@ -120,18 +122,22 @@ public class Main_Manager : MonoBehaviour
     }
     public void Cafe()
     {
+        sound.Button_Click();
         Application.OpenURL("https://cafe.naver.com/ninja1000year");
     }
     public void Use()
     {
+        sound.Button_Click();
         Application.OpenURL("https://cafe.naver.com/ninja1000year/3");
     }
     public void Personal()
     {
+        sound.Button_Click();
         Application.OpenURL("https://cafe.naver.com/ninja1000year/2");
     }
     public void Effect_Off_On()//off->on
     {
+        sound.Button_Click();
         Data.Instance.gameData.is_effect_sound_reverse = false;
         effect_off.gameObject.SetActive(false);
         effect_on.gameObject.SetActive(true);
@@ -139,6 +145,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Effect_On_Off()//off->on
     {
+        sound.Button_Click();
         Data.Instance.gameData.is_effect_sound_reverse = true;
         effect_off.gameObject.SetActive(true);
         effect_on.gameObject.SetActive(false);
@@ -146,12 +153,14 @@ public class Main_Manager : MonoBehaviour
     }
     public void Bgm_Off_On()//off->on
     {
+        sound.Button_Click();
         Data.Instance.gameData.is_bgm_sound_reverse = false;
         bgm_off.gameObject.SetActive(false);
         bgm_on.gameObject.SetActive(true);
     }
     public void Bgm_On_Off()//off->on
     {
+        sound.Button_Click();
         Data.Instance.gameData.is_bgm_sound_reverse = true;
         bgm_off.gameObject.SetActive(true);
         bgm_on.gameObject.SetActive(false);
@@ -161,10 +170,13 @@ public class Main_Manager : MonoBehaviour
     //업그레이드 관련ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
     public void Upgrade_Page()
     {
+        sound.Button_Click();
         upgrade_page.gameObject.SetActive(true);
     }
     public void Normal_Upgrade_Page()
     {
+
+        sound.Open_Window();
         upgrade_normal_page.gameObject.SetActive(true);
     }
     public void Dis_Normal_Upgrade_Page()
@@ -174,24 +186,28 @@ public class Main_Manager : MonoBehaviour
     }
     public void Fire_Upgrade_Page()
     {
+        sound.Open_Window();
         upgrade_fire_page.gameObject.SetActive(true);
     }
     public void Dis_Fire_Upgrade_Page()
     {
+
         is_not_enough_coin_fire.gameObject.SetActive(false);
         upgrade_fire_page.gameObject.SetActive(false);
     }
     public void Wood_Upgrade_Page()
     {
+        sound.Open_Window();
         upgrade_wood_page.gameObject.SetActive(true);
     }
     public void Dis_Wood_Upgrade_Page()
-    {
+    {  
         is_not_enough_coin_wood.gameObject.SetActive(false);
         upgrade_wood_page.gameObject.SetActive(false);
     }
     public void Mecha_Upgrade_Page()
     {
+        sound.Open_Window();
         upgrade_mecha_page.gameObject.SetActive(true);
     }
     public void Dis_Mecha_Upgrade_Page()
@@ -200,7 +216,9 @@ public class Main_Manager : MonoBehaviour
         upgrade_mecha_page.gameObject.SetActive(false);
     }
     public void Normal_Upgrade()
-    {
+    {  //강화서에 있는 확인버튼
+     
+        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_normal_lv + 1) * 1000)
         {
             is_not_enough_coin_normal.gameObject.SetActive(true);
@@ -219,7 +237,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Fire_Upgrade()
     {
-
+        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_fire_lv + 1) * 1000)
         {
             is_not_enough_coin_fire.gameObject.SetActive(true);
@@ -238,6 +256,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Wood_Upgrade()
     {
+        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_wood_lv + 1) * 1000)
         {
             is_not_enough_coin_wood.gameObject.SetActive(true);
@@ -256,6 +275,7 @@ public class Main_Manager : MonoBehaviour
     }
     public void Mecha_Upgrade()
     {
+        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_mecha_lv + 1) * 1000)
         {
             is_not_enough_coin_mecha.gameObject.SetActive(true);
