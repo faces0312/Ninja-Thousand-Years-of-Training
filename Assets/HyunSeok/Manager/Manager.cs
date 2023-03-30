@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
+    public AdmobManager ad;
+
     public Camera camera;
 
     public static Manager manager;
@@ -59,6 +61,11 @@ public class Manager : MonoBehaviour
     public GameObject mecha_map_name_text;
     public GameObject map_name_left;
     public GameObject map_name_right;
+
+
+    //광고
+    public GameObject respawn_Page;
+    public int life_cnt;
 
     [Serializable]
     public class Skill_Array
@@ -135,6 +142,8 @@ public class Manager : MonoBehaviour
         is_fire_name = false;
         is_wood_name = false;
         is_mecha_name = false;
+
+        life_cnt = 1;
     }
 
     private void Start()
@@ -438,5 +447,17 @@ public class Manager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void Dis_Ad_Respawn_Page()
+    {
+        respawn_Page.gameObject.SetActive(false);
+        result_page.gameObject.SetActive(true);
+        result.gameObject.SetActive(true);
+    }
+
+    public void Ad_Respawn()
+    {
+        ad.ShowFrontAd2();
     }
 }

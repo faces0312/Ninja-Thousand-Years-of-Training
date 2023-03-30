@@ -61,8 +61,12 @@ public class Player : MonoBehaviour
         if (hp <=0)
         {
             Time.timeScale = 0;
-            Manager.manager.result_page.gameObject.SetActive(true);
-            Manager.manager.result.gameObject.SetActive(true);
+            if (Manager.manager.life_cnt == 1)
+            {
+                Manager.manager.respawn_Page.gameObject.SetActive(true);
+            }
+            else
+                Manager.manager.Dis_Ad_Respawn_Page();
         }
         float x = joy_Stick.Horizontal();
         float y = joy_Stick.Vertical();

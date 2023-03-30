@@ -12,19 +12,27 @@ public class AdmobManager : MonoBehaviour
     void Awake()
     {
         LoadFrontAd();
+
+        LoadFrontAd2();
     }
     private void Start()
     {
         frontAd.OnAdClosed += HandleOnAdClosed;
+
+        frontAd2.OnAdClosed += HandleOnAdClosed2;
     }
 
 
     const string frontTestID = "ca-app-pub-3940256099942544/8691691433";
     const string frontID = "ca-app-pub-7537224848353526/5338042228";
 
+    const string front2ID = "ca-app-pub-7537224848353526/1224371544";
+
 
 
     InterstitialAd frontAd;
+
+    InterstitialAd frontAd2;
 
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
@@ -36,6 +44,14 @@ public class AdmobManager : MonoBehaviour
         Data.Instance.SaveGameData();
 
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void HandleOnAdClosed2(object sender, EventArgs args)
+    {
+        Manager.manager.player.hp = Manager.manager.player.hp_max;
+        Manager.manager.respawn_Page.gameObject.SetActive(false);
+        Manager.manager.life_cnt--;
+        Time.timeScale = 1;
     }
 
     AdRequest GetAdRequest()
@@ -53,9 +69,25 @@ public class AdmobManager : MonoBehaviour
         };
     }
 
+    void LoadFrontAd2()
+    {
+        frontAd2 = new InterstitialAd(is_Test ? frontTestID : front2ID);
+        frontAd2.LoadAd(GetAdRequest());
+        frontAd2.OnAdClosed += (sender, e) =>
+        {
+        };
+    }
+
     public void ShowFrontAd()
     {
         frontAd.Show();
+
+        //LoadFrontAd();
+    }
+
+    public void ShowFrontAd2()
+    {
+        frontAd2.Show();
 
         //LoadFrontAd();
     }
