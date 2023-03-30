@@ -32,7 +32,7 @@ public class Sound_Manager : MonoBehaviour
     {
         if (Data.Instance.gameData.is_effect_sound_reverse == false)
         {
-            open_Window.Play();
+            upgrade_Success.Play();
         }
         else
             return;

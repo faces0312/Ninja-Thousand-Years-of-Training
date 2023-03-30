@@ -36,6 +36,10 @@ public class Main_Manager : MonoBehaviour
     public Button fire_upgrade;
     public Button wood_upgrade;
     public Button mecha_upgrade;
+    public Button normal_upgrade_cancle;
+    public Button fire_upgrade_cancle;
+    public Button wood_upgrade_cancle;
+    public Button mecha_upgrade_cancle;
     public TextMeshProUGUI normal_lv;
     public TextMeshProUGUI fire_lv;
     public TextMeshProUGUI wood_lv;
@@ -48,7 +52,10 @@ public class Main_Manager : MonoBehaviour
     public GameObject is_not_enough_coin_fire;
     public GameObject is_not_enough_coin_wood;
     public GameObject is_not_enough_coin_mecha;
-
+    public GameObject normal_effect;
+    public GameObject fire_effect;
+    public GameObject wood_effect;
+    public GameObject mecha_effect;
     //옵션관련
     public GameObject option_page;
     public GameObject effect_on;
@@ -76,12 +83,16 @@ public class Main_Manager : MonoBehaviour
         is_not_enough_coin_wood.gameObject.SetActive(false);
         is_not_enough_coin_mecha.gameObject.SetActive(false);
 
-        /*Data.Instance.gameData.player_normal_lv = 0;
+        normal_effect.gameObject.SetActive(false);
+        fire_effect.gameObject.SetActive(false);
+        wood_effect.gameObject.SetActive(false);
+        mecha_effect.gameObject.SetActive(false);
+        Data.Instance.gameData.player_normal_lv = 0;
         Data.Instance.gameData.player_fire_lv = 0;
         Data.Instance.gameData.player_wood_lv = 0;
         Data.Instance.gameData.player_mecha_lv = 0;
 
-        Data.Instance.gameData.money = 3300;*/
+        Data.Instance.gameData.money = 3300;
     }
     public void Game_Start()
     {
@@ -222,78 +233,74 @@ public class Main_Manager : MonoBehaviour
     public void Normal_Upgrade()
     {  //강화서에 있는 확인버튼
      
-        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_normal_lv + 1) * 1000)
         {
+            sound.Button_Click();
             is_not_enough_coin_normal.gameObject.SetActive(true);
             StopCoroutine(nameof(Not_Enough_Normal));
             StartCoroutine(nameof(Not_Enough_Normal));
         }
         else
         {
-            complete_normal_page.gameObject.SetActive(true);
-            StartCoroutine(Complete_Normal());
-            Data.Instance.gameData.player_normal_lv++;
-            Data.Instance.gameData.player_normal++;
-            Data.Instance.gameData.money -= (Data.Instance.gameData.player_normal_lv * 1000);
-            Data.Instance.SaveGameData();
+            sound.Upgrade_Success();
+            normal_upgrade.gameObject.SetActive(false);
+            normal_upgrade_cancle.gameObject.SetActive(false);
+            normal_effect.gameObject.SetActive(true);
+            StartCoroutine(Normal_Effect());
         }
     }
     public void Fire_Upgrade()
     {
-        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_fire_lv + 1) * 1000)
         {
+            sound.Button_Click();
             is_not_enough_coin_fire.gameObject.SetActive(true);
             StopCoroutine(nameof(Not_Enough_Fire));
             StartCoroutine(nameof(Not_Enough_Fire));
         }
         else
         {
-            complete_fire_page.gameObject.SetActive(true);
-            StartCoroutine(Complete_Fire());
-            Data.Instance.gameData.player_fire_lv++;
-            Data.Instance.gameData.player_fire++;
-            Data.Instance.gameData.money -= (Data.Instance.gameData.player_fire_lv * 1000);
-            Data.Instance.SaveGameData();
+            sound.Upgrade_Success();
+            fire_upgrade.gameObject.SetActive(false);
+            fire_upgrade_cancle.gameObject.SetActive(false);
+            fire_effect.gameObject.SetActive(true);
+            StartCoroutine(Fire_Effect());
         }
     }
     public void Wood_Upgrade()
     {
-        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_wood_lv + 1) * 1000)
         {
+            sound.Button_Click();
             is_not_enough_coin_wood.gameObject.SetActive(true);
             StopCoroutine(nameof(Not_Enough_Wood));
             StartCoroutine(nameof(Not_Enough_Wood));
         }
         else
         {
-            complete_wood_page.gameObject.SetActive(true);
-            StartCoroutine(Complete_Wood());
-            Data.Instance.gameData.player_wood_lv++;
-            Data.Instance.gameData.player_wood++;
-            Data.Instance.gameData.money -= (Data.Instance.gameData.player_wood_lv * 1000);
-            Data.Instance.SaveGameData();
+            sound.Upgrade_Success();
+            wood_upgrade.gameObject.SetActive(false);
+            wood_upgrade_cancle.gameObject.SetActive(false);
+            wood_effect.gameObject.SetActive(true);
+            StartCoroutine(Wood_Effect());
         }
     }
     public void Mecha_Upgrade()
     {
-        sound.Button_Click();
         if (Data.Instance.gameData.money < (Data.Instance.gameData.player_mecha_lv + 1) * 1000)
         {
+            sound.Button_Click();
             is_not_enough_coin_mecha.gameObject.SetActive(true);
             StopCoroutine(nameof(Not_Enough_Mecha));
             StartCoroutine(nameof(Not_Enough_Mecha));
         }
         else
         {
-            complete_mecha_page.gameObject.SetActive(true);
-            StartCoroutine(Complete_Mecha());
-            Data.Instance.gameData.player_mecha_lv++;
-            Data.Instance.gameData.player_mecha++;
-            Data.Instance.gameData.money -= (Data.Instance.gameData.player_mecha_lv * 1000);
-            Data.Instance.SaveGameData();
+            sound.Upgrade_Success();
+            mecha_upgrade.gameObject.SetActive(false);
+            mecha_upgrade_cancle.gameObject.SetActive(false);
+            mecha_effect.gameObject.SetActive(true);
+            StartCoroutine(Mecha_Effect());
         }
     }
     public void Dis_Complete_Normal()
@@ -345,6 +352,70 @@ public class Main_Manager : MonoBehaviour
         mecha_money.text = "비용 " + ((Data.Instance.gameData.player_mecha_lv + 1) * 1000).ToString();
 
     }
+
+    IEnumerator Normal_Effect()
+    {
+        yield return new WaitForSeconds(1.1f);
+        normal_effect.gameObject.SetActive(false);
+        normal_upgrade.gameObject.SetActive(true);
+        normal_upgrade_cancle.gameObject.SetActive(true);
+        is_not_enough_coin_normal.gameObject.SetActive(false);
+        upgrade_normal_page.gameObject.SetActive(false);
+        complete_normal_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Normal());
+        Data.Instance.gameData.player_normal_lv++;
+        Data.Instance.gameData.player_normal++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_normal_lv * 1000);
+        Data.Instance.SaveGameData();
+    }
+    IEnumerator Fire_Effect()
+    {
+        yield return new WaitForSeconds(1.1f);
+        fire_effect.gameObject.SetActive(false);
+        fire_upgrade.gameObject.SetActive(true);
+        fire_upgrade_cancle.gameObject.SetActive(true);
+        is_not_enough_coin_fire.gameObject.SetActive(false);
+        upgrade_fire_page.gameObject.SetActive(false);
+        complete_fire_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Fire());
+        Data.Instance.gameData.player_fire_lv++;
+        Data.Instance.gameData.player_fire++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_fire_lv * 1000);
+        Data.Instance.SaveGameData();
+
+    }
+    IEnumerator Wood_Effect()
+    {
+        yield return new WaitForSeconds(1.1f);
+        wood_effect.gameObject.SetActive(false);
+        wood_upgrade.gameObject.SetActive(true);
+        wood_upgrade_cancle.gameObject.SetActive(true);
+        is_not_enough_coin_wood.gameObject.SetActive(false);
+        upgrade_wood_page.gameObject.SetActive(false);
+        complete_wood_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Wood());
+        Data.Instance.gameData.player_wood_lv++;
+        Data.Instance.gameData.player_wood++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_wood_lv * 1000);
+        Data.Instance.SaveGameData();
+
+    }
+    IEnumerator Mecha_Effect()
+    {
+        yield return new WaitForSeconds(1.1f);
+        mecha_effect.gameObject.SetActive(false);
+        mecha_upgrade.gameObject.SetActive(true);
+        mecha_upgrade_cancle.gameObject.SetActive(true);
+        is_not_enough_coin_mecha.gameObject.SetActive(false);
+        upgrade_mecha_page.gameObject.SetActive(false);
+        complete_mecha_page.gameObject.SetActive(true);
+        StartCoroutine(Complete_Mecha());
+        Data.Instance.gameData.player_mecha_lv++;
+        Data.Instance.gameData.player_mecha++;
+        Data.Instance.gameData.money -= (Data.Instance.gameData.player_mecha_lv * 1000);
+        Data.Instance.SaveGameData();
+    }
+
 
     IEnumerator Complete_Normal()
     {
