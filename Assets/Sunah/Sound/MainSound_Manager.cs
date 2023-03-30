@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sound_Manager : MonoBehaviour
+public class MainSound_Manager : MonoBehaviour
 {
     public AudioSource button_Click;
     public AudioSource open_Window;

@@ -63,7 +63,7 @@ public class Main_Manager : MonoBehaviour
     public GameObject bgm_on;
     public GameObject bgm_off;
 
-    public Sound_Manager sound;
+    public MainSound_Manager sound;
 
     private void Start()
     {
