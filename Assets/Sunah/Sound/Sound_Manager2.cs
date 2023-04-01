@@ -4,22 +4,21 @@ using UnityEngine;
 
 public class Sound_Manager2 : MonoBehaviour
 {
-
-    public AudioSource treeHeal;
     public AudioSource bossLightning;
     public AudioSource bossWarning;
     public AudioSource bossLaser;
-    public AudioSource boomerang;
-    public AudioSource voltTackle;
-    public AudioSource tailsmanBomb;
-    public AudioSource shock;
     public AudioSource killEnemy;
-    public AudioSource wind;
-    public AudioSource electricity;
-    public AudioSource tornado;
     public AudioSource normalAttack;
+    public AudioSource boomerang;
+    public AudioSource fire;
+    public AudioSource[] talismanBomb;
     public AudioSource fireColumn;
-    public AudioSource launchFire;
+    public AudioSource wind;
+    public AudioSource treeHeal;
+    public AudioSource tornado;
+    public AudioSource voltTackle;
+    public AudioSource electricity;
+    
     public void TreeHeal()
     {
         if (Data.Instance.gameData.is_effect_sound_reverse == false)
@@ -78,20 +77,23 @@ public class Sound_Manager2 : MonoBehaviour
         else
             return;
     }
-    public void TailsmanBomb()
+    public void TalismanBomb()
     {
         if (Data.Instance.gameData.is_effect_sound_reverse == false)
         {
-            tailsmanBomb.Play();
-        }
-        else
-            return;
-    }
-    public void Shock()
-    {
-        if (Data.Instance.gameData.is_effect_sound_reverse == false)
-        {
-            shock.Play();
+            for (int i = 0; i < 35; i++)
+            {
+                if (Manager.manager.talisman_is[i] == true)
+                {
+                    talismanBomb[i].Play();
+                    Manager.manager.talisman_cnt = i + 1;
+                }
+            }
+
+            for(int i=0;i<36;i++)
+                Manager.manager.talisman_is[i] = false;
+
+            Manager.manager.talisman_is[Manager.manager.talisman_cnt] = true;
         }
         else
             return;
@@ -100,7 +102,7 @@ public class Sound_Manager2 : MonoBehaviour
     {
         if (Data.Instance.gameData.is_effect_sound_reverse == false)
         {
-            killEnemy.Play();
+            killEnemy.PlayOneShot(killEnemy.clip);
         }
         else
             return;
@@ -154,11 +156,11 @@ public class Sound_Manager2 : MonoBehaviour
     }
 
 
-    public void LaunchFire()
+    public void Fire()
     {
         if (Data.Instance.gameData.is_effect_sound_reverse == false)
         {
-            launchFire.Play();
+            fire.Play();
         }
         else
             return;

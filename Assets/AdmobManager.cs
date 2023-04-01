@@ -23,7 +23,7 @@ public class AdmobManager : MonoBehaviour
     }
 
 
-    const string frontTestID = "ca-app-pub-3940256099942544/8691691433";
+    const string frontTestID = "ca-app-pub-3940256099942544/5224354917";
     const string frontID = "ca-app-pub-7537224848353526/5338042228";
 
     const string front2ID = "ca-app-pub-7537224848353526/1224371544";

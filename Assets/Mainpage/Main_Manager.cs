@@ -65,6 +65,8 @@ public class Main_Manager : MonoBehaviour
 
     public MainSound_Manager sound;
 
+    //楨韁婦溼
+    public GoogleLogin ranking;
     private void Start()
     {
         Time.timeScale = 1;
@@ -87,12 +89,13 @@ public class Main_Manager : MonoBehaviour
         fire_effect.gameObject.SetActive(false);
         wood_effect.gameObject.SetActive(false);
         mecha_effect.gameObject.SetActive(false);
+/*
         Data.Instance.gameData.player_normal_lv = 0;
         Data.Instance.gameData.player_fire_lv = 0;
         Data.Instance.gameData.player_wood_lv = 0;
         Data.Instance.gameData.player_mecha_lv = 0;
 
-        Data.Instance.gameData.money = 3300;
+        Data.Instance.gameData.money = 3300;*/
     }
     public void Game_Start()
     {
@@ -326,6 +329,13 @@ public class Main_Manager : MonoBehaviour
     }
     //天天天天天天天天天天天天天天天天天天天天
 
+    //楨韁天天天天天天天天天天天天天天天天天天
+    public void Ranking()
+    {
+        Social.ReportScore(Data.Instance.gameData.best_score,GPGSIds.leaderboard, (bool success) => { });
+        ranking.ShowLeaderboard();
+    }
+    //天天天天天天天天天天天天天天天天天天天天
     private void Update()
     {
         money.text = Data.Instance.gameData.money.ToString();

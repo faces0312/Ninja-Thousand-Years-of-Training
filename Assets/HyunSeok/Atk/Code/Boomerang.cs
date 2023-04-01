@@ -57,6 +57,7 @@ public class Boomerang : MonoBehaviour
             yield return new WaitForSeconds(10);
         else if (Data.Instance.gameData.boomerang_lv == 6)
             yield return new WaitForSeconds(15);
+
         gameObject.SetActive(false);
     }
 }

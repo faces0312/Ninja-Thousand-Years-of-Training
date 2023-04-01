@@ -8,6 +8,7 @@ public class VoltTackle : MonoBehaviour
     public Player_Body player_Body;
     private void OnEnable()
     {
+        Manager.manager.sound.VoltTackle();
         StartCoroutine(Volt());
         player.animator_walk.SetBool("Is_Walk", false);
         player.animator_walk.SetBool("Is_VoltTackle", true);
@@ -34,6 +35,7 @@ public class VoltTackle : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         player.speed = 3;
         player_Body.is_invin = false;
+        Manager.manager.sound.voltTackle.Stop();
         gameObject.SetActive(false);
     }
 }

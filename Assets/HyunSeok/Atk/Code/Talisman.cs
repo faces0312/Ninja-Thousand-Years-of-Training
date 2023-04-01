@@ -20,8 +20,9 @@ public class Talisman : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem" || collision.tag == "Golem_Boss")
+        if (collision.tag == "Mob1" || collision.tag == "Bat_Body" || collision.tag == "GateKeeper" || collision.tag == "Bat_Boss" || collision.tag == "Golem" || collision.tag == "Golem_Boss" || collision.tag == "Redspit_Boss")
         {
+            Manager.manager.sound.TalismanBomb();
             move_talisman = false;
             StopCoroutine("Talisman_Boom");
             talisman_boom.gameObject.SetActive(true);
@@ -31,6 +32,7 @@ public class Talisman : MonoBehaviour
     IEnumerator Talisman_Boom()
     {
         yield return new WaitForSeconds(0.2f);
+        Manager.manager.sound.TalismanBomb();
         move_talisman = false;
         talisman_boom.gameObject.SetActive(true);
     }

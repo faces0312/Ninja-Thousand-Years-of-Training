@@ -14,6 +14,8 @@ public class Max_Dmg : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         Manager.manager.objectManager.player_wall.gameObject.SetActive(true);
         Manager.manager.objectManager.Boss_General();
+        Manager.manager.warning.gameObject.SetActive(false);
+        Manager.manager.sound.bossWarning.Stop();
         gameObject.SetActive(false);
     }
 }

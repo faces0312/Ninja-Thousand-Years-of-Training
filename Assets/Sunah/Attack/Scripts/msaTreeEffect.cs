@@ -38,6 +38,7 @@ public class msaTreeEffect : MonoBehaviour
             yield return new WaitForSeconds(14f);
         else if (Data.Instance.gameData.tree_lv == 6)
             yield return new WaitForSeconds(15f);
+        Manager.manager.sound.treeHeal.Stop();
         gameObject.SetActive(false);
     }
     

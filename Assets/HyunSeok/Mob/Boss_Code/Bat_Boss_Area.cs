@@ -68,6 +68,7 @@ public class Bat_Boss_Area : MonoBehaviour
 
     void Laser()
     {
+        Manager.manager.sound.BossLaser();
         //¼¦°Ç ÄÚµå
         laser.gameObject.transform.position = mob.gameObject.transform.position;
 

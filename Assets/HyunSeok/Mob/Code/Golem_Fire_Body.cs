@@ -364,6 +364,7 @@ public class Golem_Fire_Body : MonoBehaviour
 
     public void Drop_Letter()
     {
+        Manager.manager.sound.KillEnemy();
         int drop;
         drop = Random.Range(1, 101);
 

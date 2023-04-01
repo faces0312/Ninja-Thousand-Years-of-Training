@@ -33,6 +33,7 @@ public class Boss_Laser : MonoBehaviour
     IEnumerator Dis_Laser()
     {
         yield return new WaitForSeconds(3f);
+        Manager.manager.sound.bossLaser.Stop();
         gameObject.SetActive(false);
     }
 }

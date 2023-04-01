@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
         //hpbar.value = (float)hp / (float)hp_max;
 
         volttackle_CT = 23f;
-        volttackle_Tmp_CT = volttackle_CT;
+        volttackle_Tmp_CT = 0;
     }
   /*  private void OnEnable()
     {
@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (hp == hp_max)
+        if (hp >= hp_max)
             hpbar.gameObject.SetActive(false);
         else
             hpbar.gameObject.SetActive(true);

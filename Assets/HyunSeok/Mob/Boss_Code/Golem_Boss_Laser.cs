@@ -58,6 +58,7 @@ public class Golem_Boss_Laser : MonoBehaviour
     IEnumerator Dis_Laser()
     {
         yield return new WaitForSeconds(4f);
+        Manager.manager.sound.bossLaser.Stop();
         gameObject.SetActive(false);
     }
 }

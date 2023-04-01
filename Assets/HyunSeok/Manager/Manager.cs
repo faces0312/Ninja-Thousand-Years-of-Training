@@ -62,7 +62,7 @@ public class Manager : MonoBehaviour
     public GameObject map_name_left;
     public GameObject map_name_right;
 
-
+    public GameObject warning;
     //광고
     public GameObject respawn_Page;
     public int life_cnt;
@@ -76,6 +76,10 @@ public class Manager : MonoBehaviour
     public Skill_Array[] pasuse_skill;//pause에있는 스킬 칸수 (5개)
     public GameObject[] skill1_lv;
 
+    //사운드 관련
+    public Sound_Manager2 sound;
+    public bool[] talisman_is;
+    public int talisman_cnt;
     private void Awake()
     {
         //Screen.SetResolution(640, 360, true);
@@ -144,10 +148,19 @@ public class Manager : MonoBehaviour
         is_mecha_name = false;
 
         life_cnt = 1;
+
+        talisman_is = new bool[36];
+
+        for (int i = 0; i < 36; i++)
+            talisman_is[i] = false;
+        talisman_is[0] = true;
+
+        talisman_cnt = 0;
     }
 
     private void Start()
     {
+        warning.gameObject.SetActive(false);
         result.gameObject.SetActive(false);
         result_page.gameObject.SetActive(false);
         pause_page.gameObject.SetActive(false);

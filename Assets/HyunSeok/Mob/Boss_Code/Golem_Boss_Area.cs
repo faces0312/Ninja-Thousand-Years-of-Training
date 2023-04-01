@@ -69,6 +69,7 @@ public class Golem_Boss_Area : MonoBehaviour
 
     void Laser()
     {
+        Manager.manager.sound.BossLaser();
         laser_ran = Random.Range(0, 2);
         //¼¦°Ç ÄÚµå
         laser.gameObject.transform.position = new Vector3(mob.gameObject.transform.position.x - 0.05f, mob.gameObject.transform.position.y - 0.25f);
